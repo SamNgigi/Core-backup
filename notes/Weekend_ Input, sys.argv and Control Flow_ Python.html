@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<!-- saved from url=(0117)https://moringaschool.instructure.com/courses/22/pages/weekend-input-sys-dot-argv-and-control-flow?module_item_id=419 -->
+<html class="lato-font-loaded" lang="en-GB"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>Weekend: Input, sys.argv and Control Flow: Python</title>
+  <!--[if lte IE 9]> <meta http-equiv=refresh content="0; URL=/ie-9-is-not-supported.html" /> <![endif]-->
+  <link rel="shortcut icon" type="image/x-icon" href="https://instructure-uploads-eu.s3-eu-west-1.amazonaws.com/account_118060000000000001/attachments/23/Moringa%20Logo-02.png">
+  <link rel="apple-touch-icon" href="https://instructure-uploads-eu.s3-eu-west-1.amazonaws.com/account_118060000000000001/attachments/16/MORINGA%20TREE%20WHITE.png">
+  
+  <link rel="stylesheet" media="all" href="./Weekend_ Input, sys.argv and Control Flow_ Python_files/variables-750d72b9d3e5d522f965bf904110c132.css">
+  <link rel="stylesheet" media="all" href="./Weekend_ Input, sys.argv and Control Flow_ Python_files/common-79b981d2d9.css">
+  <script async="" src="./Weekend_ Input, sys.argv and Control Flow_ Python_files/analytics.js"></script><script type="text/javascript" async="" src="./Weekend_ Input, sys.argv and Control Flow_ Python_files/ga.js"></script><script>
+//<![CDATA[
+
+!function(){
+  var o,s,v;
+  if (!(window.Promise && Object.assign && Object.values && [].find && [].includes && (o={},s=Symbol(),v={},o[s]=v,o[s]===v) && (function f(){}).bind().name==='bound f')) {
+    s = 's', document.write('<'+s+'cr'+'ipt src="https://du11hjcvx0uqb.cloudfront.net/dist/ie11-polyfill-a0702bf7af.js"></'+s+'c'+'ript>');
+  }
+}();
+      
+//]]>
+</script>
+  <script src="./Weekend_ Input, sys.argv and Control Flow_ Python_files/lato-fontfaceobserver-11a14bc0b6.js" async="async"></script>
+  
+  <meta name="apple-itunes-app" content="app-id=480883488">
+<link rel="manifest" href="https://moringaschool.instructure.com/web-app-manifest/manifest.json">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#8e9847">
+  <link rel="stylesheet" media="all" href="./Weekend_ Input, sys.argv and Control Flow_ Python_files/wiki_page-46e7e026f6.css">
+  
+  
+  <script>
+    function _earlyClick(e){
+      var c = e.target
+      while (c && c.ownerDocument) {
+        if (c.getAttribute('href') == '#' || c.getAttribute('data-method')) {
+          e.preventDefault()
+          (_earlyClick.clicks = _earlyClick.clicks || []).push(c)
+          break
+        }
+        c = c.parentNode
+      }
+    }
+    document.addEventListener('click', _earlyClick)
+  </script>
+  <script src="./Weekend_ Input, sys.argv and Control Flow_ Python_files/variables-750d72b9d3e5d522f965bf904110c132.js" defer="defer"></script>
+  <script src="./Weekend_ Input, sys.argv and Control Flow_ Python_files/vendor.bundle-b4a7e4be55.js" defer="defer"></script>
+<script src="./Weekend_ Input, sys.argv and Control Flow_ Python_files/Nairobi-5be04c1e07.js" defer="defer"></script>
+<script src="./Weekend_ Input, sys.argv and Control Flow_ Python_files/en_GB-31745e04c9.js" defer="defer"></script>
+<script src="./Weekend_ Input, sys.argv and Control Flow_ Python_files/en-gb.bundle-5b8e778bb0.js" defer="defer"></script>
+<script src="./Weekend_ Input, sys.argv and Control Flow_ Python_files/appBootstrap.bundle-659e6cb04a.js" defer="defer"></script>
+<script src="./Weekend_ Input, sys.argv and Control Flow_ Python_files/common.bundle-7a4babf662.js" defer="defer"></script>
+<script src="./Weekend_ Input, sys.argv and Control Flow_ Python_files/wiki_page_show.bundle-6cdff07d81.js" defer="defer"></script>
+<style type="text/css"></style></head>
+
+<body class="with-left-side course-menu-expanded padless-content pages primary-nav-transitions context-course_22 show webkit chrome touch">
+
+<noscript>
+  &lt;div role="alert" class="ic-flash-static ic-flash-error"&gt;
+    &lt;div class="ic-flash__icon" aria-hidden="true"&gt;
+      &lt;i class="icon-warning"&gt;&lt;/i&gt;
+    &lt;/div&gt;
+    &lt;h1&gt; To access this site, you must enable JavaScript.&lt;/h1&gt;
+  &lt;/div&gt;
+</noscript>
+
+
+
+
+
+<ul id="flash_message_holder"></ul>
+<div id="flash_screenreader_holder" role="alert" aria-live="assertive" aria-relevant="additions" class="screenreader-only" aria-atomic="false"></div>
+
+<div id="application" class="ic-app">
+  
+  <header id="header" class="ic-app-header no-print ">
+    <a href="https://moringaschool.instructure.com/courses/22/pages/weekend-input-sys-dot-argv-and-control-flow?module_item_id=419#content" id="skip_navigation_link">Skip to content</a>
+      <div role="region" class="ic-app-header__main-navigation" aria-label="Global navigation">
+        <div class="ic-app-header__logomark-container">
+          <a href="https://moringaschool.instructure.com/" class="ic-app-header__logomark">
+            <span class="screenreader-only">Dashboard</span>
+          </a>
+        </div>
+        <ul id="menu" class="ic-app-header__menu-list">
+            <li class="menu-item ic-app-header__menu-list-item ">
+              <a id="global_nav_profile_link" href="https://moringaschool.instructure.com/profile" class="ic-app-header__menu-list-link">
+                <div class="menu-item-icon-container" aria-hidden="true">
+                  <div class="ic-avatar ">
+                    <img src="./Weekend_ Input, sys.argv and Control Flow_ Python_files/480a1c23def404db6a4a6bf1deb1add6" alt="Sam Ngigi">
+                  </div>
+                </div>
+                <div class="menu-item__text">
+                  Account
+                </div>
+              </a>
+            </li>
+          <li class="ic-app-header__menu-list-item ">
+            <a id="global_nav_dashboard_link" href="https://moringaschool.instructure.com/" class="ic-app-header__menu-list-link">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--dashboard" version="1.1" x="0" y="0" viewBox="0 0 280 200" enable-background="new 0 0 280 200" xml:space="preserve"><path d="M273.09,180.75H197.47V164.47h62.62A122.16,122.16,0,1,0,17.85,142a124,124,0,0,0,2,22.51H90.18v16.29H6.89l-1.5-6.22A138.51,138.51,0,0,1,1.57,142C1.57,65.64,63.67,3.53,140,3.53S278.43,65.64,278.43,142a137.67,137.67,0,0,1-3.84,32.57ZM66.49,87.63,50.24,71.38,61.75,59.86,78,76.12Zm147,0L202,76.12l16.25-16.25,11.51,11.51ZM131.85,53.82v-23h16.29v23Zm15.63,142.3a31.71,31.71,0,0,1-28-16.81c-6.4-12.08-15.73-72.29-17.54-84.25a8.15,8.15,0,0,1,13.58-7.2c8.88,8.21,53.48,49.72,59.88,61.81a31.61,31.61,0,0,1-27.9,46.45ZM121.81,116.2c4.17,24.56,9.23,50.21,12,55.49A15.35,15.35,0,1,0,161,157.3C158.18,152,139.79,133.44,121.81,116.2Z"></path></svg>
+
+              </div>
+              <div class="menu-item__text">Dashboard</div>
+            </a>
+          </li>
+          <li class="menu-item ic-app-header__menu-list-item ic-app-header__menu-list-item--active">
+            <a id="global_nav_courses_link" href="https://moringaschool.instructure.com/courses" class="ic-app-header__menu-list-link">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--courses" version="1.1" x="0" y="0" viewBox="0 0 280 259" enable-background="new 0 0 280 259" xml:space="preserve"><path d="M73.31,198c-11.93,0-22.22,8-24,18.73a26.67,26.67,0,0,0-.3,3.63v.3a22,22,0,0,0,5.44,14.65,22.47,22.47,0,0,0,17.22,8H200V228.19h-134V213.08H200V198Zm21-105.74h90.64V62H94.3ZM79.19,107.34V46.92H200v60.42Zm7.55,30.21V122.45H192.49v15.11ZM71.65,16.71A22.72,22.72,0,0,0,49,39.36V190.88a41.12,41.12,0,0,1,24.32-8h157V16.71ZM33.88,39.36A37.78,37.78,0,0,1,71.65,1.6H245.36V198H215.15v45.32h22.66V258.4H71.65a37.85,37.85,0,0,1-37.76-37.76Z"></path></svg>
+
+              </div>
+              <div class="menu-item__text">
+                Courses
+              </div>
+            </a>
+          </li>
+          <li class="menu-item ic-app-header__menu-list-item ">
+            <a id="global_nav_calendar_link" href="https://moringaschool.instructure.com/calendar" class="ic-app-header__menu-list-link">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--calendar" version="1.1" x="0" y="0" viewBox="0 0 280 280" enable-background="new 0 0 280 280" xml:space="preserve"><path d="M197.07,213.38h16.31V197.07H197.07Zm-16.31,16.31V180.76h48.92v48.92Zm-48.92-16.31h16.31V197.07H131.85Zm-16.31,16.31V180.76h48.92v48.92ZM66.62,213.38H82.93V197.07H66.62ZM50.32,229.68V180.76H99.24v48.92Zm146.75-81.53h16.31V131.85H197.07Zm-16.31,16.31V115.54h48.92v48.92Zm-48.92-16.31h16.31V131.85H131.85Zm-16.31,16.31V115.54h48.92v48.92ZM66.62,148.15H82.93V131.85H66.62ZM50.32,164.46V115.54H99.24v48.92ZM34,262.29H246V82.93H34ZM246,66.62V42.16A8.17,8.17,0,0,0,237.84,34H213.38v8.15a8.15,8.15,0,1,1-16.31,0V34H82.93v8.15a8.15,8.15,0,0,1-16.31,0V34H42.16A8.17,8.17,0,0,0,34,42.16V66.62Zm-8.15-48.92a24.49,24.49,0,0,1,24.46,24.46V278.6H17.71V42.16A24.49,24.49,0,0,1,42.16,17.71H66.62V9.55a8.15,8.15,0,0,1,16.31,0v8.15H197.07V9.55a8.15,8.15,0,1,1,16.31,0v8.15Z"></path></svg>
+
+              </div>
+              <div class="menu-item__text">
+                Calendar
+              </div>
+            </a>
+          </li>
+          <li class="menu-item ic-app-header__menu-list-item ">
+            <a id="global_nav_conversations_link" href="https://moringaschool.instructure.com/conversations" class="ic-app-header__menu-list-link">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--inbox" version="1.1" x="0" y="0" viewBox="0 0 280 280" enable-background="new 0 0 280 280" xml:space="preserve"><path d="M91.72,120.75h96.56V104.65H91.72Zm0,48.28h80.47V152.94H91.72Zm0-96.56h80.47V56.37H91.72Zm160.94,34.88H228.52V10.78h-177v96.56H27.34A24.17,24.17,0,0,0,3.2,131.48V244.14a24.17,24.17,0,0,0,24.14,24.14H252.66a24.17,24.17,0,0,0,24.14-24.14V131.48A24.17,24.17,0,0,0,252.66,107.34Zm0,16.09a8.06,8.06,0,0,1,8,8v51.77l-32.19,19.31V123.44ZM67.58,203.91v-177H212.42v177ZM27.34,123.44H51.48v79.13L19.29,183.26V131.48A8.06,8.06,0,0,1,27.34,123.44ZM252.66,252.19H27.34a8.06,8.06,0,0,1-8-8V202l30,18H230.75l30-18v42.12A8.06,8.06,0,0,1,252.66,252.19Z"></path></svg>
+
+                <span class="menu-item__badge" style="display: none">0</span>
+              </div>
+              <div class="menu-item__text">
+                Inbox
+              </div>
+            </a>
+          </li>
+            
+
+
+          <li class="ic-app-header__menu-list-item">
+           <a id="global_nav_help_link" class="ic-app-header__menu-list-link" data-track-category="help system" data-track-label="help button" href="http://help.instructure.com/">
+              <div class="menu-item-icon-container" role="presentation">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg menu-item__icon svg-icon-cog" version="1.1" x="0" y="0" viewBox="0 0 200 200" enable-background="new 0 0 200 200" xml:space="preserve" fill="currentColor"><path d="M100,127.88A27.88,27.88,0,1,1,127.92,100,27.92,27.92,0,0,1,100,127.88M100,61a39,39,0,1,0,39,39,39.08,39.08,0,0,0-39-39m73.42,39a70.26,70.26,0,0,0-1.15-12.57l20.76-18-19.7-33.66-26.19,8.73a74.2,74.2,0,0,0-22.11-12.68L119.68,5.2H80.4L75,31.83A72.9,72.9,0,0,0,52.89,44.51L26.71,35.79,7,69.45l20.74,18a69.95,69.95,0,0,0,0,25.13L7,130.55l19.7,33.66,26.19-8.74A74.23,74.23,0,0,0,75,168.16l5.4,26.64h39.28l5.4-26.63a72.88,72.88,0,0,0,22.11-12.69l26.19,8.74,19.7-33.66-20.76-18A70.26,70.26,0,0,0,173.46,100Zm5.31,32.92-10.45,17.86-23.72-7.92-2.42,2.2a61.7,61.7,0,0,1-23.57,13.51l-3.17,1-4.88,24.1h-21l-4.88-24.11-3.17-1A61.7,61.7,0,0,1,57.91,145l-2.42-2.2-23.72,7.92L21.31,132.91l18.74-16.24-.74-3.26a59.25,59.25,0,0,1,0-26.83l.74-3.26L21.31,67.09,31.76,49.23l23.72,7.91,2.42-2.2A61.87,61.87,0,0,1,81.47,41.42l3.17-1,4.88-24.1h21l4.88,24.11,3.17,1A61.73,61.73,0,0,1,142.18,55l2.42,2.2,23.72-7.92,10.45,17.86L160,83.33l.74,3.26a59.25,59.25,0,0,1,0,26.83l-.74,3.26Z"></path></svg>
+
+              </div>
+              <div class="menu-item__text">
+                Help Desk
+              </div>
+</a>          </li>
+        </ul>
+      </div>
+      <div class="ic-app-header__secondary-navigation">
+        <ul class="ic-app-header__menu-list">
+          <li class="menu-item ic-app-header__menu-list-item">
+            <button id="primaryNavToggle" class="ic-app-header__menu-list-link ic-app-header__menu-list-link--nav-toggle" aria-label="
+                Expand global navigation
+                " title="
+                Expand global navigation
+                ">
+              <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--navtoggle" version="1.1" x="0" y="0" width="40" height="32" viewBox="0 0 40 32" xml:space="preserve">
+  <path d="M39.5,30.28V2.48H37.18v27.8Zm-4.93-13.9L22.17,4,20.53,5.61l9.61,9.61H.5v2.31H30.14l-9.61,9.61,1.64,1.64Z"></path>
+</svg>
+
+            </button>
+          </li>
+        </ul>
+      </div>
+    <div id="global_nav_tray_container"><noscript data-reactid=".0"></noscript></div>
+  </header>
+
+
+  <div id="instructure_ajax_error_box">
+    <div style="text-align: right; background-color: #fff;"><a href="https://moringaschool.instructure.com/courses/22/pages/weekend-input-sys-dot-argv-and-control-flow?module_item_id=419#" class="close_instructure_ajax_error_box_link">Close</a></div>
+    <iframe id="instructure_ajax_error_result" src="./Weekend_ Input, sys.argv and Control Flow_ Python_files/saved_resource.html" style="border: 0;" title="Error"></iframe>
+  </div>
+
+  
+
+  <div id="wrapper" class="ic-Layout-wrapper">
+      <div class="ic-app-nav-toggle-and-crumbs no-print">
+          <button type="button" id="courseMenuToggle" class="Button Button--link ic-app-course-nav-toggle" aria-live="polite" aria-label="Hide courses navigation menu" title="Hide courses navigation menu">
+            <i class="icon-hamburger" aria-hidden="true"></i>
+          </button>
+          <div class="ic-app-crumbs">
+        <nav id="breadcrumbs" role="navigation" aria-label="breadcrumbs"><ul><li class="home"><a href="https://moringaschool.instructure.com/"><span class="ellipsible">      <i class="icon-home" title="My dashboard">
+        <span class="screenreader-only">My dashboard</span>
+      </i>
+</span></a></li><li><a href="https://moringaschool.instructure.com/courses/22"><span class="ellipsible">py-ke</span></a></li><li><a href="https://moringaschool.instructure.com/courses/22/pages"><span class="ellipsible">Pages</span></a></li><li><span class="ellipsible">Weekend: Input, sys.argv and Control Flow</span></li></ul></nav>
+        </div>
+      </div>
+    <div id="main" class="ic-Layout-columns">
+        <div class="ic-Layout-watermark"></div>
+        <div id="left-side" class="ic-app-course-menu list-view" style="display: block">
+            <nav role="navigation" aria-label="Courses navigation menu"><ul id="section-tabs"><li class="section"><a href="https://moringaschool.instructure.com/courses/22" title="Home" class="home" tabindex="0">Home</a></li><li class="section"><a href="https://moringaschool.instructure.com/courses/22/modules" title="Modules" class="modules" tabindex="0">Modules</a></li><li class="section"><a href="https://moringaschool.instructure.com/courses/22/grades" title="Grades" class="grades" tabindex="0">Grades</a></li><li class="section"><a href="https://moringaschool.instructure.com/courses/22/assignments" title="Assignments" class="assignments" tabindex="0">Assignments</a></li><li class="section"><a href="https://moringaschool.instructure.com/courses/22/discussion_topics" title="Discussions" class="discussions" tabindex="0">Discussions</a></li></ul></nav>
+        </div>
+      <div id="not_right_side" class="ic-app-main-content">
+        <div id="content-wrapper" class="ic-Layout-contentWrapper">
+            
+
+          <div id="content" class="ic-Layout-contentMain" role="main">
+            
+
+  
+
+<div id="wiki_page_show">
+<div class="header-bar-outer-container">
+  <div class="header-bar-container sticky-toolbar" data-sticky="">
+    <div class="header-bar flex-container">
+      <div class="header-bar-left header-left-flex">
+        
+          
+        
+      </div>
+      <div class="header-bar-right header-right-flex">
+        
+          
+          
+            
+          
+        
+        
+          
+        
+        
+      </div>
+    </div>
+    <div class="page-changed-alert" role="alert" aria-atomic="true" aria-live="polite"></div>
+  </div>
+</div>
+
+
+<div class="show-content user_content clearfix enhanced">
+  <h1 class="page-title">Weekend: Input, sys.argv and Control Flow</h1>
+  
+    <div id="content">
+<h2>Python Variables</h2>
+<p>Variables are named references to <strong>objects</strong>.</p>
+<p>Here is an example of how we create a variable in Python in the Python shell:</p>
+<div class="codehilite">
+<pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">x</span>
+<span class="mi">4</span>
+</code></pre>
+</div>
+<p>We create variables by using the assignment operator <code>=</code> . Variables do not store any value, but point to where the value is created in the computer's memory.</p>
+<p><img src="./Weekend_ Input, sys.argv and Control Flow_ Python_files/ygY7Chc.jpg" alt="Variable referencing" style="max-width: 1102px;"></p>
+<p>When we equate two variables we are referencing the variables to the same value.</p>
+<p><img src="./Weekend_ Input, sys.argv and Control Flow_ Python_files/zb1EfxK.jpg" alt="double variable referencing" style="max-width: 1102px;"></p>
+<p>Python variables can store values from any data type. Since Python is dynamic in nature we do not have to specify what type of data we are storing.</p>
+<div class="codehilite">
+<pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">12</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">x</span>
+<span class="mi">12</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="s2">"Hello"</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">x</span>
+<span class="n">Hello</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">pie</span> <span class="o">=</span> <span class="mf">3.1423</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">pie</span>
+<span class="mf">3.1423</span>
+</code></pre>
+</div>
+<h2>Python Modules</h2>
+<p><img src="./Weekend_ Input, sys.argv and Control Flow_ Python_files/LxjZpFD.jpg" alt="Python Modules" style="max-width: 1102px;"></p>
+<p>A Python module is a single executable (can be run or launched) Python file.It contains code to do a particular task and has a <code>.py</code> extension.</p>
+<p>Let us create this on our desktops. Create a folder and name it <em>MS-Python-Pre-work</em>. Create a new file and name it <em>module_test.py</em>. Open Atom and type in the following:</p>
+<p><strong>module_test.py</strong></p>
+<div class="codehilite">
+<pre><span></span><code><span class="n">greeting</span> <span class="o">=</span> <span class="s2">"Hello"</span>
+<span class="n">school</span> <span class="o">=</span> <span class="s2">"Moringa"</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">greeting</span> <span class="o">+</span> <span class="s2">", "</span> <span class="o">+</span> <span class="n">school</span> <span class="o">+</span> <span class="s2">"!"</span><span class="p">)</span>
+</code></pre>
+</div>
+<p>To execute this code, navigate to the project folder in the console (where <em>module_test.py</em> is located) and run the following command:</p>
+<div class="codehilite">
+<pre><span></span><code>$ python3.6 module_test.py
+Hello, Moringa!
+</code></pre>
+</div>
+<p>We type in <code>python3.6</code> then the name of the file <code>module_test.py</code>. The code is immediately executed and we get our output as <code>Hello, Moringa!</code></p>
+<p>A Python program is a collection of modules that are linked to perform a particular function.</p>
+<h2>Import</h2>
+<p>Python comes with a lot of pre-written code in for of <strong>modules</strong> and <strong>packages</strong>.</p>
+<ol>
+<li>A module is a single Python file that contains code to do a particular task.</li>
+<li>A package is made up of one or more modules that are joined to perform a particular task.</li>
+</ol>
+<p>Modules and packages belong to Python's standard library. They extend Python's functionality, and it is important to learn how to use them.</p>
+<p>To use these packages or modules we use the <code>import</code> keyword. Let us create a new Python file and name it <em>example.py</em>.</p>
+<p>Add the following line to the file:</p>
+<p><strong>example.py</strong></p>
+<div class="codehilite">
+<pre><span></span><code><span class="kn">import</span> <span class="nn">this</span>
+</code></pre>
+</div>
+<p>Now let's run the file from the terminal:</p>
+<div class="codehilite">
+<pre><span></span><code>$ python3.6 example.py
+</code></pre>
+</div>
+<p>And this will print to the console:</p>
+<div class="codehilite">
+<pre><span></span><code><span class="n">The</span> <span class="n">Zen</span> <span class="n">of</span> <span class="n">Python</span><span class="p">,</span> <span class="n">by</span> <span class="n">Tim</span> <span class="n">Peters</span>
+
+<span class="n">Beautiful</span> <span class="ow">is</span> <span class="n">better</span> <span class="n">than</span> <span class="n">ugly</span><span class="o">.</span>
+<span class="n">Explicit</span> <span class="ow">is</span> <span class="n">better</span> <span class="n">than</span> <span class="n">implicit</span><span class="o">.</span>
+<span class="n">Simple</span> <span class="ow">is</span> <span class="n">better</span> <span class="n">than</span> <span class="nb">complex</span><span class="o">.</span>
+<span class="n">Complex</span> <span class="ow">is</span> <span class="n">better</span> <span class="n">than</span> <span class="n">complicated</span><span class="o">.</span>
+<span class="n">Flat</span> <span class="ow">is</span> <span class="n">better</span> <span class="n">than</span> <span class="n">nested</span><span class="o">.</span>
+<span class="n">Sparse</span> <span class="ow">is</span> <span class="n">better</span> <span class="n">than</span> <span class="n">dense</span><span class="o">.</span>
+<span class="n">Readability</span> <span class="n">counts</span><span class="o">.</span>
+<span class="n">Special</span> <span class="n">cases</span> <span class="n">aren</span><span class="s1">'t special enough to break the rules.</span>
+<span class="n">Although</span> <span class="n">practicality</span> <span class="n">beats</span> <span class="n">purity</span><span class="o">.</span>
+<span class="n">Errors</span> <span class="n">should</span> <span class="n">never</span> <span class="k">pass</span> <span class="n">silently</span><span class="o">.</span>
+<span class="n">Unless</span> <span class="n">explicitly</span> <span class="n">silenced</span><span class="o">.</span>
+<span class="n">In</span> <span class="n">the</span> <span class="n">face</span> <span class="n">of</span> <span class="n">ambiguity</span><span class="p">,</span> <span class="n">refuse</span> <span class="n">the</span> <span class="n">temptation</span> <span class="n">to</span> <span class="n">guess</span><span class="o">.</span>
+<span class="n">There</span> <span class="n">should</span> <span class="n">be</span> <span class="n">one</span><span class="o">--</span> <span class="ow">and</span> <span class="n">preferably</span> <span class="n">only</span> <span class="n">one</span> <span class="o">--</span><span class="n">obvious</span> <span class="n">way</span> <span class="n">to</span> <span class="n">do</span> <span class="n">it</span><span class="o">.</span>
+<span class="n">Although</span> <span class="n">that</span> <span class="n">way</span> <span class="n">may</span> <span class="ow">not</span> <span class="n">be</span> <span class="n">obvious</span> <span class="n">at</span> <span class="n">first</span> <span class="n">unless</span> <span class="n">you</span><span class="s1">'re Dutch.</span>
+<span class="n">Now</span> <span class="ow">is</span> <span class="n">better</span> <span class="n">than</span> <span class="n">never</span><span class="o">.</span>
+<span class="n">Although</span> <span class="n">never</span> <span class="ow">is</span> <span class="n">often</span> <span class="n">better</span> <span class="n">than</span> <span class="o">*</span><span class="n">right</span><span class="o">*</span> <span class="n">now</span><span class="o">.</span>
+<span class="n">If</span> <span class="n">the</span> <span class="n">implementation</span> <span class="ow">is</span> <span class="n">hard</span> <span class="n">to</span> <span class="n">explain</span><span class="p">,</span> <span class="n">it</span><span class="s1">'s a bad idea.</span>
+<span class="n">If</span> <span class="n">the</span> <span class="n">implementation</span> <span class="ow">is</span> <span class="n">easy</span> <span class="n">to</span> <span class="n">explain</span><span class="p">,</span> <span class="n">it</span> <span class="n">may</span> <span class="n">be</span> <span class="n">a</span> <span class="n">good</span> <span class="n">idea</span><span class="o">.</span>
+<span class="n">Namespaces</span> <span class="n">are</span> <span class="n">one</span> <span class="n">honking</span> <span class="n">great</span> <span class="n">idea</span> <span class="o">--</span> <span class="n">let</span><span class="s1">'s do more of those!</span>
+</code></pre>
+</div>
+<p>This is known as the <code>Zen of Python</code>. t doesn't do much, but it is a nice way to show you how to import modules.</p>
+<h3>
+<code>math</code> Module</h3>
+<p>Let us look at a more useful module, named <code>math</code>. Replace the contents of <em>example.py</em> with the following code:</p>
+<p><strong>example.py</strong></p>
+<div class="codehilite">
+<pre><span></span><code><span class="kn">import</span> <span class="nn">math</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="n">y</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+</code></pre>
+</div>
+<p>Let's run it:</p>
+<div class="codehilite">
+<pre><span></span><code>$ python3.6 example.py
+<span class="m">3</span>.0
+<span class="m">3</span>
+</code></pre>
+</div>
+<p>Here, we import the <code>math</code> module. The <code>math</code> module comes with a lot of built-in methods, and we've used a couple of them here: the <code>sqrt()</code> method to find the square root of 9 (3.0), which we represent with the variable <code>x</code>; and the <code>ceil()</code> method to round up <code>x</code> (3).</p>
+<p>The syntax to use when we use module methods is <code>module_name.method_name(arguments)</code>, where <code>module_name</code> is the name of the module (<code>math</code> in this case) and <code>method_name</code> is the name of the method (we've used <code>sqrt()</code> and <code>ciel()</code>).</p>
+<h4>
+<code>from</code> Keyword</h4>
+<p>You can also import a module method directly using the keyword <code>from</code>. Try this out in <em>example.py</em>:</p>
+<p><strong>example.py</strong></p>
+<div class="codehilite">
+<pre><span></span><code><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">sqrt</span><span class="p">,</span><span class="n">ceil</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">sqrt</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="n">y</span> <span class="o">=</span> <span class="n">ceil</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+
+<span class="mf">3.0</span>
+<span class="mi">3</span>
+</code></pre>
+</div>
+<p>Notice here that the syntax changes: we were able to use <code>sqrt()</code> and <code>ciel()</code> without typing <code>math</code> first. When we use the <code>from</code> keyword, we can use the method name directly without referencing the module.</p>
+<h3>
+<code>random</code> Module</h3>
+<p>Let us use another fun module called <strong>random</strong>. Replace the contents of <em>example.py</em> with the following code:</p>
+<p><strong>example.py</strong></p>
+<div class="codehilite">
+<pre><span></span><code><span class="kn">import</span> <span class="nn">random</span>
+
+<span class="c1"># We can generate a random number using the randint method</span>
+
+<span class="n">random_number</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">random_number</span><span class="p">)</span>
+</code></pre>
+</div>
+<p>Here used the <code>import</code> keyword, to get the random module. From the module we used its <code>randint()</code> method and passed in two parameters to define the range of values from which Python will choose a random number (in our example, 0 is the low end of the range and 10 is the high end). When we run the file, it returns a random number, from the range provided by the parameters.</p>
+<p>Now let's run it a few times:</p>
+<div class="codehilite">
+<pre><span></span><code>$ python3.6 example.py
+<span class="m">4</span>
+$ python3.6 example.py
+<span class="m">0</span>
+$ python3.6 example.py
+<span class="m">7</span>
+</code></pre>
+</div>
+<p>The output on your console may look different, but the thing to note here is that it's generating a different value each time we run <em>example.py</em>. We have the <code>random</code> module to thank for that.</p>
+<h3>Input Exercise</h3>
+<h4>Circumference Calculation</h4>
+<p>Write a program that calculates the circumference of a wheel. The formula is C=2πr, where π is the value 3.14 and <code>r</code> is the radius of the circle.</p>
+<p>To take this a step further, let the radius of the circle be a random integer generated by the <code>random</code> module.</p>
+<h2>Input and<span>&nbsp;</span><code>sys.argv</code>
+</h2>
+<p>In our applications, we have basically been typing out values to everything in our code. Now let us explore a different way to obtain data into our application by configuring user input.</p>
+<h3>
+<code>input()</code><span>&nbsp;</span>function</h3>
+<p>The<span>&nbsp;</span><code>input()</code><span>&nbsp;</span>function is called inside our Python application and prompts the user to pass in an input, which is stored as a string.</p>
+<p>Let us create a new folder in our<span>&nbsp;</span><em>MS-Python-Pre-work</em><span>&nbsp;</span>directory called<span>&nbsp;</span><em>Input</em>, and create a new file<span>&nbsp;</span><em>input_demo.py</em><span>&nbsp;</span>and type in this:</p>
+<p><strong>input_demo.py</strong></p>
+<div class="codehilite">
+<pre><span></span><code><span class="k">print</span><span class="p">(</span><span class="s2">"What is your name?"</span><span class="p">)</span>
+<span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s2">"How old are you?"</span><span class="p">)</span>
+<span class="n">age</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">age</span><span class="p">)</span>
+</code></pre>
+</div>
+<p>We then run the file:</p>
+<div class="codehilite">
+<pre><span></span><code>$ python3.6 input_demo.py
+<span class="s2">"What is your name?"</span>
+James
+<span class="s2">"How old are you?"</span>
+<span class="m">19</span>
+
+James
+<span class="m">19</span>
+</code></pre>
+</div>
+<p>Here we are prompting the user for their name and age, and storing them in variables. Since<span>&nbsp;</span><code>age</code><span>&nbsp;</span>is a number, we used the<span>&nbsp;</span><code>int()</code><span>&nbsp;</span>function to convert it to an integer.</p>
+<h3>Using the<span>&nbsp;</span><code>sys</code><span>&nbsp;</span>Module</h3>
+<p>The<span>&nbsp;</span><code>sys</code><span>&nbsp;</span>module provides variables used or maintained by the interpreter. It has the list<span>&nbsp;</span><code>sys.argv</code>, which contains the arguments passed into the command line when running the command to execute the program. Let's see how to use<span>&nbsp;</span><code>sys.argv</code><span>&nbsp;</span>to take input from the command line. Open up<span>&nbsp;</span><em>input_demo.py</em><span>&nbsp;</span>and replace the contents this code:</p>
+<p><strong>input_demo.py</strong></p>
+<div class="codehilite">
+<pre><span></span><code><span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="n">name</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s2">"How old are you?"</span><span class="p">)</span>
+<span class="n">age</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">age</span><span class="p">)</span>
+</code></pre>
+</div>
+<p>Now let's run the file:</p>
+<div class="codehilite">
+<pre><span></span><code>$ python3.6 input_demo.py James
+<span class="s2">"How old are you?"</span>
+<span class="m">19</span>
+
+James
+<span class="m">19</span>
+</code></pre>
+</div>
+<p>Here we have first imported the<span>&nbsp;</span><code>sys</code><span>&nbsp;</span>module so that we could use<span>&nbsp;</span><code>sys.argv</code><span>&nbsp;</span>to store user input from the console and store it in a list. This is different from the previous example, where we used prompts along with<span>&nbsp;</span><code>input()</code><span>&nbsp;</span>to get the name of our user. Notice that we entered our name as the second argument of the command where we executed the program (the first argument was<span>&nbsp;</span><code>input_demo.py</code>):</p>
+<div class="codehilite">
+<pre><span></span><code>$ python3.6 input_demo.py James
+</code></pre>
+</div>
+<p>Since<span>&nbsp;</span><code>sys.argv</code><span>&nbsp;</span>returns a list, we used<span>&nbsp;</span><code>sys.argv[1]</code><span>&nbsp;</span>in<span>&nbsp;</span><em>input_demo.py</em><span>&nbsp;</span>to retrieve this value - this simply tells our application to pick the argument at index 1 when our application is run and store it as variable<span>&nbsp;</span><code>name</code>.</p>
+<p>We can pass multiple arguments when we run our application:</p>
+<p><strong>input_demo.py</strong></p>
+<div class="codehilite">
+<pre><span></span><code><span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="n">name</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">age</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">age</span><span class="p">)</span>
+</code></pre>
+</div>
+<p>We then run the file with the necessary arguments:</p>
+<div class="codehilite">
+<pre><span></span><code>$ python3.6 input_demo.py James <span class="m">19</span>
+James
+<span class="m">19</span>
+</code></pre>
+</div>
+<p>Here we pick both the<span>&nbsp;</span><code>name</code><span>&nbsp;</span>and<span>&nbsp;</span><code>age</code><span>&nbsp;</span>from the command line arguments passed.</p>
+<h3>Input and Type Casting Exercises</h3>
+<h4>Birthday dates</h4>
+<p>Create a program where you prompt a user for their age and return the year they were born.</p>
+<p>After that, return the year they will turn 80.</p>
+<h4>Tip Calculator</h4>
+<p>Create a program that lets the user input their total bill at a restaurant, and returns the total cost of the bill including a tip. Use 15% of the total bill as the tip calculation.</p>
+<p>For example, if the total bill is KSh 1000, the tip is 0.15 * 1000 = KSh 150, so the total cost of the bill returned to the user is 1000 + 150 = KSh 1150.</p>
+<p>Once you're finished, take this a step further and let the user enter their level of satisfaction with their service and factor that value into the tip percentage. For example, if they received good service, the tip is 15%; great service is 20%; terrible service is 0%.</p>
+<h2>Control Flow</h2>
+<p>Up to now our applications haven't been that interesting. Let us add some logic to our applications.</p>
+<h3>
+<code>if</code><span>&nbsp;</span>statements</h3>
+<p>An<span>&nbsp;</span><code>if</code><span>&nbsp;</span>statement runs only when the condition passed to it evaluates to true. Let's experiment with this in<span>&nbsp;</span><em>input_demo.py</em>.</p>
+<p><strong>input_demo.py</strong></p>
+<div class="codehilite">
+<pre><span></span><code><span class="n">height</span> <span class="o">=</span> <span class="mi">74</span> <span class="c1"># The unit is inches</span>
+<span class="k">if</span> <span class="n">height</span> <span class="o">&gt;</span> <span class="mi">70</span> <span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">"You are really tall"</span><span class="p">)</span>
+</code></pre>
+</div>
+<p>Run the file in the console:</p>
+<div class="codehilite">
+<pre><span></span><code>$ python3.6 input_demo.py
+You are really tall
+</code></pre>
+</div>
+<p>Since<span>&nbsp;</span><code>height</code><span>&nbsp;</span>is above 70, the<span>&nbsp;</span><code>if</code><span>&nbsp;</span>statement will be called and it will print out the statement. This syntax differs from other programming languages like JavaScript which use curly braces (<code>{}</code><span>&nbsp;</span>)to hold blocks of code, such as this example:</p>
+<div class="codehilite">
+<pre><span></span><code><span class="kd">var</span> <span class="nx">height</span> <span class="o">=</span> <span class="mi">74</span>
+<span class="k">if</span> <span class="p">(</span><span class="nx">height</span> <span class="o">&gt;</span> <span class="mi">70</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"You are really tall"</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+<p>Python uses<span>&nbsp;</span><strong>indents</strong>. Indents are just four spaces we give to our application to define blocks of code. If we don't indent blocks of our code, we get an<span>&nbsp;</span><strong>IndentationError</strong><span>&nbsp;</span>and our program won't run.</p>
+<h4>Comparison Operators</h4>
+<p>Let us look at some of the comparison operators we will be using in Python</p>
+<ul>
+<li>
+<code>&gt;</code><span>&nbsp;</span>Greater than</li>
+<li>
+<code>&lt;</code><span>&nbsp;</span>Less than</li>
+<li>
+<code>==</code>Equal to</li>
+<li>
+<code>!=</code>not equal to</li>
+<li>
+<code>&gt;=</code><span>&nbsp;</span>Greater than or equal to</li>
+<li>
+<code>&lt;=</code>Less than or Equal to</li>
+<li>
+<code>and</code><span>&nbsp;</span>Checks if both conditions evaluate to true</li>
+<li>
+<code>or</code><span>&nbsp;</span>Checks if at least one condition is true</li>
+<li>
+<code>not</code><span>&nbsp;</span>returns the opposite of the condition given</li>
+</ul>
+<h3><code>else</code></h3>
+<p>The<span>&nbsp;</span><code>else</code><span>&nbsp;</span>statement comes right at the end of the<span>&nbsp;</span><code>if</code><span>&nbsp;</span>statement. It is run only when the<span>&nbsp;</span><code>if</code><span>&nbsp;</span>statement evaluates to<span>&nbsp;</span><code>False</code>. Let's add an<span>&nbsp;</span><code>else</code><span>&nbsp;</span>statement to our example program:</p>
+<p><strong>input_example.py</strong></p>
+<div class="codehilite">
+<pre><span></span><code><span class="n">height</span> <span class="o">=</span> <span class="mi">54</span> <span class="c1"># inches</span>
+<span class="k">if</span> <span class="n">height</span> <span class="o">&gt;</span> <span class="mi">70</span> <span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">"You are really tall"</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">"You are really short"</span><span class="p">)</span>
+</code></pre>
+</div>
+<p>Now when we run the file, we get a different message:</p>
+<div class="codehilite">
+<pre><span></span><code>$ python3.6 input_demo.py
+You are really short
+</code></pre>
+</div>
+<p>The height is not greater than 70 so the<span>&nbsp;</span><code>if</code><span>&nbsp;</span>statement evaluates to<span>&nbsp;</span><code>False</code><span>&nbsp;</span>and the<span>&nbsp;</span><code>else</code><span>&nbsp;</span>statement is called.</p>
+<h3><code>elif</code></h3>
+<p>What if we have more than one condition to check for? We can use<span>&nbsp;</span><code>elif</code>, which will allow us to check for multiple conditions. Looking at our example:</p>
+<div class="codehilite">
+<pre><span></span><code><span class="n">height</span> <span class="o">=</span> <span class="mi">68</span> <span class="c1"># inches</span>
+<span class="k">if</span> <span class="n">height</span> <span class="o">&gt;</span> <span class="mi">70</span> <span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">"You are really tall"</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">height</span> <span class="o">&gt;</span> <span class="mi">60</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">"You are of average height"</span><span class="p">)</span>
+
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">"You are really short"</span><span class="p">)</span>
+</code></pre>
+</div>
+<p>Now let's run it:</p>
+<div class="codehilite">
+<pre><span></span><code>$ python3.6 input_demo.py
+You are of average height
+</code></pre>
+</div>
+<p>Since the height is greater than 60, the<span>&nbsp;</span><code>elif</code><span>&nbsp;</span>statement will be executed first and Python never reaches the<span>&nbsp;</span><code>else</code><span>&nbsp;</span>statement.</p>
+<h3>Checking for nothing</h3>
+<p>In Python an empty value is automatically considered to be<span>&nbsp;</span><code>False</code>. Consider this code:</p>
+<p><strong>input_example.py</strong></p>
+<div class="codehilite">
+<pre><span></span><code><span class="n">name</span> <span class="o">=</span> <span class="s2">""</span>
+<span class="n">list_a</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">if</span> <span class="n">list_a</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">"I will not run"</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">"I am Empty"</span><span class="p">)</span>
+</code></pre>
+</div>
+<p>When we run this code, nothing prints to the console.</p>
+<div class="codehilite">
+<pre><span></span><code>$ python3.6 input_demo.py
+I am Empty
+</code></pre>
+</div>
+<p>This is because the<span>&nbsp;</span><code>if</code><span>&nbsp;</span>statement only runs if the output evaluates to be<span>&nbsp;</span><code>True</code>, and since our list is empty the condition evaluates to<span>&nbsp;</span><code>False</code></p>
+</div>
+  
+</div>
+<div style=""><div class="module-sequence-padding"></div>
+<div class="module-sequence-footer" role="navigation" aria-label="Module Navigation">
+  <div class="module-sequence-footer-content">
+    
+      <a href="https://moringaschool.instructure.com/courses/22/modules/items/418" role="button" class="Button module-sequence-footer-button--previous" data-tooltip="right" data-html-tooltip-title="&lt;i class=&#39;icon-document&#39;&gt;&lt;/i&gt; Weekend: Python Variables and Modules Import" aria-describedby="msf0-previous-desc">
+        <i class="icon-mini-arrow-left"></i>Previous
+        <span id="msf0-previous-desc" class="hidden" hidden="">Previous: Weekend: Python Variables and Modules Import</span>
+      </a>
+    
+
+    
+      <span class="module-sequence-footer-button--next" data-tooltip="left" data-html-tooltip-title="&lt;i class=&#39;icon-document&#39;&gt;&lt;/i&gt; Weekend: Looping">
+        <a href="https://moringaschool.instructure.com/courses/22/modules/items/420" role="button" class="Button" aria-describedby="msf0-next-desc">
+          Next<i class="icon-mini-arrow-right"></i>
+          <span id="msf0-next-desc" class="hidden" hidden="">Next: Weekend: Looping</span>
+        </a>
+      </span>
+    
+  </div>
+</div>
+</div></div>
+
+          </div>
+        </div>
+        <div id="right-side-wrapper" class="ic-app-main-content__secondary">
+          <aside id="right-side" role="complementary">
+            
+          </aside>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+    <div style="display:none;"><!-- Everything inside of this should always stay hidden -->
+        <div id="page_view_id">aee58bd5-076f-4f0d-839b-d2f8491c943c</div>
+    </div>
+    
+<div id="cant_record_dialog" style="display: none;">
+  <div>
+    In order to create video or audio recordings your computer needs to be webcam-enabled. If you don't have a webcam on your computer, you can still record audio-only messages by first installing the Google Video Chat plugin.
+  </div>
+  <div style="text-align: center; font-size: 1.5em; margin: 10px;">
+    <a href="http://www.google.com/chat/video" target="_blank" rel="noopener" class="btn">Install the video plugin</a>
+  </div>
+  <div class="links" style="text-align: right; font-size: 0.8em; display: none;">
+    <a href="https://moringaschool.instructure.com/courses/22/pages/weekend-input-sys-dot-argv-and-control-flow?module_item_id=419#" class="cant_record_link">Don't have a webcam?</a>
+  </div>
+</div>
+
+  <div id="aria_alerts" class="hide-text affix" role="alert" aria-live="assertive"></div>
+  <div id="StudentTray__Container"></div>
+  <script>
+  INST = {"environment":"production","allowMediaComments":true,"kalturaSettings":{"domain":"eu.nv.instructuremedia.com","resource_domain":"eu.nv.instructuremedia.com","rtmp_domain":"eu.fms-prod.instructuremedia.com","partner_id":"5","subpartner_id":"0","player_ui_conf":"0","kcw_ui_conf":"0","upload_ui_conf":"0","max_file_size_bytes":534773760,"do_analytics":false,"hide_rte_button":false,"js_uploader":true},"googleAnalyticsAccount":"UA-9138420-1","disableScribdPreviews":true,"logPageViews":true,"maxVisibleEditorButtons":3,"editorButtons":[{"name":"GitHub","id":5,"url":"https://www.edu-apps.org/tool_redirect?id=github","icon_url":"https://www.edu-apps.org/tools/github/icon.png","canvas_icon_class":null,"width":600,"height":320}]};
+  ENV = {"ASSET_HOST":"https://du11hjcvx0uqb.cloudfront.net","active_brand_config_json_url":"https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/8474fb899c39509f978887304568a161/variables-750d72b9d3e5d522f965bf904110c132.json","url_to_what_gets_loaded_inside_the_tinymce_editor_css":["https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/8474fb899c39509f978887304568a161/variables-750d72b9d3e5d522f965bf904110c132.css","https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/new_styles_normal_contrast/bundles/what_gets_loaded_inside_the_tinymce_editor-bb4121d737.css"],"url_for_high_contrast_tinymce_editor_css":["https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/default/variables-high_contrast-750d72b9d3e5d522f965bf904110c132.css","https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/new_styles_high_contrast/bundles/what_gets_loaded_inside_the_tinymce_editor-b61a4bdaa8.css"],"current_user_id":"97","current_user":{"id":"97","display_name":"Sam Ngigi","avatar_image_url":"https://secure.gravatar.com/avatar/480a1c23def404db6a4a6bf1deb1add6?s=50\u0026d=https%3A%2F%2Fmoringaschool.instructure.com%2Fimages%2Fmessages%2Favatar-50.png","html_url":"https://moringaschool.instructure.com/about/97"},"current_user_roles":["user","student"],"current_user_disabled_inbox":false,"files_domain":"cluster58-files.instructure.com","DOMAIN_ROOT_ACCOUNT_ID":118060000000000001,"k12":false,"use_responsive_layout":false,"help_link_name":"Help Desk","help_link_icon":"cog","use_high_contrast":false,"SETTINGS":{"open_registration":false,"eportfolios_enabled":true,"collapse_global_nav":true,"show_feedback_link":true,"enable_profiles":true},"page_view_update_url":"/page_views/aee58bd5-076f-4f0d-839b-d2f8491c943c?page_view_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpIjoiYWVlNThiZDUtMDc2Zi00ZjBkLTgzOWItZDJmODQ5MWM5NDNjIiwidSI6MTE4MDYwMDAwMDAwMDAwMDk3LCJjIjoiMjAxOC0wMS0xNFQwNzoyMDozNS44NloifQ.jqRAGyiyiA8tgOviXjDxGZz-4Zs2p5rJxN_oos9wxts","context_asset_string":"course_22","ping_url":"https://moringaschool.instructure.com/api/v1/courses/22/ping","TIMEZONE":"Africa/Nairobi","CONTEXT_TIMEZONE":"Africa/Nairobi","GRAPHQL_ENABLED":false,"LOCALE":"en-GB","BIGEASY_LOCALE":"en_GB","FULLCALENDAR_LOCALE":"en-gb","MOMENT_LOCALE":"en-gb","WIKI_RIGHTS":{"read":true},"PAGE_RIGHTS":{"read":true},"DEFAULT_EDITING_ROLES":"teachers","WIKI_PAGES_PATH":"/courses/22/pages","WIKI_PAGE":{"title":"Weekend: Input, sys.argv and Control Flow","created_at":"2017-11-25T11:14:21Z","url":"weekend-input-sys-dot-argv-and-control-flow","editing_roles":"teachers","page_id":"419","published":true,"hide_from_students":false,"front_page":false,"html_url":"https://moringaschool.instructure.com/courses/22/pages/weekend-input-sys-dot-argv-and-control-flow","updated_at":"2017-11-25T11:14:21Z","locked_for_user":false,"body":"\u003cdiv id=\"content\"\u003e\r\n\u003ch2\u003ePython Variables\u003c/h2\u003e\r\n\u003cp\u003eVariables are named references to \u003cstrong\u003eobjects\u003c/strong\u003e.\u003c/p\u003e\r\n\u003cp\u003eHere is an example of how we create a variable in Python in the Python shell:\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e\u003cspan class=\"o\"\u003e\u0026gt;\u0026gt;\u0026gt;\u003c/span\u003e \u003cspan class=\"n\"\u003ex\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"mi\"\u003e4\u003c/span\u003e\r\n\u003cspan class=\"o\"\u003e\u0026gt;\u0026gt;\u0026gt;\u003c/span\u003e \u003cspan class=\"n\"\u003ex\u003c/span\u003e\r\n\u003cspan class=\"mi\"\u003e4\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eWe create variables by using the assignment operator \u003ccode\u003e=\u003c/code\u003e . Variables do not store any value, but point to where the value is created in the computer's memory.\u003c/p\u003e\r\n\u003cp\u003e\u003cimg src=\"http://i.imgur.com/ygY7Chc.jpg\" alt=\"Variable referencing\"\u003e\u003c/p\u003e\r\n\u003cp\u003eWhen we equate two variables we are referencing the variables to the same value.\u003c/p\u003e\r\n\u003cp\u003e\u003cimg src=\"http://i.imgur.com/zb1EfxK.jpg\" alt=\"double variable referencing\"\u003e\u003c/p\u003e\r\n\u003cp\u003ePython variables can store values from any data type. Since Python is dynamic in nature we do not have to specify what type of data we are storing.\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e\u003cspan class=\"o\"\u003e\u0026gt;\u0026gt;\u0026gt;\u003c/span\u003e \u003cspan class=\"n\"\u003ex\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"mi\"\u003e12\u003c/span\u003e\r\n\u003cspan class=\"o\"\u003e\u0026gt;\u0026gt;\u0026gt;\u003c/span\u003e \u003cspan class=\"n\"\u003ex\u003c/span\u003e\r\n\u003cspan class=\"mi\"\u003e12\u003c/span\u003e\r\n\u003cspan class=\"o\"\u003e\u0026gt;\u0026gt;\u0026gt;\u003c/span\u003e \u003cspan class=\"n\"\u003ex\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"s2\"\u003e\"Hello\"\u003c/span\u003e\r\n\u003cspan class=\"o\"\u003e\u0026gt;\u0026gt;\u0026gt;\u003c/span\u003e \u003cspan class=\"n\"\u003ex\u003c/span\u003e\r\n\u003cspan class=\"n\"\u003eHello\u003c/span\u003e\r\n\u003cspan class=\"o\"\u003e\u0026gt;\u0026gt;\u0026gt;\u003c/span\u003e \u003cspan class=\"n\"\u003epie\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"mf\"\u003e3.1423\u003c/span\u003e\r\n\u003cspan class=\"o\"\u003e\u0026gt;\u0026gt;\u0026gt;\u003c/span\u003e \u003cspan class=\"n\"\u003epie\u003c/span\u003e\r\n\u003cspan class=\"mf\"\u003e3.1423\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003ch2\u003ePython Modules\u003c/h2\u003e\r\n\u003cp\u003e\u003cimg src=\"http://i.imgur.com/LxjZpFD.jpg\" alt=\"Python Modules\"\u003e\u003c/p\u003e\r\n\u003cp\u003eA Python module is a single executable (can be run or launched) Python file.It contains code to do a particular task and has a \u003ccode\u003e.py\u003c/code\u003e extension.\u003c/p\u003e\r\n\u003cp\u003eLet us create this on our desktops. Create a folder and name it \u003cem\u003eMS-Python-Pre-work\u003c/em\u003e. Create a new file and name it \u003cem\u003emodule_test.py\u003c/em\u003e. Open Atom and type in the following:\u003c/p\u003e\r\n\u003cp\u003e\u003cstrong\u003emodule_test.py\u003c/strong\u003e\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e\u003cspan class=\"n\"\u003egreeting\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"s2\"\u003e\"Hello\"\u003c/span\u003e\r\n\u003cspan class=\"n\"\u003eschool\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"s2\"\u003e\"Moringa\"\u003c/span\u003e\r\n\r\n\u003cspan class=\"k\"\u003eprint\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"n\"\u003egreeting\u003c/span\u003e \u003cspan class=\"o\"\u003e+\u003c/span\u003e \u003cspan class=\"s2\"\u003e\", \"\u003c/span\u003e \u003cspan class=\"o\"\u003e+\u003c/span\u003e \u003cspan class=\"n\"\u003eschool\u003c/span\u003e \u003cspan class=\"o\"\u003e+\u003c/span\u003e \u003cspan class=\"s2\"\u003e\"!\"\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eTo execute this code, navigate to the project folder in the console (where \u003cem\u003emodule_test.py\u003c/em\u003e is located) and run the following command:\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e$ python3.6 module_test.py\r\nHello, Moringa!\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eWe type in \u003ccode\u003epython3.6\u003c/code\u003e then the name of the file \u003ccode\u003emodule_test.py\u003c/code\u003e. The code is immediately executed and we get our output as \u003ccode\u003eHello, Moringa!\u003c/code\u003e\u003c/p\u003e\r\n\u003cp\u003eA Python program is a collection of modules that are linked to perform a particular function.\u003c/p\u003e\r\n\u003ch2\u003eImport\u003c/h2\u003e\r\n\u003cp\u003ePython comes with a lot of pre-written code in for of \u003cstrong\u003emodules\u003c/strong\u003e and \u003cstrong\u003epackages\u003c/strong\u003e.\u003c/p\u003e\r\n\u003col\u003e\r\n\u003cli\u003eA module is a single Python file that contains code to do a particular task.\u003c/li\u003e\r\n\u003cli\u003eA package is made up of one or more modules that are joined to perform a particular task.\u003c/li\u003e\r\n\u003c/ol\u003e\r\n\u003cp\u003eModules and packages belong to Python's standard library. They extend Python's functionality, and it is important to learn how to use them.\u003c/p\u003e\r\n\u003cp\u003eTo use these packages or modules we use the \u003ccode\u003eimport\u003c/code\u003e keyword. Let us create a new Python file and name it \u003cem\u003eexample.py\u003c/em\u003e.\u003c/p\u003e\r\n\u003cp\u003eAdd the following line to the file:\u003c/p\u003e\r\n\u003cp\u003e\u003cstrong\u003eexample.py\u003c/strong\u003e\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e\u003cspan class=\"kn\"\u003eimport\u003c/span\u003e \u003cspan class=\"nn\"\u003ethis\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eNow let's run the file from the terminal:\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e$ python3.6 example.py\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eAnd this will print to the console:\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e\u003cspan class=\"n\"\u003eThe\u003c/span\u003e \u003cspan class=\"n\"\u003eZen\u003c/span\u003e \u003cspan class=\"n\"\u003eof\u003c/span\u003e \u003cspan class=\"n\"\u003ePython\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e \u003cspan class=\"n\"\u003eby\u003c/span\u003e \u003cspan class=\"n\"\u003eTim\u003c/span\u003e \u003cspan class=\"n\"\u003ePeters\u003c/span\u003e\r\n\r\n\u003cspan class=\"n\"\u003eBeautiful\u003c/span\u003e \u003cspan class=\"ow\"\u003eis\u003c/span\u003e \u003cspan class=\"n\"\u003ebetter\u003c/span\u003e \u003cspan class=\"n\"\u003ethan\u003c/span\u003e \u003cspan class=\"n\"\u003eugly\u003c/span\u003e\u003cspan class=\"o\"\u003e.\u003c/span\u003e\r\n\u003cspan class=\"n\"\u003eExplicit\u003c/span\u003e \u003cspan class=\"ow\"\u003eis\u003c/span\u003e \u003cspan class=\"n\"\u003ebetter\u003c/span\u003e \u003cspan class=\"n\"\u003ethan\u003c/span\u003e \u003cspan class=\"n\"\u003eimplicit\u003c/span\u003e\u003cspan class=\"o\"\u003e.\u003c/span\u003e\r\n\u003cspan class=\"n\"\u003eSimple\u003c/span\u003e \u003cspan class=\"ow\"\u003eis\u003c/span\u003e \u003cspan class=\"n\"\u003ebetter\u003c/span\u003e \u003cspan class=\"n\"\u003ethan\u003c/span\u003e \u003cspan class=\"nb\"\u003ecomplex\u003c/span\u003e\u003cspan class=\"o\"\u003e.\u003c/span\u003e\r\n\u003cspan class=\"n\"\u003eComplex\u003c/span\u003e \u003cspan class=\"ow\"\u003eis\u003c/span\u003e \u003cspan class=\"n\"\u003ebetter\u003c/span\u003e \u003cspan class=\"n\"\u003ethan\u003c/span\u003e \u003cspan class=\"n\"\u003ecomplicated\u003c/span\u003e\u003cspan class=\"o\"\u003e.\u003c/span\u003e\r\n\u003cspan class=\"n\"\u003eFlat\u003c/span\u003e \u003cspan class=\"ow\"\u003eis\u003c/span\u003e \u003cspan class=\"n\"\u003ebetter\u003c/span\u003e \u003cspan class=\"n\"\u003ethan\u003c/span\u003e \u003cspan class=\"n\"\u003enested\u003c/span\u003e\u003cspan class=\"o\"\u003e.\u003c/span\u003e\r\n\u003cspan class=\"n\"\u003eSparse\u003c/span\u003e \u003cspan class=\"ow\"\u003eis\u003c/span\u003e \u003cspan class=\"n\"\u003ebetter\u003c/span\u003e \u003cspan class=\"n\"\u003ethan\u003c/span\u003e \u003cspan class=\"n\"\u003edense\u003c/span\u003e\u003cspan class=\"o\"\u003e.\u003c/span\u003e\r\n\u003cspan class=\"n\"\u003eReadability\u003c/span\u003e \u003cspan class=\"n\"\u003ecounts\u003c/span\u003e\u003cspan class=\"o\"\u003e.\u003c/span\u003e\r\n\u003cspan class=\"n\"\u003eSpecial\u003c/span\u003e \u003cspan class=\"n\"\u003ecases\u003c/span\u003e \u003cspan class=\"n\"\u003earen\u003c/span\u003e\u003cspan class=\"s1\"\u003e't special enough to break the rules.\u003c/span\u003e\r\n\u003cspan class=\"n\"\u003eAlthough\u003c/span\u003e \u003cspan class=\"n\"\u003epracticality\u003c/span\u003e \u003cspan class=\"n\"\u003ebeats\u003c/span\u003e \u003cspan class=\"n\"\u003epurity\u003c/span\u003e\u003cspan class=\"o\"\u003e.\u003c/span\u003e\r\n\u003cspan class=\"n\"\u003eErrors\u003c/span\u003e \u003cspan class=\"n\"\u003eshould\u003c/span\u003e \u003cspan class=\"n\"\u003enever\u003c/span\u003e \u003cspan class=\"k\"\u003epass\u003c/span\u003e \u003cspan class=\"n\"\u003esilently\u003c/span\u003e\u003cspan class=\"o\"\u003e.\u003c/span\u003e\r\n\u003cspan class=\"n\"\u003eUnless\u003c/span\u003e \u003cspan class=\"n\"\u003eexplicitly\u003c/span\u003e \u003cspan class=\"n\"\u003esilenced\u003c/span\u003e\u003cspan class=\"o\"\u003e.\u003c/span\u003e\r\n\u003cspan class=\"n\"\u003eIn\u003c/span\u003e \u003cspan class=\"n\"\u003ethe\u003c/span\u003e \u003cspan class=\"n\"\u003eface\u003c/span\u003e \u003cspan class=\"n\"\u003eof\u003c/span\u003e \u003cspan class=\"n\"\u003eambiguity\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e \u003cspan class=\"n\"\u003erefuse\u003c/span\u003e \u003cspan class=\"n\"\u003ethe\u003c/span\u003e \u003cspan class=\"n\"\u003etemptation\u003c/span\u003e \u003cspan class=\"n\"\u003eto\u003c/span\u003e \u003cspan class=\"n\"\u003eguess\u003c/span\u003e\u003cspan class=\"o\"\u003e.\u003c/span\u003e\r\n\u003cspan class=\"n\"\u003eThere\u003c/span\u003e \u003cspan class=\"n\"\u003eshould\u003c/span\u003e \u003cspan class=\"n\"\u003ebe\u003c/span\u003e \u003cspan class=\"n\"\u003eone\u003c/span\u003e\u003cspan class=\"o\"\u003e--\u003c/span\u003e \u003cspan class=\"ow\"\u003eand\u003c/span\u003e \u003cspan class=\"n\"\u003epreferably\u003c/span\u003e \u003cspan class=\"n\"\u003eonly\u003c/span\u003e \u003cspan class=\"n\"\u003eone\u003c/span\u003e \u003cspan class=\"o\"\u003e--\u003c/span\u003e\u003cspan class=\"n\"\u003eobvious\u003c/span\u003e \u003cspan class=\"n\"\u003eway\u003c/span\u003e \u003cspan class=\"n\"\u003eto\u003c/span\u003e \u003cspan class=\"n\"\u003edo\u003c/span\u003e \u003cspan class=\"n\"\u003eit\u003c/span\u003e\u003cspan class=\"o\"\u003e.\u003c/span\u003e\r\n\u003cspan class=\"n\"\u003eAlthough\u003c/span\u003e \u003cspan class=\"n\"\u003ethat\u003c/span\u003e \u003cspan class=\"n\"\u003eway\u003c/span\u003e \u003cspan class=\"n\"\u003emay\u003c/span\u003e \u003cspan class=\"ow\"\u003enot\u003c/span\u003e \u003cspan class=\"n\"\u003ebe\u003c/span\u003e \u003cspan class=\"n\"\u003eobvious\u003c/span\u003e \u003cspan class=\"n\"\u003eat\u003c/span\u003e \u003cspan class=\"n\"\u003efirst\u003c/span\u003e \u003cspan class=\"n\"\u003eunless\u003c/span\u003e \u003cspan class=\"n\"\u003eyou\u003c/span\u003e\u003cspan class=\"s1\"\u003e're Dutch.\u003c/span\u003e\r\n\u003cspan class=\"n\"\u003eNow\u003c/span\u003e \u003cspan class=\"ow\"\u003eis\u003c/span\u003e \u003cspan class=\"n\"\u003ebetter\u003c/span\u003e \u003cspan class=\"n\"\u003ethan\u003c/span\u003e \u003cspan class=\"n\"\u003enever\u003c/span\u003e\u003cspan class=\"o\"\u003e.\u003c/span\u003e\r\n\u003cspan class=\"n\"\u003eAlthough\u003c/span\u003e \u003cspan class=\"n\"\u003enever\u003c/span\u003e \u003cspan class=\"ow\"\u003eis\u003c/span\u003e \u003cspan class=\"n\"\u003eoften\u003c/span\u003e \u003cspan class=\"n\"\u003ebetter\u003c/span\u003e \u003cspan class=\"n\"\u003ethan\u003c/span\u003e \u003cspan class=\"o\"\u003e*\u003c/span\u003e\u003cspan class=\"n\"\u003eright\u003c/span\u003e\u003cspan class=\"o\"\u003e*\u003c/span\u003e \u003cspan class=\"n\"\u003enow\u003c/span\u003e\u003cspan class=\"o\"\u003e.\u003c/span\u003e\r\n\u003cspan class=\"n\"\u003eIf\u003c/span\u003e \u003cspan class=\"n\"\u003ethe\u003c/span\u003e \u003cspan class=\"n\"\u003eimplementation\u003c/span\u003e \u003cspan class=\"ow\"\u003eis\u003c/span\u003e \u003cspan class=\"n\"\u003ehard\u003c/span\u003e \u003cspan class=\"n\"\u003eto\u003c/span\u003e \u003cspan class=\"n\"\u003eexplain\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e \u003cspan class=\"n\"\u003eit\u003c/span\u003e\u003cspan class=\"s1\"\u003e's a bad idea.\u003c/span\u003e\r\n\u003cspan class=\"n\"\u003eIf\u003c/span\u003e \u003cspan class=\"n\"\u003ethe\u003c/span\u003e \u003cspan class=\"n\"\u003eimplementation\u003c/span\u003e \u003cspan class=\"ow\"\u003eis\u003c/span\u003e \u003cspan class=\"n\"\u003eeasy\u003c/span\u003e \u003cspan class=\"n\"\u003eto\u003c/span\u003e \u003cspan class=\"n\"\u003eexplain\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e \u003cspan class=\"n\"\u003eit\u003c/span\u003e \u003cspan class=\"n\"\u003emay\u003c/span\u003e \u003cspan class=\"n\"\u003ebe\u003c/span\u003e \u003cspan class=\"n\"\u003ea\u003c/span\u003e \u003cspan class=\"n\"\u003egood\u003c/span\u003e \u003cspan class=\"n\"\u003eidea\u003c/span\u003e\u003cspan class=\"o\"\u003e.\u003c/span\u003e\r\n\u003cspan class=\"n\"\u003eNamespaces\u003c/span\u003e \u003cspan class=\"n\"\u003eare\u003c/span\u003e \u003cspan class=\"n\"\u003eone\u003c/span\u003e \u003cspan class=\"n\"\u003ehonking\u003c/span\u003e \u003cspan class=\"n\"\u003egreat\u003c/span\u003e \u003cspan class=\"n\"\u003eidea\u003c/span\u003e \u003cspan class=\"o\"\u003e--\u003c/span\u003e \u003cspan class=\"n\"\u003elet\u003c/span\u003e\u003cspan class=\"s1\"\u003e's do more of those!\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eThis is known as the \u003ccode\u003eZen of Python\u003c/code\u003e. t doesn't do much, but it is a nice way to show you how to import modules.\u003c/p\u003e\r\n\u003ch3\u003e\n\u003ccode\u003emath\u003c/code\u003e Module\u003c/h3\u003e\r\n\u003cp\u003eLet us look at a more useful module, named \u003ccode\u003emath\u003c/code\u003e. Replace the contents of \u003cem\u003eexample.py\u003c/em\u003e with the following code:\u003c/p\u003e\r\n\u003cp\u003e\u003cstrong\u003eexample.py\u003c/strong\u003e\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e\u003cspan class=\"kn\"\u003eimport\u003c/span\u003e \u003cspan class=\"nn\"\u003emath\u003c/span\u003e\r\n\r\n\u003cspan class=\"n\"\u003ex\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"n\"\u003emath\u003c/span\u003e\u003cspan class=\"o\"\u003e.\u003c/span\u003e\u003cspan class=\"n\"\u003esqrt\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"mi\"\u003e9\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e\r\n\u003cspan class=\"k\"\u003eprint\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"n\"\u003ex\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e\r\n\r\n\u003cspan class=\"n\"\u003ey\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"n\"\u003emath\u003c/span\u003e\u003cspan class=\"o\"\u003e.\u003c/span\u003e\u003cspan class=\"n\"\u003eceil\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"n\"\u003ex\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e\r\n\u003cspan class=\"k\"\u003eprint\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"n\"\u003ey\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eLet's run it:\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e$ python3.6 example.py\r\n\u003cspan class=\"m\"\u003e3\u003c/span\u003e.0\r\n\u003cspan class=\"m\"\u003e3\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eHere, we import the \u003ccode\u003emath\u003c/code\u003e module. The \u003ccode\u003emath\u003c/code\u003e module comes with a lot of built-in methods, and we've used a couple of them here: the \u003ccode\u003esqrt()\u003c/code\u003e method to find the square root of 9 (3.0), which we represent with the variable \u003ccode\u003ex\u003c/code\u003e; and the \u003ccode\u003eceil()\u003c/code\u003e method to round up \u003ccode\u003ex\u003c/code\u003e (3).\u003c/p\u003e\r\n\u003cp\u003eThe syntax to use when we use module methods is \u003ccode\u003emodule_name.method_name(arguments)\u003c/code\u003e, where \u003ccode\u003emodule_name\u003c/code\u003e is the name of the module (\u003ccode\u003emath\u003c/code\u003e in this case) and \u003ccode\u003emethod_name\u003c/code\u003e is the name of the method (we've used \u003ccode\u003esqrt()\u003c/code\u003e and \u003ccode\u003eciel()\u003c/code\u003e).\u003c/p\u003e\r\n\u003ch4\u003e\n\u003ccode\u003efrom\u003c/code\u003e Keyword\u003c/h4\u003e\r\n\u003cp\u003eYou can also import a module method directly using the keyword \u003ccode\u003efrom\u003c/code\u003e. Try this out in \u003cem\u003eexample.py\u003c/em\u003e:\u003c/p\u003e\r\n\u003cp\u003e\u003cstrong\u003eexample.py\u003c/strong\u003e\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e\u003cspan class=\"kn\"\u003efrom\u003c/span\u003e \u003cspan class=\"nn\"\u003emath\u003c/span\u003e \u003cspan class=\"kn\"\u003eimport\u003c/span\u003e \u003cspan class=\"n\"\u003esqrt\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"n\"\u003eceil\u003c/span\u003e\r\n\r\n\u003cspan class=\"n\"\u003ex\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"n\"\u003esqrt\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"mi\"\u003e9\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e\r\n\u003cspan class=\"k\"\u003eprint\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"n\"\u003ex\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e\r\n\r\n\u003cspan class=\"n\"\u003ey\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"n\"\u003eceil\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"n\"\u003ex\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e\r\n\u003cspan class=\"k\"\u003eprint\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"n\"\u003ey\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e\r\n\r\n\u003cspan class=\"mf\"\u003e3.0\u003c/span\u003e\r\n\u003cspan class=\"mi\"\u003e3\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eNotice here that the syntax changes: we were able to use \u003ccode\u003esqrt()\u003c/code\u003e and \u003ccode\u003eciel()\u003c/code\u003e without typing \u003ccode\u003emath\u003c/code\u003e first. When we use the \u003ccode\u003efrom\u003c/code\u003e keyword, we can use the method name directly without referencing the module.\u003c/p\u003e\r\n\u003ch3\u003e\n\u003ccode\u003erandom\u003c/code\u003e Module\u003c/h3\u003e\r\n\u003cp\u003eLet us use another fun module called \u003cstrong\u003erandom\u003c/strong\u003e. Replace the contents of \u003cem\u003eexample.py\u003c/em\u003e with the following code:\u003c/p\u003e\r\n\u003cp\u003e\u003cstrong\u003eexample.py\u003c/strong\u003e\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e\u003cspan class=\"kn\"\u003eimport\u003c/span\u003e \u003cspan class=\"nn\"\u003erandom\u003c/span\u003e\r\n\r\n\u003cspan class=\"c1\"\u003e# We can generate a random number using the randint method\u003c/span\u003e\r\n\r\n\u003cspan class=\"n\"\u003erandom_number\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"n\"\u003erandom\u003c/span\u003e\u003cspan class=\"o\"\u003e.\u003c/span\u003e\u003cspan class=\"n\"\u003erandint\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"mi\"\u003e0\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"mi\"\u003e10\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e\r\n\r\n\u003cspan class=\"k\"\u003eprint\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"n\"\u003erandom_number\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eHere used the \u003ccode\u003eimport\u003c/code\u003e keyword, to get the random module. From the module we used its \u003ccode\u003erandint()\u003c/code\u003e method and passed in two parameters to define the range of values from which Python will choose a random number (in our example, 0 is the low end of the range and 10 is the high end). When we run the file, it returns a random number, from the range provided by the parameters.\u003c/p\u003e\r\n\u003cp\u003eNow let's run it a few times:\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e$ python3.6 example.py\r\n\u003cspan class=\"m\"\u003e4\u003c/span\u003e\r\n$ python3.6 example.py\r\n\u003cspan class=\"m\"\u003e0\u003c/span\u003e\r\n$ python3.6 example.py\r\n\u003cspan class=\"m\"\u003e7\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eThe output on your console may look different, but the thing to note here is that it's generating a different value each time we run \u003cem\u003eexample.py\u003c/em\u003e. We have the \u003ccode\u003erandom\u003c/code\u003e module to thank for that.\u003c/p\u003e\r\n\u003ch3\u003eInput Exercise\u003c/h3\u003e\r\n\u003ch4\u003eCircumference Calculation\u003c/h4\u003e\r\n\u003cp\u003eWrite a program that calculates the circumference of a wheel. The formula is C=2πr, where π is the value 3.14 and \u003ccode\u003er\u003c/code\u003e is the radius of the circle.\u003c/p\u003e\r\n\u003cp\u003eTo take this a step further, let the radius of the circle be a random integer generated by the \u003ccode\u003erandom\u003c/code\u003e module.\u003c/p\u003e\r\n\u003ch2\u003eInput and\u003cspan\u003e \u003c/span\u003e\u003ccode\u003esys.argv\u003c/code\u003e\n\u003c/h2\u003e\r\n\u003cp\u003eIn our applications, we have basically been typing out values to everything in our code. Now let us explore a different way to obtain data into our application by configuring user input.\u003c/p\u003e\r\n\u003ch3\u003e\n\u003ccode\u003einput()\u003c/code\u003e\u003cspan\u003e \u003c/span\u003efunction\u003c/h3\u003e\r\n\u003cp\u003eThe\u003cspan\u003e \u003c/span\u003e\u003ccode\u003einput()\u003c/code\u003e\u003cspan\u003e \u003c/span\u003efunction is called inside our Python application and prompts the user to pass in an input, which is stored as a string.\u003c/p\u003e\r\n\u003cp\u003eLet us create a new folder in our\u003cspan\u003e \u003c/span\u003e\u003cem\u003eMS-Python-Pre-work\u003c/em\u003e\u003cspan\u003e \u003c/span\u003edirectory called\u003cspan\u003e \u003c/span\u003e\u003cem\u003eInput\u003c/em\u003e, and create a new file\u003cspan\u003e \u003c/span\u003e\u003cem\u003einput_demo.py\u003c/em\u003e\u003cspan\u003e \u003c/span\u003eand type in this:\u003c/p\u003e\r\n\u003cp\u003e\u003cstrong\u003einput_demo.py\u003c/strong\u003e\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e\u003cspan class=\"k\"\u003eprint\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"s2\"\u003e\"What is your name?\"\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e\r\n\u003cspan class=\"n\"\u003ename\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"nb\"\u003einput\u003c/span\u003e\u003cspan class=\"p\"\u003e()\u003c/span\u003e\r\n\r\n\u003cspan class=\"k\"\u003eprint\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"s2\"\u003e\"How old are you?\"\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e\r\n\u003cspan class=\"n\"\u003eage\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"nb\"\u003eint\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"nb\"\u003einput\u003c/span\u003e\u003cspan class=\"p\"\u003e())\u003c/span\u003e\r\n\r\n\u003cspan class=\"k\"\u003eprint\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"n\"\u003ename\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e\r\n\u003cspan class=\"k\"\u003eprint\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"n\"\u003eage\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eWe then run the file:\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e$ python3.6 input_demo.py\r\n\u003cspan class=\"s2\"\u003e\"What is your name?\"\u003c/span\u003e\r\nJames\r\n\u003cspan class=\"s2\"\u003e\"How old are you?\"\u003c/span\u003e\r\n\u003cspan class=\"m\"\u003e19\u003c/span\u003e\r\n\r\nJames\r\n\u003cspan class=\"m\"\u003e19\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eHere we are prompting the user for their name and age, and storing them in variables. Since\u003cspan\u003e \u003c/span\u003e\u003ccode\u003eage\u003c/code\u003e\u003cspan\u003e \u003c/span\u003eis a number, we used the\u003cspan\u003e \u003c/span\u003e\u003ccode\u003eint()\u003c/code\u003e\u003cspan\u003e \u003c/span\u003efunction to convert it to an integer.\u003c/p\u003e\r\n\u003ch3\u003eUsing the\u003cspan\u003e \u003c/span\u003e\u003ccode\u003esys\u003c/code\u003e\u003cspan\u003e \u003c/span\u003eModule\u003c/h3\u003e\r\n\u003cp\u003eThe\u003cspan\u003e \u003c/span\u003e\u003ccode\u003esys\u003c/code\u003e\u003cspan\u003e \u003c/span\u003emodule provides variables used or maintained by the interpreter. It has the list\u003cspan\u003e \u003c/span\u003e\u003ccode\u003esys.argv\u003c/code\u003e, which contains the arguments passed into the command line when running the command to execute the program. Let's see how to use\u003cspan\u003e \u003c/span\u003e\u003ccode\u003esys.argv\u003c/code\u003e\u003cspan\u003e \u003c/span\u003eto take input from the command line. Open up\u003cspan\u003e \u003c/span\u003e\u003cem\u003einput_demo.py\u003c/em\u003e\u003cspan\u003e \u003c/span\u003eand replace the contents this code:\u003c/p\u003e\r\n\u003cp\u003e\u003cstrong\u003einput_demo.py\u003c/strong\u003e\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e\u003cspan class=\"kn\"\u003eimport\u003c/span\u003e \u003cspan class=\"nn\"\u003esys\u003c/span\u003e\r\n\r\n\u003cspan class=\"n\"\u003ename\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"n\"\u003esys\u003c/span\u003e\u003cspan class=\"o\"\u003e.\u003c/span\u003e\u003cspan class=\"n\"\u003eargv\u003c/span\u003e\u003cspan class=\"p\"\u003e[\u003c/span\u003e\u003cspan class=\"mi\"\u003e1\u003c/span\u003e\u003cspan class=\"p\"\u003e]\u003c/span\u003e\r\n\r\n\u003cspan class=\"k\"\u003eprint\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"s2\"\u003e\"How old are you?\"\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e\r\n\u003cspan class=\"n\"\u003eage\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"nb\"\u003eint\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"nb\"\u003einput\u003c/span\u003e\u003cspan class=\"p\"\u003e())\u003c/span\u003e\r\n\r\n\u003cspan class=\"k\"\u003eprint\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"n\"\u003ename\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e\r\n\u003cspan class=\"k\"\u003eprint\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"n\"\u003eage\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eNow let's run the file:\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e$ python3.6 input_demo.py James\r\n\u003cspan class=\"s2\"\u003e\"How old are you?\"\u003c/span\u003e\r\n\u003cspan class=\"m\"\u003e19\u003c/span\u003e\r\n\r\nJames\r\n\u003cspan class=\"m\"\u003e19\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eHere we have first imported the\u003cspan\u003e \u003c/span\u003e\u003ccode\u003esys\u003c/code\u003e\u003cspan\u003e \u003c/span\u003emodule so that we could use\u003cspan\u003e \u003c/span\u003e\u003ccode\u003esys.argv\u003c/code\u003e\u003cspan\u003e \u003c/span\u003eto store user input from the console and store it in a list. This is different from the previous example, where we used prompts along with\u003cspan\u003e \u003c/span\u003e\u003ccode\u003einput()\u003c/code\u003e\u003cspan\u003e \u003c/span\u003eto get the name of our user. Notice that we entered our name as the second argument of the command where we executed the program (the first argument was\u003cspan\u003e \u003c/span\u003e\u003ccode\u003einput_demo.py\u003c/code\u003e):\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e$ python3.6 input_demo.py James\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eSince\u003cspan\u003e \u003c/span\u003e\u003ccode\u003esys.argv\u003c/code\u003e\u003cspan\u003e \u003c/span\u003ereturns a list, we used\u003cspan\u003e \u003c/span\u003e\u003ccode\u003esys.argv[1]\u003c/code\u003e\u003cspan\u003e \u003c/span\u003ein\u003cspan\u003e \u003c/span\u003e\u003cem\u003einput_demo.py\u003c/em\u003e\u003cspan\u003e \u003c/span\u003eto retrieve this value - this simply tells our application to pick the argument at index 1 when our application is run and store it as variable\u003cspan\u003e \u003c/span\u003e\u003ccode\u003ename\u003c/code\u003e.\u003c/p\u003e\r\n\u003cp\u003eWe can pass multiple arguments when we run our application:\u003c/p\u003e\r\n\u003cp\u003e\u003cstrong\u003einput_demo.py\u003c/strong\u003e\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e\u003cspan class=\"kn\"\u003eimport\u003c/span\u003e \u003cspan class=\"nn\"\u003esys\u003c/span\u003e\r\n\r\n\u003cspan class=\"n\"\u003ename\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"n\"\u003esys\u003c/span\u003e\u003cspan class=\"o\"\u003e.\u003c/span\u003e\u003cspan class=\"n\"\u003eargv\u003c/span\u003e\u003cspan class=\"p\"\u003e[\u003c/span\u003e\u003cspan class=\"mi\"\u003e1\u003c/span\u003e\u003cspan class=\"p\"\u003e]\u003c/span\u003e\r\n\u003cspan class=\"n\"\u003eage\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"n\"\u003esys\u003c/span\u003e\u003cspan class=\"o\"\u003e.\u003c/span\u003e\u003cspan class=\"n\"\u003eargv\u003c/span\u003e\u003cspan class=\"p\"\u003e[\u003c/span\u003e\u003cspan class=\"mi\"\u003e2\u003c/span\u003e\u003cspan class=\"p\"\u003e]\u003c/span\u003e\r\n\r\n\u003cspan class=\"k\"\u003eprint\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"n\"\u003ename\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e\r\n\u003cspan class=\"k\"\u003eprint\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"n\"\u003eage\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eWe then run the file with the necessary arguments:\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e$ python3.6 input_demo.py James \u003cspan class=\"m\"\u003e19\u003c/span\u003e\r\nJames\r\n\u003cspan class=\"m\"\u003e19\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eHere we pick both the\u003cspan\u003e \u003c/span\u003e\u003ccode\u003ename\u003c/code\u003e\u003cspan\u003e \u003c/span\u003eand\u003cspan\u003e \u003c/span\u003e\u003ccode\u003eage\u003c/code\u003e\u003cspan\u003e \u003c/span\u003efrom the command line arguments passed.\u003c/p\u003e\r\n\u003ch3\u003eInput and Type Casting Exercises\u003c/h3\u003e\r\n\u003ch4\u003eBirthday dates\u003c/h4\u003e\r\n\u003cp\u003eCreate a program where you prompt a user for their age and return the year they were born.\u003c/p\u003e\r\n\u003cp\u003eAfter that, return the year they will turn 80.\u003c/p\u003e\r\n\u003ch4\u003eTip Calculator\u003c/h4\u003e\r\n\u003cp\u003eCreate a program that lets the user input their total bill at a restaurant, and returns the total cost of the bill including a tip. Use 15% of the total bill as the tip calculation.\u003c/p\u003e\r\n\u003cp\u003eFor example, if the total bill is KSh 1000, the tip is 0.15 * 1000 = KSh 150, so the total cost of the bill returned to the user is 1000 + 150 = KSh 1150.\u003c/p\u003e\r\n\u003cp\u003eOnce you're finished, take this a step further and let the user enter their level of satisfaction with their service and factor that value into the tip percentage. For example, if they received good service, the tip is 15%; great service is 20%; terrible service is 0%.\u003c/p\u003e\r\n\u003ch2\u003eControl Flow\u003c/h2\u003e\r\n\u003cp\u003eUp to now our applications haven't been that interesting. Let us add some logic to our applications.\u003c/p\u003e\r\n\u003ch3\u003e\n\u003ccode\u003eif\u003c/code\u003e\u003cspan\u003e \u003c/span\u003estatements\u003c/h3\u003e\r\n\u003cp\u003eAn\u003cspan\u003e \u003c/span\u003e\u003ccode\u003eif\u003c/code\u003e\u003cspan\u003e \u003c/span\u003estatement runs only when the condition passed to it evaluates to true. Let's experiment with this in\u003cspan\u003e \u003c/span\u003e\u003cem\u003einput_demo.py\u003c/em\u003e.\u003c/p\u003e\r\n\u003cp\u003e\u003cstrong\u003einput_demo.py\u003c/strong\u003e\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e\u003cspan class=\"n\"\u003eheight\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"mi\"\u003e74\u003c/span\u003e \u003cspan class=\"c1\"\u003e# The unit is inches\u003c/span\u003e\r\n\u003cspan class=\"k\"\u003eif\u003c/span\u003e \u003cspan class=\"n\"\u003eheight\u003c/span\u003e \u003cspan class=\"o\"\u003e\u0026gt;\u003c/span\u003e \u003cspan class=\"mi\"\u003e70\u003c/span\u003e \u003cspan class=\"p\"\u003e:\u003c/span\u003e\r\n    \u003cspan class=\"k\"\u003eprint\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"s2\"\u003e\"You are really tall\"\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eRun the file in the console:\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e$ python3.6 input_demo.py\r\nYou are really tall\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eSince\u003cspan\u003e \u003c/span\u003e\u003ccode\u003eheight\u003c/code\u003e\u003cspan\u003e \u003c/span\u003eis above 70, the\u003cspan\u003e \u003c/span\u003e\u003ccode\u003eif\u003c/code\u003e\u003cspan\u003e \u003c/span\u003estatement will be called and it will print out the statement. This syntax differs from other programming languages like JavaScript which use curly braces (\u003ccode\u003e{}\u003c/code\u003e\u003cspan\u003e \u003c/span\u003e)to hold blocks of code, such as this example:\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e\u003cspan class=\"kd\"\u003evar\u003c/span\u003e \u003cspan class=\"nx\"\u003eheight\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"mi\"\u003e74\u003c/span\u003e\r\n\u003cspan class=\"k\"\u003eif\u003c/span\u003e \u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"nx\"\u003eheight\u003c/span\u003e \u003cspan class=\"o\"\u003e\u0026gt;\u003c/span\u003e \u003cspan class=\"mi\"\u003e70\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e \u003cspan class=\"p\"\u003e{\u003c/span\u003e\r\n  \u003cspan class=\"nx\"\u003econsole\u003c/span\u003e\u003cspan class=\"p\"\u003e.\u003c/span\u003e\u003cspan class=\"nx\"\u003elog\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"s2\"\u003e\"You are really tall\"\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e\r\n\u003cspan class=\"p\"\u003e}\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003ePython uses\u003cspan\u003e \u003c/span\u003e\u003cstrong\u003eindents\u003c/strong\u003e. Indents are just four spaces we give to our application to define blocks of code. If we don't indent blocks of our code, we get an\u003cspan\u003e \u003c/span\u003e\u003cstrong\u003eIndentationError\u003c/strong\u003e\u003cspan\u003e \u003c/span\u003eand our program won't run.\u003c/p\u003e\r\n\u003ch4\u003eComparison Operators\u003c/h4\u003e\r\n\u003cp\u003eLet us look at some of the comparison operators we will be using in Python\u003c/p\u003e\r\n\u003cul\u003e\r\n\u003cli\u003e\n\u003ccode\u003e\u0026gt;\u003c/code\u003e\u003cspan\u003e \u003c/span\u003eGreater than\u003c/li\u003e\r\n\u003cli\u003e\n\u003ccode\u003e\u0026lt;\u003c/code\u003e\u003cspan\u003e \u003c/span\u003eLess than\u003c/li\u003e\r\n\u003cli\u003e\n\u003ccode\u003e==\u003c/code\u003eEqual to\u003c/li\u003e\r\n\u003cli\u003e\n\u003ccode\u003e!=\u003c/code\u003enot equal to\u003c/li\u003e\r\n\u003cli\u003e\n\u003ccode\u003e\u0026gt;=\u003c/code\u003e\u003cspan\u003e \u003c/span\u003eGreater than or equal to\u003c/li\u003e\r\n\u003cli\u003e\n\u003ccode\u003e\u0026lt;=\u003c/code\u003eLess than or Equal to\u003c/li\u003e\r\n\u003cli\u003e\n\u003ccode\u003eand\u003c/code\u003e\u003cspan\u003e \u003c/span\u003eChecks if both conditions evaluate to true\u003c/li\u003e\r\n\u003cli\u003e\n\u003ccode\u003eor\u003c/code\u003e\u003cspan\u003e \u003c/span\u003eChecks if at least one condition is true\u003c/li\u003e\r\n\u003cli\u003e\n\u003ccode\u003enot\u003c/code\u003e\u003cspan\u003e \u003c/span\u003ereturns the opposite of the condition given\u003c/li\u003e\r\n\u003c/ul\u003e\r\n\u003ch3\u003e\u003ccode\u003eelse\u003c/code\u003e\u003c/h3\u003e\r\n\u003cp\u003eThe\u003cspan\u003e \u003c/span\u003e\u003ccode\u003eelse\u003c/code\u003e\u003cspan\u003e \u003c/span\u003estatement comes right at the end of the\u003cspan\u003e \u003c/span\u003e\u003ccode\u003eif\u003c/code\u003e\u003cspan\u003e \u003c/span\u003estatement. It is run only when the\u003cspan\u003e \u003c/span\u003e\u003ccode\u003eif\u003c/code\u003e\u003cspan\u003e \u003c/span\u003estatement evaluates to\u003cspan\u003e \u003c/span\u003e\u003ccode\u003eFalse\u003c/code\u003e. Let's add an\u003cspan\u003e \u003c/span\u003e\u003ccode\u003eelse\u003c/code\u003e\u003cspan\u003e \u003c/span\u003estatement to our example program:\u003c/p\u003e\r\n\u003cp\u003e\u003cstrong\u003einput_example.py\u003c/strong\u003e\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e\u003cspan class=\"n\"\u003eheight\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"mi\"\u003e54\u003c/span\u003e \u003cspan class=\"c1\"\u003e# inches\u003c/span\u003e\r\n\u003cspan class=\"k\"\u003eif\u003c/span\u003e \u003cspan class=\"n\"\u003eheight\u003c/span\u003e \u003cspan class=\"o\"\u003e\u0026gt;\u003c/span\u003e \u003cspan class=\"mi\"\u003e70\u003c/span\u003e \u003cspan class=\"p\"\u003e:\u003c/span\u003e\r\n    \u003cspan class=\"k\"\u003eprint\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"s2\"\u003e\"You are really tall\"\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e\r\n\u003cspan class=\"k\"\u003eelse\u003c/span\u003e\u003cspan class=\"p\"\u003e:\u003c/span\u003e\r\n    \u003cspan class=\"k\"\u003eprint\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"s2\"\u003e\"You are really short\"\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eNow when we run the file, we get a different message:\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e$ python3.6 input_demo.py\r\nYou are really short\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eThe height is not greater than 70 so the\u003cspan\u003e \u003c/span\u003e\u003ccode\u003eif\u003c/code\u003e\u003cspan\u003e \u003c/span\u003estatement evaluates to\u003cspan\u003e \u003c/span\u003e\u003ccode\u003eFalse\u003c/code\u003e\u003cspan\u003e \u003c/span\u003eand the\u003cspan\u003e \u003c/span\u003e\u003ccode\u003eelse\u003c/code\u003e\u003cspan\u003e \u003c/span\u003estatement is called.\u003c/p\u003e\r\n\u003ch3\u003e\u003ccode\u003eelif\u003c/code\u003e\u003c/h3\u003e\r\n\u003cp\u003eWhat if we have more than one condition to check for? We can use\u003cspan\u003e \u003c/span\u003e\u003ccode\u003eelif\u003c/code\u003e, which will allow us to check for multiple conditions. Looking at our example:\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e\u003cspan class=\"n\"\u003eheight\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"mi\"\u003e68\u003c/span\u003e \u003cspan class=\"c1\"\u003e# inches\u003c/span\u003e\r\n\u003cspan class=\"k\"\u003eif\u003c/span\u003e \u003cspan class=\"n\"\u003eheight\u003c/span\u003e \u003cspan class=\"o\"\u003e\u0026gt;\u003c/span\u003e \u003cspan class=\"mi\"\u003e70\u003c/span\u003e \u003cspan class=\"p\"\u003e:\u003c/span\u003e\r\n    \u003cspan class=\"k\"\u003eprint\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"s2\"\u003e\"You are really tall\"\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e\r\n\u003cspan class=\"k\"\u003eelif\u003c/span\u003e \u003cspan class=\"n\"\u003eheight\u003c/span\u003e \u003cspan class=\"o\"\u003e\u0026gt;\u003c/span\u003e \u003cspan class=\"mi\"\u003e60\u003c/span\u003e\u003cspan class=\"p\"\u003e:\u003c/span\u003e\r\n    \u003cspan class=\"k\"\u003eprint\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"s2\"\u003e\"You are of average height\"\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e\r\n\r\n\u003cspan class=\"k\"\u003eelse\u003c/span\u003e\u003cspan class=\"p\"\u003e:\u003c/span\u003e\r\n    \u003cspan class=\"k\"\u003eprint\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"s2\"\u003e\"You are really short\"\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eNow let's run it:\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e$ python3.6 input_demo.py\r\nYou are of average height\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eSince the height is greater than 60, the\u003cspan\u003e \u003c/span\u003e\u003ccode\u003eelif\u003c/code\u003e\u003cspan\u003e \u003c/span\u003estatement will be executed first and Python never reaches the\u003cspan\u003e \u003c/span\u003e\u003ccode\u003eelse\u003c/code\u003e\u003cspan\u003e \u003c/span\u003estatement.\u003c/p\u003e\r\n\u003ch3\u003eChecking for nothing\u003c/h3\u003e\r\n\u003cp\u003eIn Python an empty value is automatically considered to be\u003cspan\u003e \u003c/span\u003e\u003ccode\u003eFalse\u003c/code\u003e. Consider this code:\u003c/p\u003e\r\n\u003cp\u003e\u003cstrong\u003einput_example.py\u003c/strong\u003e\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e\u003cspan class=\"n\"\u003ename\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"s2\"\u003e\"\"\u003c/span\u003e\r\n\u003cspan class=\"n\"\u003elist_a\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"p\"\u003e[]\u003c/span\u003e\r\n\r\n\u003cspan class=\"k\"\u003eif\u003c/span\u003e \u003cspan class=\"n\"\u003elist_a\u003c/span\u003e\u003cspan class=\"p\"\u003e:\u003c/span\u003e\r\n    \u003cspan class=\"k\"\u003eprint\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"s2\"\u003e\"I will not run\"\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e\r\n\u003cspan class=\"k\"\u003eelse\u003c/span\u003e\u003cspan class=\"p\"\u003e:\u003c/span\u003e\r\n        \u003cspan class=\"k\"\u003eprint\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"s2\"\u003e\"I am Empty\"\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eWhen we run this code, nothing prints to the console.\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e$ python3.6 input_demo.py\r\nI am Empty\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eThis is because the\u003cspan\u003e \u003c/span\u003e\u003ccode\u003eif\u003c/code\u003e\u003cspan\u003e \u003c/span\u003estatement only runs if the output evaluates to be\u003cspan\u003e \u003c/span\u003e\u003ccode\u003eTrue\u003c/code\u003e, and since our list is empty the condition evaluates to\u003cspan\u003e \u003c/span\u003e\u003ccode\u003eFalse\u003c/code\u003e\u003c/p\u003e\r\n\u003c/div\u003e"},"WIKI_PAGE_REVISION":"1","WIKI_PAGE_SHOW_PATH":"/courses/22/pages/weekend-input-sys-dot-argv-and-control-flow","WIKI_PAGE_EDIT_PATH":"/courses/22/pages/weekend-input-sys-dot-argv-and-control-flow/edit","WIKI_PAGE_HISTORY_PATH":"/courses/22/pages/weekend-input-sys-dot-argv-and-control-flow/revisions","COURSE_ID":"22","MODULES_PATH":"/courses/22/modules","wiki_page_menu_tools":[],"DISPLAY_SHOW_ALL_LINK":false,"badge_counts":{"submissions":0},"notices":[]};
+</script>
+
+<script src="./Weekend_ Input, sys.argv and Control Flow_ Python_files/navigation_header.bundle-404806ff60.js" defer="defer"></script>
+<script src="./Weekend_ Input, sys.argv and Control Flow_ Python_files/canvas.js" defer="defer"></script>
+
+</div> <!-- #application -->
+
+
+<div class="ReactTrayPortal"><div data-reactid=".1"></div></div></body></html>

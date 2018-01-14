@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<!-- saved from url=(0096)https://moringaschool.instructure.com/courses/22/pages/monday-oop-programming?module_item_id=423 -->
+<html class="lato-font-loaded" lang="en-GB"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>Monday: OOP Programming: Python</title>
+  <!--[if lte IE 9]> <meta http-equiv=refresh content="0; URL=/ie-9-is-not-supported.html" /> <![endif]-->
+  <link rel="shortcut icon" type="image/x-icon" href="https://instructure-uploads-eu.s3-eu-west-1.amazonaws.com/account_118060000000000001/attachments/23/Moringa%20Logo-02.png">
+  <link rel="apple-touch-icon" href="https://instructure-uploads-eu.s3-eu-west-1.amazonaws.com/account_118060000000000001/attachments/16/MORINGA%20TREE%20WHITE.png">
+  
+  <link rel="stylesheet" media="all" href="./Monday_ OOP Programming_ Python_files/variables-750d72b9d3e5d522f965bf904110c132.css">
+  <link rel="stylesheet" media="all" href="./Monday_ OOP Programming_ Python_files/common-79b981d2d9.css">
+  <script async="" src="./Monday_ OOP Programming_ Python_files/analytics.js"></script><script type="text/javascript" async="" src="./Monday_ OOP Programming_ Python_files/ga.js"></script><script>
+//<![CDATA[
+
+!function(){
+  var o,s,v;
+  if (!(window.Promise && Object.assign && Object.values && [].find && [].includes && (o={},s=Symbol(),v={},o[s]=v,o[s]===v) && (function f(){}).bind().name==='bound f')) {
+    s = 's', document.write('<'+s+'cr'+'ipt src="https://du11hjcvx0uqb.cloudfront.net/dist/ie11-polyfill-a0702bf7af.js"></'+s+'c'+'ript>');
+  }
+}();
+      
+//]]>
+</script>
+  <script src="./Monday_ OOP Programming_ Python_files/lato-fontfaceobserver-11a14bc0b6.js" async="async"></script>
+  
+  <meta name="apple-itunes-app" content="app-id=480883488">
+<link rel="manifest" href="https://moringaschool.instructure.com/web-app-manifest/manifest.json">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#8e9847">
+  <link rel="stylesheet" media="all" href="./Monday_ OOP Programming_ Python_files/wiki_page-46e7e026f6.css">
+  
+  
+  <script>
+    function _earlyClick(e){
+      var c = e.target
+      while (c && c.ownerDocument) {
+        if (c.getAttribute('href') == '#' || c.getAttribute('data-method')) {
+          e.preventDefault()
+          (_earlyClick.clicks = _earlyClick.clicks || []).push(c)
+          break
+        }
+        c = c.parentNode
+      }
+    }
+    document.addEventListener('click', _earlyClick)
+  </script>
+  <script src="./Monday_ OOP Programming_ Python_files/variables-750d72b9d3e5d522f965bf904110c132.js" defer="defer"></script>
+  <script src="./Monday_ OOP Programming_ Python_files/vendor.bundle-b4a7e4be55.js" defer="defer"></script>
+<script src="./Monday_ OOP Programming_ Python_files/Nairobi-5be04c1e07.js" defer="defer"></script>
+<script src="./Monday_ OOP Programming_ Python_files/en_GB-31745e04c9.js" defer="defer"></script>
+<script src="./Monday_ OOP Programming_ Python_files/en-gb.bundle-5b8e778bb0.js" defer="defer"></script>
+<script src="./Monday_ OOP Programming_ Python_files/appBootstrap.bundle-659e6cb04a.js" defer="defer"></script>
+<script src="./Monday_ OOP Programming_ Python_files/common.bundle-7a4babf662.js" defer="defer"></script>
+<script src="./Monday_ OOP Programming_ Python_files/wiki_page_show.bundle-6cdff07d81.js" defer="defer"></script>
+<style type="text/css"></style></head>
+
+<body class="with-left-side course-menu-expanded padless-content pages primary-nav-transitions context-course_22 show webkit chrome touch">
+
+<noscript>
+  &lt;div role="alert" class="ic-flash-static ic-flash-error"&gt;
+    &lt;div class="ic-flash__icon" aria-hidden="true"&gt;
+      &lt;i class="icon-warning"&gt;&lt;/i&gt;
+    &lt;/div&gt;
+    &lt;h1&gt; To access this site, you must enable JavaScript.&lt;/h1&gt;
+  &lt;/div&gt;
+</noscript>
+
+
+
+
+
+<ul id="flash_message_holder"></ul>
+<div id="flash_screenreader_holder" role="alert" aria-live="assertive" aria-relevant="additions" class="screenreader-only" aria-atomic="false"></div>
+
+<div id="application" class="ic-app">
+  
+  <header id="header" class="ic-app-header no-print ">
+    <a href="https://moringaschool.instructure.com/courses/22/pages/monday-oop-programming?module_item_id=423#content" id="skip_navigation_link">Skip to content</a>
+      <div role="region" class="ic-app-header__main-navigation" aria-label="Global navigation">
+        <div class="ic-app-header__logomark-container">
+          <a href="https://moringaschool.instructure.com/" class="ic-app-header__logomark">
+            <span class="screenreader-only">Dashboard</span>
+          </a>
+        </div>
+        <ul id="menu" class="ic-app-header__menu-list">
+            <li class="menu-item ic-app-header__menu-list-item ">
+              <a id="global_nav_profile_link" href="https://moringaschool.instructure.com/profile" class="ic-app-header__menu-list-link">
+                <div class="menu-item-icon-container" aria-hidden="true">
+                  <div class="ic-avatar ">
+                    <img src="./Monday_ OOP Programming_ Python_files/480a1c23def404db6a4a6bf1deb1add6" alt="Sam Ngigi">
+                  </div>
+                </div>
+                <div class="menu-item__text">
+                  Account
+                </div>
+              </a>
+            </li>
+          <li class="ic-app-header__menu-list-item ">
+            <a id="global_nav_dashboard_link" href="https://moringaschool.instructure.com/" class="ic-app-header__menu-list-link">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--dashboard" version="1.1" x="0" y="0" viewBox="0 0 280 200" enable-background="new 0 0 280 200" xml:space="preserve"><path d="M273.09,180.75H197.47V164.47h62.62A122.16,122.16,0,1,0,17.85,142a124,124,0,0,0,2,22.51H90.18v16.29H6.89l-1.5-6.22A138.51,138.51,0,0,1,1.57,142C1.57,65.64,63.67,3.53,140,3.53S278.43,65.64,278.43,142a137.67,137.67,0,0,1-3.84,32.57ZM66.49,87.63,50.24,71.38,61.75,59.86,78,76.12Zm147,0L202,76.12l16.25-16.25,11.51,11.51ZM131.85,53.82v-23h16.29v23Zm15.63,142.3a31.71,31.71,0,0,1-28-16.81c-6.4-12.08-15.73-72.29-17.54-84.25a8.15,8.15,0,0,1,13.58-7.2c8.88,8.21,53.48,49.72,59.88,61.81a31.61,31.61,0,0,1-27.9,46.45ZM121.81,116.2c4.17,24.56,9.23,50.21,12,55.49A15.35,15.35,0,1,0,161,157.3C158.18,152,139.79,133.44,121.81,116.2Z"></path></svg>
+
+              </div>
+              <div class="menu-item__text">Dashboard</div>
+            </a>
+          </li>
+          <li class="menu-item ic-app-header__menu-list-item ic-app-header__menu-list-item--active">
+            <a id="global_nav_courses_link" href="https://moringaschool.instructure.com/courses" class="ic-app-header__menu-list-link">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--courses" version="1.1" x="0" y="0" viewBox="0 0 280 259" enable-background="new 0 0 280 259" xml:space="preserve"><path d="M73.31,198c-11.93,0-22.22,8-24,18.73a26.67,26.67,0,0,0-.3,3.63v.3a22,22,0,0,0,5.44,14.65,22.47,22.47,0,0,0,17.22,8H200V228.19h-134V213.08H200V198Zm21-105.74h90.64V62H94.3ZM79.19,107.34V46.92H200v60.42Zm7.55,30.21V122.45H192.49v15.11ZM71.65,16.71A22.72,22.72,0,0,0,49,39.36V190.88a41.12,41.12,0,0,1,24.32-8h157V16.71ZM33.88,39.36A37.78,37.78,0,0,1,71.65,1.6H245.36V198H215.15v45.32h22.66V258.4H71.65a37.85,37.85,0,0,1-37.76-37.76Z"></path></svg>
+
+              </div>
+              <div class="menu-item__text">
+                Courses
+              </div>
+            </a>
+          </li>
+          <li class="menu-item ic-app-header__menu-list-item ">
+            <a id="global_nav_calendar_link" href="https://moringaschool.instructure.com/calendar" class="ic-app-header__menu-list-link">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--calendar" version="1.1" x="0" y="0" viewBox="0 0 280 280" enable-background="new 0 0 280 280" xml:space="preserve"><path d="M197.07,213.38h16.31V197.07H197.07Zm-16.31,16.31V180.76h48.92v48.92Zm-48.92-16.31h16.31V197.07H131.85Zm-16.31,16.31V180.76h48.92v48.92ZM66.62,213.38H82.93V197.07H66.62ZM50.32,229.68V180.76H99.24v48.92Zm146.75-81.53h16.31V131.85H197.07Zm-16.31,16.31V115.54h48.92v48.92Zm-48.92-16.31h16.31V131.85H131.85Zm-16.31,16.31V115.54h48.92v48.92ZM66.62,148.15H82.93V131.85H66.62ZM50.32,164.46V115.54H99.24v48.92ZM34,262.29H246V82.93H34ZM246,66.62V42.16A8.17,8.17,0,0,0,237.84,34H213.38v8.15a8.15,8.15,0,1,1-16.31,0V34H82.93v8.15a8.15,8.15,0,0,1-16.31,0V34H42.16A8.17,8.17,0,0,0,34,42.16V66.62Zm-8.15-48.92a24.49,24.49,0,0,1,24.46,24.46V278.6H17.71V42.16A24.49,24.49,0,0,1,42.16,17.71H66.62V9.55a8.15,8.15,0,0,1,16.31,0v8.15H197.07V9.55a8.15,8.15,0,1,1,16.31,0v8.15Z"></path></svg>
+
+              </div>
+              <div class="menu-item__text">
+                Calendar
+              </div>
+            </a>
+          </li>
+          <li class="menu-item ic-app-header__menu-list-item ">
+            <a id="global_nav_conversations_link" href="https://moringaschool.instructure.com/conversations" class="ic-app-header__menu-list-link">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--inbox" version="1.1" x="0" y="0" viewBox="0 0 280 280" enable-background="new 0 0 280 280" xml:space="preserve"><path d="M91.72,120.75h96.56V104.65H91.72Zm0,48.28h80.47V152.94H91.72Zm0-96.56h80.47V56.37H91.72Zm160.94,34.88H228.52V10.78h-177v96.56H27.34A24.17,24.17,0,0,0,3.2,131.48V244.14a24.17,24.17,0,0,0,24.14,24.14H252.66a24.17,24.17,0,0,0,24.14-24.14V131.48A24.17,24.17,0,0,0,252.66,107.34Zm0,16.09a8.06,8.06,0,0,1,8,8v51.77l-32.19,19.31V123.44ZM67.58,203.91v-177H212.42v177ZM27.34,123.44H51.48v79.13L19.29,183.26V131.48A8.06,8.06,0,0,1,27.34,123.44ZM252.66,252.19H27.34a8.06,8.06,0,0,1-8-8V202l30,18H230.75l30-18v42.12A8.06,8.06,0,0,1,252.66,252.19Z"></path></svg>
+
+                <span class="menu-item__badge" style="display: none">0</span>
+              </div>
+              <div class="menu-item__text">
+                Inbox
+              </div>
+            </a>
+          </li>
+            
+
+
+          <li class="ic-app-header__menu-list-item">
+           <a id="global_nav_help_link" class="ic-app-header__menu-list-link" data-track-category="help system" data-track-label="help button" href="http://help.instructure.com/">
+              <div class="menu-item-icon-container" role="presentation">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg menu-item__icon svg-icon-cog" version="1.1" x="0" y="0" viewBox="0 0 200 200" enable-background="new 0 0 200 200" xml:space="preserve" fill="currentColor"><path d="M100,127.88A27.88,27.88,0,1,1,127.92,100,27.92,27.92,0,0,1,100,127.88M100,61a39,39,0,1,0,39,39,39.08,39.08,0,0,0-39-39m73.42,39a70.26,70.26,0,0,0-1.15-12.57l20.76-18-19.7-33.66-26.19,8.73a74.2,74.2,0,0,0-22.11-12.68L119.68,5.2H80.4L75,31.83A72.9,72.9,0,0,0,52.89,44.51L26.71,35.79,7,69.45l20.74,18a69.95,69.95,0,0,0,0,25.13L7,130.55l19.7,33.66,26.19-8.74A74.23,74.23,0,0,0,75,168.16l5.4,26.64h39.28l5.4-26.63a72.88,72.88,0,0,0,22.11-12.69l26.19,8.74,19.7-33.66-20.76-18A70.26,70.26,0,0,0,173.46,100Zm5.31,32.92-10.45,17.86-23.72-7.92-2.42,2.2a61.7,61.7,0,0,1-23.57,13.51l-3.17,1-4.88,24.1h-21l-4.88-24.11-3.17-1A61.7,61.7,0,0,1,57.91,145l-2.42-2.2-23.72,7.92L21.31,132.91l18.74-16.24-.74-3.26a59.25,59.25,0,0,1,0-26.83l.74-3.26L21.31,67.09,31.76,49.23l23.72,7.91,2.42-2.2A61.87,61.87,0,0,1,81.47,41.42l3.17-1,4.88-24.1h21l4.88,24.11,3.17,1A61.73,61.73,0,0,1,142.18,55l2.42,2.2,23.72-7.92,10.45,17.86L160,83.33l.74,3.26a59.25,59.25,0,0,1,0,26.83l-.74,3.26Z"></path></svg>
+
+              </div>
+              <div class="menu-item__text">
+                Help Desk
+              </div>
+</a>          </li>
+        </ul>
+      </div>
+      <div class="ic-app-header__secondary-navigation">
+        <ul class="ic-app-header__menu-list">
+          <li class="menu-item ic-app-header__menu-list-item">
+            <button id="primaryNavToggle" class="ic-app-header__menu-list-link ic-app-header__menu-list-link--nav-toggle" aria-label="
+                Expand global navigation
+                " title="
+                Expand global navigation
+                ">
+              <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--navtoggle" version="1.1" x="0" y="0" width="40" height="32" viewBox="0 0 40 32" xml:space="preserve">
+  <path d="M39.5,30.28V2.48H37.18v27.8Zm-4.93-13.9L22.17,4,20.53,5.61l9.61,9.61H.5v2.31H30.14l-9.61,9.61,1.64,1.64Z"></path>
+</svg>
+
+            </button>
+          </li>
+        </ul>
+      </div>
+    <div id="global_nav_tray_container"><noscript data-reactid=".0"></noscript></div>
+  </header>
+
+
+  <div id="instructure_ajax_error_box">
+    <div style="text-align: right; background-color: #fff;"><a href="https://moringaschool.instructure.com/courses/22/pages/monday-oop-programming?module_item_id=423#" class="close_instructure_ajax_error_box_link">Close</a></div>
+    <iframe id="instructure_ajax_error_result" src="./Monday_ OOP Programming_ Python_files/saved_resource.html" style="border: 0;" title="Error"></iframe>
+  </div>
+
+  
+
+  <div id="wrapper" class="ic-Layout-wrapper">
+      <div class="ic-app-nav-toggle-and-crumbs no-print">
+          <button type="button" id="courseMenuToggle" class="Button Button--link ic-app-course-nav-toggle" aria-live="polite" aria-label="Hide courses navigation menu" title="Hide courses navigation menu">
+            <i class="icon-hamburger" aria-hidden="true"></i>
+          </button>
+          <div class="ic-app-crumbs">
+        <nav id="breadcrumbs" role="navigation" aria-label="breadcrumbs"><ul><li class="home"><a href="https://moringaschool.instructure.com/"><span class="ellipsible">      <i class="icon-home" title="My dashboard">
+        <span class="screenreader-only">My dashboard</span>
+      </i>
+</span></a></li><li><a href="https://moringaschool.instructure.com/courses/22"><span class="ellipsible">py-ke</span></a></li><li><a href="https://moringaschool.instructure.com/courses/22/pages"><span class="ellipsible">Pages</span></a></li><li><span class="ellipsible">Monday: OOP Programming</span></li></ul></nav>
+        </div>
+      </div>
+    <div id="main" class="ic-Layout-columns">
+        <div class="ic-Layout-watermark"></div>
+        <div id="left-side" class="ic-app-course-menu list-view" style="display: block">
+            <nav role="navigation" aria-label="Courses navigation menu"><ul id="section-tabs"><li class="section"><a href="https://moringaschool.instructure.com/courses/22" title="Home" class="home" tabindex="0">Home</a></li><li class="section"><a href="https://moringaschool.instructure.com/courses/22/modules" title="Modules" class="modules" tabindex="0">Modules</a></li><li class="section"><a href="https://moringaschool.instructure.com/courses/22/grades" title="Grades" class="grades" tabindex="0">Grades</a></li><li class="section"><a href="https://moringaschool.instructure.com/courses/22/assignments" title="Assignments" class="assignments" tabindex="0">Assignments</a></li><li class="section"><a href="https://moringaschool.instructure.com/courses/22/discussion_topics" title="Discussions" class="discussions" tabindex="0">Discussions</a></li></ul></nav>
+        </div>
+      <div id="not_right_side" class="ic-app-main-content">
+        <div id="content-wrapper" class="ic-Layout-contentWrapper">
+            
+
+          <div id="content" class="ic-Layout-contentMain" role="main">
+            
+
+  
+
+<div id="wiki_page_show">
+<div class="header-bar-outer-container">
+  <div class="header-bar-container sticky-toolbar sticky" data-sticky="">
+    <div class="header-bar flex-container">
+      <div class="header-bar-left header-left-flex">
+        
+          
+        
+      </div>
+      <div class="header-bar-right header-right-flex">
+        
+          
+          
+            
+          
+        
+        
+          
+        
+        
+      </div>
+    </div>
+    <div class="page-changed-alert" role="alert" aria-atomic="true" aria-live="polite"></div>
+  </div>
+</div>
+
+
+<div class="show-content user_content clearfix enhanced">
+  <h1 class="page-title">Monday: OOP Programming</h1>
+  
+    <h2>Introduction To Object oriented programming.</h2>
+<h3>Classes</h3>
+<p>A class is a blueprint to create objects. It allows us to group data and functions logically and in an easy to use manner.</p>
+<p>Let us take an example of a<span>&nbsp;</span><em>car</em>. A car has many<span>&nbsp;</span><strong>features</strong>. It has<span>&nbsp;</span><em>number of wheels, seat capacity ,fuel capacity, speed mileage, brand</em><span>&nbsp;</span>etc.</p>
+<p>A car also has many<span>&nbsp;</span><strong>behaviors</strong><span>&nbsp;</span>like<span>&nbsp;</span><em>starting,stopping, accelerating, decelerating</em>.</p>
+<p>When creating a blueprint of this car we will include all those features (read<span>&nbsp;</span><strong>attributes</strong>) and behaviors (read<span>&nbsp;</span><strong>methods</strong>). This will be our template to creating car<span>&nbsp;</span><strong>objects</strong></p>
+<h3>Objects</h3>
+<p>An object is an instance of a class. In our car example above we created a basic template or blueprint to which we can create our car objects. Objects can have different property values but implement the same attributes and methods.</p>
+<p>We will consider these two in depth as we go along with the lessons.</p>
+<h3>Contact List application</h3>
+<p>Let us learn by creating our contact list application.</p>
+<ol>
+<li>Create a folder on your desktop and call it Contact-List</li>
+<li>Create in that folder, a file and name it<span>&nbsp;</span><code>contact.py</code>
+</li>
+<li>Open Atom</li>
+</ol>
+<h2>Creating Classes</h2>
+<p><strong>contact.py</strong></p>
+<div class="codehilite">
+<pre><span></span><code>   <span class="k">class</span> <span class="nc">Contact</span><span class="p">:</span>
+    <span class="sd">"""</span>
+<span class="sd">    Class that generates new instances of contacts</span>
+<span class="sd">    """</span>
+
+    <span class="k">pass</span>
+</code></pre>
+</div>
+<p>In Python we create a class using the keyword<span>&nbsp;</span><strong>class</strong></p>
+<p>We create a class<span>&nbsp;</span><code>Contact</code><span>&nbsp;</span>and generate a<span>&nbsp;</span><strong>docstring</strong><span>&nbsp;</span>for it. Docstrings are strings that occur as the first statement of a named block. They allow you to document what that code block does. This is part of Python's<span>&nbsp;</span><a href="https://www.python.org/dev/peps/pep-0008/" class="external" target="_blank" rel="noreferrer noopener"><span><span><strong>PEP 8</strong></span><span class="screenreader-only">&nbsp;(Links to an external site.)</span></span><span class="ui-icon ui-icon-extlink ui-icon-inline" title="Links to an external site."><span class="screenreader-only">Links to an external site.</span></span></a><span>&nbsp;</span>(Python Enhancement Proposal). This is a style guide that is generally accepted by the Python community on how to write and present your code.</p>
+<h3>
+<code>__init__</code><span>&nbsp;</span>method</h3>
+<p>The<span>&nbsp;</span><code>__init__</code><span>&nbsp;</span>method in Python, allows us to create new instances of a class. And it also allows us to pass in properties for the new object.</p>
+<p>It is written with double underscores (<code>_</code>) before and after the word<span>&nbsp;</span><code>init</code></p>
+<div class="codehilite">
+<pre><span></span><code>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">first_name</span><span class="p">,</span><span class="n">last_name</span><span class="p">,</span><span class="n">number</span><span class="p">,</span><span class="n">email</span><span class="p">):</span>
+
+        <span class="sd">'''</span>
+<span class="sd">        __init__ method that helps us define properties for our objects.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            first_name: New contact first name.</span>
+<span class="sd">            last_name : New contact last name.</span>
+<span class="sd">            number: New contact phone number.</span>
+<span class="sd">            email : New contact email address.</span>
+<span class="sd">        '''</span>
+</code></pre>
+</div>
+<p>Here we create the constructor and pass in 5 arguments. The first argument<span>&nbsp;</span><code>self</code><span>&nbsp;</span>is a special keyword in Python.</p>
+<h3>
+<code>self</code><span>&nbsp;</span>Variable</h3>
+<p>Methods and functions in Python have only one major difference. Notice how we declare</p>
+<p><code>__init__</code><span>&nbsp;</span>in the above example:</p>
+<div class="codehilite">
+<pre><span></span><code><span class="o">...</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">first_name</span><span class="p">,</span><span class="n">last_name</span><span class="p">,</span><span class="n">number</span><span class="p">,</span><span class="n">email</span><span class="p">):</span>
+<span class="o">...</span>
+</code></pre>
+</div>
+<p>Methods have one extra variable added to the beginning of their parameter list: The<span>&nbsp;</span><code>self</code><span>&nbsp;</span>variable.</p>
+<p><code>self</code><span>&nbsp;</span>is a variable that represents the instance of the object itself. If you are coming from another programming language like Java or JavaScript, the<span>&nbsp;</span><code>self</code><span>&nbsp;</span>variable can be likened to the<span>&nbsp;</span><code>this</code><span>&nbsp;</span>keyword,</p>
+<h3>Instance and Class variables</h3>
+<div class="codehilite">
+<pre><span></span><code><span class="k">class</span> <span class="nc">Contact</span><span class="p">:</span>
+    <span class="sd">"""</span>
+<span class="sd">    Class that generates new instances of contacts.</span>
+<span class="sd">    """</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">first_name</span><span class="p">,</span><span class="n">last_name</span><span class="p">,</span><span class="n">number</span><span class="p">,</span><span class="n">email</span><span class="p">):</span>
+
+      <span class="c1"># docstring removed for simplicity</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">first_name</span> <span class="o">=</span> <span class="n">first_name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">last_name</span> <span class="o">=</span> <span class="n">last_name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">number</span> <span class="o">=</span> <span class="n">number</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">email</span> <span class="o">=</span> <span class="n">email</span>
+</code></pre>
+</div>
+<p><strong>Instance variables</strong><span>&nbsp;</span>are variables that are unique to each new instance of the class. In our example above, we have created four instance variables, that take up the<span>&nbsp;</span><code>firstname</code>,<span>&nbsp;</span><code>lastname</code>,<span>&nbsp;</span><code>number</code>, and<span>&nbsp;</span><code>email</code><span>&nbsp;</span>of our new contact.</p>
+<div class="codehilite">
+<pre><span></span><code><span class="k">class</span> <span class="nc">Contact</span><span class="p">:</span>
+    <span class="sd">"""</span>
+<span class="sd">    Class that generates new instances of contacts.</span>
+<span class="sd">    """</span>
+
+    <span class="n">contact_list</span> <span class="o">=</span> <span class="p">[]</span> <span class="c1"># Empty contact list</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">first_name</span><span class="p">,</span><span class="n">last_name</span><span class="p">,</span><span class="n">number</span><span class="p">,</span><span class="n">email</span><span class="p">):</span>
+
+      <span class="c1"># docstring removed for simplicity</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">first_name</span> <span class="o">=</span> <span class="n">first_name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">last_name</span> <span class="o">=</span> <span class="n">last_name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">number</span> <span class="o">=</span> <span class="n">number</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">email</span> <span class="o">=</span> <span class="n">email</span>
+</code></pre>
+</div>
+<p><strong>Class variables</strong><span>&nbsp;</span>are variables that belong to the entire class and can be accessed by all instances of the class. Here we create the<span>&nbsp;</span><code>contact_list</code><span>&nbsp;</span>variable that will be used to store our created contact objects .</p>
+<p>Let us test our new class in the R.E.P.L. On the console open the R.E.P.L</p>
+<div class="codehilite">
+<pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">contact</span> <span class="kn">import</span> <span class="n">Contact</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">help</span><span class="p">(</span><span class="n">Contact</span><span class="p">)</span>
+</code></pre>
+</div>
+<p>Here we import our<span>&nbsp;</span><code>Contact</code><span>&nbsp;</span>class from our contact module and use the<span>&nbsp;</span><code>help()</code>function to see the properties of our Class</p>
+<div class="codehilite">
+<pre><span></span><code><span class="o">&gt;&gt;&gt;</span>  <span class="n">new_contact</span> <span class="o">=</span> <span class="n">Contact</span><span class="p">(</span><span class="s2">"James"</span><span class="p">,</span><span class="s2">"Muriuki"</span><span class="p">,</span><span class="s2">"0712345678"</span><span class="p">,</span><span class="s2">"james@moringaschool.com"</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span>  <span class="n">new_contact</span><span class="o">.</span><span class="n">first_name</span>
+<span class="s1">'James'</span>
+</code></pre>
+</div>
+<p>We created a new contact object and passed in all four properties. Notice that we did not pass in an argument for<span>&nbsp;</span><code>self</code>. The<span>&nbsp;</span><code>self</code><span>&nbsp;</span>variable is passed in the background by the Python Interpretor and we do not need to worry about it.</p>
+<p>We then targeted the<span>&nbsp;</span><code>firstname</code><span>&nbsp;</span>property by using the object<span>&nbsp;</span><code>.</code><span>&nbsp;</span>dot notation.</p>
+  
+</div>
+<div style=""><div class="module-sequence-padding"></div>
+<div class="module-sequence-footer" role="navigation" aria-label="Module Navigation">
+  <div class="module-sequence-footer-content">
+    
+      <a href="https://moringaschool.instructure.com/courses/22/modules/items/422" role="button" class="Button module-sequence-footer-button--previous" data-tooltip="right" data-html-tooltip-title="&lt;i class=&#39;icon-document&#39;&gt;&lt;/i&gt; Monday: Introduction" aria-describedby="msf0-previous-desc">
+        <i class="icon-mini-arrow-left"></i>Previous
+        <span id="msf0-previous-desc" class="hidden" hidden="">Previous: Monday: Introduction</span>
+      </a>
+    
+
+    
+      <span class="module-sequence-footer-button--next" data-tooltip="left" data-html-tooltip-title="&lt;i class=&#39;icon-document&#39;&gt;&lt;/i&gt; Monday: Behaviour Driven Development and Test Driven Development">
+        <a href="https://moringaschool.instructure.com/courses/22/modules/items/424" role="button" class="Button" aria-describedby="msf0-next-desc">
+          Next<i class="icon-mini-arrow-right"></i>
+          <span id="msf0-next-desc" class="hidden" hidden="">Next: Monday: Behaviour Driven Development and Test Driven Development</span>
+        </a>
+      </span>
+    
+  </div>
+</div>
+</div></div>
+
+          </div>
+        </div>
+        <div id="right-side-wrapper" class="ic-app-main-content__secondary">
+          <aside id="right-side" role="complementary">
+            
+          </aside>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+    <div style="display:none;"><!-- Everything inside of this should always stay hidden -->
+        <div id="page_view_id">67b5228d-4bbb-41d5-9af0-9f8ae46a0e6d</div>
+    </div>
+    
+<div id="cant_record_dialog" style="display: none;">
+  <div>
+    In order to create video or audio recordings your computer needs to be webcam-enabled. If you don't have a webcam on your computer, you can still record audio-only messages by first installing the Google Video Chat plugin.
+  </div>
+  <div style="text-align: center; font-size: 1.5em; margin: 10px;">
+    <a href="http://www.google.com/chat/video" target="_blank" rel="noopener" class="btn">Install the video plugin</a>
+  </div>
+  <div class="links" style="text-align: right; font-size: 0.8em; display: none;">
+    <a href="https://moringaschool.instructure.com/courses/22/pages/monday-oop-programming?module_item_id=423#" class="cant_record_link">Don't have a webcam?</a>
+  </div>
+</div>
+
+  <div id="aria_alerts" class="hide-text affix" role="alert" aria-live="assertive"></div>
+  <div id="StudentTray__Container"></div>
+  <script>
+  INST = {"environment":"production","allowMediaComments":true,"kalturaSettings":{"domain":"eu.nv.instructuremedia.com","resource_domain":"eu.nv.instructuremedia.com","rtmp_domain":"eu.fms-prod.instructuremedia.com","partner_id":"5","subpartner_id":"0","player_ui_conf":"0","kcw_ui_conf":"0","upload_ui_conf":"0","max_file_size_bytes":534773760,"do_analytics":false,"hide_rte_button":false,"js_uploader":true},"googleAnalyticsAccount":"UA-9138420-1","disableScribdPreviews":true,"logPageViews":true,"maxVisibleEditorButtons":3,"editorButtons":[{"name":"GitHub","id":5,"url":"https://www.edu-apps.org/tool_redirect?id=github","icon_url":"https://www.edu-apps.org/tools/github/icon.png","canvas_icon_class":null,"width":600,"height":320}]};
+  ENV = {"ASSET_HOST":"https://du11hjcvx0uqb.cloudfront.net","active_brand_config_json_url":"https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/8474fb899c39509f978887304568a161/variables-750d72b9d3e5d522f965bf904110c132.json","url_to_what_gets_loaded_inside_the_tinymce_editor_css":["https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/8474fb899c39509f978887304568a161/variables-750d72b9d3e5d522f965bf904110c132.css","https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/new_styles_normal_contrast/bundles/what_gets_loaded_inside_the_tinymce_editor-bb4121d737.css"],"url_for_high_contrast_tinymce_editor_css":["https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/default/variables-high_contrast-750d72b9d3e5d522f965bf904110c132.css","https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/new_styles_high_contrast/bundles/what_gets_loaded_inside_the_tinymce_editor-b61a4bdaa8.css"],"current_user_id":"97","current_user":{"id":"97","display_name":"Sam Ngigi","avatar_image_url":"https://secure.gravatar.com/avatar/480a1c23def404db6a4a6bf1deb1add6?s=50\u0026d=https%3A%2F%2Fmoringaschool.instructure.com%2Fimages%2Fmessages%2Favatar-50.png","html_url":"https://moringaschool.instructure.com/about/97"},"current_user_roles":["user","student"],"current_user_disabled_inbox":false,"files_domain":"cluster58-files.instructure.com","DOMAIN_ROOT_ACCOUNT_ID":118060000000000001,"k12":false,"use_responsive_layout":false,"help_link_name":"Help Desk","help_link_icon":"cog","use_high_contrast":false,"SETTINGS":{"open_registration":false,"eportfolios_enabled":true,"collapse_global_nav":true,"show_feedback_link":true,"enable_profiles":true},"page_view_update_url":"/page_views/67b5228d-4bbb-41d5-9af0-9f8ae46a0e6d?page_view_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpIjoiNjdiNTIyOGQtNGJiYi00MWQ1LTlhZjAtOWY4YWU0NmEwZTZkIiwidSI6MTE4MDYwMDAwMDAwMDAwMDk3LCJjIjoiMjAxOC0wMS0xNFQwNzoxNzoxOC4yNloifQ.PcOOZ_9PTba5-RJHlEx-HAVrviWRV-eI3NUrKuC6A9M","context_asset_string":"course_22","ping_url":"https://moringaschool.instructure.com/api/v1/courses/22/ping","TIMEZONE":"Africa/Nairobi","CONTEXT_TIMEZONE":"Africa/Nairobi","GRAPHQL_ENABLED":false,"LOCALE":"en-GB","BIGEASY_LOCALE":"en_GB","FULLCALENDAR_LOCALE":"en-gb","MOMENT_LOCALE":"en-gb","WIKI_RIGHTS":{"read":true},"PAGE_RIGHTS":{"read":true},"DEFAULT_EDITING_ROLES":"teachers","WIKI_PAGES_PATH":"/courses/22/pages","WIKI_PAGE":{"title":"Monday: OOP Programming","created_at":"2017-11-25T11:14:22Z","url":"monday-oop-programming","editing_roles":"teachers","page_id":"428","published":true,"hide_from_students":false,"front_page":false,"html_url":"https://moringaschool.instructure.com/courses/22/pages/monday-oop-programming","updated_at":"2017-11-25T11:14:22Z","locked_for_user":false,"body":"\u003ch2\u003eIntroduction To Object oriented programming.\u003c/h2\u003e\r\n\u003ch3\u003eClasses\u003c/h3\u003e\r\n\u003cp\u003eA class is a blueprint to create objects. It allows us to group data and functions logically and in an easy to use manner.\u003c/p\u003e\r\n\u003cp\u003eLet us take an example of a\u003cspan\u003e \u003c/span\u003e\u003cem\u003ecar\u003c/em\u003e. A car has many\u003cspan\u003e \u003c/span\u003e\u003cstrong\u003efeatures\u003c/strong\u003e. It has\u003cspan\u003e \u003c/span\u003e\u003cem\u003enumber of wheels, seat capacity ,fuel capacity, speed mileage, brand\u003c/em\u003e\u003cspan\u003e \u003c/span\u003eetc.\u003c/p\u003e\r\n\u003cp\u003eA car also has many\u003cspan\u003e \u003c/span\u003e\u003cstrong\u003ebehaviors\u003c/strong\u003e\u003cspan\u003e \u003c/span\u003elike\u003cspan\u003e \u003c/span\u003e\u003cem\u003estarting,stopping, accelerating, decelerating\u003c/em\u003e.\u003c/p\u003e\r\n\u003cp\u003eWhen creating a blueprint of this car we will include all those features (read\u003cspan\u003e \u003c/span\u003e\u003cstrong\u003eattributes\u003c/strong\u003e) and behaviors (read\u003cspan\u003e \u003c/span\u003e\u003cstrong\u003emethods\u003c/strong\u003e). This will be our template to creating car\u003cspan\u003e \u003c/span\u003e\u003cstrong\u003eobjects\u003c/strong\u003e\u003c/p\u003e\r\n\u003ch3\u003eObjects\u003c/h3\u003e\r\n\u003cp\u003eAn object is an instance of a class. In our car example above we created a basic template or blueprint to which we can create our car objects. Objects can have different property values but implement the same attributes and methods.\u003c/p\u003e\r\n\u003cp\u003eWe will consider these two in depth as we go along with the lessons.\u003c/p\u003e\r\n\u003ch3\u003eContact List application\u003c/h3\u003e\r\n\u003cp\u003eLet us learn by creating our contact list application.\u003c/p\u003e\r\n\u003col\u003e\r\n\u003cli\u003eCreate a folder on your desktop and call it Contact-List\u003c/li\u003e\r\n\u003cli\u003eCreate in that folder, a file and name it\u003cspan\u003e \u003c/span\u003e\u003ccode\u003econtact.py\u003c/code\u003e\n\u003c/li\u003e\r\n\u003cli\u003eOpen Atom\u003c/li\u003e\r\n\u003c/ol\u003e\r\n\u003ch2\u003eCreating Classes\u003c/h2\u003e\r\n\u003cp\u003e\u003cstrong\u003econtact.py\u003c/strong\u003e\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e   \u003cspan class=\"k\"\u003eclass\u003c/span\u003e \u003cspan class=\"nc\"\u003eContact\u003c/span\u003e\u003cspan class=\"p\"\u003e:\u003c/span\u003e\r\n    \u003cspan class=\"sd\"\u003e\"\"\"\u003c/span\u003e\r\n\u003cspan class=\"sd\"\u003e    Class that generates new instances of contacts\u003c/span\u003e\r\n\u003cspan class=\"sd\"\u003e    \"\"\"\u003c/span\u003e\r\n\r\n    \u003cspan class=\"k\"\u003epass\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eIn Python we create a class using the keyword\u003cspan\u003e \u003c/span\u003e\u003cstrong\u003eclass\u003c/strong\u003e\u003c/p\u003e\r\n\u003cp\u003eWe create a class\u003cspan\u003e \u003c/span\u003e\u003ccode\u003eContact\u003c/code\u003e\u003cspan\u003e \u003c/span\u003eand generate a\u003cspan\u003e \u003c/span\u003e\u003cstrong\u003edocstring\u003c/strong\u003e\u003cspan\u003e \u003c/span\u003efor it. Docstrings are strings that occur as the first statement of a named block. They allow you to document what that code block does. This is part of Python's\u003cspan\u003e \u003c/span\u003e\u003ca href=\"https://www.python.org/dev/peps/pep-0008/\"\u003e\u003cstrong\u003ePEP 8\u003c/strong\u003e\u003c/a\u003e\u003cspan\u003e \u003c/span\u003e(Python Enhancement Proposal). This is a style guide that is generally accepted by the Python community on how to write and present your code.\u003c/p\u003e\r\n\u003ch3\u003e\n\u003ccode\u003e__init__\u003c/code\u003e\u003cspan\u003e \u003c/span\u003emethod\u003c/h3\u003e\r\n\u003cp\u003eThe\u003cspan\u003e \u003c/span\u003e\u003ccode\u003e__init__\u003c/code\u003e\u003cspan\u003e \u003c/span\u003emethod in Python, allows us to create new instances of a class. And it also allows us to pass in properties for the new object.\u003c/p\u003e\r\n\u003cp\u003eIt is written with double underscores (\u003ccode\u003e_\u003c/code\u003e) before and after the word\u003cspan\u003e \u003c/span\u003e\u003ccode\u003einit\u003c/code\u003e\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e    \u003cspan class=\"k\"\u003edef\u003c/span\u003e \u003cspan class=\"fm\"\u003e__init__\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"bp\"\u003eself\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"n\"\u003efirst_name\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"n\"\u003elast_name\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"n\"\u003enumber\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"n\"\u003eemail\u003c/span\u003e\u003cspan class=\"p\"\u003e):\u003c/span\u003e\r\n\r\n        \u003cspan class=\"sd\"\u003e'''\u003c/span\u003e\r\n\u003cspan class=\"sd\"\u003e        __init__ method that helps us define properties for our objects.\u003c/span\u003e\r\n\r\n\u003cspan class=\"sd\"\u003e        Args:\u003c/span\u003e\r\n\u003cspan class=\"sd\"\u003e            first_name: New contact first name.\u003c/span\u003e\r\n\u003cspan class=\"sd\"\u003e            last_name : New contact last name.\u003c/span\u003e\r\n\u003cspan class=\"sd\"\u003e            number: New contact phone number.\u003c/span\u003e\r\n\u003cspan class=\"sd\"\u003e            email : New contact email address.\u003c/span\u003e\r\n\u003cspan class=\"sd\"\u003e        '''\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eHere we create the constructor and pass in 5 arguments. The first argument\u003cspan\u003e \u003c/span\u003e\u003ccode\u003eself\u003c/code\u003e\u003cspan\u003e \u003c/span\u003eis a special keyword in Python.\u003c/p\u003e\r\n\u003ch3\u003e\n\u003ccode\u003eself\u003c/code\u003e\u003cspan\u003e \u003c/span\u003eVariable\u003c/h3\u003e\r\n\u003cp\u003eMethods and functions in Python have only one major difference. Notice how we declare\u003c/p\u003e\r\n\u003cp\u003e\u003ccode\u003e__init__\u003c/code\u003e\u003cspan\u003e \u003c/span\u003ein the above example:\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e\u003cspan class=\"o\"\u003e...\u003c/span\u003e\r\n    \u003cspan class=\"k\"\u003edef\u003c/span\u003e \u003cspan class=\"fm\"\u003e__init__\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"bp\"\u003eself\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"n\"\u003efirst_name\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"n\"\u003elast_name\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"n\"\u003enumber\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"n\"\u003eemail\u003c/span\u003e\u003cspan class=\"p\"\u003e):\u003c/span\u003e\r\n\u003cspan class=\"o\"\u003e...\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eMethods have one extra variable added to the beginning of their parameter list: The\u003cspan\u003e \u003c/span\u003e\u003ccode\u003eself\u003c/code\u003e\u003cspan\u003e \u003c/span\u003evariable.\u003c/p\u003e\r\n\u003cp\u003e\u003ccode\u003eself\u003c/code\u003e\u003cspan\u003e \u003c/span\u003eis a variable that represents the instance of the object itself. If you are coming from another programming language like Java or JavaScript, the\u003cspan\u003e \u003c/span\u003e\u003ccode\u003eself\u003c/code\u003e\u003cspan\u003e \u003c/span\u003evariable can be likened to the\u003cspan\u003e \u003c/span\u003e\u003ccode\u003ethis\u003c/code\u003e\u003cspan\u003e \u003c/span\u003ekeyword,\u003c/p\u003e\r\n\u003ch3\u003eInstance and Class variables\u003c/h3\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e\u003cspan class=\"k\"\u003eclass\u003c/span\u003e \u003cspan class=\"nc\"\u003eContact\u003c/span\u003e\u003cspan class=\"p\"\u003e:\u003c/span\u003e\r\n    \u003cspan class=\"sd\"\u003e\"\"\"\u003c/span\u003e\r\n\u003cspan class=\"sd\"\u003e    Class that generates new instances of contacts.\u003c/span\u003e\r\n\u003cspan class=\"sd\"\u003e    \"\"\"\u003c/span\u003e\r\n\r\n    \u003cspan class=\"k\"\u003edef\u003c/span\u003e \u003cspan class=\"fm\"\u003e__init__\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"bp\"\u003eself\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"n\"\u003efirst_name\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"n\"\u003elast_name\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"n\"\u003enumber\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"n\"\u003eemail\u003c/span\u003e\u003cspan class=\"p\"\u003e):\u003c/span\u003e\r\n\r\n      \u003cspan class=\"c1\"\u003e# docstring removed for simplicity\u003c/span\u003e\r\n\r\n        \u003cspan class=\"bp\"\u003eself\u003c/span\u003e\u003cspan class=\"o\"\u003e.\u003c/span\u003e\u003cspan class=\"n\"\u003efirst_name\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"n\"\u003efirst_name\u003c/span\u003e\r\n        \u003cspan class=\"bp\"\u003eself\u003c/span\u003e\u003cspan class=\"o\"\u003e.\u003c/span\u003e\u003cspan class=\"n\"\u003elast_name\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"n\"\u003elast_name\u003c/span\u003e\r\n        \u003cspan class=\"bp\"\u003eself\u003c/span\u003e\u003cspan class=\"o\"\u003e.\u003c/span\u003e\u003cspan class=\"n\"\u003enumber\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"n\"\u003enumber\u003c/span\u003e\r\n        \u003cspan class=\"bp\"\u003eself\u003c/span\u003e\u003cspan class=\"o\"\u003e.\u003c/span\u003e\u003cspan class=\"n\"\u003eemail\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"n\"\u003eemail\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003e\u003cstrong\u003eInstance variables\u003c/strong\u003e\u003cspan\u003e \u003c/span\u003eare variables that are unique to each new instance of the class. In our example above, we have created four instance variables, that take up the\u003cspan\u003e \u003c/span\u003e\u003ccode\u003efirstname\u003c/code\u003e,\u003cspan\u003e \u003c/span\u003e\u003ccode\u003elastname\u003c/code\u003e,\u003cspan\u003e \u003c/span\u003e\u003ccode\u003enumber\u003c/code\u003e, and\u003cspan\u003e \u003c/span\u003e\u003ccode\u003eemail\u003c/code\u003e\u003cspan\u003e \u003c/span\u003eof our new contact.\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e\u003cspan class=\"k\"\u003eclass\u003c/span\u003e \u003cspan class=\"nc\"\u003eContact\u003c/span\u003e\u003cspan class=\"p\"\u003e:\u003c/span\u003e\r\n    \u003cspan class=\"sd\"\u003e\"\"\"\u003c/span\u003e\r\n\u003cspan class=\"sd\"\u003e    Class that generates new instances of contacts.\u003c/span\u003e\r\n\u003cspan class=\"sd\"\u003e    \"\"\"\u003c/span\u003e\r\n\r\n    \u003cspan class=\"n\"\u003econtact_list\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"p\"\u003e[]\u003c/span\u003e \u003cspan class=\"c1\"\u003e# Empty contact list\u003c/span\u003e\r\n\r\n    \u003cspan class=\"k\"\u003edef\u003c/span\u003e \u003cspan class=\"fm\"\u003e__init__\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"bp\"\u003eself\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"n\"\u003efirst_name\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"n\"\u003elast_name\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"n\"\u003enumber\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"n\"\u003eemail\u003c/span\u003e\u003cspan class=\"p\"\u003e):\u003c/span\u003e\r\n\r\n      \u003cspan class=\"c1\"\u003e# docstring removed for simplicity\u003c/span\u003e\r\n\r\n        \u003cspan class=\"bp\"\u003eself\u003c/span\u003e\u003cspan class=\"o\"\u003e.\u003c/span\u003e\u003cspan class=\"n\"\u003efirst_name\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"n\"\u003efirst_name\u003c/span\u003e\r\n        \u003cspan class=\"bp\"\u003eself\u003c/span\u003e\u003cspan class=\"o\"\u003e.\u003c/span\u003e\u003cspan class=\"n\"\u003elast_name\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"n\"\u003elast_name\u003c/span\u003e\r\n        \u003cspan class=\"bp\"\u003eself\u003c/span\u003e\u003cspan class=\"o\"\u003e.\u003c/span\u003e\u003cspan class=\"n\"\u003enumber\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"n\"\u003enumber\u003c/span\u003e\r\n        \u003cspan class=\"bp\"\u003eself\u003c/span\u003e\u003cspan class=\"o\"\u003e.\u003c/span\u003e\u003cspan class=\"n\"\u003eemail\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"n\"\u003eemail\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003e\u003cstrong\u003eClass variables\u003c/strong\u003e\u003cspan\u003e \u003c/span\u003eare variables that belong to the entire class and can be accessed by all instances of the class. Here we create the\u003cspan\u003e \u003c/span\u003e\u003ccode\u003econtact_list\u003c/code\u003e\u003cspan\u003e \u003c/span\u003evariable that will be used to store our created contact objects .\u003c/p\u003e\r\n\u003cp\u003eLet us test our new class in the R.E.P.L. On the console open the R.E.P.L\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e\u003cspan class=\"o\"\u003e\u0026gt;\u0026gt;\u0026gt;\u003c/span\u003e \u003cspan class=\"kn\"\u003efrom\u003c/span\u003e \u003cspan class=\"nn\"\u003econtact\u003c/span\u003e \u003cspan class=\"kn\"\u003eimport\u003c/span\u003e \u003cspan class=\"n\"\u003eContact\u003c/span\u003e\r\n\u003cspan class=\"o\"\u003e\u0026gt;\u0026gt;\u0026gt;\u003c/span\u003e \u003cspan class=\"n\"\u003ehelp\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"n\"\u003eContact\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eHere we import our\u003cspan\u003e \u003c/span\u003e\u003ccode\u003eContact\u003c/code\u003e\u003cspan\u003e \u003c/span\u003eclass from our contact module and use the\u003cspan\u003e \u003c/span\u003e\u003ccode\u003ehelp()\u003c/code\u003efunction to see the properties of our Class\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e\u003cspan class=\"o\"\u003e\u0026gt;\u0026gt;\u0026gt;\u003c/span\u003e  \u003cspan class=\"n\"\u003enew_contact\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"n\"\u003eContact\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"s2\"\u003e\"James\"\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"s2\"\u003e\"Muriuki\"\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"s2\"\u003e\"0712345678\"\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"s2\"\u003e\"james@moringaschool.com\"\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e\r\n\u003cspan class=\"o\"\u003e\u0026gt;\u0026gt;\u0026gt;\u003c/span\u003e  \u003cspan class=\"n\"\u003enew_contact\u003c/span\u003e\u003cspan class=\"o\"\u003e.\u003c/span\u003e\u003cspan class=\"n\"\u003efirst_name\u003c/span\u003e\r\n\u003cspan class=\"s1\"\u003e'James'\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eWe created a new contact object and passed in all four properties. Notice that we did not pass in an argument for\u003cspan\u003e \u003c/span\u003e\u003ccode\u003eself\u003c/code\u003e. The\u003cspan\u003e \u003c/span\u003e\u003ccode\u003eself\u003c/code\u003e\u003cspan\u003e \u003c/span\u003evariable is passed in the background by the Python Interpretor and we do not need to worry about it.\u003c/p\u003e\r\n\u003cp\u003eWe then targeted the\u003cspan\u003e \u003c/span\u003e\u003ccode\u003efirstname\u003c/code\u003e\u003cspan\u003e \u003c/span\u003eproperty by using the object\u003cspan\u003e \u003c/span\u003e\u003ccode\u003e.\u003c/code\u003e\u003cspan\u003e \u003c/span\u003edot notation.\u003c/p\u003e"},"WIKI_PAGE_REVISION":"1","WIKI_PAGE_SHOW_PATH":"/courses/22/pages/monday-oop-programming","WIKI_PAGE_EDIT_PATH":"/courses/22/pages/monday-oop-programming/edit","WIKI_PAGE_HISTORY_PATH":"/courses/22/pages/monday-oop-programming/revisions","COURSE_ID":"22","MODULES_PATH":"/courses/22/modules","wiki_page_menu_tools":[],"DISPLAY_SHOW_ALL_LINK":false,"badge_counts":{"submissions":0},"notices":[]};
+</script>
+
+<script src="./Monday_ OOP Programming_ Python_files/navigation_header.bundle-404806ff60.js" defer="defer"></script>
+<script src="./Monday_ OOP Programming_ Python_files/canvas.js" defer="defer"></script>
+
+</div> <!-- #application -->
+
+
+<div class="ReactTrayPortal"><div data-reactid=".1"></div></div></body></html>

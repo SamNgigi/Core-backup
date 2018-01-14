@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<!-- saved from url=(0122)https://moringaschool.instructure.com/courses/22/pages/weekend-strings-slicing-functions-and-exceptions?module_item_id=421 -->
+<html class="lato-font-loaded" lang="en-GB"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>Weekend: Strings; Slicing; Functions and Exceptions: Python</title>
+  <!--[if lte IE 9]> <meta http-equiv=refresh content="0; URL=/ie-9-is-not-supported.html" /> <![endif]-->
+  <link rel="shortcut icon" type="image/x-icon" href="https://instructure-uploads-eu.s3-eu-west-1.amazonaws.com/account_118060000000000001/attachments/23/Moringa%20Logo-02.png">
+  <link rel="apple-touch-icon" href="https://instructure-uploads-eu.s3-eu-west-1.amazonaws.com/account_118060000000000001/attachments/16/MORINGA%20TREE%20WHITE.png">
+  
+  <link rel="stylesheet" media="all" href="./Weekend_ Strings; Slicing; Functions and Exceptions_ Python_files/variables-750d72b9d3e5d522f965bf904110c132.css">
+  <link rel="stylesheet" media="all" href="./Weekend_ Strings; Slicing; Functions and Exceptions_ Python_files/common-79b981d2d9.css">
+  <script async="" src="./Weekend_ Strings; Slicing; Functions and Exceptions_ Python_files/analytics.js"></script><script type="text/javascript" async="" src="./Weekend_ Strings; Slicing; Functions and Exceptions_ Python_files/ga.js"></script><script>
+//<![CDATA[
+
+!function(){
+  var o,s,v;
+  if (!(window.Promise && Object.assign && Object.values && [].find && [].includes && (o={},s=Symbol(),v={},o[s]=v,o[s]===v) && (function f(){}).bind().name==='bound f')) {
+    s = 's', document.write('<'+s+'cr'+'ipt src="https://du11hjcvx0uqb.cloudfront.net/dist/ie11-polyfill-a0702bf7af.js"></'+s+'c'+'ript>');
+  }
+}();
+      
+//]]>
+</script>
+  <script src="./Weekend_ Strings; Slicing; Functions and Exceptions_ Python_files/lato-fontfaceobserver-11a14bc0b6.js" async="async"></script>
+  
+  <meta name="apple-itunes-app" content="app-id=480883488">
+<link rel="manifest" href="https://moringaschool.instructure.com/web-app-manifest/manifest.json">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#8e9847">
+  <link rel="stylesheet" media="all" href="./Weekend_ Strings; Slicing; Functions and Exceptions_ Python_files/wiki_page-46e7e026f6.css">
+  
+  
+  <script>
+    function _earlyClick(e){
+      var c = e.target
+      while (c && c.ownerDocument) {
+        if (c.getAttribute('href') == '#' || c.getAttribute('data-method')) {
+          e.preventDefault()
+          (_earlyClick.clicks = _earlyClick.clicks || []).push(c)
+          break
+        }
+        c = c.parentNode
+      }
+    }
+    document.addEventListener('click', _earlyClick)
+  </script>
+  <script src="./Weekend_ Strings; Slicing; Functions and Exceptions_ Python_files/variables-750d72b9d3e5d522f965bf904110c132.js" defer="defer"></script>
+  <script src="./Weekend_ Strings; Slicing; Functions and Exceptions_ Python_files/vendor.bundle-b4a7e4be55.js" defer="defer"></script>
+<script src="./Weekend_ Strings; Slicing; Functions and Exceptions_ Python_files/Nairobi-5be04c1e07.js" defer="defer"></script>
+<script src="./Weekend_ Strings; Slicing; Functions and Exceptions_ Python_files/en_GB-31745e04c9.js" defer="defer"></script>
+<script src="./Weekend_ Strings; Slicing; Functions and Exceptions_ Python_files/en-gb.bundle-5b8e778bb0.js" defer="defer"></script>
+<script src="./Weekend_ Strings; Slicing; Functions and Exceptions_ Python_files/appBootstrap.bundle-659e6cb04a.js" defer="defer"></script>
+<script src="./Weekend_ Strings; Slicing; Functions and Exceptions_ Python_files/common.bundle-7a4babf662.js" defer="defer"></script>
+<script src="./Weekend_ Strings; Slicing; Functions and Exceptions_ Python_files/wiki_page_show.bundle-6cdff07d81.js" defer="defer"></script>
+<style type="text/css"></style></head>
+
+<body class="with-left-side course-menu-expanded padless-content pages primary-nav-transitions context-course_22 show webkit chrome touch">
+
+<noscript>
+  &lt;div role="alert" class="ic-flash-static ic-flash-error"&gt;
+    &lt;div class="ic-flash__icon" aria-hidden="true"&gt;
+      &lt;i class="icon-warning"&gt;&lt;/i&gt;
+    &lt;/div&gt;
+    &lt;h1&gt; To access this site, you must enable JavaScript.&lt;/h1&gt;
+  &lt;/div&gt;
+</noscript>
+
+
+
+
+
+<ul id="flash_message_holder"></ul>
+<div id="flash_screenreader_holder" role="alert" aria-live="assertive" aria-relevant="additions" class="screenreader-only" aria-atomic="false"></div>
+
+<div id="application" class="ic-app">
+  
+  <header id="header" class="ic-app-header no-print ">
+    <a href="https://moringaschool.instructure.com/courses/22/pages/weekend-strings-slicing-functions-and-exceptions?module_item_id=421#content" id="skip_navigation_link">Skip to content</a>
+      <div role="region" class="ic-app-header__main-navigation" aria-label="Global navigation">
+        <div class="ic-app-header__logomark-container">
+          <a href="https://moringaschool.instructure.com/" class="ic-app-header__logomark">
+            <span class="screenreader-only">Dashboard</span>
+          </a>
+        </div>
+        <ul id="menu" class="ic-app-header__menu-list">
+            <li class="menu-item ic-app-header__menu-list-item ">
+              <a id="global_nav_profile_link" href="https://moringaschool.instructure.com/profile" class="ic-app-header__menu-list-link">
+                <div class="menu-item-icon-container" aria-hidden="true">
+                  <div class="ic-avatar ">
+                    <img src="./Weekend_ Strings; Slicing; Functions and Exceptions_ Python_files/480a1c23def404db6a4a6bf1deb1add6" alt="Sam Ngigi">
+                  </div>
+                </div>
+                <div class="menu-item__text">
+                  Account
+                </div>
+              </a>
+            </li>
+          <li class="ic-app-header__menu-list-item ">
+            <a id="global_nav_dashboard_link" href="https://moringaschool.instructure.com/" class="ic-app-header__menu-list-link">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--dashboard" version="1.1" x="0" y="0" viewBox="0 0 280 200" enable-background="new 0 0 280 200" xml:space="preserve"><path d="M273.09,180.75H197.47V164.47h62.62A122.16,122.16,0,1,0,17.85,142a124,124,0,0,0,2,22.51H90.18v16.29H6.89l-1.5-6.22A138.51,138.51,0,0,1,1.57,142C1.57,65.64,63.67,3.53,140,3.53S278.43,65.64,278.43,142a137.67,137.67,0,0,1-3.84,32.57ZM66.49,87.63,50.24,71.38,61.75,59.86,78,76.12Zm147,0L202,76.12l16.25-16.25,11.51,11.51ZM131.85,53.82v-23h16.29v23Zm15.63,142.3a31.71,31.71,0,0,1-28-16.81c-6.4-12.08-15.73-72.29-17.54-84.25a8.15,8.15,0,0,1,13.58-7.2c8.88,8.21,53.48,49.72,59.88,61.81a31.61,31.61,0,0,1-27.9,46.45ZM121.81,116.2c4.17,24.56,9.23,50.21,12,55.49A15.35,15.35,0,1,0,161,157.3C158.18,152,139.79,133.44,121.81,116.2Z"></path></svg>
+
+              </div>
+              <div class="menu-item__text">Dashboard</div>
+            </a>
+          </li>
+          <li class="menu-item ic-app-header__menu-list-item ic-app-header__menu-list-item--active">
+            <a id="global_nav_courses_link" href="https://moringaschool.instructure.com/courses" class="ic-app-header__menu-list-link">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--courses" version="1.1" x="0" y="0" viewBox="0 0 280 259" enable-background="new 0 0 280 259" xml:space="preserve"><path d="M73.31,198c-11.93,0-22.22,8-24,18.73a26.67,26.67,0,0,0-.3,3.63v.3a22,22,0,0,0,5.44,14.65,22.47,22.47,0,0,0,17.22,8H200V228.19h-134V213.08H200V198Zm21-105.74h90.64V62H94.3ZM79.19,107.34V46.92H200v60.42Zm7.55,30.21V122.45H192.49v15.11ZM71.65,16.71A22.72,22.72,0,0,0,49,39.36V190.88a41.12,41.12,0,0,1,24.32-8h157V16.71ZM33.88,39.36A37.78,37.78,0,0,1,71.65,1.6H245.36V198H215.15v45.32h22.66V258.4H71.65a37.85,37.85,0,0,1-37.76-37.76Z"></path></svg>
+
+              </div>
+              <div class="menu-item__text">
+                Courses
+              </div>
+            </a>
+          </li>
+          <li class="menu-item ic-app-header__menu-list-item ">
+            <a id="global_nav_calendar_link" href="https://moringaschool.instructure.com/calendar" class="ic-app-header__menu-list-link">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--calendar" version="1.1" x="0" y="0" viewBox="0 0 280 280" enable-background="new 0 0 280 280" xml:space="preserve"><path d="M197.07,213.38h16.31V197.07H197.07Zm-16.31,16.31V180.76h48.92v48.92Zm-48.92-16.31h16.31V197.07H131.85Zm-16.31,16.31V180.76h48.92v48.92ZM66.62,213.38H82.93V197.07H66.62ZM50.32,229.68V180.76H99.24v48.92Zm146.75-81.53h16.31V131.85H197.07Zm-16.31,16.31V115.54h48.92v48.92Zm-48.92-16.31h16.31V131.85H131.85Zm-16.31,16.31V115.54h48.92v48.92ZM66.62,148.15H82.93V131.85H66.62ZM50.32,164.46V115.54H99.24v48.92ZM34,262.29H246V82.93H34ZM246,66.62V42.16A8.17,8.17,0,0,0,237.84,34H213.38v8.15a8.15,8.15,0,1,1-16.31,0V34H82.93v8.15a8.15,8.15,0,0,1-16.31,0V34H42.16A8.17,8.17,0,0,0,34,42.16V66.62Zm-8.15-48.92a24.49,24.49,0,0,1,24.46,24.46V278.6H17.71V42.16A24.49,24.49,0,0,1,42.16,17.71H66.62V9.55a8.15,8.15,0,0,1,16.31,0v8.15H197.07V9.55a8.15,8.15,0,1,1,16.31,0v8.15Z"></path></svg>
+
+              </div>
+              <div class="menu-item__text">
+                Calendar
+              </div>
+            </a>
+          </li>
+          <li class="menu-item ic-app-header__menu-list-item ">
+            <a id="global_nav_conversations_link" href="https://moringaschool.instructure.com/conversations" class="ic-app-header__menu-list-link">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--inbox" version="1.1" x="0" y="0" viewBox="0 0 280 280" enable-background="new 0 0 280 280" xml:space="preserve"><path d="M91.72,120.75h96.56V104.65H91.72Zm0,48.28h80.47V152.94H91.72Zm0-96.56h80.47V56.37H91.72Zm160.94,34.88H228.52V10.78h-177v96.56H27.34A24.17,24.17,0,0,0,3.2,131.48V244.14a24.17,24.17,0,0,0,24.14,24.14H252.66a24.17,24.17,0,0,0,24.14-24.14V131.48A24.17,24.17,0,0,0,252.66,107.34Zm0,16.09a8.06,8.06,0,0,1,8,8v51.77l-32.19,19.31V123.44ZM67.58,203.91v-177H212.42v177ZM27.34,123.44H51.48v79.13L19.29,183.26V131.48A8.06,8.06,0,0,1,27.34,123.44ZM252.66,252.19H27.34a8.06,8.06,0,0,1-8-8V202l30,18H230.75l30-18v42.12A8.06,8.06,0,0,1,252.66,252.19Z"></path></svg>
+
+                <span class="menu-item__badge" style="display: none">0</span>
+              </div>
+              <div class="menu-item__text">
+                Inbox
+              </div>
+            </a>
+          </li>
+            
+
+
+          <li class="ic-app-header__menu-list-item">
+           <a id="global_nav_help_link" class="ic-app-header__menu-list-link" data-track-category="help system" data-track-label="help button" href="http://help.instructure.com/">
+              <div class="menu-item-icon-container" role="presentation">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg menu-item__icon svg-icon-cog" version="1.1" x="0" y="0" viewBox="0 0 200 200" enable-background="new 0 0 200 200" xml:space="preserve" fill="currentColor"><path d="M100,127.88A27.88,27.88,0,1,1,127.92,100,27.92,27.92,0,0,1,100,127.88M100,61a39,39,0,1,0,39,39,39.08,39.08,0,0,0-39-39m73.42,39a70.26,70.26,0,0,0-1.15-12.57l20.76-18-19.7-33.66-26.19,8.73a74.2,74.2,0,0,0-22.11-12.68L119.68,5.2H80.4L75,31.83A72.9,72.9,0,0,0,52.89,44.51L26.71,35.79,7,69.45l20.74,18a69.95,69.95,0,0,0,0,25.13L7,130.55l19.7,33.66,26.19-8.74A74.23,74.23,0,0,0,75,168.16l5.4,26.64h39.28l5.4-26.63a72.88,72.88,0,0,0,22.11-12.69l26.19,8.74,19.7-33.66-20.76-18A70.26,70.26,0,0,0,173.46,100Zm5.31,32.92-10.45,17.86-23.72-7.92-2.42,2.2a61.7,61.7,0,0,1-23.57,13.51l-3.17,1-4.88,24.1h-21l-4.88-24.11-3.17-1A61.7,61.7,0,0,1,57.91,145l-2.42-2.2-23.72,7.92L21.31,132.91l18.74-16.24-.74-3.26a59.25,59.25,0,0,1,0-26.83l.74-3.26L21.31,67.09,31.76,49.23l23.72,7.91,2.42-2.2A61.87,61.87,0,0,1,81.47,41.42l3.17-1,4.88-24.1h21l4.88,24.11,3.17,1A61.73,61.73,0,0,1,142.18,55l2.42,2.2,23.72-7.92,10.45,17.86L160,83.33l.74,3.26a59.25,59.25,0,0,1,0,26.83l-.74,3.26Z"></path></svg>
+
+              </div>
+              <div class="menu-item__text">
+                Help Desk
+              </div>
+</a>          </li>
+        </ul>
+      </div>
+      <div class="ic-app-header__secondary-navigation">
+        <ul class="ic-app-header__menu-list">
+          <li class="menu-item ic-app-header__menu-list-item">
+            <button id="primaryNavToggle" class="ic-app-header__menu-list-link ic-app-header__menu-list-link--nav-toggle" aria-label="
+                Expand global navigation
+                " title="
+                Expand global navigation
+                ">
+              <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--navtoggle" version="1.1" x="0" y="0" width="40" height="32" viewBox="0 0 40 32" xml:space="preserve">
+  <path d="M39.5,30.28V2.48H37.18v27.8Zm-4.93-13.9L22.17,4,20.53,5.61l9.61,9.61H.5v2.31H30.14l-9.61,9.61,1.64,1.64Z"></path>
+</svg>
+
+            </button>
+          </li>
+        </ul>
+      </div>
+    <div id="global_nav_tray_container"><noscript data-reactid=".0"></noscript></div>
+  </header>
+
+
+  <div id="instructure_ajax_error_box">
+    <div style="text-align: right; background-color: #fff;"><a href="https://moringaschool.instructure.com/courses/22/pages/weekend-strings-slicing-functions-and-exceptions?module_item_id=421#" class="close_instructure_ajax_error_box_link">Close</a></div>
+    <iframe id="instructure_ajax_error_result" src="./Weekend_ Strings; Slicing; Functions and Exceptions_ Python_files/saved_resource.html" style="border: 0;" title="Error"></iframe>
+  </div>
+
+  
+
+  <div id="wrapper" class="ic-Layout-wrapper">
+      <div class="ic-app-nav-toggle-and-crumbs no-print">
+          <button type="button" id="courseMenuToggle" class="Button Button--link ic-app-course-nav-toggle" aria-live="polite" aria-label="Hide courses navigation menu" title="Hide courses navigation menu">
+            <i class="icon-hamburger" aria-hidden="true"></i>
+          </button>
+          <div class="ic-app-crumbs">
+        <nav id="breadcrumbs" role="navigation" aria-label="breadcrumbs"><ul><li class="home"><a href="https://moringaschool.instructure.com/"><span class="ellipsible">      <i class="icon-home" title="My dashboard">
+        <span class="screenreader-only">My dashboard</span>
+      </i>
+</span></a></li><li><a href="https://moringaschool.instructure.com/courses/22"><span class="ellipsible">py-ke</span></a></li><li><a href="https://moringaschool.instructure.com/courses/22/pages"><span class="ellipsible">Pages</span></a></li><li><span class="ellipsible">Weekend: Strings; Slicing; Functions and Exceptions</span></li></ul></nav>
+        </div>
+      </div>
+    <div id="main" class="ic-Layout-columns">
+        <div class="ic-Layout-watermark"></div>
+        <div id="left-side" class="ic-app-course-menu list-view" style="display: block">
+            <nav role="navigation" aria-label="Courses navigation menu"><ul id="section-tabs"><li class="section"><a href="https://moringaschool.instructure.com/courses/22" title="Home" class="home" tabindex="0">Home</a></li><li class="section"><a href="https://moringaschool.instructure.com/courses/22/modules" title="Modules" class="modules" tabindex="0">Modules</a></li><li class="section"><a href="https://moringaschool.instructure.com/courses/22/grades" title="Grades" class="grades" tabindex="0">Grades</a></li><li class="section"><a href="https://moringaschool.instructure.com/courses/22/assignments" title="Assignments" class="assignments" tabindex="0">Assignments</a></li><li class="section"><a href="https://moringaschool.instructure.com/courses/22/discussion_topics" title="Discussions" class="discussions" tabindex="0">Discussions</a></li></ul></nav>
+        </div>
+      <div id="not_right_side" class="ic-app-main-content">
+        <div id="content-wrapper" class="ic-Layout-contentWrapper">
+            
+
+          <div id="content" class="ic-Layout-contentMain" role="main">
+            
+
+  
+
+<div id="wiki_page_show">
+<div class="header-bar-outer-container">
+  <div class="header-bar-container sticky-toolbar" data-sticky="">
+    <div class="header-bar flex-container">
+      <div class="header-bar-left header-left-flex">
+        
+          
+        
+      </div>
+      <div class="header-bar-right header-right-flex">
+        
+          
+          
+            
+          
+        
+        
+          
+        
+        
+      </div>
+    </div>
+    <div class="page-changed-alert" role="alert" aria-atomic="true" aria-live="polite"></div>
+  </div>
+</div>
+
+
+<div class="show-content user_content clearfix enhanced">
+  <h1 class="page-title">Weekend: Strings; Slicing; Functions and Exceptions</h1>
+  
+    <div id="content">
+<h2>Strings</h2>
+<h3>String Formatting</h3>
+<p>This is a way of embedding variables into strings. It is pretty easy to do.</p>
+<div class="codehilite">
+<pre><span></span><code><span class="n">name</span> <span class="o">=</span> <span class="s2">"James"</span>
+<span class="n">age</span> <span class="o">=</span> <span class="mi">19</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s2">"My name is {name} and I am {age} years old"</span><span class="p">)</span>
+</code></pre>
+</div>
+<p>we run this</p>
+<div class="codehilite">
+<pre><span></span><code>$ python3.6 example.py
+My name is James and I am <span class="m">19</span> years old
+</code></pre>
+</div>
+<p>The<span>&nbsp;</span><code>f</code><span>&nbsp;</span>before the string stands for<span>&nbsp;</span><strong>f-strings</strong><span>&nbsp;</span>or formatted strings and allow us to put replacement fields<span>&nbsp;</span><code>{}</code><span>&nbsp;</span>with variable names inside our strings</p>
+<h3>Raw strings</h3>
+<p>A raw string is a special type of string that allows us to ignore all escape characters<span>&nbsp;</span><code>\</code><span>&nbsp;</span>and print them out</p>
+<div class="codehilite">
+<pre><span></span><code><span class="k">print</span><span class="p">(</span><span class="s1">'Beyonce</span><span class="se">\'</span><span class="s1">s lemonade stand'</span><span class="p">)</span>
+</code></pre>
+</div>
+<p>we run this</p>
+<div class="codehilite">
+<pre><span></span><code>$ python example.py
+Beyonce<span class="err">'</span>s lemonade stand
+</code></pre>
+</div>
+<p>Here we see a proper use of the escape<span>&nbsp;</span><code>\</code><span>&nbsp;</span>character, by allowing us to add an apostrophe. But let us create a raw string and see what happens</p>
+<div class="codehilite">
+<pre><span></span><code><span class="k">print</span><span class="p">(</span><span class="sa">r</span><span class="s1">'Beyonce</span><span class="se">\'</span><span class="s1">s lemonade stand'</span><span class="p">)</span>
+</code></pre>
+</div>
+<p>we run this</p>
+<div class="codehilite">
+<pre><span></span><code>$ python example.py
+Beyonce<span class="se">\'</span>s lemonade stand
+</code></pre>
+</div>
+<p>We notice the<span>&nbsp;</span><code>r</code><span>&nbsp;</span>before the string. This means<span>&nbsp;</span><code>raw</code><span>&nbsp;</span>string. And in the output unlike the first example it prints out even the escape character.</p>
+<h3>Is x string methods</h3>
+<ol>
+<li>isalpha() - returns True if the string consists of letters only and is not blank</li>
+<li>isalnum() - returns True if the string consists of numbers and letters and is not blank</li>
+<li>isdecimal() - returns True if the string contains only numeric characters</li>
+<li>isspace() - returns True if the string contains only space,tabs or new lines</li>
+<li>istitle() - returns True if the string contains words that start with uppercase letters</li>
+</ol>
+<div class="codehilite">
+<pre><span></span><code><span class="n">alpha</span> <span class="o">=</span> <span class="s2">"I like old music"</span>
+<span class="n">password</span> <span class="o">=</span> <span class="s2">"K34jndnks"</span>
+<span class="n">number_string</span> <span class="o">=</span> <span class="s2">"12345"</span>
+<span class="n">tabbs</span> <span class="o">=</span> <span class="s2">"       "</span>
+<span class="n">titles</span> <span class="o">=</span> <span class="s2">"I Love Cups"</span>
+<span class="n">false_titles</span> <span class="o">=</span> <span class="s2">"I love Cups"</span>
+
+<span class="k">print</span><span class="p">(</span> <span class="n">alpha</span><span class="o">.</span><span class="n">isalpha</span><span class="p">()</span> <span class="p">)</span>
+<span class="k">print</span><span class="p">(</span> <span class="n">password</span><span class="o">.</span><span class="n">isalnum</span><span class="p">()</span> <span class="p">)</span>
+<span class="k">print</span><span class="p">(</span> <span class="n">number_string</span><span class="o">.</span><span class="n">isdecimal</span><span class="p">()</span> <span class="p">)</span>
+<span class="k">print</span><span class="p">(</span> <span class="n">tabbs</span><span class="o">.</span><span class="n">isspace</span><span class="p">()</span> <span class="p">)</span>
+<span class="k">print</span><span class="p">(</span> <span class="n">titles</span><span class="o">.</span><span class="n">istitle</span><span class="p">()</span> <span class="p">)</span>
+<span class="k">print</span><span class="p">(</span> <span class="n">false_titles</span><span class="o">.</span><span class="n">istitles</span><span class="p">())</span>
+</code></pre>
+</div>
+<p>When we run this</p>
+<div class="codehilite">
+<pre><span></span><code>$ python3.6 example.py
+True
+True
+True
+True
+True
+False
+</code></pre>
+</div>
+<p>The last print statement was false because not all the words in<span>&nbsp;</span><code>false_titles</code><span>&nbsp;</span>were in uppercase.</p>
+<p>These<span>&nbsp;</span><code>xstring</code><span>&nbsp;</span>methods are really useful when you want to do something like password validation.</p>
+<h3>String Exercises</h3>
+<ol>
+<li><strong>Mad Libs</strong></li>
+</ol>
+<p>Create a mad libs kind of program that allows users to input word descriptions such as a "noun", a "verb", an "adjective" etc and create then display a funny story from the users input</p>
+<h2>Type casting</h2>
+<p>Type casting is the act of converting one type of data to another, so as to manipulate it in some way. Let's see an example of this.</p>
+<div class="codehilite">
+<pre><span></span><code><span class="c1"># print out user's name and age</span>
+<span class="n">name</span> <span class="o">=</span> <span class="s2">"James"</span>
+<span class="n">age</span> <span class="o">=</span> <span class="mi">19</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s2">"My name is "</span><span class="o">+</span><span class="n">name</span><span class="o">+</span><span class="s2">" I am "</span><span class="o">+</span> <span class="n">age</span><span class="o">+</span><span class="s2">" years old"</span><span class="p">)</span>
+</code></pre>
+</div>
+<p>Let us run this code and see what happens.</p>
+<div class="codehilite">
+<pre><span></span><code>$ python3.6 example.py
+
+Traceback <span class="o">(</span>most recent call last<span class="o">)</span>:
+  File <span class="s2">"&lt;stdin&gt;"</span>, line <span class="m">1</span>, in &lt;module&gt;
+TypeError: must be str, not int
+</code></pre>
+</div>
+<p>Here we see we get a<span>&nbsp;</span><code>TypeError</code>, because python cannot concatenate a string with an integer. To use the<span>&nbsp;</span><code>age</code><span>&nbsp;</span>variable we need to convert it to a string.</p>
+<div class="codehilite">
+<pre><span></span><code><span class="c1"># print out u users name and age</span>
+<span class="n">name</span> <span class="o">=</span> <span class="s2">"James"</span>
+<span class="n">age</span> <span class="o">=</span> <span class="mi">19</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s2">"My name is "</span><span class="o">+</span><span class="n">name</span><span class="o">+</span><span class="s2">" I am "</span><span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">age</span><span class="p">)</span><span class="o">+</span><span class="s2">" years old"</span><span class="p">)</span>
+</code></pre>
+</div>
+<p>Let us run this code and see what happens.</p>
+<div class="codehilite">
+<pre><span></span><code>$ python3.6 example.py
+
+My name is James I am <span class="m">19</span> years old
+</code></pre>
+</div>
+<p>In this example we enclose the<span>&nbsp;</span><code>age</code><span>&nbsp;</span>variable in a function called<span>&nbsp;</span><code>str()</code>. The<span>&nbsp;</span><code>str()</code>function converts the<span>&nbsp;</span><code>age</code><span>&nbsp;</span>from an integer to a string.</p>
+<p>There are other type conversion methods: 1.<span>&nbsp;</span><code>int()</code><span>&nbsp;</span>converts what is passed to an integer. 2.<span>&nbsp;</span><code>float()</code><span>&nbsp;</span>converts what is passed to a float.</p>
+<p>Let us see more examples of this</p>
+<div class="codehilite">
+<pre><span></span><code><span class="n">name</span> <span class="o">=</span> <span class="s2">"James"</span>
+<span class="n">age</span> <span class="o">=</span> <span class="mi">19</span>
+<span class="n">weight</span> <span class="o">=</span> <span class="s1">'79'</span> <span class="c1"># Kilograms</span>
+
+<span class="n">age_weight_ratio</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">weight</span><span class="p">)</span><span class="o">/</span><span class="n">age</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">age_weight_ratio</span><span class="p">)</span>
+</code></pre>
+</div>
+<p>Run this</p>
+<div class="codehilite">
+<pre><span></span><code><span class="err">$</span> <span class="n">python3</span><span class="o">.</span><span class="mi">6</span> <span class="n">example</span><span class="o">.</span><span class="n">py</span>
+<span class="mf">4.157894736842105</span>
+</code></pre>
+</div>
+<p>Here we converted string<span>&nbsp;</span><code>weight</code>, to an integer and divided it by<span>&nbsp;</span><code>age</code>.</p>
+<h2>Slicing</h2>
+<p>Slicing is act of getting subsets or parts of strings,lists or tuples. Let's get "slicing".</p>
+<div class="codehilite">
+<pre><span></span><code><span class="n">greetings</span> <span class="o">=</span> <span class="s1">'Hello, Moringa!'</span>
+
+<span class="n">part_one</span> <span class="o">=</span> <span class="n">greetings</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">part_one</span><span class="p">)</span>
+</code></pre>
+</div>
+<p>When we run this we get:</p>
+<div class="codehilite">
+<pre><span></span><code>$ python3.6 example.py
+Hello
+</code></pre>
+</div>
+<p>A slice statement is enclosed with<span>&nbsp;</span><code>[]</code><span>&nbsp;</span>square brackets and has two parts first is the position where to start slicing and second is the position to stop but not including that position.</p>
+<p><code>[start:stop]</code></p>
+<p>In the example above, we sliced the<span>&nbsp;</span><code>greetings</code><span>&nbsp;</span>variables, took the characters in the first 5 indexes and stored them in the variable<span>&nbsp;</span><code>part_one</code></p>
+<p>You can also use negative indexes when slicing.</p>
+<div class="codehilite">
+<pre><span></span><code><span class="n">greetings</span> <span class="o">=</span> <span class="s1">'Hello, Moringa!'</span>
+
+<span class="n">part_one</span> <span class="o">=</span> <span class="n">greetings</span><span class="p">[</span><span class="o">-</span><span class="mi">8</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">part_one</span><span class="p">)</span>
+</code></pre>
+</div>
+<p>When we run this we get:</p>
+<div class="codehilite">
+<pre><span></span><code>$ python3.6 example.py
+Moringa
+</code></pre>
+</div>
+<p>In this code we start slicing counting backwards and get<span>&nbsp;</span><code>Moringa</code><span>&nbsp;</span>as our output</p>
+<div class="codehilite">
+<pre><span></span><code><span class="n">greetings</span> <span class="o">=</span> <span class="s1">'Hello, Moringa!'</span>
+
+<span class="n">part_one</span> <span class="o">=</span> <span class="n">greetings</span><span class="p">[</span><span class="mi">0</span><span class="p">:]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">part_one</span><span class="p">)</span>
+</code></pre>
+</div>
+<p>When we run this we get:</p>
+<div class="codehilite">
+<pre><span></span><code>$ python3.6 example.py
+Hello, Moringa!
+</code></pre>
+</div>
+<p>We can also choose not to specify the start or end point of our slices. In this example, Python assumes that we want to slice from index<span>&nbsp;</span><code>0</code>, to the last item and automatically fills in that value.</p>
+<p>We can also slice lists</p>
+<div class="codehilite">
+<pre><span></span><code><span class="n">number</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">]</span>
+<span class="n">four_digits</span> <span class="o">=</span> <span class="n">number</span><span class="p">[:</span><span class="mi">4</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">four_digits</span><span class="p">)</span>
+</code></pre>
+</div>
+<p>When we run this we get:</p>
+<div class="codehilite">
+<pre><span></span><code>$ python3.6 example.py
+<span class="o">[</span><span class="m">1</span>,2,3,4<span class="o">]</span>
+</code></pre>
+</div>
+<p>Here we did not specify the beginning of our slice and python automatically filled that in to be at index<span>&nbsp;</span><code>0</code>.</p>
+<h2>Functions</h2>
+<p>We have already used functions to perform several tasks like<span>&nbsp;</span><code>range</code><span>&nbsp;</span>and<span>&nbsp;</span><code>print</code><span>&nbsp;</span>but let's learn how to create our own functions in python.</p>
+<p>Functions are blocks of code that begin with the<span>&nbsp;</span><code>def</code><span>&nbsp;</span>keyword</p>
+<div class="codehilite">
+<pre><span></span><code><span class="k">def</span> <span class="nf">fun_a</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">"I have been called"</span><span class="p">)</span>
+
+<span class="n">fun_a</span><span class="p">()</span>
+
+<span class="s2">"I have been called"</span>
+</code></pre>
+</div>
+<p>This example we have created a function with no arguments and in the function we have a print statement that outputs a string</p>
+<p>We then went on to call the function and we got our desired output.</p>
+<h4>Passing Arguments</h4>
+<p>In python you can also pass arguments to functions</p>
+<div class="codehilite">
+<pre><span></span><code><span class="k">def</span> <span class="nf">fun_a</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">)</span>
+
+<span class="n">fun_a</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+<span class="mi">5</span>
+</code></pre>
+</div>
+<p>Python can also take on<span>&nbsp;</span><strong>keyword arguments</strong>. These are arguments that are already defined</p>
+<div class="codehilite">
+<pre><span></span><code><span class="k">def</span> <span class="nf">fun_a</span><span class="p">(</span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span><span class="n">b</span> <span class="o">=</span> <span class="mi">4</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">)</span>
+
+<span class="n">fun_a</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span><span class="n">b</span><span class="o">=</span><span class="mi">7</span><span class="p">);</span>
+<span class="mi">13</span>
+</code></pre>
+</div>
+<p>Here, we created a function with two<span>&nbsp;</span><code>keyword arguments</code>. When we call the function we changed the values of those arguments to our own values</p>
+<p>We could also call the function without passing any parameters. Then the default keyword arguments values will be passed in</p>
+<div class="codehilite">
+<pre><span></span><code><span class="k">def</span> <span class="nf">fun_a</span><span class="p">(</span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span><span class="n">b</span> <span class="o">=</span> <span class="mi">4</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">)</span>
+
+<span class="n">fun_a</span><span class="p">();</span>
+<span class="mi">5</span>
+</code></pre>
+</div>
+<h4>Creating an Empty function</h4>
+<p>Sometimes we might want to define a function and not put code in it. This could be for whatever reason like outlining your code.</p>
+<div class="codehilite">
+<pre><span></span><code><span class="c1"># Empty function </span>
+<span class="k">def</span> <span class="nf">fun_a</span><span class="p">():</span>
+</code></pre>
+</div>
+<p>If we run our code like this, it will give us an error. Python has a keyword called<span>&nbsp;</span><strong>pass</strong><span>&nbsp;</span>that can help us here.<span>&nbsp;</span><code>pass</code><span>&nbsp;</span>allows us to create empty blocks of code because when it runs it returns a null or nothing.</p>
+<div class="codehilite">
+<pre><span></span><code><span class="c1"># Empty function </span>
+<span class="k">def</span> <span class="nf">fun_a</span><span class="p">():</span>
+    <span class="k">pass</span>
+</code></pre>
+</div>
+<p>Now when we run our code it will work perfectly.</p>
+<h4>Functions that return something</h4>
+<p>Functions can also return values to us</p>
+<div class="codehilite">
+<pre><span></span><code><span class="k">def</span> <span class="nf">fun_a</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span>
+
+<span class="nb">sum</span> <span class="o">=</span> <span class="n">fun_a</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="nb">sum</span><span class="p">)</span>
+<span class="mi">9</span>
+</code></pre>
+</div>
+<p>Here, we use the<span>&nbsp;</span><code>return</code><span>&nbsp;</span>statement, to get the value from the operation performed in the function.</p>
+<h2>Exceptions and Error Handling</h2>
+<p>In technical terms<span>&nbsp;</span><strong>Exception Handling</strong><span>&nbsp;</span>is the mechanism for stopping normal program flow and continuing it at some surrounding code block.</p>
+<p>Simply put it is the art of spotting fatal errors that may come up in our applications and handling those errors.</p>
+<p>Right now an error breaks our application.</p>
+<p>create a new Folder called Error-Handling and inside create a file<span>&nbsp;</span><code>handle.py</code></p>
+<div class="codehilite">
+<pre><span></span><code><span class="k">def</span> <span class="nf">get_age</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">"How old are you "</span><span class="p">)</span>
+    <span class="n">age</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+    <span class="k">return</span> <span class="n">age</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">get_age</span><span class="p">())</span>
+</code></pre>
+</div>
+<p>Let's take this simple application for example where we get the age of a user</p>
+<div class="codehilite">
+<pre><span></span><code>$ python3.6 handle.py
+How old are you
+<span class="m">19</span>
+<span class="m">19</span>
+</code></pre>
+</div>
+<p>The program works fine if we enter a number. But what if a user enters a name</p>
+<div class="codehilite">
+<pre><span></span><code>$ python3.6 handle.py
+How old are you
+nineteen
+
+Traceback <span class="o">(</span>most recent call last<span class="o">)</span>:
+  File <span class="s2">"testapp.py"</span>, line <span class="m">6</span>, in &lt;module&gt;
+    <span class="nv">input_age</span> <span class="o">=</span> get_age<span class="o">()</span>
+  File <span class="s2">"testapp.py"</span>, line <span class="m">3</span>, in get_age
+    <span class="nv">age</span> <span class="o">=</span> int<span class="o">(</span>input<span class="o">())</span>
+ValueError: invalid literal <span class="k">for</span> int<span class="o">()</span> with base <span class="m">10</span>: <span class="s1">'age'</span>
+</code></pre>
+</div>
+<p>We get a<span>&nbsp;</span><code>ValueError</code><span>&nbsp;</span>because we put in a non integer string and the<span>&nbsp;</span><code>int()</code>constructor cannot convert the string to integer.</p>
+<p>This error is difficult to understand. Let us create a more understandable error message</p>
+<div class="codehilite">
+<pre><span></span><code><span class="k">def</span> <span class="nf">get_age</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">"How old are you "</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">age</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+        <span class="k">return</span> <span class="n">age</span>
+    <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">"That was not a valid input"</span>
+</code></pre>
+</div>
+<p>We use the<span>&nbsp;</span><code>try\except</code><span>&nbsp;</span>block to handle errors. Inside the<span>&nbsp;</span><code>try</code><span>&nbsp;</span>block we put in code that may throw an Error and in the<span>&nbsp;</span><code>except</code><span>&nbsp;</span>block we catch the thrown error and provide code to handle that error.</p>
+<h4>Programmer Errors</h4>
+<p>There are some error that are caused by programmers themselves. These errors should not be handled but fixed.</p>
+<ol>
+<li>
+<strong><code>IndentationError</code></strong><span>&nbsp;</span>- when you fail to separate code blocks properly.</li>
+<li>
+<strong><code>NameError</code></strong><span>&nbsp;</span>- when you call an undefined variable function or method.</li>
+<li>
+<strong><code>TypeError</code></strong><span>&nbsp;</span>- when you try and perform operations on unrelated types .</li>
+</ol>
+</div>
+ 
+<p>Copyright 2017 Moringa School.</p>
+  
+</div>
+<div style=""><div class="module-sequence-padding"></div>
+<div class="module-sequence-footer" role="navigation" aria-label="Module Navigation">
+  <div class="module-sequence-footer-content">
+    
+      <a href="https://moringaschool.instructure.com/courses/22/modules/items/420" role="button" class="Button module-sequence-footer-button--previous" data-tooltip="right" data-html-tooltip-title="&lt;i class=&#39;icon-document&#39;&gt;&lt;/i&gt; Weekend: Looping" aria-describedby="msf0-previous-desc">
+        <i class="icon-mini-arrow-left"></i>Previous
+        <span id="msf0-previous-desc" class="hidden" hidden="">Previous: Weekend: Looping</span>
+      </a>
+    
+
+    
+      <span class="module-sequence-footer-button--next" data-tooltip="left" data-html-tooltip-title="&lt;strong style=&#39;float:left&#39;&gt;Next Module:&lt;/strong&gt; &lt;br&gt; Week 1">
+        <a href="https://moringaschool.instructure.com/courses/22/modules/items/422" role="button" class="Button" aria-describedby="msf0-next-desc">
+          Next<i class="icon-mini-arrow-right"></i>
+          <span id="msf0-next-desc" class="hidden" hidden="">Next Module: Week 1</span>
+        </a>
+      </span>
+    
+  </div>
+</div>
+</div></div>
+
+          </div>
+        </div>
+        <div id="right-side-wrapper" class="ic-app-main-content__secondary">
+          <aside id="right-side" role="complementary">
+            
+          </aside>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+    <div style="display:none;"><!-- Everything inside of this should always stay hidden -->
+        <div id="page_view_id">6208556d-bfbd-4727-8552-11659f130557</div>
+    </div>
+    
+<div id="cant_record_dialog" style="display: none;">
+  <div>
+    In order to create video or audio recordings your computer needs to be webcam-enabled. If you don't have a webcam on your computer, you can still record audio-only messages by first installing the Google Video Chat plugin.
+  </div>
+  <div style="text-align: center; font-size: 1.5em; margin: 10px;">
+    <a href="http://www.google.com/chat/video" target="_blank" rel="noopener" class="btn">Install the video plugin</a>
+  </div>
+  <div class="links" style="text-align: right; font-size: 0.8em; display: none;">
+    <a href="https://moringaschool.instructure.com/courses/22/pages/weekend-strings-slicing-functions-and-exceptions?module_item_id=421#" class="cant_record_link">Don't have a webcam?</a>
+  </div>
+</div>
+
+  <div id="aria_alerts" class="hide-text affix" role="alert" aria-live="assertive"></div>
+  <div id="StudentTray__Container"></div>
+  <script>
+  INST = {"environment":"production","allowMediaComments":true,"kalturaSettings":{"domain":"eu.nv.instructuremedia.com","resource_domain":"eu.nv.instructuremedia.com","rtmp_domain":"eu.fms-prod.instructuremedia.com","partner_id":"5","subpartner_id":"0","player_ui_conf":"0","kcw_ui_conf":"0","upload_ui_conf":"0","max_file_size_bytes":534773760,"do_analytics":false,"hide_rte_button":false,"js_uploader":true},"googleAnalyticsAccount":"UA-9138420-1","disableScribdPreviews":true,"logPageViews":true,"maxVisibleEditorButtons":3,"editorButtons":[{"name":"GitHub","id":5,"url":"https://www.edu-apps.org/tool_redirect?id=github","icon_url":"https://www.edu-apps.org/tools/github/icon.png","canvas_icon_class":null,"width":600,"height":320}]};
+  ENV = {"ASSET_HOST":"https://du11hjcvx0uqb.cloudfront.net","active_brand_config_json_url":"https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/8474fb899c39509f978887304568a161/variables-750d72b9d3e5d522f965bf904110c132.json","url_to_what_gets_loaded_inside_the_tinymce_editor_css":["https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/8474fb899c39509f978887304568a161/variables-750d72b9d3e5d522f965bf904110c132.css","https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/new_styles_normal_contrast/bundles/what_gets_loaded_inside_the_tinymce_editor-bb4121d737.css"],"url_for_high_contrast_tinymce_editor_css":["https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/default/variables-high_contrast-750d72b9d3e5d522f965bf904110c132.css","https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/new_styles_high_contrast/bundles/what_gets_loaded_inside_the_tinymce_editor-b61a4bdaa8.css"],"current_user_id":"97","current_user":{"id":"97","display_name":"Sam Ngigi","avatar_image_url":"https://secure.gravatar.com/avatar/480a1c23def404db6a4a6bf1deb1add6?s=50\u0026d=https%3A%2F%2Fmoringaschool.instructure.com%2Fimages%2Fmessages%2Favatar-50.png","html_url":"https://moringaschool.instructure.com/about/97"},"current_user_roles":["user","student"],"current_user_disabled_inbox":false,"files_domain":"cluster58-files.instructure.com","DOMAIN_ROOT_ACCOUNT_ID":118060000000000001,"k12":false,"use_responsive_layout":false,"help_link_name":"Help Desk","help_link_icon":"cog","use_high_contrast":false,"SETTINGS":{"open_registration":false,"eportfolios_enabled":true,"collapse_global_nav":true,"show_feedback_link":true,"enable_profiles":true},"page_view_update_url":"/page_views/6208556d-bfbd-4727-8552-11659f130557?page_view_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpIjoiNjIwODU1NmQtYmZiZC00NzI3LTg1NTItMTE2NTlmMTMwNTU3IiwidSI6MTE4MDYwMDAwMDAwMDAwMDk3LCJjIjoiMjAxOC0wMS0xNFQwNzoxNjowMS4zN1oifQ.wiFH_cxYFfeuMwBDXhCUXqXJaSJSNlLyX2uDyIpUQIg","context_asset_string":"course_22","ping_url":"https://moringaschool.instructure.com/api/v1/courses/22/ping","TIMEZONE":"Africa/Nairobi","CONTEXT_TIMEZONE":"Africa/Nairobi","GRAPHQL_ENABLED":false,"LOCALE":"en-GB","BIGEASY_LOCALE":"en_GB","FULLCALENDAR_LOCALE":"en-gb","MOMENT_LOCALE":"en-gb","WIKI_RIGHTS":{"read":true},"PAGE_RIGHTS":{"read":true},"DEFAULT_EDITING_ROLES":"teachers","WIKI_PAGES_PATH":"/courses/22/pages","WIKI_PAGE":{"title":"Weekend: Strings; Slicing; Functions and Exceptions","created_at":"2017-11-25T11:14:21Z","url":"weekend-strings-slicing-functions-and-exceptions","editing_roles":"teachers","page_id":"416","published":true,"hide_from_students":false,"front_page":false,"html_url":"https://moringaschool.instructure.com/courses/22/pages/weekend-strings-slicing-functions-and-exceptions","updated_at":"2017-11-25T11:14:21Z","locked_for_user":false,"body":"\u003cdiv id=\"content\"\u003e\r\n\u003ch2\u003eStrings\u003c/h2\u003e\r\n\u003ch3\u003eString Formatting\u003c/h3\u003e\r\n\u003cp\u003eThis is a way of embedding variables into strings. It is pretty easy to do.\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e\u003cspan class=\"n\"\u003ename\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"s2\"\u003e\"James\"\u003c/span\u003e\r\n\u003cspan class=\"n\"\u003eage\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"mi\"\u003e19\u003c/span\u003e\r\n\r\n\u003cspan class=\"k\"\u003eprint\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"n\"\u003ef\u003c/span\u003e\u003cspan class=\"s2\"\u003e\"My name is {name} and I am {age} years old\"\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003ewe run this\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e$ python3.6 example.py\r\nMy name is James and I am \u003cspan class=\"m\"\u003e19\u003c/span\u003e years old\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eThe\u003cspan\u003e \u003c/span\u003e\u003ccode\u003ef\u003c/code\u003e\u003cspan\u003e \u003c/span\u003ebefore the string stands for\u003cspan\u003e \u003c/span\u003e\u003cstrong\u003ef-strings\u003c/strong\u003e\u003cspan\u003e \u003c/span\u003eor formatted strings and allow us to put replacement fields\u003cspan\u003e \u003c/span\u003e\u003ccode\u003e{}\u003c/code\u003e\u003cspan\u003e \u003c/span\u003ewith variable names inside our strings\u003c/p\u003e\r\n\u003ch3\u003eRaw strings\u003c/h3\u003e\r\n\u003cp\u003eA raw string is a special type of string that allows us to ignore all escape characters\u003cspan\u003e \u003c/span\u003e\u003ccode\u003e\\\u003c/code\u003e\u003cspan\u003e \u003c/span\u003eand print them out\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e\u003cspan class=\"k\"\u003eprint\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"s1\"\u003e'Beyonce\u003c/span\u003e\u003cspan class=\"se\"\u003e\\'\u003c/span\u003e\u003cspan class=\"s1\"\u003es lemonade stand'\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003ewe run this\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e$ python example.py\r\nBeyonce\u003cspan class=\"err\"\u003e'\u003c/span\u003es lemonade stand\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eHere we see a proper use of the escape\u003cspan\u003e \u003c/span\u003e\u003ccode\u003e\\\u003c/code\u003e\u003cspan\u003e \u003c/span\u003echaracter, by allowing us to add an apostrophe. But let us create a raw string and see what happens\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e\u003cspan class=\"k\"\u003eprint\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"sa\"\u003er\u003c/span\u003e\u003cspan class=\"s1\"\u003e'Beyonce\u003c/span\u003e\u003cspan class=\"se\"\u003e\\'\u003c/span\u003e\u003cspan class=\"s1\"\u003es lemonade stand'\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003ewe run this\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e$ python example.py\r\nBeyonce\u003cspan class=\"se\"\u003e\\'\u003c/span\u003es lemonade stand\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eWe notice the\u003cspan\u003e \u003c/span\u003e\u003ccode\u003er\u003c/code\u003e\u003cspan\u003e \u003c/span\u003ebefore the string. This means\u003cspan\u003e \u003c/span\u003e\u003ccode\u003eraw\u003c/code\u003e\u003cspan\u003e \u003c/span\u003estring. And in the output unlike the first example it prints out even the escape character.\u003c/p\u003e\r\n\u003ch3\u003eIs x string methods\u003c/h3\u003e\r\n\u003col\u003e\r\n\u003cli\u003eisalpha() - returns True if the string consists of letters only and is not blank\u003c/li\u003e\r\n\u003cli\u003eisalnum() - returns True if the string consists of numbers and letters and is not blank\u003c/li\u003e\r\n\u003cli\u003eisdecimal() - returns True if the string contains only numeric characters\u003c/li\u003e\r\n\u003cli\u003eisspace() - returns True if the string contains only space,tabs or new lines\u003c/li\u003e\r\n\u003cli\u003eistitle() - returns True if the string contains words that start with uppercase letters\u003c/li\u003e\r\n\u003c/ol\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e\u003cspan class=\"n\"\u003ealpha\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"s2\"\u003e\"I like old music\"\u003c/span\u003e\r\n\u003cspan class=\"n\"\u003epassword\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"s2\"\u003e\"K34jndnks\"\u003c/span\u003e\r\n\u003cspan class=\"n\"\u003enumber_string\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"s2\"\u003e\"12345\"\u003c/span\u003e\r\n\u003cspan class=\"n\"\u003etabbs\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"s2\"\u003e\"       \"\u003c/span\u003e\r\n\u003cspan class=\"n\"\u003etitles\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"s2\"\u003e\"I Love Cups\"\u003c/span\u003e\r\n\u003cspan class=\"n\"\u003efalse_titles\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"s2\"\u003e\"I love Cups\"\u003c/span\u003e\r\n\r\n\u003cspan class=\"k\"\u003eprint\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e \u003cspan class=\"n\"\u003ealpha\u003c/span\u003e\u003cspan class=\"o\"\u003e.\u003c/span\u003e\u003cspan class=\"n\"\u003eisalpha\u003c/span\u003e\u003cspan class=\"p\"\u003e()\u003c/span\u003e \u003cspan class=\"p\"\u003e)\u003c/span\u003e\r\n\u003cspan class=\"k\"\u003eprint\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e \u003cspan class=\"n\"\u003epassword\u003c/span\u003e\u003cspan class=\"o\"\u003e.\u003c/span\u003e\u003cspan class=\"n\"\u003eisalnum\u003c/span\u003e\u003cspan class=\"p\"\u003e()\u003c/span\u003e \u003cspan class=\"p\"\u003e)\u003c/span\u003e\r\n\u003cspan class=\"k\"\u003eprint\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e \u003cspan class=\"n\"\u003enumber_string\u003c/span\u003e\u003cspan class=\"o\"\u003e.\u003c/span\u003e\u003cspan class=\"n\"\u003eisdecimal\u003c/span\u003e\u003cspan class=\"p\"\u003e()\u003c/span\u003e \u003cspan class=\"p\"\u003e)\u003c/span\u003e\r\n\u003cspan class=\"k\"\u003eprint\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e \u003cspan class=\"n\"\u003etabbs\u003c/span\u003e\u003cspan class=\"o\"\u003e.\u003c/span\u003e\u003cspan class=\"n\"\u003eisspace\u003c/span\u003e\u003cspan class=\"p\"\u003e()\u003c/span\u003e \u003cspan class=\"p\"\u003e)\u003c/span\u003e\r\n\u003cspan class=\"k\"\u003eprint\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e \u003cspan class=\"n\"\u003etitles\u003c/span\u003e\u003cspan class=\"o\"\u003e.\u003c/span\u003e\u003cspan class=\"n\"\u003eistitle\u003c/span\u003e\u003cspan class=\"p\"\u003e()\u003c/span\u003e \u003cspan class=\"p\"\u003e)\u003c/span\u003e\r\n\u003cspan class=\"k\"\u003eprint\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e \u003cspan class=\"n\"\u003efalse_titles\u003c/span\u003e\u003cspan class=\"o\"\u003e.\u003c/span\u003e\u003cspan class=\"n\"\u003eistitles\u003c/span\u003e\u003cspan class=\"p\"\u003e())\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eWhen we run this\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e$ python3.6 example.py\r\nTrue\r\nTrue\r\nTrue\r\nTrue\r\nTrue\r\nFalse\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eThe last print statement was false because not all the words in\u003cspan\u003e \u003c/span\u003e\u003ccode\u003efalse_titles\u003c/code\u003e\u003cspan\u003e \u003c/span\u003ewere in uppercase.\u003c/p\u003e\r\n\u003cp\u003eThese\u003cspan\u003e \u003c/span\u003e\u003ccode\u003exstring\u003c/code\u003e\u003cspan\u003e \u003c/span\u003emethods are really useful when you want to do something like password validation.\u003c/p\u003e\r\n\u003ch3\u003eString Exercises\u003c/h3\u003e\r\n\u003col\u003e\r\n\u003cli\u003e\u003cstrong\u003eMad Libs\u003c/strong\u003e\u003c/li\u003e\r\n\u003c/ol\u003e\r\n\u003cp\u003eCreate a mad libs kind of program that allows users to input word descriptions such as a \"noun\", a \"verb\", an \"adjective\" etc and create then display a funny story from the users input\u003c/p\u003e\r\n\u003ch2\u003eType casting\u003c/h2\u003e\r\n\u003cp\u003eType casting is the act of converting one type of data to another, so as to manipulate it in some way. Let's see an example of this.\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e\u003cspan class=\"c1\"\u003e# print out user's name and age\u003c/span\u003e\r\n\u003cspan class=\"n\"\u003ename\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"s2\"\u003e\"James\"\u003c/span\u003e\r\n\u003cspan class=\"n\"\u003eage\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"mi\"\u003e19\u003c/span\u003e\r\n\r\n\u003cspan class=\"k\"\u003eprint\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"s2\"\u003e\"My name is \"\u003c/span\u003e\u003cspan class=\"o\"\u003e+\u003c/span\u003e\u003cspan class=\"n\"\u003ename\u003c/span\u003e\u003cspan class=\"o\"\u003e+\u003c/span\u003e\u003cspan class=\"s2\"\u003e\" I am \"\u003c/span\u003e\u003cspan class=\"o\"\u003e+\u003c/span\u003e \u003cspan class=\"n\"\u003eage\u003c/span\u003e\u003cspan class=\"o\"\u003e+\u003c/span\u003e\u003cspan class=\"s2\"\u003e\" years old\"\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eLet us run this code and see what happens.\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e$ python3.6 example.py\r\n\r\nTraceback \u003cspan class=\"o\"\u003e(\u003c/span\u003emost recent call last\u003cspan class=\"o\"\u003e)\u003c/span\u003e:\r\n  File \u003cspan class=\"s2\"\u003e\"\u0026lt;stdin\u0026gt;\"\u003c/span\u003e, line \u003cspan class=\"m\"\u003e1\u003c/span\u003e, in \u0026lt;module\u0026gt;\r\nTypeError: must be str, not int\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eHere we see we get a\u003cspan\u003e \u003c/span\u003e\u003ccode\u003eTypeError\u003c/code\u003e, because python cannot concatenate a string with an integer. To use the\u003cspan\u003e \u003c/span\u003e\u003ccode\u003eage\u003c/code\u003e\u003cspan\u003e \u003c/span\u003evariable we need to convert it to a string.\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e\u003cspan class=\"c1\"\u003e# print out u users name and age\u003c/span\u003e\r\n\u003cspan class=\"n\"\u003ename\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"s2\"\u003e\"James\"\u003c/span\u003e\r\n\u003cspan class=\"n\"\u003eage\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"mi\"\u003e19\u003c/span\u003e\r\n\r\n\u003cspan class=\"k\"\u003eprint\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"s2\"\u003e\"My name is \"\u003c/span\u003e\u003cspan class=\"o\"\u003e+\u003c/span\u003e\u003cspan class=\"n\"\u003ename\u003c/span\u003e\u003cspan class=\"o\"\u003e+\u003c/span\u003e\u003cspan class=\"s2\"\u003e\" I am \"\u003c/span\u003e\u003cspan class=\"o\"\u003e+\u003c/span\u003e \u003cspan class=\"nb\"\u003estr\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"n\"\u003eage\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e\u003cspan class=\"o\"\u003e+\u003c/span\u003e\u003cspan class=\"s2\"\u003e\" years old\"\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eLet us run this code and see what happens.\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e$ python3.6 example.py\r\n\r\nMy name is James I am \u003cspan class=\"m\"\u003e19\u003c/span\u003e years old\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eIn this example we enclose the\u003cspan\u003e \u003c/span\u003e\u003ccode\u003eage\u003c/code\u003e\u003cspan\u003e \u003c/span\u003evariable in a function called\u003cspan\u003e \u003c/span\u003e\u003ccode\u003estr()\u003c/code\u003e. The\u003cspan\u003e \u003c/span\u003e\u003ccode\u003estr()\u003c/code\u003efunction converts the\u003cspan\u003e \u003c/span\u003e\u003ccode\u003eage\u003c/code\u003e\u003cspan\u003e \u003c/span\u003efrom an integer to a string.\u003c/p\u003e\r\n\u003cp\u003eThere are other type conversion methods: 1.\u003cspan\u003e \u003c/span\u003e\u003ccode\u003eint()\u003c/code\u003e\u003cspan\u003e \u003c/span\u003econverts what is passed to an integer. 2.\u003cspan\u003e \u003c/span\u003e\u003ccode\u003efloat()\u003c/code\u003e\u003cspan\u003e \u003c/span\u003econverts what is passed to a float.\u003c/p\u003e\r\n\u003cp\u003eLet us see more examples of this\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e\u003cspan class=\"n\"\u003ename\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"s2\"\u003e\"James\"\u003c/span\u003e\r\n\u003cspan class=\"n\"\u003eage\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"mi\"\u003e19\u003c/span\u003e\r\n\u003cspan class=\"n\"\u003eweight\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"s1\"\u003e'79'\u003c/span\u003e \u003cspan class=\"c1\"\u003e# Kilograms\u003c/span\u003e\r\n\r\n\u003cspan class=\"n\"\u003eage_weight_ratio\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"nb\"\u003eint\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"n\"\u003eweight\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e\u003cspan class=\"o\"\u003e/\u003c/span\u003e\u003cspan class=\"n\"\u003eage\u003c/span\u003e\r\n\r\n\u003cspan class=\"k\"\u003eprint\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"n\"\u003eage_weight_ratio\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eRun this\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e\u003cspan class=\"err\"\u003e$\u003c/span\u003e \u003cspan class=\"n\"\u003epython3\u003c/span\u003e\u003cspan class=\"o\"\u003e.\u003c/span\u003e\u003cspan class=\"mi\"\u003e6\u003c/span\u003e \u003cspan class=\"n\"\u003eexample\u003c/span\u003e\u003cspan class=\"o\"\u003e.\u003c/span\u003e\u003cspan class=\"n\"\u003epy\u003c/span\u003e\r\n\u003cspan class=\"mf\"\u003e4.157894736842105\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eHere we converted string\u003cspan\u003e \u003c/span\u003e\u003ccode\u003eweight\u003c/code\u003e, to an integer and divided it by\u003cspan\u003e \u003c/span\u003e\u003ccode\u003eage\u003c/code\u003e.\u003c/p\u003e\r\n\u003ch2\u003eSlicing\u003c/h2\u003e\r\n\u003cp\u003eSlicing is act of getting subsets or parts of strings,lists or tuples. Let's get \"slicing\".\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e\u003cspan class=\"n\"\u003egreetings\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"s1\"\u003e'Hello, Moringa!'\u003c/span\u003e\r\n\r\n\u003cspan class=\"n\"\u003epart_one\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"n\"\u003egreetings\u003c/span\u003e\u003cspan class=\"p\"\u003e[\u003c/span\u003e\u003cspan class=\"mi\"\u003e0\u003c/span\u003e\u003cspan class=\"p\"\u003e:\u003c/span\u003e\u003cspan class=\"mi\"\u003e5\u003c/span\u003e\u003cspan class=\"p\"\u003e]\u003c/span\u003e\r\n\u003cspan class=\"k\"\u003eprint\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"n\"\u003epart_one\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eWhen we run this we get:\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e$ python3.6 example.py\r\nHello\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eA slice statement is enclosed with\u003cspan\u003e \u003c/span\u003e\u003ccode\u003e[]\u003c/code\u003e\u003cspan\u003e \u003c/span\u003esquare brackets and has two parts first is the position where to start slicing and second is the position to stop but not including that position.\u003c/p\u003e\r\n\u003cp\u003e\u003ccode\u003e[start:stop]\u003c/code\u003e\u003c/p\u003e\r\n\u003cp\u003eIn the example above, we sliced the\u003cspan\u003e \u003c/span\u003e\u003ccode\u003egreetings\u003c/code\u003e\u003cspan\u003e \u003c/span\u003evariables, took the characters in the first 5 indexes and stored them in the variable\u003cspan\u003e \u003c/span\u003e\u003ccode\u003epart_one\u003c/code\u003e\u003c/p\u003e\r\n\u003cp\u003eYou can also use negative indexes when slicing.\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e\u003cspan class=\"n\"\u003egreetings\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"s1\"\u003e'Hello, Moringa!'\u003c/span\u003e\r\n\r\n\u003cspan class=\"n\"\u003epart_one\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"n\"\u003egreetings\u003c/span\u003e\u003cspan class=\"p\"\u003e[\u003c/span\u003e\u003cspan class=\"o\"\u003e-\u003c/span\u003e\u003cspan class=\"mi\"\u003e8\u003c/span\u003e\u003cspan class=\"p\"\u003e:\u003c/span\u003e\u003cspan class=\"o\"\u003e-\u003c/span\u003e\u003cspan class=\"mi\"\u003e1\u003c/span\u003e\u003cspan class=\"p\"\u003e]\u003c/span\u003e\r\n\u003cspan class=\"k\"\u003eprint\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"n\"\u003epart_one\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eWhen we run this we get:\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e$ python3.6 example.py\r\nMoringa\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eIn this code we start slicing counting backwards and get\u003cspan\u003e \u003c/span\u003e\u003ccode\u003eMoringa\u003c/code\u003e\u003cspan\u003e \u003c/span\u003eas our output\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e\u003cspan class=\"n\"\u003egreetings\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"s1\"\u003e'Hello, Moringa!'\u003c/span\u003e\r\n\r\n\u003cspan class=\"n\"\u003epart_one\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"n\"\u003egreetings\u003c/span\u003e\u003cspan class=\"p\"\u003e[\u003c/span\u003e\u003cspan class=\"mi\"\u003e0\u003c/span\u003e\u003cspan class=\"p\"\u003e:]\u003c/span\u003e\r\n\u003cspan class=\"k\"\u003eprint\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"n\"\u003epart_one\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eWhen we run this we get:\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e$ python3.6 example.py\r\nHello, Moringa!\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eWe can also choose not to specify the start or end point of our slices. In this example, Python assumes that we want to slice from index\u003cspan\u003e \u003c/span\u003e\u003ccode\u003e0\u003c/code\u003e, to the last item and automatically fills in that value.\u003c/p\u003e\r\n\u003cp\u003eWe can also slice lists\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e\u003cspan class=\"n\"\u003enumber\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"p\"\u003e[\u003c/span\u003e\u003cspan class=\"mi\"\u003e1\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"mi\"\u003e2\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"mi\"\u003e3\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"mi\"\u003e4\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"mi\"\u003e5\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"mi\"\u003e6\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"mi\"\u003e7\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"mi\"\u003e8\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"mi\"\u003e9\u003c/span\u003e\u003cspan class=\"p\"\u003e]\u003c/span\u003e\r\n\u003cspan class=\"n\"\u003efour_digits\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"n\"\u003enumber\u003c/span\u003e\u003cspan class=\"p\"\u003e[:\u003c/span\u003e\u003cspan class=\"mi\"\u003e4\u003c/span\u003e\u003cspan class=\"p\"\u003e]\u003c/span\u003e\r\n\u003cspan class=\"k\"\u003eprint\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"n\"\u003efour_digits\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eWhen we run this we get:\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e$ python3.6 example.py\r\n\u003cspan class=\"o\"\u003e[\u003c/span\u003e\u003cspan class=\"m\"\u003e1\u003c/span\u003e,2,3,4\u003cspan class=\"o\"\u003e]\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eHere we did not specify the beginning of our slice and python automatically filled that in to be at index\u003cspan\u003e \u003c/span\u003e\u003ccode\u003e0\u003c/code\u003e.\u003c/p\u003e\r\n\u003ch2\u003eFunctions\u003c/h2\u003e\r\n\u003cp\u003eWe have already used functions to perform several tasks like\u003cspan\u003e \u003c/span\u003e\u003ccode\u003erange\u003c/code\u003e\u003cspan\u003e \u003c/span\u003eand\u003cspan\u003e \u003c/span\u003e\u003ccode\u003eprint\u003c/code\u003e\u003cspan\u003e \u003c/span\u003ebut let's learn how to create our own functions in python.\u003c/p\u003e\r\n\u003cp\u003eFunctions are blocks of code that begin with the\u003cspan\u003e \u003c/span\u003e\u003ccode\u003edef\u003c/code\u003e\u003cspan\u003e \u003c/span\u003ekeyword\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e\u003cspan class=\"k\"\u003edef\u003c/span\u003e \u003cspan class=\"nf\"\u003efun_a\u003c/span\u003e\u003cspan class=\"p\"\u003e():\u003c/span\u003e\r\n    \u003cspan class=\"k\"\u003eprint\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"s2\"\u003e\"I have been called\"\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e\r\n\r\n\u003cspan class=\"n\"\u003efun_a\u003c/span\u003e\u003cspan class=\"p\"\u003e()\u003c/span\u003e\r\n\r\n\u003cspan class=\"s2\"\u003e\"I have been called\"\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eThis example we have created a function with no arguments and in the function we have a print statement that outputs a string\u003c/p\u003e\r\n\u003cp\u003eWe then went on to call the function and we got our desired output.\u003c/p\u003e\r\n\u003ch4\u003ePassing Arguments\u003c/h4\u003e\r\n\u003cp\u003eIn python you can also pass arguments to functions\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e\u003cspan class=\"k\"\u003edef\u003c/span\u003e \u003cspan class=\"nf\"\u003efun_a\u003c/span\u003e \u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"n\"\u003ea\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"n\"\u003eb\u003c/span\u003e\u003cspan class=\"p\"\u003e):\u003c/span\u003e\r\n    \u003cspan class=\"k\"\u003eprint\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"n\"\u003ea\u003c/span\u003e\u003cspan class=\"o\"\u003e+\u003c/span\u003e\u003cspan class=\"n\"\u003eb\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e\r\n\r\n\u003cspan class=\"n\"\u003efun_a\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"mi\"\u003e1\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"mi\"\u003e4\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e\r\n\u003cspan class=\"mi\"\u003e5\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003ePython can also take on\u003cspan\u003e \u003c/span\u003e\u003cstrong\u003ekeyword arguments\u003c/strong\u003e. These are arguments that are already defined\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e\u003cspan class=\"k\"\u003edef\u003c/span\u003e \u003cspan class=\"nf\"\u003efun_a\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"n\"\u003ea\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"mi\"\u003e1\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"n\"\u003eb\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"mi\"\u003e4\u003c/span\u003e\u003cspan class=\"p\"\u003e):\u003c/span\u003e\r\n    \u003cspan class=\"k\"\u003eprint\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"n\"\u003ea\u003c/span\u003e\u003cspan class=\"o\"\u003e+\u003c/span\u003e\u003cspan class=\"n\"\u003eb\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e\r\n\r\n\u003cspan class=\"n\"\u003efun_a\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"n\"\u003ea\u003c/span\u003e\u003cspan class=\"o\"\u003e=\u003c/span\u003e\u003cspan class=\"mi\"\u003e6\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"n\"\u003eb\u003c/span\u003e\u003cspan class=\"o\"\u003e=\u003c/span\u003e\u003cspan class=\"mi\"\u003e7\u003c/span\u003e\u003cspan class=\"p\"\u003e);\u003c/span\u003e\r\n\u003cspan class=\"mi\"\u003e13\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eHere, we created a function with two\u003cspan\u003e \u003c/span\u003e\u003ccode\u003ekeyword arguments\u003c/code\u003e. When we call the function we changed the values of those arguments to our own values\u003c/p\u003e\r\n\u003cp\u003eWe could also call the function without passing any parameters. Then the default keyword arguments values will be passed in\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e\u003cspan class=\"k\"\u003edef\u003c/span\u003e \u003cspan class=\"nf\"\u003efun_a\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"n\"\u003ea\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"mi\"\u003e1\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"n\"\u003eb\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"mi\"\u003e4\u003c/span\u003e\u003cspan class=\"p\"\u003e):\u003c/span\u003e\r\n    \u003cspan class=\"k\"\u003eprint\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"n\"\u003ea\u003c/span\u003e\u003cspan class=\"o\"\u003e+\u003c/span\u003e\u003cspan class=\"n\"\u003eb\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e\r\n\r\n\u003cspan class=\"n\"\u003efun_a\u003c/span\u003e\u003cspan class=\"p\"\u003e();\u003c/span\u003e\r\n\u003cspan class=\"mi\"\u003e5\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003ch4\u003eCreating an Empty function\u003c/h4\u003e\r\n\u003cp\u003eSometimes we might want to define a function and not put code in it. This could be for whatever reason like outlining your code.\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e\u003cspan class=\"c1\"\u003e# Empty function \u003c/span\u003e\r\n\u003cspan class=\"k\"\u003edef\u003c/span\u003e \u003cspan class=\"nf\"\u003efun_a\u003c/span\u003e\u003cspan class=\"p\"\u003e():\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eIf we run our code like this, it will give us an error. Python has a keyword called\u003cspan\u003e \u003c/span\u003e\u003cstrong\u003epass\u003c/strong\u003e\u003cspan\u003e \u003c/span\u003ethat can help us here.\u003cspan\u003e \u003c/span\u003e\u003ccode\u003epass\u003c/code\u003e\u003cspan\u003e \u003c/span\u003eallows us to create empty blocks of code because when it runs it returns a null or nothing.\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e\u003cspan class=\"c1\"\u003e# Empty function \u003c/span\u003e\r\n\u003cspan class=\"k\"\u003edef\u003c/span\u003e \u003cspan class=\"nf\"\u003efun_a\u003c/span\u003e\u003cspan class=\"p\"\u003e():\u003c/span\u003e\r\n    \u003cspan class=\"k\"\u003epass\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eNow when we run our code it will work perfectly.\u003c/p\u003e\r\n\u003ch4\u003eFunctions that return something\u003c/h4\u003e\r\n\u003cp\u003eFunctions can also return values to us\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e\u003cspan class=\"k\"\u003edef\u003c/span\u003e \u003cspan class=\"nf\"\u003efun_a\u003c/span\u003e \u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"n\"\u003ea\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"n\"\u003eb\u003c/span\u003e\u003cspan class=\"p\"\u003e):\u003c/span\u003e\r\n    \u003cspan class=\"k\"\u003ereturn\u003c/span\u003e \u003cspan class=\"n\"\u003ea\u003c/span\u003e\u003cspan class=\"o\"\u003e+\u003c/span\u003e\u003cspan class=\"n\"\u003eb\u003c/span\u003e\r\n\r\n\u003cspan class=\"nb\"\u003esum\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"n\"\u003efun_a\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"mi\"\u003e4\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"mi\"\u003e5\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e\r\n\r\n\u003cspan class=\"k\"\u003eprint\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"nb\"\u003esum\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e\r\n\u003cspan class=\"mi\"\u003e9\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eHere, we use the\u003cspan\u003e \u003c/span\u003e\u003ccode\u003ereturn\u003c/code\u003e\u003cspan\u003e \u003c/span\u003estatement, to get the value from the operation performed in the function.\u003c/p\u003e\r\n\u003ch2\u003eExceptions and Error Handling\u003c/h2\u003e\r\n\u003cp\u003eIn technical terms\u003cspan\u003e \u003c/span\u003e\u003cstrong\u003eException Handling\u003c/strong\u003e\u003cspan\u003e \u003c/span\u003eis the mechanism for stopping normal program flow and continuing it at some surrounding code block.\u003c/p\u003e\r\n\u003cp\u003eSimply put it is the art of spotting fatal errors that may come up in our applications and handling those errors.\u003c/p\u003e\r\n\u003cp\u003eRight now an error breaks our application.\u003c/p\u003e\r\n\u003cp\u003ecreate a new Folder called Error-Handling and inside create a file\u003cspan\u003e \u003c/span\u003e\u003ccode\u003ehandle.py\u003c/code\u003e\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e\u003cspan class=\"k\"\u003edef\u003c/span\u003e \u003cspan class=\"nf\"\u003eget_age\u003c/span\u003e\u003cspan class=\"p\"\u003e():\u003c/span\u003e\r\n    \u003cspan class=\"k\"\u003eprint\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"s2\"\u003e\"How old are you \"\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e\r\n    \u003cspan class=\"n\"\u003eage\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"nb\"\u003eint\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"nb\"\u003einput\u003c/span\u003e\u003cspan class=\"p\"\u003e())\u003c/span\u003e\r\n    \u003cspan class=\"k\"\u003ereturn\u003c/span\u003e \u003cspan class=\"n\"\u003eage\u003c/span\u003e\r\n\r\n\u003cspan class=\"k\"\u003eprint\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"n\"\u003eget_age\u003c/span\u003e\u003cspan class=\"p\"\u003e())\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eLet's take this simple application for example where we get the age of a user\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e$ python3.6 handle.py\r\nHow old are you\r\n\u003cspan class=\"m\"\u003e19\u003c/span\u003e\r\n\u003cspan class=\"m\"\u003e19\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eThe program works fine if we enter a number. But what if a user enters a name\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e$ python3.6 handle.py\r\nHow old are you\r\nnineteen\r\n\r\nTraceback \u003cspan class=\"o\"\u003e(\u003c/span\u003emost recent call last\u003cspan class=\"o\"\u003e)\u003c/span\u003e:\r\n  File \u003cspan class=\"s2\"\u003e\"testapp.py\"\u003c/span\u003e, line \u003cspan class=\"m\"\u003e6\u003c/span\u003e, in \u0026lt;module\u0026gt;\r\n    \u003cspan class=\"nv\"\u003einput_age\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e get_age\u003cspan class=\"o\"\u003e()\u003c/span\u003e\r\n  File \u003cspan class=\"s2\"\u003e\"testapp.py\"\u003c/span\u003e, line \u003cspan class=\"m\"\u003e3\u003c/span\u003e, in get_age\r\n    \u003cspan class=\"nv\"\u003eage\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e int\u003cspan class=\"o\"\u003e(\u003c/span\u003einput\u003cspan class=\"o\"\u003e())\u003c/span\u003e\r\nValueError: invalid literal \u003cspan class=\"k\"\u003efor\u003c/span\u003e int\u003cspan class=\"o\"\u003e()\u003c/span\u003e with base \u003cspan class=\"m\"\u003e10\u003c/span\u003e: \u003cspan class=\"s1\"\u003e'age'\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eWe get a\u003cspan\u003e \u003c/span\u003e\u003ccode\u003eValueError\u003c/code\u003e\u003cspan\u003e \u003c/span\u003ebecause we put in a non integer string and the\u003cspan\u003e \u003c/span\u003e\u003ccode\u003eint()\u003c/code\u003econstructor cannot convert the string to integer.\u003c/p\u003e\r\n\u003cp\u003eThis error is difficult to understand. Let us create a more understandable error message\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e\u003cspan class=\"k\"\u003edef\u003c/span\u003e \u003cspan class=\"nf\"\u003eget_age\u003c/span\u003e\u003cspan class=\"p\"\u003e():\u003c/span\u003e\r\n    \u003cspan class=\"k\"\u003eprint\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"s2\"\u003e\"How old are you \"\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e\r\n    \u003cspan class=\"k\"\u003etry\u003c/span\u003e\u003cspan class=\"p\"\u003e:\u003c/span\u003e\r\n        \u003cspan class=\"n\"\u003eage\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"nb\"\u003eint\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"nb\"\u003einput\u003c/span\u003e\u003cspan class=\"p\"\u003e())\u003c/span\u003e\r\n        \u003cspan class=\"k\"\u003ereturn\u003c/span\u003e \u003cspan class=\"n\"\u003eage\u003c/span\u003e\r\n    \u003cspan class=\"k\"\u003eexcept\u003c/span\u003e \u003cspan class=\"ne\"\u003eValueError\u003c/span\u003e\u003cspan class=\"p\"\u003e:\u003c/span\u003e\r\n        \u003cspan class=\"k\"\u003ereturn\u003c/span\u003e \u003cspan class=\"s2\"\u003e\"That was not a valid input\"\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eWe use the\u003cspan\u003e \u003c/span\u003e\u003ccode\u003etry\\except\u003c/code\u003e\u003cspan\u003e \u003c/span\u003eblock to handle errors. Inside the\u003cspan\u003e \u003c/span\u003e\u003ccode\u003etry\u003c/code\u003e\u003cspan\u003e \u003c/span\u003eblock we put in code that may throw an Error and in the\u003cspan\u003e \u003c/span\u003e\u003ccode\u003eexcept\u003c/code\u003e\u003cspan\u003e \u003c/span\u003eblock we catch the thrown error and provide code to handle that error.\u003c/p\u003e\r\n\u003ch4\u003eProgrammer Errors\u003c/h4\u003e\r\n\u003cp\u003eThere are some error that are caused by programmers themselves. These errors should not be handled but fixed.\u003c/p\u003e\r\n\u003col\u003e\r\n\u003cli\u003e\n\u003cstrong\u003e\u003ccode\u003eIndentationError\u003c/code\u003e\u003c/strong\u003e\u003cspan\u003e \u003c/span\u003e- when you fail to separate code blocks properly.\u003c/li\u003e\r\n\u003cli\u003e\n\u003cstrong\u003e\u003ccode\u003eNameError\u003c/code\u003e\u003c/strong\u003e\u003cspan\u003e \u003c/span\u003e- when you call an undefined variable function or method.\u003c/li\u003e\r\n\u003cli\u003e\n\u003cstrong\u003e\u003ccode\u003eTypeError\u003c/code\u003e\u003c/strong\u003e\u003cspan\u003e \u003c/span\u003e- when you try and perform operations on unrelated types .\u003c/li\u003e\r\n\u003c/ol\u003e\r\n\u003c/div\u003e\r\n \r\n\u003cp\u003eCopyright 2017 Moringa School.\u003c/p\u003e"},"WIKI_PAGE_REVISION":"1","WIKI_PAGE_SHOW_PATH":"/courses/22/pages/weekend-strings-slicing-functions-and-exceptions","WIKI_PAGE_EDIT_PATH":"/courses/22/pages/weekend-strings-slicing-functions-and-exceptions/edit","WIKI_PAGE_HISTORY_PATH":"/courses/22/pages/weekend-strings-slicing-functions-and-exceptions/revisions","COURSE_ID":"22","MODULES_PATH":"/courses/22/modules","wiki_page_menu_tools":[],"DISPLAY_SHOW_ALL_LINK":false,"badge_counts":{"submissions":0},"notices":[]};
+</script>
+
+<script src="./Weekend_ Strings; Slicing; Functions and Exceptions_ Python_files/navigation_header.bundle-404806ff60.js" defer="defer"></script>
+<script src="./Weekend_ Strings; Slicing; Functions and Exceptions_ Python_files/canvas.js" defer="defer"></script>
+
+</div> <!-- #application -->
+
+
+<div class="ReactTrayPortal"><div data-reactid=".1"></div></div></body></html>

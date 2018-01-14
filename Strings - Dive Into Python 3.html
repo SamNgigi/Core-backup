@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)http://www.diveintopython3.net/strings.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Strings - Dive Into Python 3</title>
+<!--[if IE]><script src=j/html5.js></script><![endif]-->
+<link rel="stylesheet" href="./Strings - Dive Into Python 3_files/dip3.css">
+<style>
+body{counter-reset:h1 4}
+</style>
+<link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="./Strings - Dive Into Python 3_files/mobile.css">
+<link rel="stylesheet" media="print" href="./Strings - Dive Into Python 3_files/print.css">
+<meta name="viewport" content="initial-scale=1.0">
+</head><body><form action="http://www.google.com/cse"><div><input type="hidden" name="cx" value="014021643941856155761:l5eihuescdw"><input type="hidden" name="ie" value="UTF-8">&nbsp;<input type="search" name="q" size="25" placeholder="powered by Google™">&nbsp;<input type="submit" name="sa" value="Search"></div></form>
+<p>You are here: <a href="http://www.diveintopython3.net/index.html">Home</a> <span class="u">‣</span> <a href="http://www.diveintopython3.net/table-of-contents.html#strings">Dive Into Python 3</a> <span class="u">‣</span>
+</p><p id="level">Difficulty level: <span class="u" title="intermediate">♦♦♦♢♢</span>
+</p><h1>Strings</h1>
+<blockquote class="q">
+<p><span class="u">❝</span> I’m telling you this ’cause you’re one of my friends.<br>
+My alphabet starts where your alphabet ends! <span class="u">❞</span><br>— Dr. Seuss, On Beyond Zebra!
+</p></blockquote>
+<p id="toc"><span class="nm u">‣</span> <a href="javascript:showTOC()">show table of contents</a></p><h2 id="boring-stuff">Some Boring Stuff You Need To Understand Before You Can Dive In<a class="hl" href="http://www.diveintopython3.net/strings.html#boring-stuff">#</a></h2>
+<p class="f">Few people think about it, but text is incredibly complicated. Start with the alphabet. The people of <a href="http://en.wikipedia.org/wiki/Bougainville_Province">Bougainville</a> have the smallest alphabet in the world; their <a href="http://en.wikipedia.org/wiki/Rotokas_alphabet">Rotokas alphabet</a> is composed of only 12 letters: A, E, G, I, K, O, P, R, S, T, U, and V. On the other end of the spectrum, languages like Chinese, Japanese, and Korean have thousands of characters. English, of course, has 26 letters&nbsp;—&nbsp;52 if you count uppercase and lowercase separately&nbsp;—&nbsp;plus a handful of <i class="baa">!@#$%&amp;</i> punctuation marks.
+
+</p><p>When you talk about “text,” you’re probably thinking of “characters and symbols on my computer screen.” But computers don’t deal in characters and symbols; they deal in bits and bytes. Every piece of text you’ve ever seen on a computer screen is actually stored in a particular <i>character encoding</i>. Very roughly speaking, the character encoding provides a mapping between the stuff you see on your screen and the stuff your computer actually stores in memory and on disk. There are many different character encodings, some optimized for particular languages like Russian or Chinese or English, and others that can be used for multiple languages.
+
+</p><p>In reality, it’s more complicated than that. Many characters are common to multiple encodings, but each encoding may use a different sequence of bytes to actually store those characters in memory or on disk. So you can think of the character encoding as a kind of decryption key. Whenever someone gives you a sequence of bytes&nbsp;—&nbsp;a file, a web page, whatever&nbsp;—&nbsp;and claims it’s “text,” you need to know what character encoding they used so you can decode the bytes into characters. If they give you the wrong key or no key at all, you’re left with the unenviable task of cracking the code yourself. Chances are you’ll get it wrong, and the result will be gibberish.
+
+</p><aside>Everything you thought you knew about strings is wrong.</aside>
+
+<p>Surely you’ve seen web pages like this, with strange question-mark-like characters where apostrophes should be. That usually means the page author didn’t declare their character encoding correctly, your browser was left guessing, and the result was a mix of expected and unexpected characters. In English it’s merely annoying; in other languages, the result can be completely unreadable.
+
+</p><p>There are character encodings for each major language in the world. Since each language is different, and memory and disk space have historically been expensive, each character encoding is optimized for a particular language. By that, I mean each encoding using the same numbers (0–255) to represent that language’s characters. For instance, you’re probably familiar with the <abbr>ASCII</abbr> encoding, which stores English characters as numbers ranging from 0 to 127. (65 is capital “A”, 97 is lowercase “a”, <i class="baa">&amp;</i>c.)  English has a very simple alphabet, so it can be completely expressed in less than 128 numbers. For those of you who can count in base 2, that’s 7 out of the 8 bits in a byte.
+
+</p><p>Western European languages like French, Spanish, and German have more letters than English. Or, more precisely, they have letters combined with various diacritical marks, like the <code>ñ</code> character in Spanish. The most common encoding for these languages is CP-1252, also called “windows-1252” because it is widely used on Microsoft Windows. The CP-1252 encoding shares characters with <abbr>ASCII</abbr> in the 0–127 range, but then extends into the 128–255 range for characters like n-with-a-tilde-over-it (241), u-with-two-dots-over-it (252), <i class="baa">&amp;</i>c. It’s still a single-byte encoding, though; the highest possible number, 255, still fits in one byte.
+
+</p><p>Then there are languages like Chinese, Japanese, and Korean, which have so many characters that they require multiple-byte character sets. That is, each “character” is represented by a two-byte number from 0–65535. But different multi-byte encodings still share the same problem as different single-byte encodings, namely that they each use the same numbers to mean different things. It’s just that the range of numbers is broader, because there are many more characters to represent.
+
+</p><p>That was mostly OK in a non-networked world, where “text” was something you typed yourself and occasionally printed. There wasn’t much “plain text”. Source code was <abbr>ASCII</abbr>, and everyone else used word processors, which defined their own (non-text) formats that tracked character encoding information along with rich styling, <i class="baa">&amp;</i>c. People read these documents with the same word processing program as the original author, so everything worked, more or less.
+
+</p><p>Now think about the rise of global networks like email and the web. Lots of “plain text” flying around the globe, being authored on one computer, transmitted through a second computer, and received and displayed by a third computer. Computers can only see numbers, but the numbers could mean different things. Oh no! What to do? Well, systems had to be designed to carry encoding information along with every piece of “plain text.” Remember, it’s the decryption key that maps computer-readable numbers to human-readable characters. A missing decryption key means garbled text, gibberish, or worse.
+
+</p><p>Now think about trying to store multiple pieces of text in the same place, like in the same database table that holds all the email you’ve ever received. You still need to store the character encoding alongside each piece of text so you can display it properly. Think that’s hard? Try searching your email database,  which means converting between multiple encodings on the fly. Doesn’t that sound fun?
+
+</p><p>Now think about the possibility of multilingual documents, where characters from several languages are next to each other in the same document. (Hint: programs that tried to do this typically used escape codes to switch “modes.” Poof, you’re in Russian koi8-r mode, so 241 means Я; poof, now you’re in Mac Greek mode, so 241 means ώ.) And of course you’ll want to search <em>those</em> documents, too.
+
+</p><p>Now cry a lot, because everything you thought you knew about strings is wrong, and there ain’t no such thing as “plain text.”
+
+</p><p class="a">⁂
+
+</p><h2 id="one-ring-to-rule-them-all">Unicode<a class="hl" href="http://www.diveintopython3.net/strings.html#one-ring-to-rule-them-all">#</a></h2>
+
+<p><i>Enter <dfn>Unicode</dfn>.</i>
+
+</p><p>Unicode is a system designed to represent <em>every</em> character from <em>every</em> language. Unicode represents each letter, character, or ideograph as a 4-byte number. Each number represents a unique character used in at least one of the world’s languages. (Not all the numbers are used, but more than 65535 of them are, so 2 bytes wouldn’t be sufficient.) Characters that are used in multiple languages generally have the same number, unless there is a good etymological reason not to. Regardless, there is exactly 1 number per character, and exactly 1 character per number. Every number always means just one thing; there are no “modes” to keep track of. <code>U+0041</code> is always <code>'A'</code>, even if your language doesn’t have an <code>'A'</code> in it.
+
+</p><p>On the face of it, this seems like a great idea. One encoding to rule them all. Multiple languages per document. No more “mode switching” to switch between encodings mid-stream. But right away, the obvious question should leap out at you. Four bytes? For every single character<span class="u" title="interrobang!">‽</span> That seems awfully wasteful, especially for languages like English and Spanish, which need less than one byte (256 numbers) to express every possible character. In fact, it’s wasteful even for ideograph-based languages (like Chinese), which never need more than two bytes per character.
+
+</p><p>There is a Unicode encoding that uses four bytes per character. It’s called UTF-32, because 32 bits = 4 bytes. UTF-32 is a straightforward encoding; it takes each Unicode character (a 4-byte number) and represents the character with that same number. This has some advantages, the most important being that you can find the <var>Nth</var> character of a string in constant time, because the <var>Nth</var> character starts at the <var>4×Nth</var> byte. It also has several disadvantages, the most obvious being that it takes four freaking bytes to store every freaking character.
+
+</p><p>Even though there are a lot of Unicode characters, it turns out that most people will never use anything beyond the first 65535. Thus, there is another Unicode encoding, called UTF-16 (because 16 bits = 2 bytes). UTF-16 encodes every character from 0–65535 as two bytes, then uses some dirty hacks if you actually need to represent the rarely-used “astral plane” Unicode characters beyond 65535. Most obvious advantage: UTF-16 is twice as space-efficient as UTF-32, because every character requires only two bytes to store instead of four bytes (except for the ones that don’t). And you can still easily find the <var>Nth</var> character of a string in constant time, if you assume that the string doesn’t include any astral plane characters, which is a good assumption right up until the moment that it’s not.
+
+</p><p>But there are also non-obvious disadvantages to both UTF-32 and UTF-16. Different computer systems store individual bytes in different ways. That means that the character <code>U+4E2D</code> could be stored in UTF-16 as either <code>4E 2D</code> or <code>2D 4E</code>, depending on whether the system is big-endian or little-endian. (For UTF-32, there are even more possible byte orderings.) As long as your documents never leave your computer, you’re safe&nbsp;—&nbsp;different applications on the same computer will all use the same byte order. But the minute you want to transfer documents between systems, perhaps on a world wide web of some sort, you’re going to need a way to indicate which order your bytes are stored. Otherwise, the receiving system has no way of knowing whether the two-byte sequence <code>4E 2D</code> means <code>U+4E2D</code> or <code>U+2D4E</code>.
+
+</p><p>To solve <em>this</em> problem, the multi-byte Unicode encodings define a “Byte Order Mark,” which is a special non-printable character that you can include at the beginning of your document to indicate what order your bytes are in. For UTF-16, the Byte Order Mark is <code>U+FEFF</code>. If you receive a UTF-16 document that starts with the bytes <code>FF FE</code>, you know the byte ordering is one way; if it starts with <code>FE FF</code>, you know the byte ordering is reversed.
+
+</p><p>Still, UTF-16 isn’t exactly ideal, especially if you’re dealing with a lot of <abbr>ASCII</abbr> characters. If you think about it, even a Chinese web page is going to contain a lot of <abbr>ASCII</abbr> characters&nbsp;—&nbsp;all the elements and attributes surrounding the printable Chinese characters. Being able to find the <var>Nth</var> character in constant time is nice, but there’s still the nagging problem of those astral plane characters, which mean that you can’t <em>guarantee</em> that every character is exactly two bytes, so you can’t <em>really</em> find the <var>Nth</var> character in constant time unless you maintain a separate index. And boy, there sure is a lot of <abbr>ASCII</abbr> text in the world…
+
+</p><p>Other people pondered these questions, and they came up with a solution:
+
+</p><p class="xxxl">UTF-8
+
+</p><p>UTF-8 is a <em>variable-length</em> encoding system for Unicode. That is, different characters take up a different number of bytes. For <abbr>ASCII</abbr> characters (A-Z, <i class="baa">&amp;</i>c.) <abbr>UTF-8</abbr> uses just one byte per character. In fact, it uses the exact same bytes; the first 128 characters (0–127) in <abbr>UTF-8</abbr> are indistinguishable from <abbr>ASCII</abbr>. “Extended Latin” characters like ñ and ö end up taking two bytes. (The bytes are not simply the Unicode code point like they would be in UTF-16; there is some serious bit-twiddling involved.) Chinese characters like 中 end up taking three bytes. The rarely-used “astral plane” characters take four bytes.
+
+</p><p>Disadvantages: because each character can take a different number of bytes, finding the <var>Nth</var> character is an O(N) operation&nbsp;—&nbsp;that is, the longer the string, the longer it takes to find a specific character. Also, there is bit-twiddling involved to encode characters into bytes and decode bytes into characters.
+
+</p><p>Advantages: super-efficient encoding of common <abbr>ASCII</abbr> characters. No worse than UTF-16 for extended Latin characters. Better than UTF-32 for Chinese characters. Also (and you’ll have to trust me on this, because I’m not going to show you the math), due to the exact nature of the bit twiddling, there are no byte-ordering issues. A document encoded in <abbr>UTF-8</abbr> uses the exact same stream of bytes on any computer.
+
+</p><p class="a">⁂
+
+</p><h2 id="divingin">Diving In<a class="hl" href="http://www.diveintopython3.net/strings.html#divingin">#</a></h2>
+
+<p>In Python 3, all strings are sequences of Unicode characters. There is no such thing as a Python string encoded in <abbr>UTF-8</abbr>, or a Python string encoded as CP-1252. “Is this string <abbr>UTF-8</abbr>?” is an invalid question. <abbr>UTF-8</abbr> is a way of encoding characters as a sequence of bytes. If you want to take a string and turn it into a sequence of bytes in a particular character encoding, Python 3 can help you with that. If you want to take a sequence of bytes and turn it into a string, Python 3 can help you with that too. Bytes are not characters; bytes are bytes. Characters are an abstraction. A string is a sequence of those abstractions.
+
+</p><p class="skip"><a href="http://www.diveintopython3.net/strings.html#postautopre0" style="position: absolute; left: 0px; top: -500px; width: 1px; height: 1px; overflow: hidden;">skip over this code listing</a></p><pre class="screen" id="autopre0"><div class="w">[<a class="toggle" href="javascript:toggleCodeBlock(&#39;autopre0&#39;)">hide</a>] [<a href="javascript:plainTextOnClick(&#39;autopre0&#39;)">open in new window</a>]</div><div class="b"><a><samp class="p">&gt;&gt;&gt; </samp><kbd class="pp"><span class="pln">s </span><span class="pun">=</span><span class="pln"> </span><span class="str">'深入 Python'</span></kbd>    <span class="u">①</span></a>
+<a><samp class="p">&gt;&gt;&gt; </samp><kbd class="pp"><span class="pln">len</span><span class="pun">(</span><span class="pln">s</span><span class="pun">)</span></kbd>               <span class="u">②</span></a>
+<samp class="pp"><span class="lit">9</span></samp>
+<a><samp class="p">&gt;&gt;&gt; </samp><kbd class="pp"><span class="pln">s</span><span class="pun">[</span><span class="lit">0</span><span class="pun">]</span></kbd>                 <span class="u">③</span></a>
+<samp class="pp"><span class="str">'深'</span></samp>
+<a><samp class="p">&gt;&gt;&gt; </samp><kbd class="pp"><span class="pln">s </span><span class="pun">+</span><span class="pln"> </span><span class="str">' 3'</span></kbd>             <span class="u">④</span></a>
+<samp class="pp"><span class="str">'深入 Python 3'</span></samp></div></pre>
+<table style="width:100%;border-collapse:collapse;margin:0;border:0"><tbody><tr><td style="text-align:center;vertical-align:baseline;margin:0;padding:0;width:2em;border:0"><span class="u">①</span></td><td style="vertical-align:top;margin:0;padding:0;width:auto;border:0">To create a string, enclose it in quotes. Python strings can be defined with either single quotes (<code>'</code>) or double quotes (<code>"</code>).<!--"-->
+</td></tr><tr><td style="text-align:center;vertical-align:baseline;margin:0;padding:0;width:2em;border:0"><span class="u">②</span></td><td style="vertical-align:top;margin:0;padding:0;width:auto;border:0">The built-in <code><dfn>len</dfn>()</code> function returns the length of the string, <i>i.e.</i> the number of characters. This is the same function you use to <a href="http://www.diveintopython3.net/native-datatypes.html#extendinglists">find the length of a list, tuple, set, or dictionary</a>. A string is like a tuple of characters.
+</td></tr><tr><td style="text-align:center;vertical-align:baseline;margin:0;padding:0;width:2em;border:0"><span class="u">③</span></td><td style="vertical-align:top;margin:0;padding:0;width:auto;border:0">Just like getting individual items out of a list, you can get individual characters out of a string using index notation.
+</td></tr><tr><td style="text-align:center;vertical-align:baseline;margin:0;padding:0;width:2em;border:0"><span class="u">④</span></td><td style="vertical-align:top;margin:0;padding:0;width:auto;border:0">Just like lists, you can <dfn>concatenate</dfn> strings using the <code>+</code> operator.
+</td></tr></tbody></table>
+
+<p class="a">⁂
+
+</p><h2 id="formatting-strings">Formatting Strings<a class="hl" href="http://www.diveintopython3.net/strings.html#formatting-strings">#</a></h2>
+
+<aside>Strings can be defined with either single or double quotes.</aside>
+<p>Let’s take another look at <a href="http://www.diveintopython3.net/your-first-python-program.html#divingin"><code>humansize.py</code></a>:
+
+</p><p class="skip"><a href="http://www.diveintopython3.net/strings.html#postautopre1" style="position: absolute; left: 0px; top: -500px; width: 1px; height: 1px; overflow: hidden;">skip over this code listing</a></p><pre class="pp code" id="autopre1"><div class="w">[<a class="toggle" href="javascript:toggleCodeBlock(&#39;autopre1&#39;)">hide</a>] [<a href="javascript:plainTextOnClick(&#39;autopre1&#39;)">open in new window</a>] [<a href="http://www.diveintopython3.net/examples/humansize.py">download <code>humansize.py</code></a>]
+</div><div class="b"><code><a><span class="pln">SUFFIXES </span><span class="pun">=</span><span class="pln"> </span><span class="pun">{</span><span class="lit">1000</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="str">'KB'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'MB'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'GB'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'TB'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'PB'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'EB'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'ZB'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'YB'</span><span class="pun">],</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="u"><span class="pun">①</span></span></a><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="lit">1024</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="str">'KiB'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'MiB'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'GiB'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'TiB'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'PiB'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'EiB'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'ZiB'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'YiB'</span><span class="pun">]}</span><span class="pln"><br><br></span><span class="kwd">def</span><span class="pln"> approximate_size</span><span class="pun">(</span><span class="pln">size</span><span class="pun">,</span><span class="pln"> a_kilobyte_is_1024_bytes</span><span class="pun">=</span><span class="kwd">True</span><span class="pun">):</span><span class="pln"><br></span><a><span class="pln">&nbsp; &nbsp; </span><span class="str">'''Convert a file size to human-readable form. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="u"><span class="str">②</span></span></a><span class="str"><br><br>&nbsp; &nbsp; Keyword arguments:<br>&nbsp; &nbsp; size -- file size in bytes<br>&nbsp; &nbsp; a_kilobyte_is_1024_bytes -- if True (default), use multiples of 1024<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if False, use multiples of 1000<br><br>&nbsp; &nbsp; Returns: string<br><br></span><a><span class="str">&nbsp; &nbsp; '''</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="u"><span class="pun">③</span></span></a><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">if</span><span class="pln"> size </span><span class="pun">&lt;</span><span class="pln"> </span><span class="lit">0</span><span class="pun">:</span><span class="pln"><br></span><a><span class="pln">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">raise</span><span class="pln"> </span><span class="typ">ValueError</span><span class="pun">(</span><span class="str">'number must be non-negative'</span><span class="pun">)</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="u"><span class="pun">④</span></span></a><span class="pln"><br><br>&nbsp; &nbsp; multiple </span><span class="pun">=</span><span class="pln"> </span><span class="lit">1024</span><span class="pln"> </span><span class="kwd">if</span><span class="pln"> a_kilobyte_is_1024_bytes </span><span class="kwd">else</span><span class="pln"> </span><span class="lit">1000</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">for</span><span class="pln"> suffix </span><span class="kwd">in</span><span class="pln"> SUFFIXES</span><span class="pun">[</span><span class="pln">multiple</span><span class="pun">]:</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; size </span><span class="pun">/=</span><span class="pln"> multiple<br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">if</span><span class="pln"> size </span><span class="pun">&lt;</span><span class="pln"> multiple</span><span class="pun">:</span><span class="pln"><br></span><a><span class="pln">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">return</span><span class="pln"> </span><span class="str">'{0:.1f} {1}'</span><span class="pun">.</span><span class="pln">format</span><span class="pun">(</span><span class="pln">size</span><span class="pun">,</span><span class="pln"> suffix</span><span class="pun">)</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="u"><span class="pun">⑤</span></span></a><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="kwd">raise</span><span class="pln"> </span><span class="typ">ValueError</span><span class="pun">(</span><span class="str">'number too large'</span><span class="pun">)</span></code></div></pre>
+<table style="width:100%;border-collapse:collapse;margin:0;border:0"><tbody><tr><td style="text-align:center;vertical-align:baseline;margin:0;padding:0;width:2em;border:0"><span class="u">①</span></td><td style="vertical-align:top;margin:0;padding:0;width:auto;border:0"><code>'KB'</code>, <code>'MB'</code>, <code>'GB'</code>… those are each strings.
+</td></tr><tr><td style="text-align:center;vertical-align:baseline;margin:0;padding:0;width:2em;border:0"><span class="u">②</span></td><td style="vertical-align:top;margin:0;padding:0;width:auto;border:0">Function docstrings are strings. This docstring spans multiple lines, so it uses three-in-a-row quotes to start and end the string.
+</td></tr><tr><td style="text-align:center;vertical-align:baseline;margin:0;padding:0;width:2em;border:0"><span class="u">③</span></td><td style="vertical-align:top;margin:0;padding:0;width:auto;border:0">These three-in-a-row quotes end the docstring.
+</td></tr><tr><td style="text-align:center;vertical-align:baseline;margin:0;padding:0;width:2em;border:0"><span class="u">④</span></td><td style="vertical-align:top;margin:0;padding:0;width:auto;border:0">There’s another string, being passed to the exception as a human-readable error message.
+</td></tr><tr><td style="text-align:center;vertical-align:baseline;margin:0;padding:0;width:2em;border:0"><span class="u">⑤</span></td><td style="vertical-align:top;margin:0;padding:0;width:auto;border:0">There’s a… whoa, what the heck is that?
+</td></tr></tbody></table>
+
+<p>Python 3 supports <dfn>formatting</dfn> values into strings. Although this can include very complicated expressions, the most basic usage is to insert a value into a string with a single placeholder.
+
+</p><p class="skip"><a href="http://www.diveintopython3.net/strings.html#postautopre2" style="position: absolute; left: 0px; top: -500px; width: 1px; height: 1px; overflow: hidden;">skip over this code listing</a></p><pre class="screen" id="autopre2"><div class="w">[<a class="toggle" href="javascript:toggleCodeBlock(&#39;autopre2&#39;)">hide</a>] [<a href="javascript:plainTextOnClick(&#39;autopre2&#39;)">open in new window</a>]</div><div class="b"><samp class="p">&gt;&gt;&gt; </samp><kbd class="pp"><span class="pln">username </span><span class="pun">=</span><span class="pln"> </span><span class="str">'mark'</span></kbd>
+<a><samp class="p">&gt;&gt;&gt; </samp><kbd class="pp"><span class="pln">password </span><span class="pun">=</span><span class="pln"> </span><span class="str">'PapayaWhip'</span></kbd>                             <span class="u">①</span></a>
+<a><samp class="p">&gt;&gt;&gt; </samp><kbd class="pp"><span class="str">"{0}'s password is {1}"</span><span class="pun">.</span><span class="pln">format</span><span class="pun">(</span><span class="pln">username</span><span class="pun">,</span><span class="pln"> password</span><span class="pun">)</span></kbd>  <span class="u">②</span></a>
+<samp class="pp"><span class="str">"mark's password is PapayaWhip"</span></samp></div></pre>
+<table style="width:100%;border-collapse:collapse;margin:0;border:0"><tbody><tr><td style="text-align:center;vertical-align:baseline;margin:0;padding:0;width:2em;border:0"><span class="u">①</span></td><td style="vertical-align:top;margin:0;padding:0;width:auto;border:0">No, my password is not really <kbd>PapayaWhip</kbd>.
+</td></tr><tr><td style="text-align:center;vertical-align:baseline;margin:0;padding:0;width:2em;border:0"><span class="u">②</span></td><td style="vertical-align:top;margin:0;padding:0;width:auto;border:0">There’s a lot going on here. First, that’s a method call on a string literal. <em>Strings are objects</em>, and objects have methods. Second, the whole expression evaluates to a string. Third, <code>{0}</code> and <code>{1}</code> are <i>replacement fields</i>, which are replaced by the arguments passed to the <code><dfn>format</dfn>()</code> method.
+</td></tr></tbody></table>
+
+<h3 id="compound-field-names">Compound Field Names<a class="hl" href="http://www.diveintopython3.net/strings.html#compound-field-names">#</a></h3>
+
+<p>The previous example shows the simplest case, where the replacement fields are simply integers. Integer replacement fields are treated as positional indices into the argument list of the <code>format()</code> method. That means that <code>{0}</code> is replaced by the first argument (<var>username</var> in this case), <code>{1}</code> is replaced by the second argument (<var>password</var>), <i class="baa">&amp;</i>c. You can have as many positional indices as you have arguments, and you can have as many arguments as you want. But replacement fields are much more powerful than that.
+
+</p><p class="skip"><a href="http://www.diveintopython3.net/strings.html#postautopre3" style="position: absolute; left: 0px; top: -500px; width: 1px; height: 1px; overflow: hidden;">skip over this code listing</a></p><pre class="screen" id="autopre3"><div class="w">[<a class="toggle" href="javascript:toggleCodeBlock(&#39;autopre3&#39;)">hide</a>] [<a href="javascript:plainTextOnClick(&#39;autopre3&#39;)">open in new window</a>]</div><div class="b"><samp class="p">&gt;&gt;&gt; </samp><kbd class="pp"><span class="kwd">import</span><span class="pln"> humansize</span></kbd>
+<a><samp class="p">&gt;&gt;&gt; </samp><kbd class="pp"><span class="pln">si_suffixes </span><span class="pun">=</span><span class="pln"> humansize</span><span class="pun">.</span><span class="pln">SUFFIXES</span><span class="pun">[</span><span class="lit">1000</span><span class="pun">]</span></kbd>      <span class="u">①</span></a>
+<samp class="p">&gt;&gt;&gt; </samp><kbd class="pp"><span class="pln">si_suffixes</span></kbd>
+<samp class="pp"><span class="pun">[</span><span class="str">'KB'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'MB'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'GB'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'TB'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'PB'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'EB'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'ZB'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'YB'</span><span class="pun">]</span></samp>
+<a><samp class="p">&gt;&gt;&gt; </samp><kbd class="pp"><span class="str">'1000{0[0]} = 1{0[1]}'</span><span class="pun">.</span><span class="pln">format</span><span class="pun">(</span><span class="pln">si_suffixes</span><span class="pun">)</span></kbd>  <span class="u">②</span></a>
+<samp class="pp"><span class="str">'1000KB = 1MB'</span></samp>
+</div></pre>
+<table style="width:100%;border-collapse:collapse;margin:0;border:0"><tbody><tr><td style="text-align:center;vertical-align:baseline;margin:0;padding:0;width:2em;border:0"><span class="u">①</span></td><td style="vertical-align:top;margin:0;padding:0;width:auto;border:0">Rather than calling any function in the <code>humansize</code> module, you’re just grabbing one of the data structures it defines: the list of “SI” (powers-of-1000) suffixes.
+</td></tr><tr><td style="text-align:center;vertical-align:baseline;margin:0;padding:0;width:2em;border:0"><span class="u">②</span></td><td style="vertical-align:top;margin:0;padding:0;width:auto;border:0">This looks complicated, but it’s not. <code>{0}</code> would refer to the first argument passed to the <code>format()</code> method, <var>si_suffixes</var>. But <var>si_suffixes</var> is a list. So <code>{0[0]}</code> refers to the first item of the list which is the first argument passed to the <code>format()</code> method: <code>'KB'</code>. Meanwhile, <code>{0[1]}</code> refers to the second item of the same list: <code>'MB'</code>. Everything outside the curly braces&nbsp;—&nbsp;including <code>1000</code>, the equals sign, and the spaces&nbsp;—&nbsp;is untouched. The final result is the string <code>'1000KB = 1MB'</code>.
+</td></tr></tbody></table>
+
+<aside>{0} is replaced by the 1<sup>st</sup> format() argument. {1} is replaced by the 2<sup>nd</sup>.</aside>
+<p>What this example shows is that <em>format specifiers can access items and properties of data structures using (almost) Python syntax</em>. This is called <i>compound field names</i>. The following compound field names “just work”:
+
+</p><ul>
+<li>Passing a list, and accessing an item of the list by index (as in the previous example)
+</li><li>Passing a dictionary, and accessing a value of the dictionary by key
+</li><li>Passing a module, and accessing its variables and functions by name
+</li><li>Passing a class instance, and accessing its properties and methods by name
+</li><li><em>Any combination of the above</em>
+</li></ul>
+
+<p>Just to blow your mind, here’s an example that combines all of the above:
+
+</p><pre class="nd screen"><samp class="p">&gt;&gt;&gt; </samp><kbd class="pp"><span class="kwd">import</span><span class="pln"> humansize</span></kbd>
+<samp class="p">&gt;&gt;&gt; </samp><kbd class="pp"><span class="kwd">import</span><span class="pln"> sys</span></kbd>
+<samp class="p">&gt;&gt;&gt; </samp><kbd class="pp"><span class="str">'1MB = 1000{0.modules[humansize].SUFFIXES[1000][0]}'</span><span class="pun">.</span><span class="pln">format</span><span class="pun">(</span><span class="pln">sys</span><span class="pun">)</span></kbd>
+<samp class="pp"><span class="str">'1MB = 1000KB'</span></samp></pre>
+
+<p>Here’s how it works:
+
+</p><ul>
+<li>The <code>sys</code> module holds information about the currently running Python instance. Since you just imported it, you can pass the <code>sys</code> module itself as an argument to the <code>format()</code> method. So the replacement field <code>{0}</code> refers to the <code>sys</code> module.
+</li><li><code>sys.modules</code> is a dictionary of all the modules that have been imported in this Python instance. The keys are the module names as strings; the values are the module objects themselves. So the replacement field <code>{0.modules}</code> refers to the dictionary of imported modules.
+</li><li><code>sys.modules['humansize']</code> is the <code>humansize</code> module which you just imported. The replacement field <code>{0.modules[humansize]}</code> refers to the <code>humansize</code> module. Note the slight difference in syntax here. In real Python code, the keys of the <code>sys.modules</code> dictionary are strings; to refer to them, you need to put quotes around the module name (<i>e.g.</i> <code>'humansize'</code>). But within a replacement field, you skip the quotes around the dictionary key name (<i>e.g.</i> <code>humansize</code>). To quote <a href="http://www.python.org/dev/peps/pep-3101/">PEP 3101: Advanced String Formatting</a>, “The rules for parsing an item key are very simple. If it starts with a digit, then it is treated as a number, otherwise it is used as a string.”
+</li><li><code>sys.modules['humansize'].SUFFIXES</code> is the dictionary defined at the top of the <code>humansize</code> module. The replacement field <code>{0.modules[humansize].SUFFIXES}</code> refers to that dictionary.
+</li><li><code>sys.modules['humansize'].SUFFIXES[1000]</code> is a list of <abbr>SI</abbr> suffixes: <code>['KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB']</code>. So the replacement field <code>{0.modules[humansize].SUFFIXES[1000]}</code> refers to that list.
+</li><li><code>sys.modules['humansize'].SUFFIXES[1000][0]</code> is the first item of the list of <abbr>SI</abbr> suffixes: <code>'KB'</code>. Therefore, the complete replacement field <code>{0.modules[humansize].SUFFIXES[1000][0]}</code> is replaced by the two-character string <code>KB</code>.
+</li></ul>
+
+<h3 id="format-specifiers">Format Specifiers<a class="hl" href="http://www.diveintopython3.net/strings.html#format-specifiers">#</a></h3>
+
+<p>But wait! There’s more! Let’s take another look at that strange line of code from <code>humansize.py</code>:
+
+</p><pre class="nd pp code"><code><span class="kwd">if</span><span class="pln"> size </span><span class="pun">&lt;</span><span class="pln"> multiple</span><span class="pun">:</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">return</span><span class="pln"> </span><span class="str">'{0:.1f} {1}'</span><span class="pun">.</span><span class="pln">format</span><span class="pun">(</span><span class="pln">size</span><span class="pun">,</span><span class="pln"> suffix</span><span class="pun">)</span></code></pre>
+
+<p><code>{1}</code> is replaced with the second argument passed to the <code>format()</code> method, which is <var>suffix</var>. But what is <code>{0:.1f}</code>? It’s two things: <code>{0}</code>, which you recognize, and <code>:.1f</code>, which you don’t. The second half (including and after the colon) defines the <i>format specifier</i>, which further refines how the replaced variable should be formatted.
+
+</p><blockquote class="note compare clang">
+<p><span class="u">☞</span>Format specifiers allow you to munge the replacement text in a variety of useful ways, like the <code><dfn>printf</dfn>()</code> function in C. You can add zero- or space-padding, align strings, control decimal precision, and even convert numbers to hexadecimal.
+</p></blockquote>
+
+<p>Within a replacement field, a colon (<code>:</code>) marks the start of the format specifier. The format specifier “<code>.1</code>” means “round to the nearest tenth” (<i>i.e.</i> display only one digit after the decimal point). The format specifier “<code>f</code>” means “fixed-point number” (as opposed to exponential notation or some other decimal representation). Thus, given a <var>size</var> of <code>698.24</code> and <var>suffix</var> of <code>'GB'</code>, the formatted string would be <code>'698.2 GB'</code>, because <code>698.24</code> gets rounded to one decimal place, then the suffix is appended after the number.
+
+</p><pre class="nd screen"><samp class="p">&gt;&gt;&gt; </samp><kbd class="pp"><span class="str">'{0:.1f} {1}'</span><span class="pun">.</span><span class="pln">format</span><span class="pun">(</span><span class="lit">698.24</span><span class="pun">,</span><span class="pln"> </span><span class="str">'GB'</span><span class="pun">)</span></kbd>
+<samp class="pp"><span class="str">'698.2 GB'</span></samp></pre>
+
+<p>For all the gory details on format specifiers, consult the <a href="http://docs.python.org/3.1/library/string.html#format-specification-mini-language">Format Specification Mini-Language</a> in the official Python documentation.
+
+</p><p class="a">⁂
+
+</p><h2 id="common-string-methods">Other Common String Methods<a class="hl" href="http://www.diveintopython3.net/strings.html#common-string-methods">#</a></h2>
+
+<p>Besides formatting, strings can do a number of other useful tricks.
+
+</p><p class="skip"><a href="http://www.diveintopython3.net/strings.html#postautopre4" style="position: absolute; left: 0px; top: -500px; width: 1px; height: 1px; overflow: hidden;">skip over this code listing</a></p><pre class="screen" id="autopre4"><div class="w">[<a class="toggle" href="javascript:toggleCodeBlock(&#39;autopre4&#39;)">hide</a>] [<a href="javascript:plainTextOnClick(&#39;autopre4&#39;)">open in new window</a>]</div><div class="b"><a><samp class="p">&gt;&gt;&gt; </samp><kbd>s = '''Finished files are the re-</kbd>  <span class="u">①</span></a>
+<samp class="p">... </samp><kbd>sult of years of scientif-</kbd>
+<samp class="p">... </samp><kbd>ic study combined with the</kbd>
+<samp class="p">... </samp><kbd>experience of years.'''</kbd>
+<a><samp class="p">&gt;&gt;&gt; </samp><kbd class="pp"><span class="pln">s</span><span class="pun">.</span><span class="pln">splitlines</span><span class="pun">()</span></kbd>                     <span class="u">②</span></a>
+<samp class="pp"><span class="pun">[</span><span class="str">'Finished files are the re-'</span><span class="pun">,</span><span class="pln"><br>&nbsp;</span><span class="str">'sult of years of scientif-'</span><span class="pun">,</span><span class="pln"><br>&nbsp;</span><span class="str">'ic study combined with the'</span><span class="pun">,</span><span class="pln"><br>&nbsp;</span><span class="str">'experience of years.'</span><span class="pun">]</span></samp>
+<a><samp class="p">&gt;&gt;&gt; </samp><kbd class="pp"><span class="kwd">print</span><span class="pun">(</span><span class="pln">s</span><span class="pun">.</span><span class="pln">lower</span><span class="pun">())</span></kbd>                   <span class="u">③</span></a>
+<samp>finished files are the re-
+sult of years of scientif-
+ic study combined with the
+experience of years.</samp>
+<a><samp class="p">&gt;&gt;&gt; </samp><kbd class="pp"><span class="pln">s</span><span class="pun">.</span><span class="pln">lower</span><span class="pun">().</span><span class="pln">count</span><span class="pun">(</span><span class="str">'f'</span><span class="pun">)</span></kbd>               <span class="u">④</span></a>
+<samp class="pp"><span class="lit">6</span></samp></div></pre>
+<table style="width:100%;border-collapse:collapse;margin:0;border:0"><tbody><tr><td style="text-align:center;vertical-align:baseline;margin:0;padding:0;width:2em;border:0"><span class="u">①</span></td><td style="vertical-align:top;margin:0;padding:0;width:auto;border:0">You can input <dfn>multiline</dfn> strings in the Python interactive shell. Once you start a multiline string with triple quotation marks, just hit <kbd>ENTER</kbd> and the interactive shell will prompt you to continue the string. Typing the closing triple quotation marks ends the string, and the next <kbd>ENTER</kbd> will execute the command (in this case, assigning the string to <var>s</var>).
+</td></tr><tr><td style="text-align:center;vertical-align:baseline;margin:0;padding:0;width:2em;border:0"><span class="u">②</span></td><td style="vertical-align:top;margin:0;padding:0;width:auto;border:0">The <code><dfn>splitlines</dfn>()</code> method takes one multiline string and returns a list of strings, one for each line of the original. Note that the carriage returns at the end of each line are not included.
+</td></tr><tr><td style="text-align:center;vertical-align:baseline;margin:0;padding:0;width:2em;border:0"><span class="u">③</span></td><td style="vertical-align:top;margin:0;padding:0;width:auto;border:0">The <code>lower()</code> method converts the entire string to lowercase. (Similarly, the <code>upper()</code> method converts a string to uppercase.)
+</td></tr><tr><td style="text-align:center;vertical-align:baseline;margin:0;padding:0;width:2em;border:0"><span class="u">④</span></td><td style="vertical-align:top;margin:0;padding:0;width:auto;border:0">The <code>count()</code> method counts the number of occurrences of a substring. Yes, there really are six “f”s in that sentence!
+</td></tr></tbody></table>
+
+<p>Here’s another common case. Let’s say you have a list of key-value pairs in the form <code><var>key1</var>=<var>value1</var>&amp;<var>key2</var>=<var>value2</var></code>, and you want to split them up and make a dictionary of the form <code>{key1: value1, key2: value2}</code>.
+
+</p><p class="skip"><a href="http://www.diveintopython3.net/strings.html#postautopre5" style="position: absolute; left: 0px; top: -500px; width: 1px; height: 1px; overflow: hidden;">skip over this code listing</a></p><pre class="screen" id="autopre5"><div class="w">[<a class="toggle" href="javascript:toggleCodeBlock(&#39;autopre5&#39;)">hide</a>] [<a href="javascript:plainTextOnClick(&#39;autopre5&#39;)">open in new window</a>]</div><div class="b"><samp class="p">&gt;&gt;&gt; </samp><kbd class="pp"><span class="pln">query </span><span class="pun">=</span><span class="pln"> </span><span class="str">'user=pilgrim&amp;database=master&amp;password=PapayaWhip'</span></kbd>
+<a><samp class="p">&gt;&gt;&gt; </samp><kbd class="pp"><span class="pln">a_list </span><span class="pun">=</span><span class="pln"> query</span><span class="pun">.</span><span class="pln">split</span><span class="pun">(</span><span class="str">'&amp;'</span><span class="pun">)</span></kbd>                                        <span class="u">①</span></a>
+<samp class="p">&gt;&gt;&gt; </samp><kbd class="pp"><span class="pln">a_list</span></kbd>
+<samp class="pp"><span class="pun">[</span><span class="str">'user=pilgrim'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'database=master'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'password=PapayaWhip'</span><span class="pun">]</span></samp>
+<a><samp class="p">&gt;&gt;&gt; </samp><kbd class="pp"><span class="pln">a_list_of_lists </span><span class="pun">=</span><span class="pln"> </span><span class="pun">[</span><span class="pln">v</span><span class="pun">.</span><span class="pln">split</span><span class="pun">(</span><span class="str">'='</span><span class="pun">,</span><span class="pln"> </span><span class="lit">1</span><span class="pun">)</span><span class="pln"> </span><span class="kwd">for</span><span class="pln"> v </span><span class="kwd">in</span><span class="pln"> a_list </span><span class="kwd">if</span><span class="pln"> </span><span class="str">'='</span><span class="pln"> </span><span class="kwd">in</span><span class="pln"> v</span><span class="pun">]</span></kbd>  <span class="u">②</span></a>
+<samp class="p">&gt;&gt;&gt; </samp><kbd class="pp"><span class="pln">a_list_of_lists</span></kbd>
+<samp class="pp"><span class="pun">[[</span><span class="str">'user'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'pilgrim'</span><span class="pun">],</span><span class="pln"> </span><span class="pun">[</span><span class="str">'database'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'master'</span><span class="pun">],</span><span class="pln"> </span><span class="pun">[</span><span class="str">'password'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'PapayaWhip'</span><span class="pun">]]</span></samp>
+<a><samp class="p">&gt;&gt;&gt; </samp><kbd class="pp"><span class="pln">a_dict </span><span class="pun">=</span><span class="pln"> dict</span><span class="pun">(</span><span class="pln">a_list_of_lists</span><span class="pun">)</span></kbd>                                   <span class="u">③</span></a>
+<samp class="p">&gt;&gt;&gt; </samp><kbd class="pp"><span class="pln">a_dict</span></kbd>
+<samp class="pp"><span class="pun">{</span><span class="str">'password'</span><span class="pun">:</span><span class="pln"> </span><span class="str">'PapayaWhip'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'user'</span><span class="pun">:</span><span class="pln"> </span><span class="str">'pilgrim'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'database'</span><span class="pun">:</span><span class="pln"> </span><span class="str">'master'</span><span class="pun">}</span></samp></div></pre>
+
+<table style="width:100%;border-collapse:collapse;margin:0;border:0"><tbody><tr><td style="text-align:center;vertical-align:baseline;margin:0;padding:0;width:2em;border:0"><span class="u">①</span></td><td style="vertical-align:top;margin:0;padding:0;width:auto;border:0">The <code><dfn>split</dfn>()</code> string method has one required argument, a delimiter. The method splits a string into a list of strings based on the delimiter. Here, the delimiter is an ampersand character, but it could be anything.
+</td></tr><tr><td style="text-align:center;vertical-align:baseline;margin:0;padding:0;width:2em;border:0"><span class="u">②</span></td><td style="vertical-align:top;margin:0;padding:0;width:auto;border:0">Now we have a list of strings, each with a key, followed by an equals sign, followed by a value. We can use a <a href="http://www.diveintopython3.net/comprehensions.html#listcomprehension">list comprehension</a> to iterate over the entire list and split each string into two strings based on the first equals sign. The optional second argument to the <code>split()</code> method is the number of times you want to split. <code>1</code> means “only split once,” so the <code>split()</code> method will return a two-item list. (In theory, a value could contain an equals sign too. If you just used <code>'key=value=foo'.split('=')</code>, you would end up with a three-item list <code>['key', 'value', 'foo']</code>.)
+</td></tr><tr><td style="text-align:center;vertical-align:baseline;margin:0;padding:0;width:2em;border:0"><span class="u">③</span></td><td style="vertical-align:top;margin:0;padding:0;width:auto;border:0">Finally, Python can turn that list-of-lists into a dictionary simply by passing it to the <code>dict()</code> function.
+</td></tr></tbody></table>
+
+<blockquote class="note">
+<p><span class="u">☞</span>The previous example looks a lot like parsing query parameters in a <abbr>URL</abbr>, but real-life <abbr>URL</abbr> parsing is actually more complicated than this. If you’re dealing with <abbr>URL</abbr> query parameters, you’re better off using the <a href="http://docs.python.org/3.1/library/urllib.parse.html#urllib.parse.parse_qs"><code>urllib.parse.parse_qs()</code></a> function, which handles some non-obvious edge cases.
+</p></blockquote>
+
+<h3 id="slicingstrings">Slicing A String<a class="hl" href="http://www.diveintopython3.net/strings.html#slicingstrings">#</a></h3>
+<p>Once you’ve defined a string, you can get any part of it as a new string. This is called <i>slicing</i> the string. Slicing strings works exactly the same as <a href="http://www.diveintopython3.net/native-datatypes.html#slicinglists">slicing lists</a>, which makes sense, because strings are just sequences of characters.
+</p><p class="skip"><a href="http://www.diveintopython3.net/strings.html#postautopre6" style="position: absolute; left: 0px; top: -500px; width: 1px; height: 1px; overflow: hidden;">skip over this code listing</a></p><pre class="screen" id="autopre6"><div class="w">[<a class="toggle" href="javascript:toggleCodeBlock(&#39;autopre6&#39;)">hide</a>] [<a href="javascript:plainTextOnClick(&#39;autopre6&#39;)">open in new window</a>]</div><div class="b"><samp class="p">&gt;&gt;&gt; </samp><kbd class="pp"><span class="pln">a_string </span><span class="pun">=</span><span class="pln"> </span><span class="str">'My alphabet starts where your alphabet ends.'</span></kbd>
+<a><samp class="p">&gt;&gt;&gt; </samp><kbd class="pp"><span class="pln">a_string</span><span class="pun">[</span><span class="lit">3</span><span class="pun">:</span><span class="lit">11</span><span class="pun">]</span></kbd>           <span class="u">①</span></a>
+<samp class="pp"><span class="str">'alphabet'</span></samp>
+<a><samp class="p">&gt;&gt;&gt; </samp><kbd class="pp"><span class="pln">a_string</span><span class="pun">[</span><span class="lit">3</span><span class="pun">:-</span><span class="lit">3</span><span class="pun">]</span></kbd>           <span class="u">②</span></a>
+<samp class="pp"><span class="str">'alphabet starts where your alphabet en'</span></samp>
+<a><samp class="p">&gt;&gt;&gt; </samp><kbd class="pp"><span class="pln">a_string</span><span class="pun">[</span><span class="lit">0</span><span class="pun">:</span><span class="lit">2</span><span class="pun">]</span></kbd>            <span class="u">③</span></a>
+<samp class="pp"><span class="str">'My'</span></samp>
+<a><samp class="p">&gt;&gt;&gt; </samp><kbd class="pp"><span class="pln">a_string</span><span class="pun">[:</span><span class="lit">18</span><span class="pun">]</span></kbd>            <span class="u">④</span></a>
+<samp class="pp"><span class="str">'My alphabet starts'</span></samp>
+<a><samp class="p">&gt;&gt;&gt; </samp><kbd class="pp"><span class="pln">a_string</span><span class="pun">[</span><span class="lit">18</span><span class="pun">:]</span></kbd>            <span class="u">⑤</span></a>
+<samp class="pp"><span class="str">' where your alphabet ends.'</span></samp></div></pre>
+<table style="width:100%;border-collapse:collapse;margin:0;border:0"><tbody><tr><td style="text-align:center;vertical-align:baseline;margin:0;padding:0;width:2em;border:0"><span class="u">①</span></td><td style="vertical-align:top;margin:0;padding:0;width:auto;border:0">You can get a part of a string, called a “slice”, by specifying two indices. The return value is a new string containing all the characters of the string, in order, starting with the first slice index.
+</td></tr><tr><td style="text-align:center;vertical-align:baseline;margin:0;padding:0;width:2em;border:0"><span class="u">②</span></td><td style="vertical-align:top;margin:0;padding:0;width:auto;border:0">Like slicing lists, you can use negative indices to slice strings.
+</td></tr><tr><td style="text-align:center;vertical-align:baseline;margin:0;padding:0;width:2em;border:0"><span class="u">③</span></td><td style="vertical-align:top;margin:0;padding:0;width:auto;border:0">Strings are zero-based, so <code>a_string[0:2]</code> returns the first two items of the string, starting at <code>a_string[0]</code>, up to but not including <code>a_string[2]</code>.
+</td></tr><tr><td style="text-align:center;vertical-align:baseline;margin:0;padding:0;width:2em;border:0"><span class="u">④</span></td><td style="vertical-align:top;margin:0;padding:0;width:auto;border:0">If the left slice index is 0, you can leave it out, and 0 is implied. So <code>a_string[:18]</code> is the same as <code>a_string[0:18]</code>, because the starting 0 is implied.
+</td></tr><tr><td style="text-align:center;vertical-align:baseline;margin:0;padding:0;width:2em;border:0"><span class="u">⑤</span></td><td style="vertical-align:top;margin:0;padding:0;width:auto;border:0">Similarly, if the right slice index is the length of the string, you can leave it out. So <code>a_string[18:]</code> is the same as <code>a_string[18:44]</code>, because this string has 44 characters.  There is a pleasing symmetry here. In this 44-character string, <code>a_string[:18]</code> returns the first 18 characters, and <code>a_string[18:]</code> returns everything but the first 18 characters. In fact, <code>a_string[:<var>n</var>]</code> will always return the first <var>n</var> characters, and <code>a_string[<var>n</var>:]</code> will return the rest, regardless of the length of the string.
+</td></tr></tbody></table>
+
+<p class="a">⁂
+
+</p><h2 id="byte-arrays">Strings vs. Bytes<a class="hl" href="http://www.diveintopython3.net/strings.html#byte-arrays">#</a></h2>
+
+<p><dfn>Bytes</dfn> are bytes; characters are an abstraction. An immutable sequence of Unicode characters is called a <i>string</i>. An immutable sequence of numbers-between-0-and-255 is called a <i>bytes</i> object.
+
+</p><p class="skip"><a href="http://www.diveintopython3.net/strings.html#postautopre7" style="position: absolute; left: 0px; top: -500px; width: 1px; height: 1px; overflow: hidden;">skip over this code listing</a></p><pre class="screen" id="autopre7"><div class="w">[<a class="toggle" href="javascript:toggleCodeBlock(&#39;autopre7&#39;)">hide</a>] [<a href="javascript:plainTextOnClick(&#39;autopre7&#39;)">open in new window</a>]</div><div class="b"><a><samp class="p">&gt;&gt;&gt; </samp><kbd class="pp"><span class="kwd">by</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> b</span><span class="str">'abcd\x65'</span></kbd>  <span class="u">①</span></a>
+<samp class="p">&gt;&gt;&gt; </samp><kbd class="pp"><span class="kwd">by</span></kbd>
+<samp class="pp"><span class="pln">b</span><span class="str">'abcde'</span></samp>
+<a><samp class="p">&gt;&gt;&gt; </samp><kbd class="pp"><span class="pln">type</span><span class="pun">(</span><span class="kwd">by</span><span class="pun">)</span></kbd>          <span class="u">②</span></a>
+<samp class="pp"><span class="tag">&lt;class</span><span class="pln"> </span><span class="atv">'bytes'</span><span class="tag">&gt;</span></samp>
+<a><samp class="p">&gt;&gt;&gt; </samp><kbd class="pp"><span class="pln">len</span><span class="pun">(</span><span class="kwd">by</span><span class="pun">)</span></kbd>           <span class="u">③</span></a>
+<samp class="pp"><span class="lit">5</span></samp>
+<a><samp class="p">&gt;&gt;&gt; </samp><kbd class="pp"><span class="kwd">by</span><span class="pln"> </span><span class="pun">+=</span><span class="pln"> b</span><span class="str">'\xff'</span></kbd>     <span class="u">④</span></a>
+<samp class="p">&gt;&gt;&gt; </samp><kbd class="pp"><span class="kwd">by</span></kbd>
+<samp class="pp"><span class="pln">b</span><span class="str">'abcde\xff'</span></samp>
+<a><samp class="p">&gt;&gt;&gt; </samp><kbd class="pp"><span class="pln">len</span><span class="pun">(</span><span class="kwd">by</span><span class="pun">)</span></kbd>           <span class="u">⑤</span></a>
+<samp class="pp"><span class="lit">6</span></samp>
+<a><samp class="p">&gt;&gt;&gt; </samp><kbd class="pp"><span class="kwd">by</span><span class="pun">[</span><span class="lit">0</span><span class="pun">]</span></kbd>             <span class="u">⑥</span></a>
+<samp class="pp"><span class="lit">97</span></samp>
+<a><samp class="p">&gt;&gt;&gt; </samp><kbd class="pp"><span class="kwd">by</span><span class="pun">[</span><span class="lit">0</span><span class="pun">]</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="lit">102</span></kbd>       <span class="u">⑦</span></a>
+<samp class="traceback">Traceback (most recent call last):
+  File "&lt;stdin&gt;", line 1, in &lt;module&gt;
+TypeError: 'bytes' object does not support item assignment</samp></div></pre>
+<table style="width:100%;border-collapse:collapse;margin:0;border:0"><tbody><tr><td style="text-align:center;vertical-align:baseline;margin:0;padding:0;width:2em;border:0"><span class="u">①</span></td><td style="vertical-align:top;margin:0;padding:0;width:auto;border:0">To define a <code>bytes</code> object, use the <code>b''</code> “<dfn>byte</dfn> literal” syntax. Each byte within the byte literal can be an <abbr>ASCII</abbr> character or an encoded hexadecimal number from <code>\x00</code> to <code>\xff</code> (0–255).
+</td></tr><tr><td style="text-align:center;vertical-align:baseline;margin:0;padding:0;width:2em;border:0"><span class="u">②</span></td><td style="vertical-align:top;margin:0;padding:0;width:auto;border:0">The type of a <code>bytes</code> object is <code>bytes</code>.
+</td></tr><tr><td style="text-align:center;vertical-align:baseline;margin:0;padding:0;width:2em;border:0"><span class="u">③</span></td><td style="vertical-align:top;margin:0;padding:0;width:auto;border:0">Just like lists and strings, you can get the length of a <code>bytes</code> object with the built-in <code>len()</code> function.
+</td></tr><tr><td style="text-align:center;vertical-align:baseline;margin:0;padding:0;width:2em;border:0"><span class="u">④</span></td><td style="vertical-align:top;margin:0;padding:0;width:auto;border:0">Just like lists and strings, you can use the <code>+</code> operator to concatenate <code>bytes</code> objects. The result is a new <code>bytes</code> object.
+</td></tr><tr><td style="text-align:center;vertical-align:baseline;margin:0;padding:0;width:2em;border:0"><span class="u">⑤</span></td><td style="vertical-align:top;margin:0;padding:0;width:auto;border:0">Concatenating a 5-byte <code>bytes</code> object and a 1-byte <code>bytes</code> object gives you a 6-byte <code>bytes</code> object.
+</td></tr><tr><td style="text-align:center;vertical-align:baseline;margin:0;padding:0;width:2em;border:0"><span class="u">⑥</span></td><td style="vertical-align:top;margin:0;padding:0;width:auto;border:0">Just like lists and strings, you can use index notation to get individual bytes in a <code>bytes</code> object. The items of a string are strings; the items of a <code>bytes</code> object are integers. Specifically, integers between 0–255.
+</td></tr><tr><td style="text-align:center;vertical-align:baseline;margin:0;padding:0;width:2em;border:0"><span class="u">⑦</span></td><td style="vertical-align:top;margin:0;padding:0;width:auto;border:0">A <code>bytes</code> object is immutable; you can not assign individual bytes. If you need to change individual bytes, you can either use <a href="http://www.diveintopython3.net/strings.html#slicingstrings">string slicing</a> and concatenation operators (which work the same as strings), or you can convert the <code>bytes</code> object into a <code>bytearray</code> object.
+</td></tr></tbody></table>
+
+<p class="skip"><a href="http://www.diveintopython3.net/strings.html#postautopre8" style="position: absolute; left: 0px; top: -500px; width: 1px; height: 1px; overflow: hidden;">skip over this code listing</a></p><pre class="screen" id="autopre8"><div class="w">[<a class="toggle" href="javascript:toggleCodeBlock(&#39;autopre8&#39;)">hide</a>] [<a href="javascript:plainTextOnClick(&#39;autopre8&#39;)">open in new window</a>]</div><div class="b"><samp class="p">&gt;&gt;&gt; </samp><kbd class="pp"><span class="kwd">by</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> b</span><span class="str">'abcd\x65'</span></kbd>
+<a><samp class="p">&gt;&gt;&gt; </samp><kbd class="pp"><span class="pln">barr </span><span class="pun">=</span><span class="pln"> bytearray</span><span class="pun">(</span><span class="kwd">by</span><span class="pun">)</span></kbd>  <span class="u">①</span></a>
+<samp class="p">&gt;&gt;&gt; </samp><kbd class="pp"><span class="pln">barr</span></kbd>
+<samp class="pp"><span class="pln">bytearray</span><span class="pun">(</span><span class="pln">b</span><span class="str">'abcde'</span><span class="pun">)</span></samp>
+<a><samp class="p">&gt;&gt;&gt; </samp><kbd class="pp"><span class="pln">len</span><span class="pun">(</span><span class="pln">barr</span><span class="pun">)</span></kbd>             <span class="u">②</span></a>
+<samp class="pp"><span class="lit">5</span></samp>
+<a><samp class="p">&gt;&gt;&gt; </samp><kbd class="pp"><span class="pln">barr</span><span class="pun">[</span><span class="lit">0</span><span class="pun">]</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="lit">102</span></kbd>         <span class="u">③</span></a>
+<samp class="p">&gt;&gt;&gt; </samp><kbd class="pp"><span class="pln">barr</span></kbd>
+<samp class="pp"><span class="pln">bytearray</span><span class="pun">(</span><span class="pln">b</span><span class="str">'fbcde'</span><span class="pun">)</span></samp></div></pre>
+<table style="width:100%;border-collapse:collapse;margin:0;border:0"><tbody><tr><td style="text-align:center;vertical-align:baseline;margin:0;padding:0;width:2em;border:0"><span class="u">①</span></td><td style="vertical-align:top;margin:0;padding:0;width:auto;border:0">To convert a <code>bytes</code> object into a mutable <code>bytearray</code> object, use the built-in <code>bytearray()</code> function.
+</td></tr><tr><td style="text-align:center;vertical-align:baseline;margin:0;padding:0;width:2em;border:0"><span class="u">②</span></td><td style="vertical-align:top;margin:0;padding:0;width:auto;border:0">All the methods and operations you can do on a <code>bytes</code> object, you can do on a <code>bytearray</code> object too.
+</td></tr><tr><td style="text-align:center;vertical-align:baseline;margin:0;padding:0;width:2em;border:0"><span class="u">③</span></td><td style="vertical-align:top;margin:0;padding:0;width:auto;border:0">The one difference is that, with the <code>bytearray</code> object, you can assign individual bytes using index notation. The assigned value must be an integer between 0–255.
+</td></tr></tbody></table>
+
+<p>The one thing you <em>can never do</em> is mix bytes and strings.
+
+</p><p class="skip"><a href="http://www.diveintopython3.net/strings.html#postautopre9" style="position: absolute; left: 0px; top: -500px; width: 1px; height: 1px; overflow: hidden;">skip over this code listing</a></p><pre class="screen" id="autopre9"><div class="w">[<a class="toggle" href="javascript:toggleCodeBlock(&#39;autopre9&#39;)">hide</a>] [<a href="javascript:plainTextOnClick(&#39;autopre9&#39;)">open in new window</a>]</div><div class="b"><samp class="p">&gt;&gt;&gt; </samp><kbd class="pp"><span class="kwd">by</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> b</span><span class="str">'d'</span></kbd>
+<samp class="p">&gt;&gt;&gt; </samp><kbd class="pp"><span class="pln">s </span><span class="pun">=</span><span class="pln"> </span><span class="str">'abcde'</span></kbd>
+<a><samp class="p">&gt;&gt;&gt; </samp><kbd class="pp"><span class="kwd">by</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> s</span></kbd>                       <span class="u">①</span></a>
+<samp class="traceback">Traceback (most recent call last):
+  File "&lt;stdin&gt;", line 1, in &lt;module&gt;
+TypeError: can't concat bytes to str</samp>
+<a><samp class="p">&gt;&gt;&gt; </samp><kbd class="pp"><span class="pln">s</span><span class="pun">.</span><span class="pln">count</span><span class="pun">(</span><span class="kwd">by</span><span class="pun">)</span></kbd>                  <span class="u">②</span></a>
+<samp class="traceback">Traceback (most recent call last):
+  File "&lt;stdin&gt;", line 1, in &lt;module&gt;
+TypeError: Can't convert 'bytes' object to str implicitly</samp>
+<a><samp class="p">&gt;&gt;&gt; </samp><kbd class="pp"><span class="pln">s</span><span class="pun">.</span><span class="pln">count</span><span class="pun">(</span><span class="kwd">by</span><span class="pun">.</span><span class="pln">decode</span><span class="pun">(</span><span class="str">'ascii'</span><span class="pun">))</span></kbd>  <span class="u">③</span></a>
+<samp class="pp"><span class="lit">1</span></samp></div></pre>
+<table style="width:100%;border-collapse:collapse;margin:0;border:0"><tbody><tr><td style="text-align:center;vertical-align:baseline;margin:0;padding:0;width:2em;border:0"><span class="u">①</span></td><td style="vertical-align:top;margin:0;padding:0;width:auto;border:0">You can’t concatenate bytes and strings. They are two different data types.
+</td></tr><tr><td style="text-align:center;vertical-align:baseline;margin:0;padding:0;width:2em;border:0"><span class="u">②</span></td><td style="vertical-align:top;margin:0;padding:0;width:auto;border:0">You can’t count the occurrences of bytes in a string, because there are no bytes in a string. A string is a sequence of characters. Perhaps you meant “count the occurrences of the string that you would get after decoding this sequence of bytes in a particular character encoding”? Well then, you’ll need to say that explicitly. Python 3 won’t <dfn>implicitly</dfn> convert bytes to strings or strings to bytes.
+</td></tr><tr><td style="text-align:center;vertical-align:baseline;margin:0;padding:0;width:2em;border:0"><span class="u">③</span></td><td style="vertical-align:top;margin:0;padding:0;width:auto;border:0">By an amazing coincidence, this line of code says “count the occurrences of the string that you would get after decoding this sequence of bytes in this particular character encoding.”
+</td></tr></tbody></table>
+
+<p>And here is the link between strings and bytes: <code>bytes</code> objects have a <code><dfn>decode</dfn>()</code> method that takes a character encoding and returns a string, and strings have an <code><dfn>encode</dfn>()</code> method that takes a character encoding and returns a <code>bytes</code> object. In the previous example, the decoding was relatively straightforward&nbsp;—&nbsp;converting a sequence of bytes in the <abbr>ASCII</abbr> encoding into a string of characters. But the same process works with any encoding that supports the characters of the string&nbsp;—&nbsp;even legacy (non-Unicode) encodings.
+
+</p><p class="skip"><a href="http://www.diveintopython3.net/strings.html#postautopre10" style="position: absolute; left: 0px; top: -500px; width: 1px; height: 1px; overflow: hidden;">skip over this code listing</a></p><pre class="screen" id="autopre10"><div class="w">[<a class="toggle" href="javascript:toggleCodeBlock(&#39;autopre10&#39;)">hide</a>] [<a href="javascript:plainTextOnClick(&#39;autopre10&#39;)">open in new window</a>]</div><div class="b"><a><samp class="p">&gt;&gt;&gt; </samp><kbd class="pp"><span class="pln">a_string </span><span class="pun">=</span><span class="pln"> </span><span class="str">'深入 Python'</span></kbd>         <span class="u">①</span></a>
+<samp class="p">&gt;&gt;&gt; </samp><kbd class="pp"><span class="pln">len</span><span class="pun">(</span><span class="pln">a_string</span><span class="pun">)</span></kbd>
+<samp class="pp"><span class="lit">9</span></samp>
+<a><samp class="p">&gt;&gt;&gt; </samp><kbd class="pp"><span class="kwd">by</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> a_string</span><span class="pun">.</span><span class="pln">encode</span><span class="pun">(</span><span class="str">'utf-8'</span><span class="pun">)</span></kbd>    <span class="u">②</span></a>
+<samp class="p">&gt;&gt;&gt; </samp><kbd class="pp"><span class="kwd">by</span></kbd>
+<samp class="pp"><span class="pln">b</span><span class="str">'\xe6\xb7\xb1\xe5\x85\xa5 Python'</span></samp>
+<samp class="p">&gt;&gt;&gt; </samp><kbd class="pp"><span class="pln">len</span><span class="pun">(</span><span class="kwd">by</span><span class="pun">)</span></kbd>
+<samp class="pp"><span class="lit">13</span></samp>
+<a><samp class="p">&gt;&gt;&gt; </samp><kbd class="pp"><span class="kwd">by</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> a_string</span><span class="pun">.</span><span class="pln">encode</span><span class="pun">(</span><span class="str">'gb18030'</span><span class="pun">)</span></kbd>  <span class="u">③</span></a>
+<samp class="p">&gt;&gt;&gt; </samp><kbd class="pp"><span class="kwd">by</span></kbd>
+<samp class="pp"><span class="pln">b</span><span class="str">'\xc9\xee\xc8\xeb Python'</span></samp>
+<samp class="p">&gt;&gt;&gt; </samp><kbd class="pp"><span class="pln">len</span><span class="pun">(</span><span class="kwd">by</span><span class="pun">)</span></kbd>
+<samp class="pp"><span class="lit">11</span></samp>
+<a><samp class="p">&gt;&gt;&gt; </samp><kbd class="pp"><span class="kwd">by</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> a_string</span><span class="pun">.</span><span class="pln">encode</span><span class="pun">(</span><span class="str">'big5'</span><span class="pun">)</span></kbd>     <span class="u">④</span></a>
+<samp class="p">&gt;&gt;&gt; </samp><kbd class="pp"><span class="kwd">by</span></kbd>
+<samp class="pp"><span class="pln">b</span><span class="str">'\xb2`\xa4J Python'</span></samp>
+<samp class="p">&gt;&gt;&gt; </samp><kbd class="pp"><span class="pln">len</span><span class="pun">(</span><span class="kwd">by</span><span class="pun">)</span></kbd>
+<samp class="pp"><span class="lit">11</span></samp>
+<a><samp class="p">&gt;&gt;&gt; </samp><kbd class="pp"><span class="pln">roundtrip </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">by</span><span class="pun">.</span><span class="pln">decode</span><span class="pun">(</span><span class="str">'big5'</span><span class="pun">)</span></kbd>    <span class="u">⑤</span></a>
+<samp class="p">&gt;&gt;&gt; </samp><kbd class="pp"><span class="pln">roundtrip</span></kbd>
+<samp class="pp"><span class="str">'深入 Python'</span></samp>
+<samp class="p">&gt;&gt;&gt; </samp><kbd class="pp"><span class="pln">a_string </span><span class="pun">==</span><span class="pln"> roundtrip</span></kbd>
+<samp class="pp"><span class="kwd">True</span></samp></div></pre>
+<table style="width:100%;border-collapse:collapse;margin:0;border:0"><tbody><tr><td style="text-align:center;vertical-align:baseline;margin:0;padding:0;width:2em;border:0"><span class="u">①</span></td><td style="vertical-align:top;margin:0;padding:0;width:auto;border:0">This is a string. It has nine characters.
+</td></tr><tr><td style="text-align:center;vertical-align:baseline;margin:0;padding:0;width:2em;border:0"><span class="u">②</span></td><td style="vertical-align:top;margin:0;padding:0;width:auto;border:0">This is a <code>bytes</code> object. It has 13 bytes. It is the sequence of bytes you get when you take <var>a_string</var> and encode it in <abbr>UTF-8</abbr>.
+</td></tr><tr><td style="text-align:center;vertical-align:baseline;margin:0;padding:0;width:2em;border:0"><span class="u">③</span></td><td style="vertical-align:top;margin:0;padding:0;width:auto;border:0">This is a <code>bytes</code> object. It has 11 bytes. It is the sequence of bytes you get when you take <var>a_string</var> and encode it in <a href="http://en.wikipedia.org/wiki/GB_18030">GB18030</a>.
+</td></tr><tr><td style="text-align:center;vertical-align:baseline;margin:0;padding:0;width:2em;border:0"><span class="u">④</span></td><td style="vertical-align:top;margin:0;padding:0;width:auto;border:0">This is a <code>bytes</code> object. It has 11 bytes. It is an <em>entirely different sequence of bytes</em> that you get when you take <var>a_string</var> and encode it in <a href="http://en.wikipedia.org/wiki/Big5">Big5</a>.
+</td></tr><tr><td style="text-align:center;vertical-align:baseline;margin:0;padding:0;width:2em;border:0"><span class="u">⑤</span></td><td style="vertical-align:top;margin:0;padding:0;width:auto;border:0">This is a string. It has nine characters. It is the sequence of characters you get when you take <var>by</var> and decode it using the Big5 encoding algorithm. It is identical to the original string.
+</td></tr></tbody></table>
+
+<p class="a">⁂
+
+</p><h2 id="py-encoding">Postscript: Character Encoding Of Python Source Code<a class="hl" href="http://www.diveintopython3.net/strings.html#py-encoding">#</a></h2>
+
+<p>Python 3 assumes that your source code&nbsp;—&nbsp;<i>i.e.</i> each <code>.py</code> file&nbsp;—&nbsp;is encoded in <abbr>UTF-8</abbr>.
+
+</p><blockquote class="note compare python2">
+<p><span class="u">☞</span>In Python 2, the <dfn>default</dfn> encoding for <code>.py</code> files was <abbr>ASCII</abbr>. In Python 3, <a href="http://www.python.org/dev/peps/pep-3120/">the default encoding is <abbr>UTF-8</abbr></a>.
+</p></blockquote>
+
+<p>If you would like to use a different encoding within your Python code, you can put an encoding declaration on the first line of each file. This declaration defines a <code>.py</code> file to be windows-1252:
+
+</p><pre class="nd pp code"><code><span class="com"># -*- coding: windows-1252 -*-</span></code></pre>
+
+<p>Technically, the character encoding override can also be on the second line, if the first line is a <abbr>UNIX</abbr>-like hash-bang command.
+
+</p><pre class="nd pp code"><code><span class="com">#!/usr/bin/python3</span><span class="pln"><br></span><span class="com"># -*- coding: windows-1252 -*-</span></code></pre>
+
+<p>For more information, consult <a href="http://www.python.org/dev/peps/pep-0263/"><abbr>PEP</abbr> 263: Defining Python Source Code Encodings</a>.
+
+</p><p class="a">⁂
+
+</p><h2 id="furtherreading">Further Reading<a class="hl" href="http://www.diveintopython3.net/strings.html#furtherreading">#</a></h2>
+
+<p>On Unicode in Python:
+
+</p><ul>
+<li><a href="http://docs.python.org/3.1/howto/unicode.html">Python Unicode HOWTO</a>
+</li><li><a href="http://docs.python.org/3.0/whatsnew/3.0.html#text-vs-data-instead-of-unicode-vs-8-bit">What’s New In Python 3: Text vs. Data Instead Of Unicode vs. 8-bit</a>
+</li><li><a href="http://www.python.org/dev/peps/pep-0261/"><abbr>PEP 261</abbr></a> explains how Python handles astral characters outside of the Basic Multilingual Plane (<i>i.e.</i> characters whose ordinal value is greater than 65535)
+</li></ul>
+
+<p>On Unicode in general:
+
+</p><ul>
+<li><a href="http://www.joelonsoftware.com/articles/Unicode.html">The Absolute Minimum Every Software Developer Absolutely, Positively Must Know About Unicode and Character Sets (No Excuses!)</a>
+</li><li><a href="http://www.tbray.org/ongoing/When/200x/2003/04/06/Unicode">On the Goodness of Unicode</a>
+</li><li><a href="http://www.tbray.org/ongoing/When/200x/2003/04/13/Strings">On Character Strings</a>
+</li><li><a href="http://www.tbray.org/ongoing/When/200x/2003/04/26/UTF">Characters vs. Bytes</a>
+</li></ul>
+
+<p>On character encoding in other formats:
+
+</p><ul>
+<li><a href="http://feedparser.org/docs/character-encoding.html">Character encoding in XML</a>
+</li><li><a href="http://blog.whatwg.org/the-road-to-html-5-character-encoding">Character encoding in HTML</a>
+</li></ul>
+
+<p>On strings and string formatting:
+
+</p><ul>
+<li><a href="http://docs.python.org/3.1/library/string.html"><code>string</code>&nbsp;—&nbsp;Common string operations</a>
+</li><li><a href="http://docs.python.org/3.1/library/string.html#formatstrings">Format String Syntax</a>
+</li><li><a href="http://docs.python.org/3.1/library/string.html#format-specification-mini-language">Format Specification Mini-Language</a>
+</li><li><a href="http://www.python.org/dev/peps/pep-3101/"><abbr>PEP</abbr> 3101: Advanced String Formatting</a>
+</li></ul>
+
+<p class="v"><a href="http://www.diveintopython3.net/comprehensions.html" rel="prev" title="back to “Comprehensions”"><span class="u">☜</span></a> <a href="http://www.diveintopython3.net/regular-expressions.html" rel="next" title="onward to “Regular Expressions”"><span class="u">☞</span></a>
+
+</p><p class="c">© 2001–11 <a href="http://www.diveintopython3.net/about.html">Mark Pilgrim</a>
+<script src="./Strings - Dive Into Python 3_files/jquery.js"></script>
+<script src="./Strings - Dive Into Python 3_files/prettify.js"></script>
+<script src="./Strings - Dive Into Python 3_files/dip3.js"></script>
+</p></body></html>

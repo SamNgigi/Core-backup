@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<!-- saved from url=(0089)https://moringaschool.instructure.com/courses/22/pages/weekend-looping?module_item_id=420 -->
+<html class="lato-font-loaded" lang="en-GB"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>Weekend: Looping: Python</title>
+  <!--[if lte IE 9]> <meta http-equiv=refresh content="0; URL=/ie-9-is-not-supported.html" /> <![endif]-->
+  <link rel="shortcut icon" type="image/x-icon" href="https://instructure-uploads-eu.s3-eu-west-1.amazonaws.com/account_118060000000000001/attachments/23/Moringa%20Logo-02.png">
+  <link rel="apple-touch-icon" href="https://instructure-uploads-eu.s3-eu-west-1.amazonaws.com/account_118060000000000001/attachments/16/MORINGA%20TREE%20WHITE.png">
+  
+  <link rel="stylesheet" media="all" href="./Weekend_ Looping_ Python_files/variables-750d72b9d3e5d522f965bf904110c132.css">
+  <link rel="stylesheet" media="all" href="./Weekend_ Looping_ Python_files/common-79b981d2d9.css">
+  <script async="" src="./Weekend_ Looping_ Python_files/analytics.js"></script><script type="text/javascript" async="" src="./Weekend_ Looping_ Python_files/ga.js"></script><script>
+//<![CDATA[
+
+!function(){
+  var o,s,v;
+  if (!(window.Promise && Object.assign && Object.values && [].find && [].includes && (o={},s=Symbol(),v={},o[s]=v,o[s]===v) && (function f(){}).bind().name==='bound f')) {
+    s = 's', document.write('<'+s+'cr'+'ipt src="https://du11hjcvx0uqb.cloudfront.net/dist/ie11-polyfill-a0702bf7af.js"></'+s+'c'+'ript>');
+  }
+}();
+      
+//]]>
+</script>
+  <script src="./Weekend_ Looping_ Python_files/lato-fontfaceobserver-11a14bc0b6.js" async="async"></script>
+  
+  <meta name="apple-itunes-app" content="app-id=480883488">
+<link rel="manifest" href="https://moringaschool.instructure.com/web-app-manifest/manifest.json">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#8e9847">
+  <link rel="stylesheet" media="all" href="./Weekend_ Looping_ Python_files/wiki_page-46e7e026f6.css">
+  
+  
+  <script>
+    function _earlyClick(e){
+      var c = e.target
+      while (c && c.ownerDocument) {
+        if (c.getAttribute('href') == '#' || c.getAttribute('data-method')) {
+          e.preventDefault()
+          (_earlyClick.clicks = _earlyClick.clicks || []).push(c)
+          break
+        }
+        c = c.parentNode
+      }
+    }
+    document.addEventListener('click', _earlyClick)
+  </script>
+  <script src="./Weekend_ Looping_ Python_files/variables-750d72b9d3e5d522f965bf904110c132.js" defer="defer"></script>
+  <script src="./Weekend_ Looping_ Python_files/vendor.bundle-b4a7e4be55.js" defer="defer"></script>
+<script src="./Weekend_ Looping_ Python_files/Nairobi-5be04c1e07.js" defer="defer"></script>
+<script src="./Weekend_ Looping_ Python_files/en_GB-31745e04c9.js" defer="defer"></script>
+<script src="./Weekend_ Looping_ Python_files/en-gb.bundle-5b8e778bb0.js" defer="defer"></script>
+<script src="./Weekend_ Looping_ Python_files/appBootstrap.bundle-659e6cb04a.js" defer="defer"></script>
+<script src="./Weekend_ Looping_ Python_files/common.bundle-7a4babf662.js" defer="defer"></script>
+<script src="./Weekend_ Looping_ Python_files/wiki_page_show.bundle-6cdff07d81.js" defer="defer"></script>
+<style type="text/css"></style></head>
+
+<body class="with-left-side course-menu-expanded padless-content pages primary-nav-transitions context-course_22 show webkit chrome touch">
+
+<noscript>
+  &lt;div role="alert" class="ic-flash-static ic-flash-error"&gt;
+    &lt;div class="ic-flash__icon" aria-hidden="true"&gt;
+      &lt;i class="icon-warning"&gt;&lt;/i&gt;
+    &lt;/div&gt;
+    &lt;h1&gt; To access this site, you must enable JavaScript.&lt;/h1&gt;
+  &lt;/div&gt;
+</noscript>
+
+
+
+
+
+<ul id="flash_message_holder"></ul>
+<div id="flash_screenreader_holder" role="alert" aria-live="assertive" aria-relevant="additions" class="screenreader-only" aria-atomic="false"></div>
+
+<div id="application" class="ic-app">
+  
+  <header id="header" class="ic-app-header no-print ">
+    <a href="https://moringaschool.instructure.com/courses/22/pages/weekend-looping?module_item_id=420#content" id="skip_navigation_link">Skip to content</a>
+      <div role="region" class="ic-app-header__main-navigation" aria-label="Global navigation">
+        <div class="ic-app-header__logomark-container">
+          <a href="https://moringaschool.instructure.com/" class="ic-app-header__logomark">
+            <span class="screenreader-only">Dashboard</span>
+          </a>
+        </div>
+        <ul id="menu" class="ic-app-header__menu-list">
+            <li class="menu-item ic-app-header__menu-list-item ">
+              <a id="global_nav_profile_link" href="https://moringaschool.instructure.com/profile" class="ic-app-header__menu-list-link">
+                <div class="menu-item-icon-container" aria-hidden="true">
+                  <div class="ic-avatar ">
+                    <img src="./Weekend_ Looping_ Python_files/480a1c23def404db6a4a6bf1deb1add6" alt="Sam Ngigi">
+                  </div>
+                </div>
+                <div class="menu-item__text">
+                  Account
+                </div>
+              </a>
+            </li>
+          <li class="ic-app-header__menu-list-item ">
+            <a id="global_nav_dashboard_link" href="https://moringaschool.instructure.com/" class="ic-app-header__menu-list-link">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--dashboard" version="1.1" x="0" y="0" viewBox="0 0 280 200" enable-background="new 0 0 280 200" xml:space="preserve"><path d="M273.09,180.75H197.47V164.47h62.62A122.16,122.16,0,1,0,17.85,142a124,124,0,0,0,2,22.51H90.18v16.29H6.89l-1.5-6.22A138.51,138.51,0,0,1,1.57,142C1.57,65.64,63.67,3.53,140,3.53S278.43,65.64,278.43,142a137.67,137.67,0,0,1-3.84,32.57ZM66.49,87.63,50.24,71.38,61.75,59.86,78,76.12Zm147,0L202,76.12l16.25-16.25,11.51,11.51ZM131.85,53.82v-23h16.29v23Zm15.63,142.3a31.71,31.71,0,0,1-28-16.81c-6.4-12.08-15.73-72.29-17.54-84.25a8.15,8.15,0,0,1,13.58-7.2c8.88,8.21,53.48,49.72,59.88,61.81a31.61,31.61,0,0,1-27.9,46.45ZM121.81,116.2c4.17,24.56,9.23,50.21,12,55.49A15.35,15.35,0,1,0,161,157.3C158.18,152,139.79,133.44,121.81,116.2Z"></path></svg>
+
+              </div>
+              <div class="menu-item__text">Dashboard</div>
+            </a>
+          </li>
+          <li class="menu-item ic-app-header__menu-list-item ic-app-header__menu-list-item--active">
+            <a id="global_nav_courses_link" href="https://moringaschool.instructure.com/courses" class="ic-app-header__menu-list-link">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--courses" version="1.1" x="0" y="0" viewBox="0 0 280 259" enable-background="new 0 0 280 259" xml:space="preserve"><path d="M73.31,198c-11.93,0-22.22,8-24,18.73a26.67,26.67,0,0,0-.3,3.63v.3a22,22,0,0,0,5.44,14.65,22.47,22.47,0,0,0,17.22,8H200V228.19h-134V213.08H200V198Zm21-105.74h90.64V62H94.3ZM79.19,107.34V46.92H200v60.42Zm7.55,30.21V122.45H192.49v15.11ZM71.65,16.71A22.72,22.72,0,0,0,49,39.36V190.88a41.12,41.12,0,0,1,24.32-8h157V16.71ZM33.88,39.36A37.78,37.78,0,0,1,71.65,1.6H245.36V198H215.15v45.32h22.66V258.4H71.65a37.85,37.85,0,0,1-37.76-37.76Z"></path></svg>
+
+              </div>
+              <div class="menu-item__text">
+                Courses
+              </div>
+            </a>
+          </li>
+          <li class="menu-item ic-app-header__menu-list-item ">
+            <a id="global_nav_calendar_link" href="https://moringaschool.instructure.com/calendar" class="ic-app-header__menu-list-link">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--calendar" version="1.1" x="0" y="0" viewBox="0 0 280 280" enable-background="new 0 0 280 280" xml:space="preserve"><path d="M197.07,213.38h16.31V197.07H197.07Zm-16.31,16.31V180.76h48.92v48.92Zm-48.92-16.31h16.31V197.07H131.85Zm-16.31,16.31V180.76h48.92v48.92ZM66.62,213.38H82.93V197.07H66.62ZM50.32,229.68V180.76H99.24v48.92Zm146.75-81.53h16.31V131.85H197.07Zm-16.31,16.31V115.54h48.92v48.92Zm-48.92-16.31h16.31V131.85H131.85Zm-16.31,16.31V115.54h48.92v48.92ZM66.62,148.15H82.93V131.85H66.62ZM50.32,164.46V115.54H99.24v48.92ZM34,262.29H246V82.93H34ZM246,66.62V42.16A8.17,8.17,0,0,0,237.84,34H213.38v8.15a8.15,8.15,0,1,1-16.31,0V34H82.93v8.15a8.15,8.15,0,0,1-16.31,0V34H42.16A8.17,8.17,0,0,0,34,42.16V66.62Zm-8.15-48.92a24.49,24.49,0,0,1,24.46,24.46V278.6H17.71V42.16A24.49,24.49,0,0,1,42.16,17.71H66.62V9.55a8.15,8.15,0,0,1,16.31,0v8.15H197.07V9.55a8.15,8.15,0,1,1,16.31,0v8.15Z"></path></svg>
+
+              </div>
+              <div class="menu-item__text">
+                Calendar
+              </div>
+            </a>
+          </li>
+          <li class="menu-item ic-app-header__menu-list-item ">
+            <a id="global_nav_conversations_link" href="https://moringaschool.instructure.com/conversations" class="ic-app-header__menu-list-link">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--inbox" version="1.1" x="0" y="0" viewBox="0 0 280 280" enable-background="new 0 0 280 280" xml:space="preserve"><path d="M91.72,120.75h96.56V104.65H91.72Zm0,48.28h80.47V152.94H91.72Zm0-96.56h80.47V56.37H91.72Zm160.94,34.88H228.52V10.78h-177v96.56H27.34A24.17,24.17,0,0,0,3.2,131.48V244.14a24.17,24.17,0,0,0,24.14,24.14H252.66a24.17,24.17,0,0,0,24.14-24.14V131.48A24.17,24.17,0,0,0,252.66,107.34Zm0,16.09a8.06,8.06,0,0,1,8,8v51.77l-32.19,19.31V123.44ZM67.58,203.91v-177H212.42v177ZM27.34,123.44H51.48v79.13L19.29,183.26V131.48A8.06,8.06,0,0,1,27.34,123.44ZM252.66,252.19H27.34a8.06,8.06,0,0,1-8-8V202l30,18H230.75l30-18v42.12A8.06,8.06,0,0,1,252.66,252.19Z"></path></svg>
+
+                <span class="menu-item__badge" style="display: none">0</span>
+              </div>
+              <div class="menu-item__text">
+                Inbox
+              </div>
+            </a>
+          </li>
+            
+
+
+          <li class="ic-app-header__menu-list-item">
+           <a id="global_nav_help_link" class="ic-app-header__menu-list-link" data-track-category="help system" data-track-label="help button" href="http://help.instructure.com/">
+              <div class="menu-item-icon-container" role="presentation">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg menu-item__icon svg-icon-cog" version="1.1" x="0" y="0" viewBox="0 0 200 200" enable-background="new 0 0 200 200" xml:space="preserve" fill="currentColor"><path d="M100,127.88A27.88,27.88,0,1,1,127.92,100,27.92,27.92,0,0,1,100,127.88M100,61a39,39,0,1,0,39,39,39.08,39.08,0,0,0-39-39m73.42,39a70.26,70.26,0,0,0-1.15-12.57l20.76-18-19.7-33.66-26.19,8.73a74.2,74.2,0,0,0-22.11-12.68L119.68,5.2H80.4L75,31.83A72.9,72.9,0,0,0,52.89,44.51L26.71,35.79,7,69.45l20.74,18a69.95,69.95,0,0,0,0,25.13L7,130.55l19.7,33.66,26.19-8.74A74.23,74.23,0,0,0,75,168.16l5.4,26.64h39.28l5.4-26.63a72.88,72.88,0,0,0,22.11-12.69l26.19,8.74,19.7-33.66-20.76-18A70.26,70.26,0,0,0,173.46,100Zm5.31,32.92-10.45,17.86-23.72-7.92-2.42,2.2a61.7,61.7,0,0,1-23.57,13.51l-3.17,1-4.88,24.1h-21l-4.88-24.11-3.17-1A61.7,61.7,0,0,1,57.91,145l-2.42-2.2-23.72,7.92L21.31,132.91l18.74-16.24-.74-3.26a59.25,59.25,0,0,1,0-26.83l.74-3.26L21.31,67.09,31.76,49.23l23.72,7.91,2.42-2.2A61.87,61.87,0,0,1,81.47,41.42l3.17-1,4.88-24.1h21l4.88,24.11,3.17,1A61.73,61.73,0,0,1,142.18,55l2.42,2.2,23.72-7.92,10.45,17.86L160,83.33l.74,3.26a59.25,59.25,0,0,1,0,26.83l-.74,3.26Z"></path></svg>
+
+              </div>
+              <div class="menu-item__text">
+                Help Desk
+              </div>
+</a>          </li>
+        </ul>
+      </div>
+      <div class="ic-app-header__secondary-navigation">
+        <ul class="ic-app-header__menu-list">
+          <li class="menu-item ic-app-header__menu-list-item">
+            <button id="primaryNavToggle" class="ic-app-header__menu-list-link ic-app-header__menu-list-link--nav-toggle" aria-label="
+                Expand global navigation
+                " title="
+                Expand global navigation
+                ">
+              <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--navtoggle" version="1.1" x="0" y="0" width="40" height="32" viewBox="0 0 40 32" xml:space="preserve">
+  <path d="M39.5,30.28V2.48H37.18v27.8Zm-4.93-13.9L22.17,4,20.53,5.61l9.61,9.61H.5v2.31H30.14l-9.61,9.61,1.64,1.64Z"></path>
+</svg>
+
+            </button>
+          </li>
+        </ul>
+      </div>
+    <div id="global_nav_tray_container"><noscript data-reactid=".0"></noscript></div>
+  </header>
+
+
+  <div id="instructure_ajax_error_box">
+    <div style="text-align: right; background-color: #fff;"><a href="https://moringaschool.instructure.com/courses/22/pages/weekend-looping?module_item_id=420#" class="close_instructure_ajax_error_box_link">Close</a></div>
+    <iframe id="instructure_ajax_error_result" src="./Weekend_ Looping_ Python_files/saved_resource.html" style="border: 0;" title="Error"></iframe>
+  </div>
+
+  
+
+  <div id="wrapper" class="ic-Layout-wrapper">
+      <div class="ic-app-nav-toggle-and-crumbs no-print">
+          <button type="button" id="courseMenuToggle" class="Button Button--link ic-app-course-nav-toggle" aria-live="polite" aria-label="Hide courses navigation menu" title="Hide courses navigation menu">
+            <i class="icon-hamburger" aria-hidden="true"></i>
+          </button>
+          <div class="ic-app-crumbs">
+        <nav id="breadcrumbs" role="navigation" aria-label="breadcrumbs"><ul><li class="home"><a href="https://moringaschool.instructure.com/"><span class="ellipsible">      <i class="icon-home" title="My dashboard">
+        <span class="screenreader-only">My dashboard</span>
+      </i>
+</span></a></li><li><a href="https://moringaschool.instructure.com/courses/22"><span class="ellipsible">py-ke</span></a></li><li><a href="https://moringaschool.instructure.com/courses/22/pages"><span class="ellipsible">Pages</span></a></li><li><span class="ellipsible">Weekend: Looping</span></li></ul></nav>
+        </div>
+      </div>
+    <div id="main" class="ic-Layout-columns">
+        <div class="ic-Layout-watermark"></div>
+        <div id="left-side" class="ic-app-course-menu list-view" style="display: block">
+            <nav role="navigation" aria-label="Courses navigation menu"><ul id="section-tabs"><li class="section"><a href="https://moringaschool.instructure.com/courses/22" title="Home" class="home" tabindex="0">Home</a></li><li class="section"><a href="https://moringaschool.instructure.com/courses/22/modules" title="Modules" class="modules" tabindex="0">Modules</a></li><li class="section"><a href="https://moringaschool.instructure.com/courses/22/grades" title="Grades" class="grades" tabindex="0">Grades</a></li><li class="section"><a href="https://moringaschool.instructure.com/courses/22/assignments" title="Assignments" class="assignments" tabindex="0">Assignments</a></li><li class="section"><a href="https://moringaschool.instructure.com/courses/22/discussion_topics" title="Discussions" class="discussions" tabindex="0">Discussions</a></li></ul></nav>
+        </div>
+      <div id="not_right_side" class="ic-app-main-content">
+        <div id="content-wrapper" class="ic-Layout-contentWrapper">
+            
+
+          <div id="content" class="ic-Layout-contentMain" role="main">
+            
+
+  
+
+<div id="wiki_page_show">
+<div class="header-bar-outer-container">
+  <div class="header-bar-container sticky-toolbar" data-sticky="">
+    <div class="header-bar flex-container">
+      <div class="header-bar-left header-left-flex">
+        
+          
+        
+      </div>
+      <div class="header-bar-right header-right-flex">
+        
+          
+          
+            
+          
+        
+        
+          
+        
+        
+      </div>
+    </div>
+    <div class="page-changed-alert" role="alert" aria-atomic="true" aria-live="polite"></div>
+  </div>
+</div>
+
+
+<div class="show-content user_content clearfix enhanced">
+  <h1 class="page-title">Weekend: Looping</h1>
+  
+    <h3>Looping</h3>
+<p>A loop is a way to execute some piece of code over and over again. There are 2 kinds of loops in Python 1.<span>&nbsp;</span><code>for</code><span>&nbsp;</span>loop 2.<span>&nbsp;</span><code>while</code><span>&nbsp;</span>loop</p>
+<h4>
+<code>for</code><span>&nbsp;</span>Loops</h4>
+<p>A<span>&nbsp;</span><code>for</code><span>&nbsp;</span>loop is used when one wants to repeat something a number of times. Just like the<span>&nbsp;</span><code>if</code><span>&nbsp;</span>statements, blocks of code in a for loop are indented, otherwise they will not run.</p>
+<p>Here is an example of a<span>&nbsp;</span><code>for</code><span>&nbsp;</span>loop in Python:</p>
+<p><strong>input_example.py</strong></p>
+<div class="codehilite">
+<pre><span></span><code><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
+</code></pre>
+</div>
+<p>The<span>&nbsp;</span><code>for</code><span>&nbsp;</span>statement loops through the<span>&nbsp;</span><code>numbers</code><span>&nbsp;</span>list, and stores each individual number in a variable called<span>&nbsp;</span><code>number</code>, then prints out this new variable we have created.</p>
+<div class="codehilite">
+<pre><span></span><code>$ python3.6 input_demo.py
+<span class="m">1</span>
+<span class="m">2</span>
+<span class="m">3</span>
+<span class="m">4</span>
+<span class="m">5</span>
+</code></pre>
+</div>
+<p>We can also use a Python function named<span>&nbsp;</span><code>range()</code><span>&nbsp;</span>in our<span>&nbsp;</span><code>for</code><span>&nbsp;</span>loops. The<span>&nbsp;</span><code>range()</code>function returns a list for which we can use to loop through.</p>
+<p>First let us see how we use the<span>&nbsp;</span><code>range()</code><span>&nbsp;</span>function by creating a list.</p>
+<p><strong>input_demo.py</strong></p>
+<div class="codehilite">
+<pre><span></span><code><span class="n">list_a</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">list_a</span><span class="p">)</span>
+</code></pre>
+</div>
+<p>Here's what this code does:</p>
+<div class="codehilite">
+<pre><span></span><code>$ python3.6 input_demo.py
+<span class="o">[</span><span class="m">0</span>, <span class="m">1</span>, <span class="m">2</span>, <span class="m">3</span>, <span class="m">4</span><span class="o">]</span>
+</code></pre>
+</div>
+<p>The<span>&nbsp;</span><code>range()</code><span>&nbsp;</span>function can take on two parameters. The first one is the number from where to start the range, and the second one is where to stop the range - this does<span>&nbsp;</span><strong>not</strong><span>&nbsp;</span>include that number. In our example here, we start the range at 0 and end it at 5. Then we use the<span>&nbsp;</span><code>list()</code><span>&nbsp;</span>method to convert it to a list print it out.</p>
+<p>Let's take a look at another example using<span>&nbsp;</span><code>range()</code>.</p>
+<p><strong>input_demo.py</strong></p>
+<div class="codehilite">
+<pre><span></span><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">7</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">"I would love "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="s2">" cookies"</span><span class="p">)</span>
+</code></pre>
+</div>
+<p>Here we created a loop that prints out the string<span>&nbsp;</span><code>I would love cookies</code><span>&nbsp;</span>with the number of cookies incrementing with the<span>&nbsp;</span><code>for</code><span>&nbsp;</span>loop. We used the<span>&nbsp;</span><code>str()</code><span>&nbsp;</span>method to convert the number<span>&nbsp;</span><code>i</code><span>&nbsp;</span>to a string so that we could concatenate it with the rest of the string. Here's the output:</p>
+<div class="codehilite">
+<pre><span></span><code>$ python3.6 input_demo.py
+I would love <span class="m">0</span> cookies
+I would love <span class="m">1</span> cookies
+I would love <span class="m">2</span> cookies
+I would love <span class="m">3</span> cookies
+I would love <span class="m">4</span> cookies
+I would love <span class="m">5</span> cookies
+I would love <span class="m">6</span> cookies
+</code></pre>
+</div>
+<p>Let us create another example of a<span>&nbsp;</span><code>for</code><span>&nbsp;</span>loop with conditions.</p>
+<p><strong>input_demo.py</strong></p>
+<div class="codehilite">
+<pre><span></span><code><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</code></pre>
+</div>
+<p>Here we loop through the numbers list and check if the number inside the list is fully divisible by 2; if it is, then we print out that number.</p>
+<p>Here's the output of this<span>&nbsp;</span><code>for</code><span>&nbsp;</span>loop:</p>
+<div class="codehilite">
+<pre><span></span><code>$ python3.6 input_demo.py
+<span class="m">2</span>
+<span class="m">4</span>
+</code></pre>
+</div>
+<h4>
+<code>while</code><span>&nbsp;</span>Loops</h4>
+<p>Unlike<span>&nbsp;</span><code>for</code><span>&nbsp;</span>loops,<span>&nbsp;</span><code>while</code><span>&nbsp;</span>loops run until a certain condition is met.<span>&nbsp;</span><code>while</code><span>&nbsp;</span>loops are often used as counters. Let's see one in action:</p>
+<p><strong>input_demo.py</strong></p>
+<div class="codehilite">
+<pre><span></span><code><span class="n">players</span> <span class="o">=</span> <span class="mi">11</span>
+
+<span class="k">while</span> <span class="n">players</span> <span class="o">&gt;=</span> <span class="mi">5</span> <span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">"The remaining players are"</span><span class="p">,</span><span class="n">players</span><span class="p">)</span>
+    <span class="n">players</span> <span class="o">-=</span> <span class="mi">1</span>
+</code></pre>
+</div>
+<p>We've created a variable<span>&nbsp;</span><code>players</code><span>&nbsp;</span>that we set as 11, and then created a<span>&nbsp;</span><code>while</code><span>&nbsp;</span>loop with the condition that the value of<span>&nbsp;</span><code>players</code><span>&nbsp;</span>needs to be greater than or equal to 5. If this condition is true, then a string will print and the value of<span>&nbsp;</span><code>players</code><span>&nbsp;</span>will decrease by 1, and the loop will execute again until the condition is no longer true (that is to say,<span>&nbsp;</span><code>players</code><span>&nbsp;</span>is less than 5).</p>
+<p>Here's what happens when we run it:</p>
+<div class="codehilite">
+<pre><span></span><code>$ python3.6 input_demo.py
+The remaining players are <span class="m">11</span>
+The remaining players are <span class="m">10</span>
+The remaining players are <span class="m">9</span>
+The remaining players are <span class="m">8</span>
+The remaining players are <span class="m">7</span>
+The remaining players are <span class="m">6</span>
+The remaining players are <span class="m">5</span>
+</code></pre>
+</div>
+<p>Sure enough, the code only executes when<span>&nbsp;</span><code>players</code><span>&nbsp;</span>is greater than or equal to 5. After that, the<span>&nbsp;</span><code>while</code><span>&nbsp;</span>loop is exited and the code stops running.</p>
+<h3>Control Flow Exercises</h3>
+<h4>Magic 8 ball</h4>
+<p>Create the popular Magic 8 Ball game. If you've never played it before, it is a toy that you can ask a yes-or-no question and it will give you a random answer (feel free to read more on the<span>&nbsp;</span><a href="https://en.wikipedia.org/wiki/Magic_8-Ball" class="external" target="_blank" rel="noreferrer noopener"><span><span>Wikipedia page</span><span class="screenreader-only">&nbsp;(Links to an external site.)</span></span><span class="ui-icon ui-icon-extlink ui-icon-inline" title="Links to an external site."><span class="screenreader-only">Links to an external site.</span></span></a>). In your program, allow a person to input a question, and then create a random number. Based on the random number, pick a response to the question using<span>&nbsp;</span><code>if</code>,<span>&nbsp;</span><code>elif</code>, and<span>&nbsp;</span><code>else</code><span>&nbsp;</span>statements. You can find the responses at the<span>&nbsp;</span><a href="https://en.wikipedia.org/wiki/Magic_8-Ball#Possible_answers" class="external" target="_blank" rel="noreferrer noopener"><span><span>Wikipedia page</span><span class="screenreader-only">&nbsp;(Links to an external site.)</span></span><span class="ui-icon ui-icon-extlink ui-icon-inline" title="Links to an external site."><span class="screenreader-only">Links to an external site.</span></span></a>.</p>
+<h2><code>break</code></h2>
+<p>The<span>&nbsp;</span><code>break</code><span>&nbsp;</span>statement allows code to jump out of a loop whenever a certain condition has been met.</p>
+<p><strong>input_demo.py</strong></p>
+<div class="codehilite">
+<pre><span></span><code><span class="n">number</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">"I love candy "</span><span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">number</span><span class="p">))</span>
+    <span class="n">number</span> <span class="o">+=</span><span class="mi">1</span>
+    <span class="k">if</span> <span class="n">number</span> <span class="o">==</span> <span class="mi">7</span> <span class="p">:</span>
+        <span class="k">break</span>   
+</code></pre>
+</div>
+<p>When we run this code, see what prints to the console:</p>
+<div class="codehilite">
+<pre><span></span><code>$ python3.6 input_demo.py
+I love candy <span class="m">0</span>
+I love candy <span class="m">1</span>
+I love candy <span class="m">2</span>
+I love candy <span class="m">3</span>
+I love candy <span class="m">4</span>
+I love candy <span class="m">5</span>
+I love candy <span class="m">6</span>
+</code></pre>
+</div>
+<p>Each time the loop runs, and prints out our statement, and checks if<span>&nbsp;</span><code>number</code><span>&nbsp;</span>is equal to 7. If not, it runs again. If it is, the loop stops.</p>
+<h3><code>continue</code></h3>
+<p>The<span>&nbsp;</span><code>continue</code><span>&nbsp;</span>statement is also used in loops. It allows us to jump back up to the top of our loop. The<span>&nbsp;</span><code>continue</code><span>&nbsp;</span>keyword ignores all other statements under it and they are not run. Let's look at an example using<span>&nbsp;</span><code>continue</code>.</p>
+<p><strong>input_demo.py</strong></p>
+<div class="codehilite">
+<pre><span></span><code><span class="sd">'''</span>
+<span class="sd">in a team of members 20, some numbers are taken </span>
+<span class="sd">and want to display the numbers that are not taken</span>
+<span class="sd">so others don't pick the picked numbers</span>
+<span class="sd">'''</span>
+
+<span class="c1"># taken numbers</span>
+<span class="n">numTaken</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">13</span><span class="p">]</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s2">"Available numbers"</span><span class="p">)</span>
+
+<span class="c1"># loop</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">21</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">numTaken</span><span class="p">:</span>
+        <span class="k">continue</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</code></pre>
+</div>
+<p>We want to print numbers from 1-20, but skip over the numbers in the<span>&nbsp;</span><code>numTaken</code><span>&nbsp;</span>list. We've written a standard<span>&nbsp;</span><code>for</code><span>&nbsp;</span>loop, with a twist. If the current number<span>&nbsp;</span><code>i</code><span>&nbsp;</span>is in the<span>&nbsp;</span><code>numTaken</code><span>&nbsp;</span>list, the<span>&nbsp;</span><code>print()</code><span>&nbsp;</span>statement directly under the<span>&nbsp;</span><code>continue</code><span>&nbsp;</span>is not executed. This is because every time<span>&nbsp;</span><code>continue</code><span>&nbsp;</span>is called, Python jumps back up to the top of the loop.</p>
+<div class="codehilite">
+<pre><span></span><code>$ python3.6 input_demo.py
+Available numbers
+<span class="m">1</span>
+<span class="m">2</span>
+<span class="m">4</span>
+<span class="m">6</span>
+<span class="m">8</span>
+<span class="m">9</span>
+<span class="m">10</span>
+<span class="m">12</span>
+<span class="m">14</span>
+<span class="m">15</span>
+<span class="m">16</span>
+<span class="m">17</span>
+<span class="m">18</span>
+<span class="m">19</span>
+<span class="m">20</span>
+</code></pre>
+</div>
+<p>The numbers 1-20 have printed, but we've skipped over the numbers in our list.</p>
+<h3>Lists</h3>
+<p><strong>Lists</strong><span>&nbsp;</span>are another Python data type. They are the equivalent of arrays in other languages. A Python list can store any kind of value.</p>
+<p>We can create a list using square brackets<span>&nbsp;</span><code>[]</code><span>&nbsp;</span>or using the<span>&nbsp;</span><code>list()</code><span>&nbsp;</span>function, like this. We can open our Python shell and practice the following commands.</p>
+<div class="codehilite">
+<pre><span></span><code><span class="n">my_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">my_other_list</span> <span class="o">=</span><span class="nb">list</span><span class="p">()</span>
+</code></pre>
+</div>
+<p>Now let's create some lists that actually hold data.</p>
+<div class="codehilite">
+<pre><span></span><code><span class="n">list_a</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"a"</span><span class="p">,</span><span class="s2">"b"</span><span class="p">,</span><span class="s2">"c"</span><span class="p">,</span><span class="s2">"d"</span><span class="p">]</span> <span class="c1"># list of strings</span>
+<span class="n">list_b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span> <span class="c1"># list of numbers</span>
+<span class="n">list_c</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="s2">"west"</span><span class="p">,</span><span class="mi">34</span><span class="p">,</span><span class="s2">"longitude"</span><span class="p">]</span> <span class="c1"># mixed list</span>
+</code></pre>
+</div>
+<p>As we can see with the code above, we can create a list that holds similar types of items, such as the first two which hold only strings or only numbers; or we can mix the types of data stored in our list, as we do with<span>&nbsp;</span><code>list_c</code>, which holds both numbers and strings.</p>
+<p>We can even nest our lists with other lists.</p>
+<div class="codehilite">
+<pre><span></span><code><span class="n">list_d</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="s2">"a"</span><span class="p">,</span><span class="s2">"b"</span><span class="p">,</span><span class="s2">"c"</span><span class="p">,</span><span class="s2">"d"</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="s2">"west"</span><span class="p">,</span><span class="mi">34</span><span class="p">,</span><span class="s2">"longitude"</span><span class="p">]]</span> <span class="c1"># nested list</span>
+</code></pre>
+</div>
+<p>We can join two lists using the<span>&nbsp;</span><code>extend()</code><span>&nbsp;</span>method.</p>
+<div class="codehilite">
+<pre><span></span><code><span class="n">list_a</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"a"</span><span class="p">,</span><span class="s2">"b"</span><span class="p">,</span><span class="s2">"c"</span><span class="p">,</span><span class="s2">"d"</span><span class="p">]</span> 
+<span class="n">list_b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span>
+
+<span class="c1"># Joining list_b to list_a</span>
+
+<span class="n">list_a</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">list_b</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">list_a</span><span class="p">)</span> <span class="c1"># this will print ["a","b","c","d",1,2,3,4,5,6]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">list_b</span><span class="p">)</span> <span class="c1"># this will print [1,2,3,4,5,6]</span>
+</code></pre>
+</div>
+<p>Here we have joined<span>&nbsp;</span><code>list_b</code><span>&nbsp;</span>to<span>&nbsp;</span><code>list_a</code>. This adds new values to<span>&nbsp;</span><code>list_a</code>. Notice that<span>&nbsp;</span><code>list_b</code><span>&nbsp;</span>remains unchanged.</p>
+<p>We can also append values to a list using the<span>&nbsp;</span><code>append()</code><span>&nbsp;</span>method.</p>
+<div class="codehilite">
+<pre><span></span><code><span class="n">list_a</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"a"</span><span class="p">,</span><span class="s2">"b"</span><span class="p">,</span><span class="s2">"c"</span><span class="p">,</span><span class="s2">"d"</span><span class="p">]</span> 
+
+<span class="k">print</span><span class="p">(</span><span class="n">list_a</span><span class="p">)</span>  <span class="c1"># ["a","b","c","d"]</span>
+
+<span class="n">list_a</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">"e"</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">list_a</span><span class="p">)</span> <span class="c1"># ["a","b","c","d","e"]</span>
+</code></pre>
+</div>
+<p>Here we append a single value,<span>&nbsp;</span><code>"e"</code>, to the list.</p>
+<p>We can also arrange list items in place using the<span>&nbsp;</span><code>reverse()</code><span>&nbsp;</span>and<span>&nbsp;</span><code>sort()</code><span>&nbsp;</span>methods.</p>
+<div class="codehilite">
+<pre><span></span><code><span class="n">list_a</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"a"</span><span class="p">,</span><span class="s2">"b"</span><span class="p">,</span><span class="s2">"c"</span><span class="p">,</span><span class="s2">"d"</span><span class="p">]</span>
+<span class="n">list_a</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">list_a</span><span class="p">)</span> <span class="c1"># ['d', 'c', 'b', 'a']</span>
+</code></pre>
+</div>
+<p>Here we use the<span>&nbsp;</span><code>reverse()</code><span>&nbsp;</span>method to reverse the list.</p>
+<div class="codehilite">
+<pre><span></span><code><span class="n">list_a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">list_a</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">list_a</span><span class="p">)</span> <span class="c1"># [1, 2, 3, 4, 5, 6, 7, 8]</span>
+</code></pre>
+</div>
+<p>The<span>&nbsp;</span><code>sort()</code><span>&nbsp;</span>method arranges items in order.</p>
+<p><strong>Note</strong><span>&nbsp;</span><code>reverse</code><span>&nbsp;</span>and<span>&nbsp;</span><code>sort</code><span>&nbsp;</span>methods only work on the list they were called on. They have no return value.</p>
+<div class="codehilite">
+<pre><span></span><code><span class="n">list_a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+<span class="n">list_a</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span> <span class="c1"># converts list_a to [5,4,3,2,1]</span>
+<span class="n">list_b</span> <span class="o">=</span> <span class="n">list_a</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>  <span class="c1"># list_b is None</span>
+</code></pre>
+</div>
+<h3>Tuples</h3>
+<p>Tuples are like lists. The main difference between tuples and lists is that tuples are<span>&nbsp;</span><strong>immutable</strong><span>&nbsp;</span>- their values cannot be changed once created.</p>
+<div class="codehilite">
+<pre><span></span><code><span class="n">tuple_a</span> <span class="o">=</span> <span class="p">(</span><span class="s2">"a"</span><span class="p">,</span><span class="s2">"b"</span><span class="p">,</span><span class="s2">"c"</span><span class="p">,</span><span class="s2">"d"</span><span class="p">)</span> <span class="c1"># tuple of strings</span>
+<span class="n">tuple_b</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span> <span class="c1"># tuple of numbers</span>
+<span class="n">tuple_c</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s2">"west"</span><span class="p">,</span><span class="mi">34</span><span class="p">,</span><span class="s2">"longitude"</span><span class="p">)</span> <span class="c1"># mixed tuple</span>
+<span class="n">tuple_d</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">()</span> <span class="c1">#empty tuple</span>
+</code></pre>
+</div>
+<p>We can create a tuple using parentheses<span>&nbsp;</span><code>()</code><span>&nbsp;</span>(as in<span>&nbsp;</span><code>tuple_a</code>,<span>&nbsp;</span><code>tuple_b</code>, and<span>&nbsp;</span><code>tuple_c</code><span>&nbsp;</span>in the above example) or we can use the<span>&nbsp;</span><code>tuple()</code><span>&nbsp;</span>function (as in<span>&nbsp;</span><code>tuple_d</code>).</p>
+<h3>Dictionary</h3>
+<p>Another really powerful data structure in Python is the dictionary. Like lists, dictionaries store collections of many values of different types. Unlike indexes for lists - which are integers and start from 0, dictionary indexes don't have to be integers. They can be of different data types like strings. Indexes in dictionaries are called<span>&nbsp;</span><strong>keys</strong>. The value here is appropriately called the<span>&nbsp;</span><strong>value</strong>.</p>
+<p>Dictionaries can be created in two ways:</p>
+<div class="codehilite">
+<pre><span></span><code><span class="c1"># Creating empty dictionaries</span>
+<span class="n">my_dict</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">my_dict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+
+<span class="c1"># Creating a dictionary with keys and values</span>
+<span class="n">my_cat</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'name'</span><span class="p">:</span><span class="s1">'Mr sniffles'</span><span class="p">,</span><span class="s1">'age'</span><span class="p">:</span><span class="mi">18</span><span class="p">,</span> <span class="s1">'color'</span><span class="p">:</span><span class="s1">'black'</span><span class="p">}</span>
+</code></pre>
+</div>
+<p>In the example above, we created a new dictionary that stores details about<span>&nbsp;</span><code>my_cat</code>. We can fetch data from a dictionary by using our key as the index. Continuing from the above example, let's say that we want to print the name of<span>&nbsp;</span><code>my_cat</code>,<span>&nbsp;</span><code>'Mr sniffles'</code>. Here is how we would access that value from the dictionary:</p>
+<div class="codehilite">
+<pre><span></span><code><span class="n">cat_name</span> <span class="o">=</span> <span class="n">my_cat</span><span class="p">[</span><span class="s1">'name'</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">cat_name</span><span class="p">)</span> <span class="c1"># 'Mr sniffles'</span>
+</code></pre>
+</div>
+<p>Unlike lists, dictionaries are unordered since the indexing does not start at [0]. We will see what that means later on.</p>
+<p>We can also add items to a dictionary by defining a new key and assigning it a value.</p>
+<div class="codehilite">
+<pre><span></span><code><span class="n">birthdays</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"John"</span><span class="p">:</span><span class="s2">"August 1"</span><span class="p">,</span><span class="s2">"Marcus"</span><span class="p">:</span><span class="s2">"April 8"</span><span class="p">}</span>
+<span class="n">birthdays</span><span class="p">[</span><span class="s2">"mary"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"September 14"</span>
+<span class="k">print</span><span class="p">(</span><span class="n">birthdays</span><span class="p">)</span> <span class="c1"># this prints {"John":"August 1","Marcus":"April 8","Mary":"September 14"}</span>
+</code></pre>
+</div>
+<p>Here we had a dictionary with the birthday of two people,<span>&nbsp;</span><code>John</code><span>&nbsp;</span>and<span>&nbsp;</span><code>Marcus</code>. Then we added<span>&nbsp;</span><code>Mary</code><span>&nbsp;</span>to our birthday dictionary.</p>
+<p>We can also get the individual keys in the dictionary using the<code>keys()</code>method.</p>
+<div class="codehilite">
+<pre><span></span><code><span class="n">birthday</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"John"</span><span class="p">:</span><span class="s2">"August 1"</span><span class="p">,</span><span class="s2">"Marcus"</span><span class="p">:</span><span class="s2">"April 8"</span><span class="p">,</span><span class="s2">"Mary"</span><span class="p">:</span><span class="s2">"September 14"</span><span class="p">}</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">birthday</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span> <span class="c1"># this prints dict_keys(['John', 'Marcus', 'Mary'])</span>
+</code></pre>
+</div>
+<p>The<span>&nbsp;</span><code>keys()</code><span>&nbsp;</span>method creates a<span>&nbsp;</span><code>dict_keys</code><span>&nbsp;</span>object that holds a list of all the keys.</p>
+<p>We can convert them into a list using the<span>&nbsp;</span><code>list()</code><span>&nbsp;</span>function.</p>
+<div class="codehilite">
+<pre><span></span><code><span class="n">birthday</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"John"</span><span class="p">:</span><span class="s2">"August 1"</span><span class="p">,</span><span class="s2">"Marcus"</span><span class="p">:</span><span class="s2">"April 8"</span><span class="p">,</span><span class="s2">"Mary"</span><span class="p">:</span><span class="s2">"September 14"</span><span class="p">}</span>
+
+<span class="k">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">birthday</span><span class="o">.</span><span class="n">keys</span><span class="p">()))</span> <span class="c1"># this prints ['John', 'Marcus', 'Mary']the ne</span>
+</code></pre>
+</div>
+<h4>
+<code>setdefault()</code><span>&nbsp;</span>method</h4>
+<p>When dealing with a dictionary, sometimes it can be useful to set placeholder values to keys, before we do any operation on them, to prevent unnecessary errors.</p>
+<p>For example, let's say we want to create an application that counts every character in an input string. Open up<span>&nbsp;</span><em>import_demo.py</em><span>&nbsp;</span>and add this code:</p>
+<p><strong>import_demo.py</strong></p>
+<div class="codehilite">
+<pre><span></span><code><span class="k">print</span><span class="p">(</span><span class="s2">"Enter a string"</span><span class="p">)</span>
+
+<span class="n">input_string</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+
+<span class="n">characters</span> <span class="o">=</span> <span class="p">{}</span>
+</code></pre>
+</div>
+<p>We prompt the user for an input. Then we create an empty dictionary named<span>&nbsp;</span><code>characters</code><span>&nbsp;</span>that will store each individual character and how many times it has been used. Now let's use<span>&nbsp;</span><code>setdefault()</code>:</p>
+<p><strong>import_demo.py</strong></p>
+<div class="codehilite">
+<pre><span></span><code><span class="k">print</span><span class="p">(</span><span class="s2">"Enter a string"</span><span class="p">)</span>
+
+<span class="n">input_string</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+
+<span class="n">characters</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="k">for</span> <span class="n">character</span> <span class="ow">in</span> <span class="n">input_string</span><span class="p">:</span>
+    <span class="n">characters</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="n">character</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+</code></pre>
+</div>
+<p>Here we use a<span>&nbsp;</span><code>for</code><span>&nbsp;</span>loop to iterate through each individual character in the string. Then we use the<span>&nbsp;</span><code>setdefault()</code><span>&nbsp;</span>method to create a key for each character if the character does<span>&nbsp;</span><strong>not</strong><span>&nbsp;</span>exist in the dictionary. Then we set the default value for each as<span>&nbsp;</span><code>0</code>.</p>
+<p><strong>import_demo.py</strong></p>
+<div class="codehilite">
+<pre><span></span><code><span class="k">print</span><span class="p">(</span><span class="s2">"Enter a string"</span><span class="p">)</span>
+
+<span class="n">input_string</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+
+<span class="n">characters</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="k">for</span> <span class="n">character</span> <span class="ow">in</span> <span class="n">input_string</span><span class="p">:</span>
+<span class="n">characters</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="n">character</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">characters</span><span class="p">[</span><span class="n">character</span><span class="p">]</span> <span class="o">=</span> <span class="n">characters</span><span class="p">[</span><span class="n">character</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">characters</span><span class="p">)</span>
+</code></pre>
+</div>
+<p>Lastly we target the key that matches the character and add one to the value everytime the character is encountered.</p>
+<p>When we run this, here's what happens:</p>
+<div class="codehilite">
+<pre><span></span><code>$ python3.6 import_demo.py
+Enter a string <span class="c1"># I'm going to enter "James is awesome"</span>
+James is awesome
+
+<span class="o">{</span><span class="s1">' '</span>: <span class="m">3</span>, <span class="s1">'J'</span>: <span class="m">1</span>, <span class="s1">'a'</span>: <span class="m">2</span>, <span class="s1">'e'</span>: <span class="m">3</span>, <span class="s1">'i'</span>: <span class="m">1</span>, <span class="s1">'m'</span>: <span class="m">2</span>, <span class="s1">'o'</span>: <span class="m">2</span>, <span class="s1">'s'</span>: <span class="m">4</span>, <span class="s1">'w'</span>: <span class="m">1</span><span class="o">}</span>
+</code></pre>
+</div>
+<h3>List and Dictionary Exercises</h3>
+<h4><strong>Magic 8 ball</strong></h4>
+<p>Recreate the Magic 8 Ball exercise from the Control Flow lesson using lists instead of<span>&nbsp;</span><code>if</code><span>&nbsp;</span>statements.</p>
+<h4><strong>Feature Phones</strong></h4>
+<p>Remember the days before smartphones when text was entered in our phones using the keypad? If you need a refresher, see this image of a phone keypad:</p>
+<p><img src="./Weekend_ Looping_ Python_files/hHq4v.jpg" alt="Phone Keypad" style="max-width: 1102px;"></p>
+<p>Notice the letters on each number. To type a letter, the user needs to press the button on which the letter is printed the number of times that corresponds to its order on the button.</p>
+<p>For example, to type "E", the user needs to press "3" two times. To type "Z", the user needs to press "9" four times. To type "DOG", they need to press "3" one time, "6" three times, and "4" one time. And so on.</p>
+<p>Create a program that allows a user to enter text and then it calculates how many clicks it takes for a user to input the text. Ignore uppercase and special characters.</p>
+<p>For example, if a user inputs<span>&nbsp;</span><strong><em>"James"</em></strong>, the output should be<span>&nbsp;</span><strong><em>9</em></strong><span>&nbsp;</span>because...</p>
+<ul>
+<li>"J": press "5" one time</li>
+<li>"A": press "2" one time</li>
+<li>"M": press "6" one time</li>
+<li>"E": press "3" two times</li>
+<li>"S": press "7" four times</li>
+</ul>
+<p>Put this all together, and 1 + 1 + 1 + 2 + 4 = 9.</p>
+  
+</div>
+<div style=""><div class="module-sequence-padding"></div>
+<div class="module-sequence-footer" role="navigation" aria-label="Module Navigation">
+  <div class="module-sequence-footer-content">
+    
+      <a href="https://moringaschool.instructure.com/courses/22/modules/items/419" role="button" class="Button module-sequence-footer-button--previous" data-tooltip="right" data-html-tooltip-title="&lt;i class=&#39;icon-document&#39;&gt;&lt;/i&gt; Weekend: Input, sys.argv and Control Flow" aria-describedby="msf0-previous-desc">
+        <i class="icon-mini-arrow-left"></i>Previous
+        <span id="msf0-previous-desc" class="hidden" hidden="">Previous: Weekend: Input, sys.argv and Control Flow</span>
+      </a>
+    
+
+    
+      <span class="module-sequence-footer-button--next" data-tooltip="left" data-html-tooltip-title="&lt;i class=&#39;icon-document&#39;&gt;&lt;/i&gt; Weekend: Strings; Slicing; Functions and Exceptions">
+        <a href="https://moringaschool.instructure.com/courses/22/modules/items/421" role="button" class="Button" aria-describedby="msf0-next-desc">
+          Next<i class="icon-mini-arrow-right"></i>
+          <span id="msf0-next-desc" class="hidden" hidden="">Next: Weekend: Strings; Slicing; Functions and Exceptions</span>
+        </a>
+      </span>
+    
+  </div>
+</div>
+</div></div>
+
+          </div>
+        </div>
+        <div id="right-side-wrapper" class="ic-app-main-content__secondary">
+          <aside id="right-side" role="complementary">
+            
+          </aside>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+    <div style="display:none;"><!-- Everything inside of this should always stay hidden -->
+        <div id="page_view_id">5ff98200-f555-46cf-aeb6-782de1e91587</div>
+    </div>
+    
+<div id="cant_record_dialog" style="display: none;">
+  <div>
+    In order to create video or audio recordings your computer needs to be webcam-enabled. If you don't have a webcam on your computer, you can still record audio-only messages by first installing the Google Video Chat plugin.
+  </div>
+  <div style="text-align: center; font-size: 1.5em; margin: 10px;">
+    <a href="http://www.google.com/chat/video" target="_blank" rel="noopener" class="btn">Install the video plugin</a>
+  </div>
+  <div class="links" style="text-align: right; font-size: 0.8em; display: none;">
+    <a href="https://moringaschool.instructure.com/courses/22/pages/weekend-looping?module_item_id=420#" class="cant_record_link">Don't have a webcam?</a>
+  </div>
+</div>
+
+  <div id="aria_alerts" class="hide-text affix" role="alert" aria-live="assertive"></div>
+  <div id="StudentTray__Container"></div>
+  <script>
+  INST = {"environment":"production","allowMediaComments":true,"kalturaSettings":{"domain":"eu.nv.instructuremedia.com","resource_domain":"eu.nv.instructuremedia.com","rtmp_domain":"eu.fms-prod.instructuremedia.com","partner_id":"5","subpartner_id":"0","player_ui_conf":"0","kcw_ui_conf":"0","upload_ui_conf":"0","max_file_size_bytes":534773760,"do_analytics":false,"hide_rte_button":false,"js_uploader":true},"googleAnalyticsAccount":"UA-9138420-1","disableScribdPreviews":true,"logPageViews":true,"maxVisibleEditorButtons":3,"editorButtons":[{"name":"GitHub","id":5,"url":"https://www.edu-apps.org/tool_redirect?id=github","icon_url":"https://www.edu-apps.org/tools/github/icon.png","canvas_icon_class":null,"width":600,"height":320}]};
+  ENV = {"ASSET_HOST":"https://du11hjcvx0uqb.cloudfront.net","active_brand_config_json_url":"https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/8474fb899c39509f978887304568a161/variables-750d72b9d3e5d522f965bf904110c132.json","url_to_what_gets_loaded_inside_the_tinymce_editor_css":["https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/8474fb899c39509f978887304568a161/variables-750d72b9d3e5d522f965bf904110c132.css","https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/new_styles_normal_contrast/bundles/what_gets_loaded_inside_the_tinymce_editor-bb4121d737.css"],"url_for_high_contrast_tinymce_editor_css":["https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/default/variables-high_contrast-750d72b9d3e5d522f965bf904110c132.css","https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/new_styles_high_contrast/bundles/what_gets_loaded_inside_the_tinymce_editor-b61a4bdaa8.css"],"current_user_id":"97","current_user":{"id":"97","display_name":"Sam Ngigi","avatar_image_url":"https://secure.gravatar.com/avatar/480a1c23def404db6a4a6bf1deb1add6?s=50\u0026d=https%3A%2F%2Fmoringaschool.instructure.com%2Fimages%2Fmessages%2Favatar-50.png","html_url":"https://moringaschool.instructure.com/about/97"},"current_user_roles":["user","student"],"current_user_disabled_inbox":false,"files_domain":"cluster58-files.instructure.com","DOMAIN_ROOT_ACCOUNT_ID":118060000000000001,"k12":false,"use_responsive_layout":false,"help_link_name":"Help Desk","help_link_icon":"cog","use_high_contrast":false,"SETTINGS":{"open_registration":false,"eportfolios_enabled":true,"collapse_global_nav":true,"show_feedback_link":true,"enable_profiles":true},"page_view_update_url":"/page_views/5ff98200-f555-46cf-aeb6-782de1e91587?page_view_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpIjoiNWZmOTgyMDAtZjU1NS00NmNmLWFlYjYtNzgyZGUxZTkxNTg3IiwidSI6MTE4MDYwMDAwMDAwMDAwMDk3LCJjIjoiMjAxOC0wMS0xNFQwNzoxNTozNy40M1oifQ.DpCLSnGnS13sNCDz_xNzjf-Y_tYMiU8IMalpZrFOv_Q","context_asset_string":"course_22","ping_url":"https://moringaschool.instructure.com/api/v1/courses/22/ping","TIMEZONE":"Africa/Nairobi","CONTEXT_TIMEZONE":"Africa/Nairobi","GRAPHQL_ENABLED":false,"LOCALE":"en-GB","BIGEASY_LOCALE":"en_GB","FULLCALENDAR_LOCALE":"en-gb","MOMENT_LOCALE":"en-gb","WIKI_RIGHTS":{"read":true},"PAGE_RIGHTS":{"read":true},"DEFAULT_EDITING_ROLES":"teachers","WIKI_PAGES_PATH":"/courses/22/pages","WIKI_PAGE":{"title":"Weekend: Looping","created_at":"2017-11-25T11:14:22Z","url":"weekend-looping","editing_roles":"teachers","page_id":"422","published":true,"hide_from_students":false,"front_page":false,"html_url":"https://moringaschool.instructure.com/courses/22/pages/weekend-looping","updated_at":"2017-11-25T11:14:21Z","locked_for_user":false,"body":"\u003ch3\u003eLooping\u003c/h3\u003e\r\n\u003cp\u003eA loop is a way to execute some piece of code over and over again. There are 2 kinds of loops in Python 1.\u003cspan\u003e \u003c/span\u003e\u003ccode\u003efor\u003c/code\u003e\u003cspan\u003e \u003c/span\u003eloop 2.\u003cspan\u003e \u003c/span\u003e\u003ccode\u003ewhile\u003c/code\u003e\u003cspan\u003e \u003c/span\u003eloop\u003c/p\u003e\r\n\u003ch4\u003e\n\u003ccode\u003efor\u003c/code\u003e\u003cspan\u003e \u003c/span\u003eLoops\u003c/h4\u003e\r\n\u003cp\u003eA\u003cspan\u003e \u003c/span\u003e\u003ccode\u003efor\u003c/code\u003e\u003cspan\u003e \u003c/span\u003eloop is used when one wants to repeat something a number of times. Just like the\u003cspan\u003e \u003c/span\u003e\u003ccode\u003eif\u003c/code\u003e\u003cspan\u003e \u003c/span\u003estatements, blocks of code in a for loop are indented, otherwise they will not run.\u003c/p\u003e\r\n\u003cp\u003eHere is an example of a\u003cspan\u003e \u003c/span\u003e\u003ccode\u003efor\u003c/code\u003e\u003cspan\u003e \u003c/span\u003eloop in Python:\u003c/p\u003e\r\n\u003cp\u003e\u003cstrong\u003einput_example.py\u003c/strong\u003e\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e\u003cspan class=\"n\"\u003enumbers\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"p\"\u003e[\u003c/span\u003e\u003cspan class=\"mi\"\u003e1\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"mi\"\u003e2\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"mi\"\u003e3\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"mi\"\u003e4\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"mi\"\u003e5\u003c/span\u003e\u003cspan class=\"p\"\u003e]\u003c/span\u003e\r\n\r\n\u003cspan class=\"k\"\u003efor\u003c/span\u003e \u003cspan class=\"n\"\u003enumber\u003c/span\u003e \u003cspan class=\"ow\"\u003ein\u003c/span\u003e \u003cspan class=\"n\"\u003enumbers\u003c/span\u003e\u003cspan class=\"p\"\u003e:\u003c/span\u003e\r\n    \u003cspan class=\"k\"\u003eprint\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"n\"\u003enumber\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eThe\u003cspan\u003e \u003c/span\u003e\u003ccode\u003efor\u003c/code\u003e\u003cspan\u003e \u003c/span\u003estatement loops through the\u003cspan\u003e \u003c/span\u003e\u003ccode\u003enumbers\u003c/code\u003e\u003cspan\u003e \u003c/span\u003elist, and stores each individual number in a variable called\u003cspan\u003e \u003c/span\u003e\u003ccode\u003enumber\u003c/code\u003e, then prints out this new variable we have created.\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e$ python3.6 input_demo.py\r\n\u003cspan class=\"m\"\u003e1\u003c/span\u003e\r\n\u003cspan class=\"m\"\u003e2\u003c/span\u003e\r\n\u003cspan class=\"m\"\u003e3\u003c/span\u003e\r\n\u003cspan class=\"m\"\u003e4\u003c/span\u003e\r\n\u003cspan class=\"m\"\u003e5\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eWe can also use a Python function named\u003cspan\u003e \u003c/span\u003e\u003ccode\u003erange()\u003c/code\u003e\u003cspan\u003e \u003c/span\u003ein our\u003cspan\u003e \u003c/span\u003e\u003ccode\u003efor\u003c/code\u003e\u003cspan\u003e \u003c/span\u003eloops. The\u003cspan\u003e \u003c/span\u003e\u003ccode\u003erange()\u003c/code\u003efunction returns a list for which we can use to loop through.\u003c/p\u003e\r\n\u003cp\u003eFirst let us see how we use the\u003cspan\u003e \u003c/span\u003e\u003ccode\u003erange()\u003c/code\u003e\u003cspan\u003e \u003c/span\u003efunction by creating a list.\u003c/p\u003e\r\n\u003cp\u003e\u003cstrong\u003einput_demo.py\u003c/strong\u003e\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e\u003cspan class=\"n\"\u003elist_a\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"nb\"\u003elist\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"nb\"\u003erange\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"mi\"\u003e0\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"mi\"\u003e5\u003c/span\u003e\u003cspan class=\"p\"\u003e))\u003c/span\u003e\r\n\u003cspan class=\"k\"\u003eprint\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"n\"\u003elist_a\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eHere's what this code does:\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e$ python3.6 input_demo.py\r\n\u003cspan class=\"o\"\u003e[\u003c/span\u003e\u003cspan class=\"m\"\u003e0\u003c/span\u003e, \u003cspan class=\"m\"\u003e1\u003c/span\u003e, \u003cspan class=\"m\"\u003e2\u003c/span\u003e, \u003cspan class=\"m\"\u003e3\u003c/span\u003e, \u003cspan class=\"m\"\u003e4\u003c/span\u003e\u003cspan class=\"o\"\u003e]\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eThe\u003cspan\u003e \u003c/span\u003e\u003ccode\u003erange()\u003c/code\u003e\u003cspan\u003e \u003c/span\u003efunction can take on two parameters. The first one is the number from where to start the range, and the second one is where to stop the range - this does\u003cspan\u003e \u003c/span\u003e\u003cstrong\u003enot\u003c/strong\u003e\u003cspan\u003e \u003c/span\u003einclude that number. In our example here, we start the range at 0 and end it at 5. Then we use the\u003cspan\u003e \u003c/span\u003e\u003ccode\u003elist()\u003c/code\u003e\u003cspan\u003e \u003c/span\u003emethod to convert it to a list print it out.\u003c/p\u003e\r\n\u003cp\u003eLet's take a look at another example using\u003cspan\u003e \u003c/span\u003e\u003ccode\u003erange()\u003c/code\u003e.\u003c/p\u003e\r\n\u003cp\u003e\u003cstrong\u003einput_demo.py\u003c/strong\u003e\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e\u003cspan class=\"k\"\u003efor\u003c/span\u003e \u003cspan class=\"n\"\u003ei\u003c/span\u003e \u003cspan class=\"ow\"\u003ein\u003c/span\u003e \u003cspan class=\"nb\"\u003erange\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"mi\"\u003e0\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"mi\"\u003e7\u003c/span\u003e\u003cspan class=\"p\"\u003e):\u003c/span\u003e\r\n    \u003cspan class=\"k\"\u003eprint\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"s2\"\u003e\"I would love \"\u003c/span\u003e \u003cspan class=\"o\"\u003e+\u003c/span\u003e \u003cspan class=\"nb\"\u003estr\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"n\"\u003ei\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e \u003cspan class=\"o\"\u003e+\u003c/span\u003e \u003cspan class=\"s2\"\u003e\" cookies\"\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eHere we created a loop that prints out the string\u003cspan\u003e \u003c/span\u003e\u003ccode\u003eI would love cookies\u003c/code\u003e\u003cspan\u003e \u003c/span\u003ewith the number of cookies incrementing with the\u003cspan\u003e \u003c/span\u003e\u003ccode\u003efor\u003c/code\u003e\u003cspan\u003e \u003c/span\u003eloop. We used the\u003cspan\u003e \u003c/span\u003e\u003ccode\u003estr()\u003c/code\u003e\u003cspan\u003e \u003c/span\u003emethod to convert the number\u003cspan\u003e \u003c/span\u003e\u003ccode\u003ei\u003c/code\u003e\u003cspan\u003e \u003c/span\u003eto a string so that we could concatenate it with the rest of the string. Here's the output:\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e$ python3.6 input_demo.py\r\nI would love \u003cspan class=\"m\"\u003e0\u003c/span\u003e cookies\r\nI would love \u003cspan class=\"m\"\u003e1\u003c/span\u003e cookies\r\nI would love \u003cspan class=\"m\"\u003e2\u003c/span\u003e cookies\r\nI would love \u003cspan class=\"m\"\u003e3\u003c/span\u003e cookies\r\nI would love \u003cspan class=\"m\"\u003e4\u003c/span\u003e cookies\r\nI would love \u003cspan class=\"m\"\u003e5\u003c/span\u003e cookies\r\nI would love \u003cspan class=\"m\"\u003e6\u003c/span\u003e cookies\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eLet us create another example of a\u003cspan\u003e \u003c/span\u003e\u003ccode\u003efor\u003c/code\u003e\u003cspan\u003e \u003c/span\u003eloop with conditions.\u003c/p\u003e\r\n\u003cp\u003e\u003cstrong\u003einput_demo.py\u003c/strong\u003e\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e\u003cspan class=\"n\"\u003enumbers\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"p\"\u003e[\u003c/span\u003e\u003cspan class=\"mi\"\u003e1\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e \u003cspan class=\"mi\"\u003e2\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e \u003cspan class=\"mi\"\u003e3\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e \u003cspan class=\"mi\"\u003e4\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e \u003cspan class=\"mi\"\u003e5\u003c/span\u003e\u003cspan class=\"p\"\u003e]\u003c/span\u003e\r\n\u003cspan class=\"k\"\u003efor\u003c/span\u003e \u003cspan class=\"n\"\u003ei\u003c/span\u003e \u003cspan class=\"ow\"\u003ein\u003c/span\u003e \u003cspan class=\"n\"\u003enumbers\u003c/span\u003e\u003cspan class=\"p\"\u003e:\u003c/span\u003e\r\n    \u003cspan class=\"k\"\u003eif\u003c/span\u003e \u003cspan class=\"n\"\u003ei\u003c/span\u003e \u003cspan class=\"o\"\u003e%\u003c/span\u003e \u003cspan class=\"mi\"\u003e2\u003c/span\u003e \u003cspan class=\"o\"\u003e==\u003c/span\u003e \u003cspan class=\"mi\"\u003e0\u003c/span\u003e\u003cspan class=\"p\"\u003e:\u003c/span\u003e\r\n        \u003cspan class=\"k\"\u003eprint\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"n\"\u003ei\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eHere we loop through the numbers list and check if the number inside the list is fully divisible by 2; if it is, then we print out that number.\u003c/p\u003e\r\n\u003cp\u003eHere's the output of this\u003cspan\u003e \u003c/span\u003e\u003ccode\u003efor\u003c/code\u003e\u003cspan\u003e \u003c/span\u003eloop:\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e$ python3.6 input_demo.py\r\n\u003cspan class=\"m\"\u003e2\u003c/span\u003e\r\n\u003cspan class=\"m\"\u003e4\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003ch4\u003e\n\u003ccode\u003ewhile\u003c/code\u003e\u003cspan\u003e \u003c/span\u003eLoops\u003c/h4\u003e\r\n\u003cp\u003eUnlike\u003cspan\u003e \u003c/span\u003e\u003ccode\u003efor\u003c/code\u003e\u003cspan\u003e \u003c/span\u003eloops,\u003cspan\u003e \u003c/span\u003e\u003ccode\u003ewhile\u003c/code\u003e\u003cspan\u003e \u003c/span\u003eloops run until a certain condition is met.\u003cspan\u003e \u003c/span\u003e\u003ccode\u003ewhile\u003c/code\u003e\u003cspan\u003e \u003c/span\u003eloops are often used as counters. Let's see one in action:\u003c/p\u003e\r\n\u003cp\u003e\u003cstrong\u003einput_demo.py\u003c/strong\u003e\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e\u003cspan class=\"n\"\u003eplayers\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"mi\"\u003e11\u003c/span\u003e\r\n\r\n\u003cspan class=\"k\"\u003ewhile\u003c/span\u003e \u003cspan class=\"n\"\u003eplayers\u003c/span\u003e \u003cspan class=\"o\"\u003e\u0026gt;=\u003c/span\u003e \u003cspan class=\"mi\"\u003e5\u003c/span\u003e \u003cspan class=\"p\"\u003e:\u003c/span\u003e\r\n    \u003cspan class=\"k\"\u003eprint\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"s2\"\u003e\"The remaining players are\"\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"n\"\u003eplayers\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e\r\n    \u003cspan class=\"n\"\u003eplayers\u003c/span\u003e \u003cspan class=\"o\"\u003e-=\u003c/span\u003e \u003cspan class=\"mi\"\u003e1\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eWe've created a variable\u003cspan\u003e \u003c/span\u003e\u003ccode\u003eplayers\u003c/code\u003e\u003cspan\u003e \u003c/span\u003ethat we set as 11, and then created a\u003cspan\u003e \u003c/span\u003e\u003ccode\u003ewhile\u003c/code\u003e\u003cspan\u003e \u003c/span\u003eloop with the condition that the value of\u003cspan\u003e \u003c/span\u003e\u003ccode\u003eplayers\u003c/code\u003e\u003cspan\u003e \u003c/span\u003eneeds to be greater than or equal to 5. If this condition is true, then a string will print and the value of\u003cspan\u003e \u003c/span\u003e\u003ccode\u003eplayers\u003c/code\u003e\u003cspan\u003e \u003c/span\u003ewill decrease by 1, and the loop will execute again until the condition is no longer true (that is to say,\u003cspan\u003e \u003c/span\u003e\u003ccode\u003eplayers\u003c/code\u003e\u003cspan\u003e \u003c/span\u003eis less than 5).\u003c/p\u003e\r\n\u003cp\u003eHere's what happens when we run it:\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e$ python3.6 input_demo.py\r\nThe remaining players are \u003cspan class=\"m\"\u003e11\u003c/span\u003e\r\nThe remaining players are \u003cspan class=\"m\"\u003e10\u003c/span\u003e\r\nThe remaining players are \u003cspan class=\"m\"\u003e9\u003c/span\u003e\r\nThe remaining players are \u003cspan class=\"m\"\u003e8\u003c/span\u003e\r\nThe remaining players are \u003cspan class=\"m\"\u003e7\u003c/span\u003e\r\nThe remaining players are \u003cspan class=\"m\"\u003e6\u003c/span\u003e\r\nThe remaining players are \u003cspan class=\"m\"\u003e5\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eSure enough, the code only executes when\u003cspan\u003e \u003c/span\u003e\u003ccode\u003eplayers\u003c/code\u003e\u003cspan\u003e \u003c/span\u003eis greater than or equal to 5. After that, the\u003cspan\u003e \u003c/span\u003e\u003ccode\u003ewhile\u003c/code\u003e\u003cspan\u003e \u003c/span\u003eloop is exited and the code stops running.\u003c/p\u003e\r\n\u003ch3\u003eControl Flow Exercises\u003c/h3\u003e\r\n\u003ch4\u003eMagic 8 ball\u003c/h4\u003e\r\n\u003cp\u003eCreate the popular Magic 8 Ball game. If you've never played it before, it is a toy that you can ask a yes-or-no question and it will give you a random answer (feel free to read more on the\u003cspan\u003e \u003c/span\u003e\u003ca href=\"https://en.wikipedia.org/wiki/Magic_8-Ball\"\u003eWikipedia page\u003c/a\u003e). In your program, allow a person to input a question, and then create a random number. Based on the random number, pick a response to the question using\u003cspan\u003e \u003c/span\u003e\u003ccode\u003eif\u003c/code\u003e,\u003cspan\u003e \u003c/span\u003e\u003ccode\u003eelif\u003c/code\u003e, and\u003cspan\u003e \u003c/span\u003e\u003ccode\u003eelse\u003c/code\u003e\u003cspan\u003e \u003c/span\u003estatements. You can find the responses at the\u003cspan\u003e \u003c/span\u003e\u003ca href=\"https://en.wikipedia.org/wiki/Magic_8-Ball#Possible_answers\"\u003eWikipedia page\u003c/a\u003e.\u003c/p\u003e\r\n\u003ch2\u003e\u003ccode\u003ebreak\u003c/code\u003e\u003c/h2\u003e\r\n\u003cp\u003eThe\u003cspan\u003e \u003c/span\u003e\u003ccode\u003ebreak\u003c/code\u003e\u003cspan\u003e \u003c/span\u003estatement allows code to jump out of a loop whenever a certain condition has been met.\u003c/p\u003e\r\n\u003cp\u003e\u003cstrong\u003einput_demo.py\u003c/strong\u003e\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e\u003cspan class=\"n\"\u003enumber\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"mi\"\u003e0\u003c/span\u003e\r\n\u003cspan class=\"k\"\u003ewhile\u003c/span\u003e \u003cspan class=\"bp\"\u003eTrue\u003c/span\u003e\u003cspan class=\"p\"\u003e:\u003c/span\u003e\r\n    \u003cspan class=\"k\"\u003eprint\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"s2\"\u003e\"I love candy \"\u003c/span\u003e\u003cspan class=\"o\"\u003e+\u003c/span\u003e \u003cspan class=\"nb\"\u003estr\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"n\"\u003enumber\u003c/span\u003e\u003cspan class=\"p\"\u003e))\u003c/span\u003e\r\n    \u003cspan class=\"n\"\u003enumber\u003c/span\u003e \u003cspan class=\"o\"\u003e+=\u003c/span\u003e\u003cspan class=\"mi\"\u003e1\u003c/span\u003e\r\n    \u003cspan class=\"k\"\u003eif\u003c/span\u003e \u003cspan class=\"n\"\u003enumber\u003c/span\u003e \u003cspan class=\"o\"\u003e==\u003c/span\u003e \u003cspan class=\"mi\"\u003e7\u003c/span\u003e \u003cspan class=\"p\"\u003e:\u003c/span\u003e\r\n        \u003cspan class=\"k\"\u003ebreak\u003c/span\u003e   \r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eWhen we run this code, see what prints to the console:\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e$ python3.6 input_demo.py\r\nI love candy \u003cspan class=\"m\"\u003e0\u003c/span\u003e\r\nI love candy \u003cspan class=\"m\"\u003e1\u003c/span\u003e\r\nI love candy \u003cspan class=\"m\"\u003e2\u003c/span\u003e\r\nI love candy \u003cspan class=\"m\"\u003e3\u003c/span\u003e\r\nI love candy \u003cspan class=\"m\"\u003e4\u003c/span\u003e\r\nI love candy \u003cspan class=\"m\"\u003e5\u003c/span\u003e\r\nI love candy \u003cspan class=\"m\"\u003e6\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eEach time the loop runs, and prints out our statement, and checks if\u003cspan\u003e \u003c/span\u003e\u003ccode\u003enumber\u003c/code\u003e\u003cspan\u003e \u003c/span\u003eis equal to 7. If not, it runs again. If it is, the loop stops.\u003c/p\u003e\r\n\u003ch3\u003e\u003ccode\u003econtinue\u003c/code\u003e\u003c/h3\u003e\r\n\u003cp\u003eThe\u003cspan\u003e \u003c/span\u003e\u003ccode\u003econtinue\u003c/code\u003e\u003cspan\u003e \u003c/span\u003estatement is also used in loops. It allows us to jump back up to the top of our loop. The\u003cspan\u003e \u003c/span\u003e\u003ccode\u003econtinue\u003c/code\u003e\u003cspan\u003e \u003c/span\u003ekeyword ignores all other statements under it and they are not run. Let's look at an example using\u003cspan\u003e \u003c/span\u003e\u003ccode\u003econtinue\u003c/code\u003e.\u003c/p\u003e\r\n\u003cp\u003e\u003cstrong\u003einput_demo.py\u003c/strong\u003e\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e\u003cspan class=\"sd\"\u003e'''\u003c/span\u003e\r\n\u003cspan class=\"sd\"\u003ein a team of members 20, some numbers are taken \u003c/span\u003e\r\n\u003cspan class=\"sd\"\u003eand want to display the numbers that are not taken\u003c/span\u003e\r\n\u003cspan class=\"sd\"\u003eso others don't pick the picked numbers\u003c/span\u003e\r\n\u003cspan class=\"sd\"\u003e'''\u003c/span\u003e\r\n\r\n\u003cspan class=\"c1\"\u003e# taken numbers\u003c/span\u003e\r\n\u003cspan class=\"n\"\u003enumTaken\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"p\"\u003e[\u003c/span\u003e\u003cspan class=\"mi\"\u003e3\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"mi\"\u003e5\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"mi\"\u003e7\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"mi\"\u003e11\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"mi\"\u003e13\u003c/span\u003e\u003cspan class=\"p\"\u003e]\u003c/span\u003e\r\n\r\n\u003cspan class=\"k\"\u003eprint\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"s2\"\u003e\"Available numbers\"\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e\r\n\r\n\u003cspan class=\"c1\"\u003e# loop\u003c/span\u003e\r\n\u003cspan class=\"k\"\u003efor\u003c/span\u003e \u003cspan class=\"n\"\u003ei\u003c/span\u003e \u003cspan class=\"ow\"\u003ein\u003c/span\u003e \u003cspan class=\"nb\"\u003erange\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"mi\"\u003e1\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"mi\"\u003e21\u003c/span\u003e\u003cspan class=\"p\"\u003e):\u003c/span\u003e\r\n    \u003cspan class=\"k\"\u003eif\u003c/span\u003e \u003cspan class=\"n\"\u003ei\u003c/span\u003e \u003cspan class=\"ow\"\u003ein\u003c/span\u003e \u003cspan class=\"n\"\u003enumTaken\u003c/span\u003e\u003cspan class=\"p\"\u003e:\u003c/span\u003e\r\n        \u003cspan class=\"k\"\u003econtinue\u003c/span\u003e\r\n    \u003cspan class=\"k\"\u003eprint\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"n\"\u003ei\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eWe want to print numbers from 1-20, but skip over the numbers in the\u003cspan\u003e \u003c/span\u003e\u003ccode\u003enumTaken\u003c/code\u003e\u003cspan\u003e \u003c/span\u003elist. We've written a standard\u003cspan\u003e \u003c/span\u003e\u003ccode\u003efor\u003c/code\u003e\u003cspan\u003e \u003c/span\u003eloop, with a twist. If the current number\u003cspan\u003e \u003c/span\u003e\u003ccode\u003ei\u003c/code\u003e\u003cspan\u003e \u003c/span\u003eis in the\u003cspan\u003e \u003c/span\u003e\u003ccode\u003enumTaken\u003c/code\u003e\u003cspan\u003e \u003c/span\u003elist, the\u003cspan\u003e \u003c/span\u003e\u003ccode\u003eprint()\u003c/code\u003e\u003cspan\u003e \u003c/span\u003estatement directly under the\u003cspan\u003e \u003c/span\u003e\u003ccode\u003econtinue\u003c/code\u003e\u003cspan\u003e \u003c/span\u003eis not executed. This is because every time\u003cspan\u003e \u003c/span\u003e\u003ccode\u003econtinue\u003c/code\u003e\u003cspan\u003e \u003c/span\u003eis called, Python jumps back up to the top of the loop.\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e$ python3.6 input_demo.py\r\nAvailable numbers\r\n\u003cspan class=\"m\"\u003e1\u003c/span\u003e\r\n\u003cspan class=\"m\"\u003e2\u003c/span\u003e\r\n\u003cspan class=\"m\"\u003e4\u003c/span\u003e\r\n\u003cspan class=\"m\"\u003e6\u003c/span\u003e\r\n\u003cspan class=\"m\"\u003e8\u003c/span\u003e\r\n\u003cspan class=\"m\"\u003e9\u003c/span\u003e\r\n\u003cspan class=\"m\"\u003e10\u003c/span\u003e\r\n\u003cspan class=\"m\"\u003e12\u003c/span\u003e\r\n\u003cspan class=\"m\"\u003e14\u003c/span\u003e\r\n\u003cspan class=\"m\"\u003e15\u003c/span\u003e\r\n\u003cspan class=\"m\"\u003e16\u003c/span\u003e\r\n\u003cspan class=\"m\"\u003e17\u003c/span\u003e\r\n\u003cspan class=\"m\"\u003e18\u003c/span\u003e\r\n\u003cspan class=\"m\"\u003e19\u003c/span\u003e\r\n\u003cspan class=\"m\"\u003e20\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eThe numbers 1-20 have printed, but we've skipped over the numbers in our list.\u003c/p\u003e\r\n\u003ch3\u003eLists\u003c/h3\u003e\r\n\u003cp\u003e\u003cstrong\u003eLists\u003c/strong\u003e\u003cspan\u003e \u003c/span\u003eare another Python data type. They are the equivalent of arrays in other languages. A Python list can store any kind of value.\u003c/p\u003e\r\n\u003cp\u003eWe can create a list using square brackets\u003cspan\u003e \u003c/span\u003e\u003ccode\u003e[]\u003c/code\u003e\u003cspan\u003e \u003c/span\u003eor using the\u003cspan\u003e \u003c/span\u003e\u003ccode\u003elist()\u003c/code\u003e\u003cspan\u003e \u003c/span\u003efunction, like this. We can open our Python shell and practice the following commands.\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e\u003cspan class=\"n\"\u003emy_list\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"p\"\u003e[]\u003c/span\u003e\r\n\u003cspan class=\"n\"\u003emy_other_list\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e\u003cspan class=\"nb\"\u003elist\u003c/span\u003e\u003cspan class=\"p\"\u003e()\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eNow let's create some lists that actually hold data.\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e\u003cspan class=\"n\"\u003elist_a\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"p\"\u003e[\u003c/span\u003e\u003cspan class=\"s2\"\u003e\"a\"\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"s2\"\u003e\"b\"\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"s2\"\u003e\"c\"\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"s2\"\u003e\"d\"\u003c/span\u003e\u003cspan class=\"p\"\u003e]\u003c/span\u003e \u003cspan class=\"c1\"\u003e# list of strings\u003c/span\u003e\r\n\u003cspan class=\"n\"\u003elist_b\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"p\"\u003e[\u003c/span\u003e\u003cspan class=\"mi\"\u003e1\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"mi\"\u003e2\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"mi\"\u003e3\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"mi\"\u003e4\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"mi\"\u003e5\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"mi\"\u003e6\u003c/span\u003e\u003cspan class=\"p\"\u003e]\u003c/span\u003e \u003cspan class=\"c1\"\u003e# list of numbers\u003c/span\u003e\r\n\u003cspan class=\"n\"\u003elist_c\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"p\"\u003e[\u003c/span\u003e\u003cspan class=\"mi\"\u003e1\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"s2\"\u003e\"west\"\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"mi\"\u003e34\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"s2\"\u003e\"longitude\"\u003c/span\u003e\u003cspan class=\"p\"\u003e]\u003c/span\u003e \u003cspan class=\"c1\"\u003e# mixed list\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eAs we can see with the code above, we can create a list that holds similar types of items, such as the first two which hold only strings or only numbers; or we can mix the types of data stored in our list, as we do with\u003cspan\u003e \u003c/span\u003e\u003ccode\u003elist_c\u003c/code\u003e, which holds both numbers and strings.\u003c/p\u003e\r\n\u003cp\u003eWe can even nest our lists with other lists.\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e\u003cspan class=\"n\"\u003elist_d\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"p\"\u003e[\u003c/span\u003e \u003cspan class=\"p\"\u003e[\u003c/span\u003e\u003cspan class=\"s2\"\u003e\"a\"\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"s2\"\u003e\"b\"\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"s2\"\u003e\"c\"\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"s2\"\u003e\"d\"\u003c/span\u003e\u003cspan class=\"p\"\u003e],[\u003c/span\u003e\u003cspan class=\"mi\"\u003e1\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"mi\"\u003e2\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"mi\"\u003e3\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"mi\"\u003e4\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"mi\"\u003e5\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"mi\"\u003e6\u003c/span\u003e\u003cspan class=\"p\"\u003e],[\u003c/span\u003e\u003cspan class=\"mi\"\u003e1\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"s2\"\u003e\"west\"\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"mi\"\u003e34\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"s2\"\u003e\"longitude\"\u003c/span\u003e\u003cspan class=\"p\"\u003e]]\u003c/span\u003e \u003cspan class=\"c1\"\u003e# nested list\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eWe can join two lists using the\u003cspan\u003e \u003c/span\u003e\u003ccode\u003eextend()\u003c/code\u003e\u003cspan\u003e \u003c/span\u003emethod.\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e\u003cspan class=\"n\"\u003elist_a\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"p\"\u003e[\u003c/span\u003e\u003cspan class=\"s2\"\u003e\"a\"\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"s2\"\u003e\"b\"\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"s2\"\u003e\"c\"\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"s2\"\u003e\"d\"\u003c/span\u003e\u003cspan class=\"p\"\u003e]\u003c/span\u003e \r\n\u003cspan class=\"n\"\u003elist_b\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"p\"\u003e[\u003c/span\u003e\u003cspan class=\"mi\"\u003e1\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"mi\"\u003e2\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"mi\"\u003e3\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"mi\"\u003e4\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"mi\"\u003e5\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"mi\"\u003e6\u003c/span\u003e\u003cspan class=\"p\"\u003e]\u003c/span\u003e\r\n\r\n\u003cspan class=\"c1\"\u003e# Joining list_b to list_a\u003c/span\u003e\r\n\r\n\u003cspan class=\"n\"\u003elist_a\u003c/span\u003e\u003cspan class=\"o\"\u003e.\u003c/span\u003e\u003cspan class=\"n\"\u003eextend\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"n\"\u003elist_b\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e\r\n\r\n\u003cspan class=\"k\"\u003eprint\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"n\"\u003elist_a\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e \u003cspan class=\"c1\"\u003e# this will print [\"a\",\"b\",\"c\",\"d\",1,2,3,4,5,6]\u003c/span\u003e\r\n\u003cspan class=\"k\"\u003eprint\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"n\"\u003elist_b\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e \u003cspan class=\"c1\"\u003e# this will print [1,2,3,4,5,6]\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eHere we have joined\u003cspan\u003e \u003c/span\u003e\u003ccode\u003elist_b\u003c/code\u003e\u003cspan\u003e \u003c/span\u003eto\u003cspan\u003e \u003c/span\u003e\u003ccode\u003elist_a\u003c/code\u003e. This adds new values to\u003cspan\u003e \u003c/span\u003e\u003ccode\u003elist_a\u003c/code\u003e. Notice that\u003cspan\u003e \u003c/span\u003e\u003ccode\u003elist_b\u003c/code\u003e\u003cspan\u003e \u003c/span\u003eremains unchanged.\u003c/p\u003e\r\n\u003cp\u003eWe can also append values to a list using the\u003cspan\u003e \u003c/span\u003e\u003ccode\u003eappend()\u003c/code\u003e\u003cspan\u003e \u003c/span\u003emethod.\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e\u003cspan class=\"n\"\u003elist_a\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"p\"\u003e[\u003c/span\u003e\u003cspan class=\"s2\"\u003e\"a\"\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"s2\"\u003e\"b\"\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"s2\"\u003e\"c\"\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"s2\"\u003e\"d\"\u003c/span\u003e\u003cspan class=\"p\"\u003e]\u003c/span\u003e \r\n\r\n\u003cspan class=\"k\"\u003eprint\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"n\"\u003elist_a\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e  \u003cspan class=\"c1\"\u003e# [\"a\",\"b\",\"c\",\"d\"]\u003c/span\u003e\r\n\r\n\u003cspan class=\"n\"\u003elist_a\u003c/span\u003e\u003cspan class=\"o\"\u003e.\u003c/span\u003e\u003cspan class=\"n\"\u003eappend\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"s2\"\u003e\"e\"\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e\r\n\r\n\u003cspan class=\"k\"\u003eprint\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"n\"\u003elist_a\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e \u003cspan class=\"c1\"\u003e# [\"a\",\"b\",\"c\",\"d\",\"e\"]\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eHere we append a single value,\u003cspan\u003e \u003c/span\u003e\u003ccode\u003e\"e\"\u003c/code\u003e, to the list.\u003c/p\u003e\r\n\u003cp\u003eWe can also arrange list items in place using the\u003cspan\u003e \u003c/span\u003e\u003ccode\u003ereverse()\u003c/code\u003e\u003cspan\u003e \u003c/span\u003eand\u003cspan\u003e \u003c/span\u003e\u003ccode\u003esort()\u003c/code\u003e\u003cspan\u003e \u003c/span\u003emethods.\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e\u003cspan class=\"n\"\u003elist_a\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"p\"\u003e[\u003c/span\u003e\u003cspan class=\"s2\"\u003e\"a\"\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"s2\"\u003e\"b\"\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"s2\"\u003e\"c\"\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"s2\"\u003e\"d\"\u003c/span\u003e\u003cspan class=\"p\"\u003e]\u003c/span\u003e\r\n\u003cspan class=\"n\"\u003elist_a\u003c/span\u003e\u003cspan class=\"o\"\u003e.\u003c/span\u003e\u003cspan class=\"n\"\u003ereverse\u003c/span\u003e\u003cspan class=\"p\"\u003e()\u003c/span\u003e\r\n\r\n\u003cspan class=\"k\"\u003eprint\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"n\"\u003elist_a\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e \u003cspan class=\"c1\"\u003e# ['d', 'c', 'b', 'a']\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eHere we use the\u003cspan\u003e \u003c/span\u003e\u003ccode\u003ereverse()\u003c/code\u003e\u003cspan\u003e \u003c/span\u003emethod to reverse the list.\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e\u003cspan class=\"n\"\u003elist_a\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"p\"\u003e[\u003c/span\u003e\u003cspan class=\"mi\"\u003e1\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"mi\"\u003e3\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"mi\"\u003e4\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"mi\"\u003e8\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"mi\"\u003e5\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"mi\"\u003e7\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"mi\"\u003e6\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"mi\"\u003e2\u003c/span\u003e\u003cspan class=\"p\"\u003e]\u003c/span\u003e\r\n\u003cspan class=\"n\"\u003elist_a\u003c/span\u003e\u003cspan class=\"o\"\u003e.\u003c/span\u003e\u003cspan class=\"n\"\u003esort\u003c/span\u003e\u003cspan class=\"p\"\u003e()\u003c/span\u003e\r\n\r\n\u003cspan class=\"k\"\u003eprint\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"n\"\u003elist_a\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e \u003cspan class=\"c1\"\u003e# [1, 2, 3, 4, 5, 6, 7, 8]\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eThe\u003cspan\u003e \u003c/span\u003e\u003ccode\u003esort()\u003c/code\u003e\u003cspan\u003e \u003c/span\u003emethod arranges items in order.\u003c/p\u003e\r\n\u003cp\u003e\u003cstrong\u003eNote\u003c/strong\u003e\u003cspan\u003e \u003c/span\u003e\u003ccode\u003ereverse\u003c/code\u003e\u003cspan\u003e \u003c/span\u003eand\u003cspan\u003e \u003c/span\u003e\u003ccode\u003esort\u003c/code\u003e\u003cspan\u003e \u003c/span\u003emethods only work on the list they were called on. They have no return value.\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e\u003cspan class=\"n\"\u003elist_a\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"p\"\u003e[\u003c/span\u003e\u003cspan class=\"mi\"\u003e1\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"mi\"\u003e2\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"mi\"\u003e3\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"mi\"\u003e4\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"mi\"\u003e5\u003c/span\u003e\u003cspan class=\"p\"\u003e]\u003c/span\u003e\r\n\u003cspan class=\"n\"\u003elist_a\u003c/span\u003e\u003cspan class=\"o\"\u003e.\u003c/span\u003e\u003cspan class=\"n\"\u003ereverse\u003c/span\u003e\u003cspan class=\"p\"\u003e()\u003c/span\u003e \u003cspan class=\"c1\"\u003e# converts list_a to [5,4,3,2,1]\u003c/span\u003e\r\n\u003cspan class=\"n\"\u003elist_b\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"n\"\u003elist_a\u003c/span\u003e\u003cspan class=\"o\"\u003e.\u003c/span\u003e\u003cspan class=\"n\"\u003ereverse\u003c/span\u003e\u003cspan class=\"p\"\u003e()\u003c/span\u003e  \u003cspan class=\"c1\"\u003e# list_b is None\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003ch3\u003eTuples\u003c/h3\u003e\r\n\u003cp\u003eTuples are like lists. The main difference between tuples and lists is that tuples are\u003cspan\u003e \u003c/span\u003e\u003cstrong\u003eimmutable\u003c/strong\u003e\u003cspan\u003e \u003c/span\u003e- their values cannot be changed once created.\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e\u003cspan class=\"n\"\u003etuple_a\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"s2\"\u003e\"a\"\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"s2\"\u003e\"b\"\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"s2\"\u003e\"c\"\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"s2\"\u003e\"d\"\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e \u003cspan class=\"c1\"\u003e# tuple of strings\u003c/span\u003e\r\n\u003cspan class=\"n\"\u003etuple_b\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"mi\"\u003e1\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"mi\"\u003e2\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"mi\"\u003e3\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"mi\"\u003e4\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"mi\"\u003e5\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"mi\"\u003e6\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e \u003cspan class=\"c1\"\u003e# tuple of numbers\u003c/span\u003e\r\n\u003cspan class=\"n\"\u003etuple_c\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"mi\"\u003e1\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"s2\"\u003e\"west\"\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"mi\"\u003e34\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"s2\"\u003e\"longitude\"\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e \u003cspan class=\"c1\"\u003e# mixed tuple\u003c/span\u003e\r\n\u003cspan class=\"n\"\u003etuple_d\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"nb\"\u003etuple\u003c/span\u003e\u003cspan class=\"p\"\u003e()\u003c/span\u003e \u003cspan class=\"c1\"\u003e#empty tuple\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eWe can create a tuple using parentheses\u003cspan\u003e \u003c/span\u003e\u003ccode\u003e()\u003c/code\u003e\u003cspan\u003e \u003c/span\u003e(as in\u003cspan\u003e \u003c/span\u003e\u003ccode\u003etuple_a\u003c/code\u003e,\u003cspan\u003e \u003c/span\u003e\u003ccode\u003etuple_b\u003c/code\u003e, and\u003cspan\u003e \u003c/span\u003e\u003ccode\u003etuple_c\u003c/code\u003e\u003cspan\u003e \u003c/span\u003ein the above example) or we can use the\u003cspan\u003e \u003c/span\u003e\u003ccode\u003etuple()\u003c/code\u003e\u003cspan\u003e \u003c/span\u003efunction (as in\u003cspan\u003e \u003c/span\u003e\u003ccode\u003etuple_d\u003c/code\u003e).\u003c/p\u003e\r\n\u003ch3\u003eDictionary\u003c/h3\u003e\r\n\u003cp\u003eAnother really powerful data structure in Python is the dictionary. Like lists, dictionaries store collections of many values of different types. Unlike indexes for lists - which are integers and start from 0, dictionary indexes don't have to be integers. They can be of different data types like strings. Indexes in dictionaries are called\u003cspan\u003e \u003c/span\u003e\u003cstrong\u003ekeys\u003c/strong\u003e. The value here is appropriately called the\u003cspan\u003e \u003c/span\u003e\u003cstrong\u003evalue\u003c/strong\u003e.\u003c/p\u003e\r\n\u003cp\u003eDictionaries can be created in two ways:\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e\u003cspan class=\"c1\"\u003e# Creating empty dictionaries\u003c/span\u003e\r\n\u003cspan class=\"n\"\u003emy_dict\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"p\"\u003e{}\u003c/span\u003e\r\n\u003cspan class=\"n\"\u003emy_dict\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"nb\"\u003edict\u003c/span\u003e\u003cspan class=\"p\"\u003e()\u003c/span\u003e\r\n\r\n\u003cspan class=\"c1\"\u003e# Creating a dictionary with keys and values\u003c/span\u003e\r\n\u003cspan class=\"n\"\u003emy_cat\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"p\"\u003e{\u003c/span\u003e\u003cspan class=\"s1\"\u003e'name'\u003c/span\u003e\u003cspan class=\"p\"\u003e:\u003c/span\u003e\u003cspan class=\"s1\"\u003e'Mr sniffles'\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"s1\"\u003e'age'\u003c/span\u003e\u003cspan class=\"p\"\u003e:\u003c/span\u003e\u003cspan class=\"mi\"\u003e18\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e \u003cspan class=\"s1\"\u003e'color'\u003c/span\u003e\u003cspan class=\"p\"\u003e:\u003c/span\u003e\u003cspan class=\"s1\"\u003e'black'\u003c/span\u003e\u003cspan class=\"p\"\u003e}\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eIn the example above, we created a new dictionary that stores details about\u003cspan\u003e \u003c/span\u003e\u003ccode\u003emy_cat\u003c/code\u003e. We can fetch data from a dictionary by using our key as the index. Continuing from the above example, let's say that we want to print the name of\u003cspan\u003e \u003c/span\u003e\u003ccode\u003emy_cat\u003c/code\u003e,\u003cspan\u003e \u003c/span\u003e\u003ccode\u003e'Mr sniffles'\u003c/code\u003e. Here is how we would access that value from the dictionary:\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e\u003cspan class=\"n\"\u003ecat_name\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"n\"\u003emy_cat\u003c/span\u003e\u003cspan class=\"p\"\u003e[\u003c/span\u003e\u003cspan class=\"s1\"\u003e'name'\u003c/span\u003e\u003cspan class=\"p\"\u003e]\u003c/span\u003e\r\n\u003cspan class=\"k\"\u003eprint\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"n\"\u003ecat_name\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e \u003cspan class=\"c1\"\u003e# 'Mr sniffles'\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eUnlike lists, dictionaries are unordered since the indexing does not start at [0]. We will see what that means later on.\u003c/p\u003e\r\n\u003cp\u003eWe can also add items to a dictionary by defining a new key and assigning it a value.\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e\u003cspan class=\"n\"\u003ebirthdays\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"p\"\u003e{\u003c/span\u003e\u003cspan class=\"s2\"\u003e\"John\"\u003c/span\u003e\u003cspan class=\"p\"\u003e:\u003c/span\u003e\u003cspan class=\"s2\"\u003e\"August 1\"\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"s2\"\u003e\"Marcus\"\u003c/span\u003e\u003cspan class=\"p\"\u003e:\u003c/span\u003e\u003cspan class=\"s2\"\u003e\"April 8\"\u003c/span\u003e\u003cspan class=\"p\"\u003e}\u003c/span\u003e\r\n\u003cspan class=\"n\"\u003ebirthdays\u003c/span\u003e\u003cspan class=\"p\"\u003e[\u003c/span\u003e\u003cspan class=\"s2\"\u003e\"mary\"\u003c/span\u003e\u003cspan class=\"p\"\u003e]\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"s2\"\u003e\"September 14\"\u003c/span\u003e\r\n\u003cspan class=\"k\"\u003eprint\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"n\"\u003ebirthdays\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e \u003cspan class=\"c1\"\u003e# this prints {\"John\":\"August 1\",\"Marcus\":\"April 8\",\"Mary\":\"September 14\"}\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eHere we had a dictionary with the birthday of two people,\u003cspan\u003e \u003c/span\u003e\u003ccode\u003eJohn\u003c/code\u003e\u003cspan\u003e \u003c/span\u003eand\u003cspan\u003e \u003c/span\u003e\u003ccode\u003eMarcus\u003c/code\u003e. Then we added\u003cspan\u003e \u003c/span\u003e\u003ccode\u003eMary\u003c/code\u003e\u003cspan\u003e \u003c/span\u003eto our birthday dictionary.\u003c/p\u003e\r\n\u003cp\u003eWe can also get the individual keys in the dictionary using the\u003ccode\u003ekeys()\u003c/code\u003emethod.\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e\u003cspan class=\"n\"\u003ebirthday\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"p\"\u003e{\u003c/span\u003e\u003cspan class=\"s2\"\u003e\"John\"\u003c/span\u003e\u003cspan class=\"p\"\u003e:\u003c/span\u003e\u003cspan class=\"s2\"\u003e\"August 1\"\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"s2\"\u003e\"Marcus\"\u003c/span\u003e\u003cspan class=\"p\"\u003e:\u003c/span\u003e\u003cspan class=\"s2\"\u003e\"April 8\"\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"s2\"\u003e\"Mary\"\u003c/span\u003e\u003cspan class=\"p\"\u003e:\u003c/span\u003e\u003cspan class=\"s2\"\u003e\"September 14\"\u003c/span\u003e\u003cspan class=\"p\"\u003e}\u003c/span\u003e\r\n\r\n\u003cspan class=\"k\"\u003eprint\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"n\"\u003ebirthday\u003c/span\u003e\u003cspan class=\"o\"\u003e.\u003c/span\u003e\u003cspan class=\"n\"\u003ekeys\u003c/span\u003e\u003cspan class=\"p\"\u003e())\u003c/span\u003e \u003cspan class=\"c1\"\u003e# this prints dict_keys(['John', 'Marcus', 'Mary'])\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eThe\u003cspan\u003e \u003c/span\u003e\u003ccode\u003ekeys()\u003c/code\u003e\u003cspan\u003e \u003c/span\u003emethod creates a\u003cspan\u003e \u003c/span\u003e\u003ccode\u003edict_keys\u003c/code\u003e\u003cspan\u003e \u003c/span\u003eobject that holds a list of all the keys.\u003c/p\u003e\r\n\u003cp\u003eWe can convert them into a list using the\u003cspan\u003e \u003c/span\u003e\u003ccode\u003elist()\u003c/code\u003e\u003cspan\u003e \u003c/span\u003efunction.\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e\u003cspan class=\"n\"\u003ebirthday\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"p\"\u003e{\u003c/span\u003e\u003cspan class=\"s2\"\u003e\"John\"\u003c/span\u003e\u003cspan class=\"p\"\u003e:\u003c/span\u003e\u003cspan class=\"s2\"\u003e\"August 1\"\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"s2\"\u003e\"Marcus\"\u003c/span\u003e\u003cspan class=\"p\"\u003e:\u003c/span\u003e\u003cspan class=\"s2\"\u003e\"April 8\"\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"s2\"\u003e\"Mary\"\u003c/span\u003e\u003cspan class=\"p\"\u003e:\u003c/span\u003e\u003cspan class=\"s2\"\u003e\"September 14\"\u003c/span\u003e\u003cspan class=\"p\"\u003e}\u003c/span\u003e\r\n\r\n\u003cspan class=\"k\"\u003eprint\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"nb\"\u003elist\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"n\"\u003ebirthday\u003c/span\u003e\u003cspan class=\"o\"\u003e.\u003c/span\u003e\u003cspan class=\"n\"\u003ekeys\u003c/span\u003e\u003cspan class=\"p\"\u003e()))\u003c/span\u003e \u003cspan class=\"c1\"\u003e# this prints ['John', 'Marcus', 'Mary']the ne\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003ch4\u003e\n\u003ccode\u003esetdefault()\u003c/code\u003e\u003cspan\u003e \u003c/span\u003emethod\u003c/h4\u003e\r\n\u003cp\u003eWhen dealing with a dictionary, sometimes it can be useful to set placeholder values to keys, before we do any operation on them, to prevent unnecessary errors.\u003c/p\u003e\r\n\u003cp\u003eFor example, let's say we want to create an application that counts every character in an input string. Open up\u003cspan\u003e \u003c/span\u003e\u003cem\u003eimport_demo.py\u003c/em\u003e\u003cspan\u003e \u003c/span\u003eand add this code:\u003c/p\u003e\r\n\u003cp\u003e\u003cstrong\u003eimport_demo.py\u003c/strong\u003e\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e\u003cspan class=\"k\"\u003eprint\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"s2\"\u003e\"Enter a string\"\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e\r\n\r\n\u003cspan class=\"n\"\u003einput_string\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"nb\"\u003einput\u003c/span\u003e\u003cspan class=\"p\"\u003e()\u003c/span\u003e\r\n\r\n\u003cspan class=\"n\"\u003echaracters\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"p\"\u003e{}\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eWe prompt the user for an input. Then we create an empty dictionary named\u003cspan\u003e \u003c/span\u003e\u003ccode\u003echaracters\u003c/code\u003e\u003cspan\u003e \u003c/span\u003ethat will store each individual character and how many times it has been used. Now let's use\u003cspan\u003e \u003c/span\u003e\u003ccode\u003esetdefault()\u003c/code\u003e:\u003c/p\u003e\r\n\u003cp\u003e\u003cstrong\u003eimport_demo.py\u003c/strong\u003e\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e\u003cspan class=\"k\"\u003eprint\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"s2\"\u003e\"Enter a string\"\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e\r\n\r\n\u003cspan class=\"n\"\u003einput_string\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"nb\"\u003einput\u003c/span\u003e\u003cspan class=\"p\"\u003e()\u003c/span\u003e\r\n\r\n\u003cspan class=\"n\"\u003echaracters\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"p\"\u003e{}\u003c/span\u003e\r\n\r\n\u003cspan class=\"k\"\u003efor\u003c/span\u003e \u003cspan class=\"n\"\u003echaracter\u003c/span\u003e \u003cspan class=\"ow\"\u003ein\u003c/span\u003e \u003cspan class=\"n\"\u003einput_string\u003c/span\u003e\u003cspan class=\"p\"\u003e:\u003c/span\u003e\r\n    \u003cspan class=\"n\"\u003echaracters\u003c/span\u003e\u003cspan class=\"o\"\u003e.\u003c/span\u003e\u003cspan class=\"n\"\u003esetdefault\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"n\"\u003echaracter\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"mi\"\u003e0\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eHere we use a\u003cspan\u003e \u003c/span\u003e\u003ccode\u003efor\u003c/code\u003e\u003cspan\u003e \u003c/span\u003eloop to iterate through each individual character in the string. Then we use the\u003cspan\u003e \u003c/span\u003e\u003ccode\u003esetdefault()\u003c/code\u003e\u003cspan\u003e \u003c/span\u003emethod to create a key for each character if the character does\u003cspan\u003e \u003c/span\u003e\u003cstrong\u003enot\u003c/strong\u003e\u003cspan\u003e \u003c/span\u003eexist in the dictionary. Then we set the default value for each as\u003cspan\u003e \u003c/span\u003e\u003ccode\u003e0\u003c/code\u003e.\u003c/p\u003e\r\n\u003cp\u003e\u003cstrong\u003eimport_demo.py\u003c/strong\u003e\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e\u003cspan class=\"k\"\u003eprint\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"s2\"\u003e\"Enter a string\"\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e\r\n\r\n\u003cspan class=\"n\"\u003einput_string\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"nb\"\u003einput\u003c/span\u003e\u003cspan class=\"p\"\u003e()\u003c/span\u003e\r\n\r\n\u003cspan class=\"n\"\u003echaracters\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"p\"\u003e{}\u003c/span\u003e\r\n\r\n\u003cspan class=\"k\"\u003efor\u003c/span\u003e \u003cspan class=\"n\"\u003echaracter\u003c/span\u003e \u003cspan class=\"ow\"\u003ein\u003c/span\u003e \u003cspan class=\"n\"\u003einput_string\u003c/span\u003e\u003cspan class=\"p\"\u003e:\u003c/span\u003e\r\n\u003cspan class=\"n\"\u003echaracters\u003c/span\u003e\u003cspan class=\"o\"\u003e.\u003c/span\u003e\u003cspan class=\"n\"\u003esetdefault\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"n\"\u003echaracter\u003c/span\u003e\u003cspan class=\"p\"\u003e,\u003c/span\u003e\u003cspan class=\"mi\"\u003e0\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e\r\n\u003cspan class=\"n\"\u003echaracters\u003c/span\u003e\u003cspan class=\"p\"\u003e[\u003c/span\u003e\u003cspan class=\"n\"\u003echaracter\u003c/span\u003e\u003cspan class=\"p\"\u003e]\u003c/span\u003e \u003cspan class=\"o\"\u003e=\u003c/span\u003e \u003cspan class=\"n\"\u003echaracters\u003c/span\u003e\u003cspan class=\"p\"\u003e[\u003c/span\u003e\u003cspan class=\"n\"\u003echaracter\u003c/span\u003e\u003cspan class=\"p\"\u003e]\u003c/span\u003e \u003cspan class=\"o\"\u003e+\u003c/span\u003e \u003cspan class=\"mi\"\u003e1\u003c/span\u003e\r\n\r\n\u003cspan class=\"k\"\u003eprint\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"n\"\u003echaracters\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eLastly we target the key that matches the character and add one to the value everytime the character is encountered.\u003c/p\u003e\r\n\u003cp\u003eWhen we run this, here's what happens:\u003c/p\u003e\r\n\u003cdiv class=\"codehilite\"\u003e\r\n\u003cpre\u003e\u003cspan\u003e\u003c/span\u003e\u003ccode\u003e$ python3.6 import_demo.py\r\nEnter a string \u003cspan class=\"c1\"\u003e# I'm going to enter \"James is awesome\"\u003c/span\u003e\r\nJames is awesome\r\n\r\n\u003cspan class=\"o\"\u003e{\u003c/span\u003e\u003cspan class=\"s1\"\u003e' '\u003c/span\u003e: \u003cspan class=\"m\"\u003e3\u003c/span\u003e, \u003cspan class=\"s1\"\u003e'J'\u003c/span\u003e: \u003cspan class=\"m\"\u003e1\u003c/span\u003e, \u003cspan class=\"s1\"\u003e'a'\u003c/span\u003e: \u003cspan class=\"m\"\u003e2\u003c/span\u003e, \u003cspan class=\"s1\"\u003e'e'\u003c/span\u003e: \u003cspan class=\"m\"\u003e3\u003c/span\u003e, \u003cspan class=\"s1\"\u003e'i'\u003c/span\u003e: \u003cspan class=\"m\"\u003e1\u003c/span\u003e, \u003cspan class=\"s1\"\u003e'm'\u003c/span\u003e: \u003cspan class=\"m\"\u003e2\u003c/span\u003e, \u003cspan class=\"s1\"\u003e'o'\u003c/span\u003e: \u003cspan class=\"m\"\u003e2\u003c/span\u003e, \u003cspan class=\"s1\"\u003e's'\u003c/span\u003e: \u003cspan class=\"m\"\u003e4\u003c/span\u003e, \u003cspan class=\"s1\"\u003e'w'\u003c/span\u003e: \u003cspan class=\"m\"\u003e1\u003c/span\u003e\u003cspan class=\"o\"\u003e}\u003c/span\u003e\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/div\u003e\r\n\u003ch3\u003eList and Dictionary Exercises\u003c/h3\u003e\r\n\u003ch4\u003e\u003cstrong\u003eMagic 8 ball\u003c/strong\u003e\u003c/h4\u003e\r\n\u003cp\u003eRecreate the Magic 8 Ball exercise from the Control Flow lesson using lists instead of\u003cspan\u003e \u003c/span\u003e\u003ccode\u003eif\u003c/code\u003e\u003cspan\u003e \u003c/span\u003estatements.\u003c/p\u003e\r\n\u003ch4\u003e\u003cstrong\u003eFeature Phones\u003c/strong\u003e\u003c/h4\u003e\r\n\u003cp\u003eRemember the days before smartphones when text was entered in our phones using the keypad? If you need a refresher, see this image of a phone keypad:\u003c/p\u003e\r\n\u003cp\u003e\u003cimg src=\"https://i.stack.imgur.com/hHq4v.jpg\" alt=\"Phone Keypad\"\u003e\u003c/p\u003e\r\n\u003cp\u003eNotice the letters on each number. To type a letter, the user needs to press the button on which the letter is printed the number of times that corresponds to its order on the button.\u003c/p\u003e\r\n\u003cp\u003eFor example, to type \"E\", the user needs to press \"3\" two times. To type \"Z\", the user needs to press \"9\" four times. To type \"DOG\", they need to press \"3\" one time, \"6\" three times, and \"4\" one time. And so on.\u003c/p\u003e\r\n\u003cp\u003eCreate a program that allows a user to enter text and then it calculates how many clicks it takes for a user to input the text. Ignore uppercase and special characters.\u003c/p\u003e\r\n\u003cp\u003eFor example, if a user inputs\u003cspan\u003e \u003c/span\u003e\u003cstrong\u003e\u003cem\u003e\"James\"\u003c/em\u003e\u003c/strong\u003e, the output should be\u003cspan\u003e \u003c/span\u003e\u003cstrong\u003e\u003cem\u003e9\u003c/em\u003e\u003c/strong\u003e\u003cspan\u003e \u003c/span\u003ebecause...\u003c/p\u003e\r\n\u003cul\u003e\r\n\u003cli\u003e\"J\": press \"5\" one time\u003c/li\u003e\r\n\u003cli\u003e\"A\": press \"2\" one time\u003c/li\u003e\r\n\u003cli\u003e\"M\": press \"6\" one time\u003c/li\u003e\r\n\u003cli\u003e\"E\": press \"3\" two times\u003c/li\u003e\r\n\u003cli\u003e\"S\": press \"7\" four times\u003c/li\u003e\r\n\u003c/ul\u003e\r\n\u003cp\u003ePut this all together, and 1 + 1 + 1 + 2 + 4 = 9.\u003c/p\u003e"},"WIKI_PAGE_REVISION":"1","WIKI_PAGE_SHOW_PATH":"/courses/22/pages/weekend-looping","WIKI_PAGE_EDIT_PATH":"/courses/22/pages/weekend-looping/edit","WIKI_PAGE_HISTORY_PATH":"/courses/22/pages/weekend-looping/revisions","COURSE_ID":"22","MODULES_PATH":"/courses/22/modules","wiki_page_menu_tools":[],"DISPLAY_SHOW_ALL_LINK":false,"badge_counts":{"submissions":0},"notices":[]};
+</script>
+
+<script src="./Weekend_ Looping_ Python_files/navigation_header.bundle-404806ff60.js" defer="defer"></script>
+<script src="./Weekend_ Looping_ Python_files/canvas.js" defer="defer"></script>
+
+</div> <!-- #application -->
+
+
+<div class="ReactTrayPortal"><div data-reactid=".1"></div></div></body></html>

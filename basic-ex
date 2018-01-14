@@ -1,0 +1,11 @@
+
+Python Math Practice
+
+>>> h = float(input("Whats your height in meters:"));
+Whats your height in meters:1.8
+>>> w = float(input("What is your weight in kgs:"))
+What is your weight in kgs:60
+>>> w/h*2
+66.66666666666667
+>>> 
+
