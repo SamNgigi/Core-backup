@@ -1,10 +1,12 @@
-print("What is your name?");
-name = input();
+import sys
+# The below code allows us to pass in arguments from the command line.
+# So executing this python program we can type in our name say Sam before executing it. And our name will be stored to the name variable through the sys.argva[].
+# Literally we can take sys.argv[] to mean system.argument variable.
 
-print("What is your age?");
-# int() is to convert the inputfrom string into number.
-age = int(input());
+name = sys.argv[1]
 
+print("How old are you?")
+age = int(input())
 
-# Have to convert int into string using str(age)
-print("Hi " + name + ".Looking good for " + str(age) + " years young :)")
+print(name)
+print(age)
