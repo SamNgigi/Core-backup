@@ -41,4 +41,8 @@ print("");
 print("Using counter variable");
 for number in range(0,7):
     print("Bruv give me "+ str(number)+" samosas")
-# 
+# For loop wiht conditions
+numbers = [1,2,3,4,5];
+for number in numbers:
+    if number % 2 == 0:
+        print(number);
