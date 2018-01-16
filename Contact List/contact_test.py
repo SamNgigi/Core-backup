@@ -76,13 +76,25 @@ class TestContact(unittest.TestCase):
         """
         self.new_contact.save_contact()
         # new contact
-        test_contact = Contact("Test", "user", "0712345678", "test@usr.com")
+        test_contact = Contact("Test", "user", "0798765432", "test@usr.com")
         # new contact saved
         test_contact.save_contact()
     #    For deleting the new contact
         self.new_contact.delete_contact()
         self.assertEqual(len(Contact.contact_list), 1)
 
+    # Test to see if we can search and find our saved contacts
+    def test_find_contact_by_number(self):
+        """
+        Test to check if we can find a contact by phone nuber and display any information.
+        Method that takes in a number and returns a contact that matches that number.
+        """
+        self.new_contact.save_contact()
+        # new contact
+        test_contact = Contact("Test", "user", "0798765432", "test@usr.com")
+        found_contact = Contact.find_by_number("0798765432")
+        # The test
+        self.assertEqual(found_contact.email, test_contact.email)
 
 
 # Below we are simply stating that if the module being tested is running we collect the test methods and execute them.

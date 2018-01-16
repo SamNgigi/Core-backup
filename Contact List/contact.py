@@ -37,3 +37,6 @@ class Contact:
         delete_contact method delete a saved contact from the contact_list.
         """
         Contact.contact_list.remove(self)
+
+    @classmethod
+    def find_by
