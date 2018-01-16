@@ -2,6 +2,8 @@
 import unittest
 # Importing that class Contact
 from contact import Contact
+# We download this third party module below using python3.6 -m pip install pyperclip
+import pyperclip
 
 # We create a subclass that inherits from unittest.TestCase. A subclass is just a normal class that can inherit methods and variables from other classes in addition to its own.
 
@@ -120,7 +122,16 @@ class TestContact(unittest.TestCase):
         """
         self.assertEqual(Contact.display_contacts(), Contact.contact_list)
 
+   # We want to test if we can copy paste info.
+    def test_copy_email(self):
+        """
+        Test to confirm that we are copying the email address from a found contact
+        """
+        self.new_contact.save_contact()
+        Contact.copy_email("0712345678")
+        self.assertEqual(self.new_contact.email, pyperclip.paste())
 
-# Below we are simply stating that if the module being tested is running we collect the test methods and execute them.
+
+        # Below we are simply stating that if the module being tested is running we collect the test methods and execute them.
 if __name__ == "__main__":
     unittest.main()
