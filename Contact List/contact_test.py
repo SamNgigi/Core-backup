@@ -23,7 +23,15 @@ class TestContact(unittest.TestCase):
         # Below creating the new contact object to test.
         self.new_contact = Contact(
             "James", "Muriuki", "0712345678", "james@moringaschool.com")
+  # Just like the setUp() method the tearDown() method executes a set of instructions after every test
 
+    def tearDown(self):
+        """
+        tearDown method that does clean up after each test case has run.
+        """
+
+        # Here the tearDown() method assigns the contact_list in the Contact class empty. This helps us get accurate test results everytime have a new test case
+        Contact.contact_list = []
     # self.new_contact is an instance of the Contact class.
     # We create method test_init to check if our objects are instantiated corectly.
 
@@ -37,6 +45,44 @@ class TestContact(unittest.TestCase):
         self.assertEqual(self.new_contact.last_name, "Muriuki")
         self.assertEqual(self.new_contact.phone_number, "0712345678")
         self.assertEqual(self.new_contact.email, "james@moringaschool.com")
+
+    # Second test
+    # We want to test if we can save contacts.
+    # indentation wise it below function has to be on the same line with the ohter functions
+    def test_save_contact(self):
+        """
+        test_save_contact test case to test if the contact object is saved into the contact list
+        """
+        # .save_contact() is the save to contact function.
+        # Test would check if an addition has been made to our contact list
+        self.new_contact.save_contact()
+        self.assertEqual(len(Contact.contact_list), 1)
+
+    # Test to se if we can add to contact list multiple times
+    def test_save_multiple_contact(self):
+        """
+        def test_save_multiple_contact to check if we can save multiple contacts to our contact_list
+        """
+        self.new_contact.save_contact()
+        # new contact
+        test_contact = Contact("Test", "user", "0798765432", "test@user.com")
+        test_contact.save_contact()
+        self.assertEqual(len(Contact.contact_list), 2)
+
+    # Test to see if we can delete contacts
+    def test_delete_contact(self):
+        """
+        test_delete_contact to test if we can remove a contact from our contact list
+        """
+        self.new_contact.save_contact()
+        # new contact
+        test_contact = Contact("Test", "user", "0712345678", "test@usr.com")
+        # new contact saved
+        test_contact.save_contact()
+    #    For deleting the new contact
+        self.new_contact.delete_contact()
+        self.assertEqual(len(Contact.contact_list), 1)
+
 
 
 # Below we are simply stating that if the module being tested is running we collect the test methods and execute them.
