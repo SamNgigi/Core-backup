@@ -136,13 +136,15 @@ def main():
                 print("")
             else:
                 print("That contact does not exist")
+                print("")
 
         elif short_code == "ex":
             print("Bye! Seeya! Chow! Adious! Baadaye!")
+            print("")
             break
-    else:
-        print("I really didn't get that. Please use the short codes below")
-        print("")
+        else:
+            print("I really didn't get that. Please use the short codes below")
+            print("")
 
 
 if __name__ == '__main__':
