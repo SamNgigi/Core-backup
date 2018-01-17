@@ -72,78 +72,78 @@ def copy_email(number):
 
 
 def main():
-    print("Hello Welcome to your contact list. What is your name?")
+    print("Hello Welcome to your contact list. Whats your name?")
     user_name = input()
+    print("")
 
-    print(f"Hello {user_name}. what would you like to do?")
-    print('\n')
+    print(f"Hi {user_name}! What would you like to do?")
+    print("")
 
     while True:
-        print("Use these short codes : cc - create a new contact, dc - display contacts, fc -find a contact, ex -exit the contact list ")
-
+        print("""Use these short codes:
+              nc - create new contact,
+              dc- display contacts,
+              fc - find a contact,
+              ex - exit contact list.""")
         short_code = input().lower()
-
-        if short_code == 'cc':
+        print("_" * 20)
+        if short_code == "nc":
             print("New Contact")
-            print("-" * 10)
+            print("_" * 20)
 
-            print("First name ....")
+            print("Enter first name -")
             f_name = input()
 
-            print("Last name ...")
+            print("Enter last name -")
             l_name = input()
 
-            print("Phone number ...")
+            print("Phone number -")
             p_number = input()
 
-            print("Email address ...")
+            print("Email address -")
             e_address = input()
 
-            # create and save new contact.
-            save_contacts(create_contact(
-                f_name, l_name, p_number, e_address))
-            print('\n')
-            print(f"New Contact {f_name} {l_name} created")
-            print('\n')
+            save_contacts(create_contact(f_name, l_name, p_number, e_address))
 
-        elif short_code == 'dc':
+            print("")
+            print(f"""New contact - {f_name} {l_name} """)
+            print("")
 
+        elif short_code == "dc":
             if display_contacts():
-                print("Here is a list of all your contacts")
-                print('\n')
-
+                print("Here is a list of all you contacts")
+                print("")
                 for contact in display_contacts():
                     print(
-                        f"{contact.first_name} {contact.last_name} .....{contact.phone_number}")
-
-                print('\n')
+                        f"{contact.first_name} {contact.last_name} {contact.phone_number} {contact.email}")
+                    print("")
             else:
-                print('\n')
-                print("You dont seem to have any contacts saved yet")
-                print('\n')
+                print("")
+                print("You dont seem to have any contacts save yet")
+                print("")
 
-        elif short_code == 'fc':
-
+        elif short_code == "fc":
             print("Enter the number you want to search for")
 
             search_number = input()
-            if check_existing_contacts(search_number):
+            if check_existing_contact(search_number):
                 search_contact = find_contact(search_number)
+                print("_" * 20)
                 print(f"{search_contact.first_name} {search_contact.last_name}")
-                print('-' * 20)
-
-                print(f"Phone number.......{search_contact.phone_number}")
-                print(f"Email address.......{search_contact.email}")
+                print("_" * 20)
+                print(f"Phone number - {search_contact.phone_number}")
+                print(f"Email address - {search_contact.email}")
+                print("")
             else:
                 print("That contact does not exist")
 
         elif short_code == "ex":
-            print("Bye .......")
+            print("Bye! Seeya! Chow! Adious! Baadaye!")
             break
-        else:
-            print("I really didn't get that. Please use the short codes")
+    else:
+        print("I really didn't get that. Please use the short codes below")
+        print("")
 
 
 if __name__ == '__main__':
-
     main()
