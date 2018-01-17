@@ -35,8 +35,8 @@ string_list = handle3.readlines()
 print("The array")
 print("")
 print(string_list)
-# We the then use the .close() method to close the file handle because,
 
+# Looping through a text file
 handle4 = open("text.txt")
 find_word = handle4.read()
 counter = 0
@@ -47,5 +47,11 @@ print("")
 print(f"The word Python in the text.txt occurs {counter} times")
 # print(str(counter) + " times")
 
+# We write to a text file using the w mode.
+# Carefull. This will ovewrite all contents of a file
+handle5 = open("text-write.txt", "w")
+# We use write() to write
+handle5.write("Missed it! Have to try it again")
 
+# We the then use the .close() method to close the file handle because
 handle.close()
