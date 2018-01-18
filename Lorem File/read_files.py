@@ -4,6 +4,8 @@ working with a list of properties and functions
 """
 # read_list = []
 
+text_file = "tests.txt"
+
 
 def file_read(text_file):
     """
@@ -11,7 +13,13 @@ def file_read(text_file):
 
     We pass in text_file parameter as a placeholder where
     we can store our actual text file when calling this function.
+
+    It raises:
+    FileNotFoundError:if it cannot find the file
     """
-    with open(text_file, "r") as handle:
-        data = handle.read()
-        return data
+    try:
+        with open(text_file, "r") as handle:
+            data = handle.read()
+            return data
+    except FileNotFoundError:
+        return None
