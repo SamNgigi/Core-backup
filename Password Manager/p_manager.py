@@ -38,6 +38,7 @@ class Passwords:
 
         So our object will have an account name and password
         """
+
         self.account_name = account_name
         self.account_password = account_password
 
