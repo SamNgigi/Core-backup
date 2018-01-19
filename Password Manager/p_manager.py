@@ -27,7 +27,7 @@ class Passwords:
     """
     password_list = []
 
-    def __init__(self, account_name, account_password):
+    def __init__(self, account_name, account_password, password_length):
         """
         The init method allows us to create new instances of our class.
         It also allows us to pass in properties for the object.
@@ -41,6 +41,7 @@ class Passwords:
 
         self.account_name = account_name
         self.account_password = account_password
+        self.password_length = password_length
 
     # print("How long do you want your password:")
     # password_length = int(input())

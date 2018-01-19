@@ -22,7 +22,8 @@ class TestPasswords(unittest.TestCase):
         We then store it as an instance variable in the test class as:
         self.new_password
         """
-        self.new_accountpass = Passwords("CIA", "myowncreativepass")
+
+        self.new_profile = Passwords("CIA", "myowncreativepass", "17")
 
     def test_instance(self):
         """
@@ -30,9 +31,28 @@ class TestPasswords(unittest.TestCase):
         instanciated properly.
         """
 
-        self.assertEqual(self.new_accountpass.account_name, "CIA")
-        self.assertEqual(self.new_accountpass.account_password,
+        self.assertEqual(self.new_profile.account_name, "CIA")
+        self.assertEqual(self.new_profile.account_password,
                          "myowncreativepass")
+        self.assertEqual(self.new_profile.password_length,
+                         "17")
+
+    def test_save_profile(self):
+        """
+        Test Case to test if the contact object is saved.
+
+        So here it seems like we save try save our profile using a function on
+        p_manager that we  have not built.
+        This is what causes our test to fail and will only work when we build
+        it and then import the working one
+        """
+        self.new_profile.save_profile()
+        self.assertEqual(len(Passwords.password_list), 1)
+
+    # def test_passGenerated(self):
+    #     """
+    #     We want to test if our password generator will work. Hp
+    #     """
 
 
 if __name__ == "__main__":
