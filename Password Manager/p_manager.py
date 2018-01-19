@@ -43,6 +43,15 @@ class Passwords:
         self.account_password = account_password
         self.password_length = password_length
 
+    def save_profile(self):
+        """
+        Here we build our save profile function that will append every account
+        and password profile.
+        When we import it and use it on our test_save profile test-case...it
+        should work.
+        """
+        Passwords.password_list.append(self)
+
     # print("How long do you want your password:")
     # password_length = int(input())
     # string = "abcdefghigjkmnopqrstuvwxyz1234567890-_=+{}\|"';>./,`!@#$^&*()`'
