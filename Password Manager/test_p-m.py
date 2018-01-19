@@ -25,6 +25,15 @@ class TestPasswords(unittest.TestCase):
 
         self.new_profile = Passwords("CIA", "myowncreativepass", "17")
 
+    def tearDown(self):
+        """
+        This tearDown function cleans up after every test case.
+
+        For example in this case...what we want is to return our password_list
+        array to default even after multiple saves.
+        """
+        Passwords.password_list = []
+
     def test_instance(self):
         """
         test_instance tests if a the object created in setUp is initialized/
