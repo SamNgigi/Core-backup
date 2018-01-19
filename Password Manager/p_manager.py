@@ -59,11 +59,7 @@ class Passwords:
         """
         Passwords.password_list.append(self)
 
-    def test_display_profile(self):
-        """
-        Method that displays the list of all the profiles saved
-        """
-        self.assertEqual(Passwords.display_profile(), Passwords.password_list)
+
 # print("How long do you want your password:")
 # password_length = int(input())
 # string = "abcdefghigjkmnopqrstuvwxyz1234567890-_=+{}\|"';>./,`!@#$^&*()`'
