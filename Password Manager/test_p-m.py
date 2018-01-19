@@ -58,10 +58,22 @@ class TestPasswords(unittest.TestCase):
         self.new_profile.save_profile()
         self.assertEqual(len(Passwords.password_list), 1)
 
-    # def test_passGenerated(self):
-    #     """
-    #     We want to test if our password generator will work. Hp
-    #     """
+    def test_save_multiple_profiles(self):
+        """
+        Test to see if our function can save multiple contacts.
+        """
+        test_profile = Passwords("Twitter", "newtwitteruser", "14")
+        """
+        test_profile does not need "self". Its a local variable
+        """
+        test_profile.save_profile()
+        self.new_profile.save_profile()
+        self.assertEqual(len(Passwords.password_list), 2)
+
+        # def test_passGenerated(self):
+        #     """
+        #     We want to test if our password generator will work. Hp
+        #     """
 
 
 if __name__ == "__main__":
